@@ -1,0 +1,30 @@
+# Docker Commands
+docker-compose build
+docker-compose up -d
+docker-compose up -d --build
+docker-compose exec web python manage.py flush --no-input
+docker-compose exec web python manage.py migrate --no-input
+docker-compose exec web python manage.py createsuperuser
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml down -v
+docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+docker-compose -f docker-compose.prod.yml exec web python manage.py createsuperuser
+docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+docker-compose -f docker-compose.prod.yml logs -f
+docker-compose logs -f
+docker-compose -f docker-compose.prod.yml logs -f
+
+# Django Commands
+python manage.py migrate --fake drf zero
+python manage.py makemigrations
+python manage.py migrate
+python manage.py showmigrations
+python manage.py createsuperuser --email jmpmcman@ranci.org --username admin
+python manage.py runserver
+127.0.0.1:8000/drf/apimvt/v1/data/triangle_tracts.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/ltdb_std_2012_sample_subset_geom.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile=12/1148/1609
+127.0.0.1:8000/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile=12/1148/1609

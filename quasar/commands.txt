@@ -1,0 +1,3 @@
+yarn install
+quasar dev
+quasar build

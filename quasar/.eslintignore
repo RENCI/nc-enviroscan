@@ -1,0 +1,4 @@
+/dist
+/*.js
+/src/mixins/vue-d3-barchart.vue
+/src/mixins/radar-chart.vue
