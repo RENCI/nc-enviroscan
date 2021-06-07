@@ -97,7 +97,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentradiovariable1" color="teal" /></td>
@@ -118,7 +118,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="assqu1"></span></td>
@@ -169,7 +169,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentradiovariable1" color="teal" /></td>
@@ -190,7 +190,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="cdsqu1"></span></td>
@@ -242,7 +242,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_lead_med" v-model="currentradiovariable1" color="teal" /></td>
@@ -263,7 +263,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="pbsqu1"></span></td>
@@ -315,7 +315,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentradiovariable1" color="teal" /></td>
@@ -336,7 +336,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="mnsqu1"></span></td>
@@ -1116,7 +1116,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentradiovariable2" color="teal" /></td>
@@ -1137,7 +1137,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="assqu1"></span></td>
@@ -1188,7 +1188,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentradiovariable2" color="teal" /></td>
@@ -1209,7 +1209,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="cdsqu1"></span></td>
@@ -1261,7 +1261,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_lead_med" v-model="currentradiovariable2" color="teal" /></td>
@@ -1282,7 +1282,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="pbsqu1"></span></td>
@@ -1334,7 +1334,7 @@
                           <tr>
                             <td>Median</td>
                             <td>Mean</td>
-                            <td>% of Standard</td>
+                            <td>% Above Standard</td>
                           </tr>
                           <tr>
                             <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentradiovariable2" color="teal" /></td>
@@ -1355,7 +1355,7 @@
                                     <tr>
                                        <td style="text-align:center;" colspan="2">Median (ppb)</td>
                                        <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% of Standard</td>
+                                       <td style="text-align:center;" >% Above Standard</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="mnsqu1"></span></td>
@@ -2187,7 +2187,7 @@
                   <!-- tr>
                     <td id="nested" -->
                       <tr>
-                        <td style="text-align:center;" colspan="5">Manganese % of Standard</td>
+                        <td style="text-align:center;" colspan="5">Manganese % Above Standard</td>
                         <td style="text-align:center;">% Poverty</td>
                       </tr>
                       <tr>
