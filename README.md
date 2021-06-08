@@ -14,16 +14,16 @@ cd nc-enviroscan
 
 In the project root directory create a file named .env.dev and add the following information to it:
 
-DEBUG=1
-SECRET_KEY=foo
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-SQL_ENGINE=django.contrib.gis.db.backends.postgis
-SQL_DATABASE=ncenviroscan_dev
-SQL_USER=ncenviroscan
-SQL_PASSWORD=xxxxxxxxxx
-SQL_HOST=db
-SQL_PORT=5432
-DATABASE=postgres
+DEBUG=1  
+SECRET_KEY=foo  
+DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]  
+SQL_ENGINE=django.contrib.gis.db.backends.postgis  
+SQL_DATABASE=ncenviroscan_dev  
+SQL_USER=ncenviroscan  
+SQL_PASSWORD=xxxxxxxxxx  
+SQL_HOST=db  
+SQL_PORT=5432  
+DATABASE=postgres  
 
 Add your own password.
 
@@ -68,22 +68,22 @@ cd nc-enviroscan
 
 In the project root directory create a file named .env.prod and add the following information to it:
 
-DEBUG=0
-SECRET_KEY=change_me
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-SQL_ENGINE=django.contrib.gis.db.backends.postgis
-SQL_DATABASE=ncenviroscan_prod
-SQL_USER=ncenviroscan
-SQL_PASSWORD=xxxxxxxxx
-SQL_HOST=db
-SQL_PORT=5432
-DATABASE=postgres
+DEBUG=0  
+SECRET_KEY=change_me  
+DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]  
+SQL_ENGINE=django.contrib.gis.db.backends.postgis  
+SQL_DATABASE=ncenviroscan_prod  
+SQL_USER=ncenviroscan  
+SQL_PASSWORD=xxxxxxxxx  
+SQL_HOST=db  
+SQL_PORT=5432  
+DATABASE=postgres  
 
 Add your own password. Know create a file named .env.prod.db and add the following information to it:
 
-POSTGRES_USER=ncenviroscan
-POSTGRES_PASSWORD=xxxxxxxxx
-POSTGRES_DB=ncenviroscan_prod
+POSTGRES_USER=ncenviroscan  
+POSTGRES_PASSWORD=xxxxxxxxx  
+POSTGRES_DB=ncenviroscan_prod  
 
 Add your own password.
 
