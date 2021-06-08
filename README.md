@@ -33,7 +33,7 @@ docker-compose up -d --build
 
 After this process has finished run "python manage.py migrate" using the docker-compose command:
 
-docker-compose exec web python manage.py flush --no-input
+docker-compose exec web python manage.py migrate --no-input
 
 At this poing the database is ready for ingest of data.
 
