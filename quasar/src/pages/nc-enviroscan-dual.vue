@@ -113,49 +113,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu1"></span></td>
-                                      <td>&gt; 6.83</td>
-                                      <td>&gt; 8.95</td>
-                                      <td>&gt; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu2"></span></td>
-                                      <td>&ge; 6.83 &amp; &lt; 10.12</td>
-                                      <td>&ge; 8.95 &amp; &lt; 14.93</td>
-                                      <td>&ge; 16.0 &amp; &lt; 32.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu3"></span></td>
-                                      <td>&ge; 10.12 &amp; &lt; 13.42</td>
-                                      <td>&ge; 14.93 &amp; &lt; 20.92</td>
-                                      <td>&ge; 32.0 &amp; &lt; 48.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu4"></span></td>
-                                      <td>&ge; 13.42 &amp; &lt; 16.71</td>
-                                      <td>&ge; 20.92 &amp; &lt; 26.9</td>
-                                      <td>&ge; 48.0 &amp; &lt; 64.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu5"></span></td>
-                                      <td>&ge; 16.71</td>
-                                      <td>&ge; 26.9</td>
-                                      <td>&ge; 64.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu1"></span></td>
+                                  <td>&gt; 6.83</td>
+                                  <td>&gt; 8.95</td>
+                                  <td>&gt; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu2"></span></td>
+                                  <td>&ge; 6.83 &amp; &lt; 12.0</td>
+                                  <td>&ge; 8.95 &amp; &lt; 18.43</td>
+                                  <td>&ge; 16.0 &amp; &lt; 40.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu3"></span></td>
+                                  <td>&ge; 12.0 &amp; &lt; 16.71</td>
+                                  <td>&ge; 18.43 &amp; &lt; 26.9</td>
+                                  <td>&ge; 40.0 &amp; &lt; 64.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu4"></span></td>
+                                  <td>&ge; 66.71</td>
+                                  <td>&ge; 26.9</td>
+                                  <td>&ge; 64.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -185,49 +175,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                      <td>&gt; 0.74</td>
-                                      <td>&gt; 2.71</td>
-                                      <td>&gt; 4.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu2"></span></td>
-                                      <td>&ge; 0.74 &amp; &lt; 0.77</td>
-                                      <td>&ge; 2.71 &amp; &lt; 4.72</td>
-                                      <td>&ge; 4.0 &amp; &lt; 8.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu3"></span></td>
-                                      <td>&ge; 0.77 &amp; &lt; 0.79</td>
-                                      <td>&ge; 4.72 &amp; &lt; 6.72</td>
-                                      <td>&ge; 8.0 &amp; &lt; 12.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu4"></span></td>
-                                      <td>&ge; 0.79 &amp; &lt; 0.82</td>
-                                      <td>&ge; 6.72 &amp; &lt; 8.73</td>
-                                      <td>&ge; 12.0 &amp; &lt; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu5"></span></td>
-                                      <td>&ge; 0.82</td>
-                                      <td>&ge; 8.73</td>
-                                      <td>&ge; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu1"></span></td>
+                                  <td>&gt; 0.74</td>
+                                  <td>&gt; 2.71</td>
+                                  <td>&gt; 4.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu2"></span></td>
+                                  <td>&ge; 0.74 &amp; &lt; 0.78</td>
+                                  <td>&ge; 2.71 &amp; &lt; 5.72</td>
+                                  <td>&ge; 4.0 &amp; &lt; 10.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu3"></span></td>
+                                  <td>&ge; 0.78 &amp; &lt; 0.82</td>
+                                  <td>&ge; 5.72 &amp; &lt; 8.63</td>
+                                  <td>&ge; 10.0 &amp; &lt; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu4"></span></td>
+                                  <td>&ge; 0.82</td>
+                                  <td>&ge; 8.73</td>
+                                  <td>&ge; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -258,49 +238,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                      <td>&gt; 11.69</td>
-                                      <td>&gt; 39.22</td>
-                                      <td>&gt; 20.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu2"></span></td>
-                                      <td>&ge; 11.69 &amp; &lt; 19.83</td>
-                                      <td>&ge; 39.22 &amp; &lt; 75.53</td>
-                                      <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu3"></span></td>
-                                      <td>&ge; 19.83 &amp; &lt; 27.98</td>
-                                      <td>&ge; 75.53 &amp; &lt; 111.83</td>
-                                      <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu4"></span></td>
-                                      <td>&ge; 27.98 &amp; &lt; 36.12</td>
-                                      <td>&ge; 111.83 &amp; &lt; 148.14</td>
-                                      <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu5"></span></td>
-                                      <td>&ge; 36.12</td>
-                                      <td>&ge; 148.14</td>
-                                      <td>&ge; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqufill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu1"></span></td>
+                                  <td>&gt; 11.69</td>
+                                  <td>&gt; 39.22</td>
+                                  <td>&gt; 20.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu2"></span></td>
+                                  <td>&ge; 11.69 &amp; &lt; 23.83</td>
+                                  <td>&ge; 39.22 &amp; &lt; 93.53</td>
+                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu3"></span></td>
+                                  <td>&ge; 23.83 &amp; &lt; 36.12</td>
+                                  <td>&ge; 93.53 &amp; &lt; 148.14</td>
+                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu4"></span></td>
+                                  <td>&ge; 36.12</td>
+                                  <td>&ge; 148.14</td>
+                                  <td>&ge; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqufill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -331,49 +301,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                      <td>&gt; 184.4</td>
-                                      <td>&gt; 213.09</td>
-                                      <td>&gt; 20.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu2"></span></td>
-                                      <td>&ge; 184.4 &amp; &lt; 350.8</td>
-                                      <td>&ge; 213.09 &amp; &lt; 404.97</td>
-                                      <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu3"></span></td>
-                                      <td>&ge; 350.8 &amp; &lt; 517.2</td>
-                                      <td>&ge; 404.97 &amp; &lt; 596.85</td>
-                                      <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu4"></span></td>
-                                      <td>&ge; 517.2 &amp; &lt; 683.6</td>
-                                      <td>&ge; 596.85 &amp; &lt; 788.73</td>
-                                      <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu5"></span></td>
-                                      <td>&ge; 683.6</td>
-                                      <td>&ge; 788.73</td>
-                                      <td>&ge; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu1"></span></td>
+                                  <td>&gt; 184.4</td>
+                                  <td>&gt; 213.09</td>
+                                  <td>&gt; 20.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu2"></span></td>
+                                  <td>&ge; 184.4 &amp; &lt; 414.2</td>
+                                  <td>&ge; 213.09 &amp; &lt; 500.0</td>
+                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu3"></span></td>
+                                  <td>&ge; 414.2 &amp; &lt; 683.6</td>
+                                  <td>&ge; 500.0 &amp; &lt; 788.73</td>
+                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu4"></span></td>
+                                  <td>&ge; 683.6</td>
+                                  <td>&ge; 788.73</td>
+                                  <td>&ge; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -416,26 +376,18 @@
                               <q-markup-table dense class="bg-teal-1">
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu1"></span></td>
-                                  <td>&gt; 15%</td>
+                                  <td>&gt; 25%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu2"></span></td>
-                                  <td>&ge; 15% &amp; &lt; 30%</td>
+                                  <td>&ge; 25% &amp; &lt; 50%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu3"></span></td>
-                                  <td>&ge; 30% &amp; &lt; 45%</td>
+                                  <td>&ge; 50% &amp; &lt; 75%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu4"></span></td>
-                                  <td>&ge; 45% &amp; &lt; 60%</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="acssqu5"></span></td>
-                                  <td>&ge; 60% &amp; &lt; 75%</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="acssqu6"></span></td>
                                   <td>&ge; 75%</td>
                                 </tr>
                                 <tr>
@@ -612,111 +564,79 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Lead Paint</td>
-                                       <td style="text-align:center;" >Diesel Particulate</td>
-                                       <td style="text-align:center;" >Air Toxics Cancer</td>
-                                       <td style="text-align:center;" >Air toxics respiratory</td>
-                                       <td style="text-align:center;" >Traffic</td>
-                                       <td style="text-align:center;" >Direct Dischargers</td>
-                                       <td style="text-align:center;" >National Priorities </td>
-                                       <td style="text-align:center;" >Risk Management</td>
-                                       <td style="text-align:center;" >Storage and Disposal</td>
-                                       <td style="text-align:center;" >Ozone</td>
-                                       <td style="text-align:center;" >PM2.5</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                      <td>&gt;-200.0</td>
-                                      <td>&gt;-300.0</td>
-                                      <td>&gt;-45000.0</td>
-                                      <td>&gt;-600.0</td>
-                                      <td>&gt;800000.0</td>
-                                      <td>&gt;-47000.0</td>
-                                      <td>&gt;-400.0</td>
-                                      <td>&gt;-450.0</td>
-                                      <td>&gt;-3200.0</td>
-                                      <td>&gt;-58000.0</td>
-                                      <td>&gt;-11000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu2"></span></td>
-                                      <td>&ge; -200.0 &amp; &lt; 0.0</td>
-                                      <td>&ge; -300.0 &amp; &lt; 0.0</td>
-                                      <td>&ge; -45000.0 &amp; &lt; -20000.0</td>
-                                      <td>&ge; -600.0 &amp; &lt; -250</td>
-                                      <td>&ge; 800000.0 &amp; &lt; 1700000.0</td>
-                                      <td>&ge; -47000.0 &amp; &lt; -35000.0</td>
-                                      <td>&ge; -400.0 &amp; &lt; -120.0</td>
-                                      <td>&ge; -450.0 &amp; &lt; 1000.0</td>
-                                      <td>&ge; -3200.0 &amp; &lt; -1000.0</td>
-                                      <td>&ge; -58000.0 &amp; &lt; -28000.0</td>
-                                      <td>&ge; -11000.0 &amp; &lt; -5500.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu3"></span></td>
-                                      <td>&ge; 0.0 &amp; &lt; 200.0</td>
-                                      <td>&ge; 0.0 &amp; &lt; 280.0</td>
-                                      <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
-                                      <td>&ge; -250.0 &amp; &lt; 100.0</td>
-                                      <td>&ge; 1700000.0 &amp; &lt; 1700000.0</td>
-                                      <td>&ge; -35000.0 &amp; &lt; -22000.0</td>
-                                      <td>&ge; -120.0 &amp; &lt; 150.0</td>
-                                      <td>&ge; 1000.0 &amp; &lt; 2450.0</td>
-                                      <td>&ge; -1000.0 &amp; &lt; 1800.0</td>
-                                      <td>&ge; -28000.0 &amp; &lt; 600.0</td>
-                                      <td>&ge; -5500.0 &amp; &lt; 1000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu4"></span></td>
-                                      <td>&ge; 200.0 &amp; &lt; 400.0</td>
-                                      <td>&ge; 280.0 &amp; &lt; 580.0</td>
-                                      <td>&ge; 5000.0 &amp; &lt; 30000.0</td>
-                                      <td>&ge; 100.0 &amp; &lt; 450.0</td>
-                                      <td>&ge; 2600000.0 &amp; &lt; 2600000.0</td>
-                                      <td>&ge; -22000.0 &amp; &lt; -10000.0</td>
-                                      <td>&ge; 150.0 &amp; &lt; 420.0</td>
-                                      <td>&ge; 2450.0 &amp; &lt; 3900.0</td>
-                                      <td>&ge; 1800.0 &amp; &lt; 4600.0</td>
-                                      <td>&ge; 600.0 &amp; &lt; 38000.0</td>
-                                      <td>&ge; 1000.0 &amp; &lt; 7500.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu5"></span></td>
-                                      <td>&ge; 400.0 &amp; &lt; 600.0</td>
-                                      <td>&ge; 580.0 &amp; &lt; 850.0</td>
-                                      <td>&ge; 30000.0 &amp; &lt; 55000.0</td>
-                                      <td>&ge; 450.0 &amp; &lt; 800.0</td>
-                                      <td>&ge; 3500000.0 &amp; &lt; 4400000.0</td>
-                                      <td>&ge; -10000.0 &amp; &lt; 200.0</td>
-                                      <td>&ge; 420.0 &amp; &lt; 690.0</td>
-                                      <td>&ge; 3900.0 &amp; &lt; 5350.0</td>
-                                      <td>&ge; 4600.0 &amp; &lt; 7300.0</td>
-                                      <td>&ge; 38000.0 &amp; &lt; 70000.0</td>
-                                      <td>&ge; 7500.0 &amp; &lt; 15000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu6"></span></td>
-                                      <td>&ge; 600.0</td>
-                                      <td>&ge; 850.0</td>
-                                      <td>&ge; 55000.0</td>
-                                      <td>&ge; 800.0</td>
-                                      <td>&ge; 4400000.0</td>
-                                      <td>&ge; 200.0</td>
-                                      <td>&ge; 690.0</td>
-                                      <td>&ge; 5350.0</td>
-                                      <td>&ge; 7300.0</td>
-                                      <td>&ge; 70000.0</td>
-                                      <td>&ge; 15000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Lead Paint</td>
+                                   <td style="text-align:center;" >Diesel Particulate</td>
+                                   <td style="text-align:center;" >Air Toxics Cancer</td>
+                                   <td style="text-align:center;" >Air toxics respiratory</td>
+                                   <td style="text-align:center;" >Traffic</td>
+                                   <td style="text-align:center;" >Direct Dischargers</td>
+                                   <td style="text-align:center;" >National Priorities </td>
+                                   <td style="text-align:center;" >Risk Management</td>
+                                   <td style="text-align:center;" >Storage and Disposal</td>
+                                   <td style="text-align:center;" >Ozone</td>
+                                   <td style="text-align:center;" >PM2.5</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt;-100.0</td>
+                                  <td>&gt;-200.0</td>
+                                  <td>&gt;-20000.0</td>
+                                  <td>&gt;-400.0</td>
+                                  <td>&gt;200000.0</td>
+                                  <td>&gt;-35000.0</td>
+                                  <td>&gt;-200.0</td>
+                                  <td>&gt;0.0</td>
+                                  <td>&gt;-2000.0</td>
+                                  <td>&gt;-40000.0</td>
+                                  <td>&gt;-6000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; -100.0 &amp; &lt; 200.0</td>
+                                  <td>&ge; -200.0 &amp; &lt; 300.0</td>
+                                  <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
+                                  <td>&ge; -400.0 &amp; &lt; 100</td>
+                                  <td>&ge; 200000.0 &amp; &lt; 1000000.0</td>
+                                  <td>&ge; -35000.0 &amp; &lt; -15000.0</td>
+                                  <td>&ge; -200.0 &amp; &lt; 150.0</td>
+                                  <td>&ge; 0.0 &amp; &lt; 2500.0</td>
+                                  <td>&ge; -2000.0 &amp; &lt; 2000.0</td>
+                                  <td>&ge; -40000.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; -6000.0 &amp; &lt; 5000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; 200.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; 300.0 &amp; &lt; 700.0</td>
+                                  <td>&ge; 5000.0 &amp; &lt; 40000.0</td>
+                                  <td>&ge; 100.0 &amp; &lt; 600.0</td>
+                                  <td>&ge; 100000.0 &amp; &lt; 4000000.0</td>
+                                  <td>&ge; -15000.0 &amp; &lt; 0.0</td>
+                                  <td>&ge; 150.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; 2500.0 &amp; &lt; 5000.0</td>
+                                  <td>&ge; 2000.0 &amp; &lt; 6500.0</td>
+                                  <td>&ge; 500.0 &amp; &lt; 50000.0</td>
+                                  <td>&ge; 5000.0 &amp; &lt; 10000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; 500.0</td>
+                                  <td>&ge; 700.0</td>
+                                  <td>&ge; 40000.0</td>
+                                  <td>&ge; 600.0</td>
+                                  <td>&ge; 4000000.0</td>
+                                  <td>&ge; 0.0</td>
+                                  <td>&ge; 500.0</td>
+                                  <td>&ge; 5000.0</td>
+                                  <td>&ge; 6500.0</td>
+                                  <td>&ge; 50000.0</td>
+                                  <td>&ge; 10000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -1132,49 +1052,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu1"></span></td>
-                                      <td>&gt; 6.83</td>
-                                      <td>&gt; 8.95</td>
-                                      <td>&gt; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu2"></span></td>
-                                      <td>&ge; 6.83 &amp; &lt; 10.12</td>
-                                      <td>&ge; 8.95 &amp; &lt; 14.93</td>
-                                      <td>&ge; 16.0 &amp; &lt; 32.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu3"></span></td>
-                                      <td>&ge; 10.12 &amp; &lt; 13.42</td>
-                                      <td>&ge; 14.93 &amp; &lt; 20.92</td>
-                                      <td>&ge; 32.0 &amp; &lt; 48.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu4"></span></td>
-                                      <td>&ge; 13.42 &amp; &lt; 16.71</td>
-                                      <td>&ge; 20.92 &amp; &lt; 26.9</td>
-                                      <td>&ge; 48.0 &amp; &lt; 64.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="assqu5"></span></td>
-                                      <td>&ge; 16.71</td>
-                                      <td>&ge; 26.9</td>
-                                      <td>&ge; 64.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu1"></span></td>
+                                  <td>&gt; 6.83</td>
+                                  <td>&gt; 8.95</td>
+                                  <td>&gt; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu2"></span></td>
+                                  <td>&ge; 6.83 &amp; &lt; 12.0</td>
+                                  <td>&ge; 8.95 &amp; &lt; 18.43</td>
+                                  <td>&ge; 16.0 &amp; &lt; 40.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu3"></span></td>
+                                  <td>&ge; 12.0 &amp; &lt; 16.71</td>
+                                  <td>&ge; 18.43 &amp; &lt; 26.9</td>
+                                  <td>&ge; 40.0 &amp; &lt; 64.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="assqu4"></span></td>
+                                  <td>&ge; 66.71</td>
+                                  <td>&ge; 26.9</td>
+                                  <td>&ge; 64.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -1204,49 +1114,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                      <td>&gt; 0.74</td>
-                                      <td>&gt; 2.71</td>
-                                      <td>&gt; 4.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu2"></span></td>
-                                      <td>&ge; 0.74 &amp; &lt; 0.77</td>
-                                      <td>&ge; 2.71 &amp; &lt; 4.72</td>
-                                      <td>&ge; 4.0 &amp; &lt; 8.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu3"></span></td>
-                                      <td>&ge; 0.77 &amp; &lt; 0.79</td>
-                                      <td>&ge; 4.72 &amp; &lt; 6.72</td>
-                                      <td>&ge; 8.0 &amp; &lt; 12.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu4"></span></td>
-                                      <td>&ge; 0.79 &amp; &lt; 0.82</td>
-                                      <td>&ge; 6.72 &amp; &lt; 8.73</td>
-                                      <td>&ge; 12.0 &amp; &lt; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="cdsqu5"></span></td>
-                                      <td>&ge; 0.82</td>
-                                      <td>&ge; 8.73</td>
-                                      <td>&ge; 16.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu1"></span></td>
+                                  <td>&gt; 0.74</td>
+                                  <td>&gt; 2.71</td>
+                                  <td>&gt; 4.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu2"></span></td>
+                                  <td>&ge; 0.74 &amp; &lt; 0.78</td>
+                                  <td>&ge; 2.71 &amp; &lt; 5.72</td>
+                                  <td>&ge; 4.0 &amp; &lt; 10.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu3"></span></td>
+                                  <td>&ge; 0.78 &amp; &lt; 0.82</td>
+                                  <td>&ge; 5.72 &amp; &lt; 8.63</td>
+                                  <td>&ge; 10.0 &amp; &lt; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="cdsqu4"></span></td>
+                                  <td>&ge; 0.82</td>
+                                  <td>&ge; 8.73</td>
+                                  <td>&ge; 16.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -1277,49 +1177,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                      <td>&gt; 11.69</td>
-                                      <td>&gt; 39.22</td>
-                                      <td>&gt; 20.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu2"></span></td>
-                                      <td>&ge; 11.69 &amp; &lt; 19.83</td>
-                                      <td>&ge; 39.22 &amp; &lt; 75.53</td>
-                                      <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu3"></span></td>
-                                      <td>&ge; 19.83 &amp; &lt; 27.98</td>
-                                      <td>&ge; 75.53 &amp; &lt; 111.83</td>
-                                      <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu4"></span></td>
-                                      <td>&ge; 27.98 &amp; &lt; 36.12</td>
-                                      <td>&ge; 111.83 &amp; &lt; 148.14</td>
-                                      <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqu5"></span></td>
-                                      <td>&ge; 36.12</td>
-                                      <td>&ge; 148.14</td>
-                                      <td>&ge; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="pbsqufill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu1"></span></td>
+                                  <td>&gt; 11.69</td>
+                                  <td>&gt; 39.22</td>
+                                  <td>&gt; 20.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu2"></span></td>
+                                  <td>&ge; 11.69 &amp; &lt; 23.83</td>
+                                  <td>&ge; 39.22 &amp; &lt; 93.53</td>
+                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu3"></span></td>
+                                  <td>&ge; 23.83 &amp; &lt; 36.12</td>
+                                  <td>&ge; 93.53 &amp; &lt; 148.14</td>
+                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqu4"></span></td>
+                                  <td>&ge; 36.12</td>
+                                  <td>&ge; 148.14</td>
+                                  <td>&ge; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="pbsqufill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -1350,49 +1240,39 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                                       <td style="text-align:center;" >Mean (ppb)</td>
-                                       <td style="text-align:center;" >% Above Standard</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                      <td>&gt; 184.4</td>
-                                      <td>&gt; 213.09</td>
-                                      <td>&gt; 20.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu2"></span></td>
-                                      <td>&ge; 184.4 &amp; &lt; 350.8</td>
-                                      <td>&ge; 213.09 &amp; &lt; 404.97</td>
-                                      <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu3"></span></td>
-                                      <td>&ge; 350.8 &amp; &lt; 517.2</td>
-                                      <td>&ge; 404.97 &amp; &lt; 596.85</td>
-                                      <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu4"></span></td>
-                                      <td>&ge; 517.2 &amp; &lt; 683.6</td>
-                                      <td>&ge; 596.85 &amp; &lt; 788.73</td>
-                                      <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="mnsqu5"></span></td>
-                                      <td>&ge; 683.6</td>
-                                      <td>&ge; 788.73</td>
-                                      <td>&ge; 80.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                                   <td style="text-align:center;" >Mean (ppb)</td>
+                                   <td style="text-align:center;" >% Above Standard</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu1"></span></td>
+                                  <td>&gt; 184.4</td>
+                                  <td>&gt; 213.09</td>
+                                  <td>&gt; 20.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu2"></span></td>
+                                  <td>&ge; 184.4 &amp; &lt; 414.2</td>
+                                  <td>&ge; 213.09 &amp; &lt; 500.0</td>
+                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu3"></span></td>
+                                  <td>&ge; 414.2 &amp; &lt; 683.6</td>
+                                  <td>&ge; 500.0 &amp; &lt; 788.73</td>
+                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="mnsqu4"></span></td>
+                                  <td>&ge; 683.6</td>
+                                  <td>&ge; 788.73</td>
+                                  <td>&ge; 80.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -1435,26 +1315,18 @@
                               <q-markup-table dense class="bg-teal-1">
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu1"></span></td>
-                                  <td>&gt; 15%</td>
+                                  <td>&gt; 25%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu2"></span></td>
-                                  <td>&ge; 15% &amp; &lt; 30%</td>
+                                  <td>&ge; 25% &amp; &lt; 50%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu3"></span></td>
-                                  <td>&ge; 30% &amp; &lt; 45%</td>
+                                  <td>&ge; 50% &amp; &lt; 75%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu4"></span></td>
-                                  <td>&ge; 45% &amp; &lt; 60%</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="acssqu5"></span></td>
-                                  <td>&ge; 60% &amp; &lt; 75%</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="acssqu6"></span></td>
                                   <td>&ge; 75%</td>
                                 </tr>
                                 <tr>
@@ -1632,111 +1504,79 @@
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
-                                <!-- tr>
-                                  <td id="nested" -->
-                                    <tr>
-                                       <td style="text-align:center;" colspan="2">Lead Paint</td>
-                                       <td style="text-align:center;" >Diesel Particulate</td>
-                                       <td style="text-align:center;" >Air Toxics Cancer</td>
-                                       <td style="text-align:center;" >Air toxics respiratory</td>
-                                       <td style="text-align:center;" >Traffic</td>
-                                       <td style="text-align:center;" >Direct Dischargers</td>
-                                       <td style="text-align:center;" >National Priorities </td>
-                                       <td style="text-align:center;" >Risk Management</td>
-                                       <td style="text-align:center;" >Storage and Disposal</td>
-                                       <td style="text-align:center;" >Ozone</td>
-                                       <td style="text-align:center;" >PM2.5</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                      <td>&gt;-200.0</td>
-                                      <td>&gt;-300.0</td>
-                                      <td>&gt;-45000.0</td>
-                                      <td>&gt;-600.0</td>
-                                      <td>&gt;800000.0</td>
-                                      <td>&gt;-47000.0</td>
-                                      <td>&gt;-400.0</td>
-                                      <td>&gt;-450.0</td>
-                                      <td>&gt;-3200.0</td>
-                                      <td>&gt;-58000.0</td>
-                                      <td>&gt;-11000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu2"></span></td>
-                                      <td>&ge; -200.0 &amp; &lt; 0.0</td>
-                                      <td>&ge; -300.0 &amp; &lt; 0.0</td>
-                                      <td>&ge; -45000.0 &amp; &lt; -20000.0</td>
-                                      <td>&ge; -600.0 &amp; &lt; -250</td>
-                                      <td>&ge; 800000.0 &amp; &lt; 1700000.0</td>
-                                      <td>&ge; -47000.0 &amp; &lt; -35000.0</td>
-                                      <td>&ge; -400.0 &amp; &lt; -120.0</td>
-                                      <td>&ge; -450.0 &amp; &lt; 1000.0</td>
-                                      <td>&ge; -3200.0 &amp; &lt; -1000.0</td>
-                                      <td>&ge; -58000.0 &amp; &lt; -28000.0</td>
-                                      <td>&ge; -11000.0 &amp; &lt; -5500.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu3"></span></td>
-                                      <td>&ge; 0.0 &amp; &lt; 200.0</td>
-                                      <td>&ge; 0.0 &amp; &lt; 280.0</td>
-                                      <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
-                                      <td>&ge; -250.0 &amp; &lt; 100.0</td>
-                                      <td>&ge; 1700000.0 &amp; &lt; 1700000.0</td>
-                                      <td>&ge; -35000.0 &amp; &lt; -22000.0</td>
-                                      <td>&ge; -120.0 &amp; &lt; 150.0</td>
-                                      <td>&ge; 1000.0 &amp; &lt; 2450.0</td>
-                                      <td>&ge; -1000.0 &amp; &lt; 1800.0</td>
-                                      <td>&ge; -28000.0 &amp; &lt; 600.0</td>
-                                      <td>&ge; -5500.0 &amp; &lt; 1000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu4"></span></td>
-                                      <td>&ge; 200.0 &amp; &lt; 400.0</td>
-                                      <td>&ge; 280.0 &amp; &lt; 580.0</td>
-                                      <td>&ge; 5000.0 &amp; &lt; 30000.0</td>
-                                      <td>&ge; 100.0 &amp; &lt; 450.0</td>
-                                      <td>&ge; 2600000.0 &amp; &lt; 2600000.0</td>
-                                      <td>&ge; -22000.0 &amp; &lt; -10000.0</td>
-                                      <td>&ge; 150.0 &amp; &lt; 420.0</td>
-                                      <td>&ge; 2450.0 &amp; &lt; 3900.0</td>
-                                      <td>&ge; 1800.0 &amp; &lt; 4600.0</td>
-                                      <td>&ge; 600.0 &amp; &lt; 38000.0</td>
-                                      <td>&ge; 1000.0 &amp; &lt; 7500.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu5"></span></td>
-                                      <td>&ge; 400.0 &amp; &lt; 600.0</td>
-                                      <td>&ge; 580.0 &amp; &lt; 850.0</td>
-                                      <td>&ge; 30000.0 &amp; &lt; 55000.0</td>
-                                      <td>&ge; 450.0 &amp; &lt; 800.0</td>
-                                      <td>&ge; 3500000.0 &amp; &lt; 4400000.0</td>
-                                      <td>&ge; -10000.0 &amp; &lt; 200.0</td>
-                                      <td>&ge; 420.0 &amp; &lt; 690.0</td>
-                                      <td>&ge; 3900.0 &amp; &lt; 5350.0</td>
-                                      <td>&ge; 4600.0 &amp; &lt; 7300.0</td>
-                                      <td>&ge; 38000.0 &amp; &lt; 70000.0</td>
-                                      <td>&ge; 7500.0 &amp; &lt; 15000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="ejssqu6"></span></td>
-                                      <td>&ge; 600.0</td>
-                                      <td>&ge; 850.0</td>
-                                      <td>&ge; 55000.0</td>
-                                      <td>&ge; 800.0</td>
-                                      <td>&ge; 4400000.0</td>
-                                      <td>&ge; 200.0</td>
-                                      <td>&ge; 690.0</td>
-                                      <td>&ge; 5350.0</td>
-                                      <td>&ge; 7300.0</td>
-                                      <td>&ge; 70000.0</td>
-                                      <td>&ge; 15000.0</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
-                                    </tr>
-                                  <!-- /td>
-                                </tr -->
+                                <tr>
+                                   <td style="text-align:center;" colspan="2">Lead Paint</td>
+                                   <td style="text-align:center;" >Diesel Particulate</td>
+                                   <td style="text-align:center;" >Air Toxics Cancer</td>
+                                   <td style="text-align:center;" >Air toxics respiratory</td>
+                                   <td style="text-align:center;" >Traffic</td>
+                                   <td style="text-align:center;" >Direct Dischargers</td>
+                                   <td style="text-align:center;" >National Priorities </td>
+                                   <td style="text-align:center;" >Risk Management</td>
+                                   <td style="text-align:center;" >Storage and Disposal</td>
+                                   <td style="text-align:center;" >Ozone</td>
+                                   <td style="text-align:center;" >PM2.5</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt;-100.0</td>
+                                  <td>&gt;-200.0</td>
+                                  <td>&gt;-20000.0</td>
+                                  <td>&gt;-400.0</td>
+                                  <td>&gt;200000.0</td>
+                                  <td>&gt;-35000.0</td>
+                                  <td>&gt;-200.0</td>
+                                  <td>&gt;0.0</td>
+                                  <td>&gt;-2000.0</td>
+                                  <td>&gt;-40000.0</td>
+                                  <td>&gt;-6000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; -100.0 &amp; &lt; 200.0</td>
+                                  <td>&ge; -200.0 &amp; &lt; 300.0</td>
+                                  <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
+                                  <td>&ge; -400.0 &amp; &lt; 100</td>
+                                  <td>&ge; 200000.0 &amp; &lt; 1000000.0</td>
+                                  <td>&ge; -35000.0 &amp; &lt; -15000.0</td>
+                                  <td>&ge; -200.0 &amp; &lt; 150.0</td>
+                                  <td>&ge; 0.0 &amp; &lt; 2500.0</td>
+                                  <td>&ge; -2000.0 &amp; &lt; 2000.0</td>
+                                  <td>&ge; -40000.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; -6000.0 &amp; &lt; 5000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; 200.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; 300.0 &amp; &lt; 700.0</td>
+                                  <td>&ge; 5000.0 &amp; &lt; 40000.0</td>
+                                  <td>&ge; 100.0 &amp; &lt; 600.0</td>
+                                  <td>&ge; 100000.0 &amp; &lt; 4000000.0</td>
+                                  <td>&ge; -15000.0 &amp; &lt; 0.0</td>
+                                  <td>&ge; 150.0 &amp; &lt; 500.0</td>
+                                  <td>&ge; 2500.0 &amp; &lt; 5000.0</td>
+                                  <td>&ge; 2000.0 &amp; &lt; 6500.0</td>
+                                  <td>&ge; 500.0 &amp; &lt; 50000.0</td>
+                                  <td>&ge; 5000.0 &amp; &lt; 10000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; 500.0</td>
+                                  <td>&ge; 700.0</td>
+                                  <td>&ge; 40000.0</td>
+                                  <td>&ge; 600.0</td>
+                                  <td>&ge; 4000000.0</td>
+                                  <td>&ge; 0.0</td>
+                                  <td>&ge; 500.0</td>
+                                  <td>&ge; 5000.0</td>
+                                  <td>&ge; 6500.0</td>
+                                  <td>&ge; 50000.0</td>
+                                  <td>&ge; 10000.0</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill -999.99</td>
+                                </tr>
                               </q-markup-table>
                             </font>
                           </q-popup-proxy>
@@ -2050,7 +1890,7 @@
       <div class="wrapper">
         <!--// app map1 -->
         <vl-map v-if="mapVisible" class="dualmap" ref="map1" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-          data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
+          @singleclick="onMap1Click" data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
           <!--//map1 view aka ol.View -->
           <div v-if="mapSync === 'False'">
             <vl-view ref="view1" :center.sync="center1" :zoom.sync="zoom1" :rotation.sync="rotation"></vl-view>
@@ -2080,7 +1920,7 @@
 
         <!--// app map2 -->
         <vl-map v-if="mapVisible" class="dualmap" ref="map2" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-          data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
+          @singleclick="onMap2Click" data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
            <!--// map2 view aka ol.View -->
           <div v-if="mapSync === 'False'">
             <vl-view ref="view2" :center.sync="center2" :zoom.sync="zoom2" :rotation.sync="rotation"></vl-view>
@@ -2178,84 +2018,125 @@
       <q-footer elevated class="bg-teal">
         <q-toolbar>
           <!-- q-toolbar-title class="q-mr-sm text-black">Footer</q-toolbar-title -->
-          <!-- // legend -->
+          <!-- // Map1 pattern legend -->
           <div class="q-pa-md q-gutter-y-sm column text-black">
-            TEST LEGEND
+            Map One Pattern Legend
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <font size="2" face="Arial" >
                 <q-markup-table dense class="bg-brown-1">
-                  <!-- tr>
-                    <td id="nested" -->
-                      <tr>
-                        <td style="text-align:center;" colspan="5">Manganese % Above Standard</td>
-                        <td style="text-align:center;">% Poverty</td>
-                      </tr>
-                      <tr>
-                         <td>&gt; 20</td>
-                         <td>&ge; 20 &amp; &lt; 40</td>
-                         <td>&ge; 40 &amp; &lt; 60</td>
-                         <td>&ge; 60 &amp; &lt; 80</td>
-                         <td>&ge; 80</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr11"></div></td>
-                        <td style="padding:5px"><div class="vstr12"></div></td>
-                        <td style="padding:5px"><div class="vstr13"></div></td>
-                        <td style="padding:5px"><div class="vstr14"></div></td>
-                        <td style="padding:5px"><div class="vstr15"></div></td>
-                        <td>&gt; 15</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr21"></div></td>
-                        <td style="padding:5px"><div class="vstr22"></div></td>
-                        <td style="padding:5px"><div class="vstr23"></div></td>
-                        <td style="padding:5px"><div class="vstr24"></div></td>
-                        <td style="padding:5px"><div class="vstr25"></div></td>
-                        <td>&ge; 15 &amp; &lt; 30</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr31"></div></td>
-                        <td style="padding:5px"><div class="vstr32"></div></td>
-                        <td style="padding:5px"><div class="vstr33"></div></td>
-                        <td style="padding:5px"><div class="vstr34"></div></td>
-                        <td style="padding:5px"><div class="vstr35"></div></td>
-                        <td>&ge; 30 &amp; &lt; 45</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr41"></div></td>
-                        <td style="padding:5px"><div class="vstr42"></div></td>
-                        <td style="padding:5px"><div class="vstr43"></div></td>
-                        <td style="padding:5px"><div class="vstr44"></div></td>
-                        <td style="padding:5px"><div class="vstr45"></div></td>
-                        <td>&ge; 45 &amp; &lt; 60</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr51"></div></td>
-                        <td style="padding:5px"><div class="vstr52"></div></td>
-                        <td style="padding:5px"><div class="vstr53"></div></td>
-                        <td style="padding:5px"><div class="vstr54"></div></td>
-                        <td style="padding:5px"><div class="vstr55"></div></td>
-                        <td>&ge; 60 &amp; &lt; 75</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><div class="vstr61"></div></td>
-                        <td style="padding:5px"><div class="vstr62"></div></td>
-                        <td style="padding:5px"><div class="vstr63"></div></td>
-                        <td style="padding:5px"><div class="vstr64"></div></td>
-                        <td style="padding:5px"><div class="vstr65"></div></td>
-                        <td>&ge; 75</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill -999.99</td>
-                      </tr>
-                    <!-- /td>
-                  </tr -->
+                  <tr>
+                    <td style="text-align:center;" colspan="4"><span v-html="map1pat1title"></span></td>
+                    <td style="text-align:center;"><span v-html="map1pat2title"></span></td>
+                  </tr>
+                  <tr>
+                     <td>&lt; <span v-html="map1pat1val1"></span></td>
+                     <td>&ge; <span v-html="map1pat1val1"></span> &amp; &lt; <span v-html="map1pat1val2"></span></td>
+                     <td>&ge; <span v-html="map1pat1val2"></span> &amp; &lt; <span v-html="map1pat1val3"></span></td>
+                     <td>&ge; <span v-html="map1pat1val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr11"></div></td>
+                    <td style="padding:5px"><div class="vstr12"></div></td>
+                    <td style="padding:5px"><div class="vstr13"></div></td>
+                    <td style="padding:5px"><div class="vstr14"></div></td>
+                    <td>&lt; <span v-html="map1pat2val1"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr21"></div></td>
+                    <td style="padding:5px"><div class="vstr22"></div></td>
+                    <td style="padding:5px"><div class="vstr23"></div></td>
+                    <td style="padding:5px"><div class="vstr24"></div></td>
+                    <td>&ge; <span v-html="map1pat2val1"></span> &amp; &lt; <span v-html="map1pat2val2"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr31"></div></td>
+                    <td style="padding:5px"><div class="vstr32"></div></td>
+                    <td style="padding:5px"><div class="vstr33"></div></td>
+                    <td style="padding:5px"><div class="vstr34"></div></td>
+                    <td>&ge; <span v-html="map1pat2val2"></span> &amp; &lt; <span v-html="map1pat2val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr41"></div></td>
+                    <td style="padding:5px"><div class="vstr42"></div></td>
+                    <td style="padding:5px"><div class="vstr43"></div></td>
+                    <td style="padding:5px"><div class="vstr44"></div></td>
+                    <td>&ge; <span v-html="map1pat2val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><span class="vstrfill"></span></td>
+                    <td>Fill -999.99</td>
+                  </tr>
+                </q-markup-table>
+                <q-markup-table dense class="bg-brown-1">
+                  <tr>
+                    <td><span v-html="map1var1"></span></td>
+                    <td><span v-html="map1var2"></span></td>
+                  </tr>
                 </q-markup-table>
               </font>
             </q-popup-proxy>
           </div>
-          <!-- // legend -->
+          <!-- // Map1 pattern legend -->
+          <q-space />
+          <!-- // Map2 pattern legend -->
+          <div class="q-pa-md q-gutter-y-sm column text-black">
+            Map Two Pattern Legend
+            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+              <font size="2" face="Arial" >
+                <q-markup-table dense class="bg-brown-1">
+                  <tr>
+                    <td style="text-align:center;" colspan="4"><span v-html="map2pat1title"></span></td>
+                    <td style="text-align:center;"><span v-html="map2pat2title"></span></td>
+                  </tr>
+                  <tr>
+                     <td>&lt; <span v-html="map2pat1val1"></span></td>
+                     <td>&ge; <span v-html="map2pat1val1"></span> &amp; &lt; <span v-html="map2pat1val2"></span></td>
+                     <td>&ge; <span v-html="map2pat1val2"></span> &amp; &lt; <span v-html="map2pat1val3"></span></td>
+                     <td>&ge; <span v-html="map2pat1val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr11"></div></td>
+                    <td style="padding:5px"><div class="vstr12"></div></td>
+                    <td style="padding:5px"><div class="vstr13"></div></td>
+                    <td style="padding:5px"><div class="vstr14"></div></td>
+                    <td>&lt; <span v-html="map2pat2val1"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr21"></div></td>
+                    <td style="padding:5px"><div class="vstr22"></div></td>
+                    <td style="padding:5px"><div class="vstr23"></div></td>
+                    <td style="padding:5px"><div class="vstr24"></div></td>
+                    <td>&ge; <span v-html="map2pat2val1"></span> &amp; &lt; <span v-html="map2pat2val2"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr31"></div></td>
+                    <td style="padding:5px"><div class="vstr32"></div></td>
+                    <td style="padding:5px"><div class="vstr33"></div></td>
+                    <td style="padding:5px"><div class="vstr34"></div></td>
+                    <td>&ge; <span v-html="map2pat2val2"></span> &amp; &lt; <span v-html="map2pat2val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr41"></div></td>
+                    <td style="padding:5px"><div class="vstr42"></div></td>
+                    <td style="padding:5px"><div class="vstr43"></div></td>
+                    <td style="padding:5px"><div class="vstr44"></div></td>
+                    <td>&ge; <span v-html="map2pat2val3"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><span class="vstrfill"></span></td>
+                    <td>Fill -999.99</td>
+                  </tr>
+                </q-markup-table>
+                <q-markup-table dense class="bg-brown-1">
+                  <tr>
+                    <td><span v-html="map2var1"></span></td>
+                    <td><span v-html="map2var2"></span></td>
+                  </tr>
+                </q-markup-table>
+              </font>
+            </q-popup-proxy>
+          </div>
+          <!-- // Map2 pattern legend -->
         </q-toolbar>
       </q-footer>
 
@@ -2282,7 +2163,7 @@ import { DEVICE_PIXEL_RATIO } from 'ol/has.js'
 
 // geocoder
 const Nominatim = require('nominatim-geocoder')
-const geocoder = new Nominatim()
+const geocoder = new Nominatim({ delay: 1000, secure: true, host: 'nominatim.openstreetmap.org' })
 
 // pubhost and secrets import
 import pubhost from '../assets/pubhost.json'
@@ -2379,20 +2260,35 @@ export default {
       ejsmap1style: 'nopattern',
       ejsmap2style: 'nopattern',
       varcolor: null,
-      arsncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 52, 220, 0.65)', 'rgba(186, 52, 235, 0.65)', 'rgba(165, 52, 235, 0.65)',
-        'rgba(143, 52, 235, 0.65)', 'rgba(119, 52, 235, 0.65)'],
-      cadmcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(223, 235, 52, 0.65)', 'rgba(235, 192, 52, 0.65)', 'rgba(235, 162, 52, 0.65)',
-        'rgba(235, 131, 52, 0.65)', 'rgba(235, 89, 52, 0.65)'],
-      leadcolors: ['rgba(50, 110, 219, 0.65)', 'rgba(196, 200, 207, 0.65)', 'rgba(156, 162, 173, 0.65)', 'rgba(116, 121, 130, 0.65)',
-        'rgba(79, 82, 89, 0.65)', 'rgba(39, 40, 43, 0.65)'],
-      mngncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(194, 232, 190, 0.65)', 'rgba(81, 222, 67, 0.65)', 'rgba(25, 128, 11, 0.65)',
-        'rgba(14, 82, 5, 0.65)', 'rgba(5, 97, 76, 0.65)'],
-      acscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(252, 210, 211, 0.65)', 'rgba(252, 109, 114, 0.65)', 'rgba(247, 59, 66, 0.65)',
-        'rgba(250, 2, 11, 0.65)', 'rgba(181, 2, 6, 0.65)', 'rgba(140, 1, 5, 0.65)'],
-      ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 227, 3, 0.65)', 'rgba(252, 186, 3, 0.65)',
-        'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)', 'rgba(140, 1, 5, 0.65)'],
-      covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)',
-        'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      pattern1colors: ['rgba(246, 250, 5, 1.0)', 'rgba(0, 125, 125, 1.0)', 'rgba(91, 240, 245, 1.0)', 'rgba(250, 203, 92, 1.0)', 'rgba(240, 129, 5, 1.0)'],
+      pattern2colors: ['rgba(246, 250, 5, 1.0)', 'rgba(2, 114, 250, 1.0)', 'rgba(150, 215, 250, 1.0)', 'rgba(250, 219, 202, 1.0)', 'rgba(153, 55, 2, 1.0)'],
+      arsncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(247, 121, 237, 0.65)', 'rgba(194, 76, 237, 0.65)', 'rgba(165, 52, 235, 0.65)', 'rgba(127, 3, 252, 0.65)'],
+      cadmcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(223, 235, 52, 0.65)', 'rgba(235, 192, 52, 0.65)', 'rgba(235, 162, 52, 0.65)', 'rgba(235, 89, 52, 0.65)'],
+      leadcolors: ['rgba(50, 110, 219, 0.65)', 'rgba(196, 200, 207, 0.65)', 'rgba(155, 158, 163, 0.65)', 'rgba(108, 112, 120, 0.65)', 'rgba(39, 40, 43, 0.65)'],
+      mngncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(194, 232, 190, 0.65)', 'rgba(81, 222, 67, 0.65)', 'rgba(25, 128, 11, 0.65)', 'rgba(14, 82, 5, 0.65)'],
+      acscolors: ['rgba(91, 95, 99, 0.85)', 'rgba(252, 210, 211, 0.85)', 'rgba(247, 84, 90, 0.85)', 'rgba(212, 4, 9, 0.85)', 'rgba(122, 1, 5, 0.85)'],
+      ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
+      covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      map1pat1val1: 0,
+      map1pat1val2: 0,
+      map1pat1val3: 0,
+      map1pat1title: 'None',
+      map1pat2val1: 0,
+      map1pat2val2: 0,
+      map1pat2val3: 0,
+      map1pat2title: 'None',
+      map1var1: 'None',
+      map1var2: 'None',
+      map2pat1val1: 0,
+      map2pat1val2: 0,
+      map2pat1val3: 0,
+      map2pat1title: 'None',
+      map2pat2val1: 0,
+      map2pat2val2: 0,
+      map2pat2val3: 0,
+      map2pat2title: 'None',
+      map2var1: 'None',
+      map2var2: 'None',
       // baselayers config
       baselayer1: 'osm',
       baselayer2: 'osm',
@@ -2764,78 +2660,290 @@ export default {
         } else if (data[variable.substring(11)] >= values[4]) {
           this.varcolor = colors[5]
         }
+      } else if (colors.length === 5) {
+        if (layer.substring(0, layer.length - 1) === 'ncwelllayer') {
+          if (data[variable.substring(11)] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable.substring(11)] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable.substring(11)] >= values[3]) {
+            this.varcolor = colors[4]
+          }
+        } else {
+          if (data[variable] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable] >= values[3]) {
+            this.varcolor = colors[4]
+          }
+        }
       }
     },
     getPatternColors: function (data, values, colors, variable, layer) {
-      if (colors.length === 7) {
-        let getPattern
-        if (layer === 'acslayer1') {
-          if (this.acsmap1style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.acsmap1style === 'pattern2') {
-            getPattern = this.getPattern2
+      if (layer.substr(-1) === '1') {
+        if (layer.substring(0, layer.length - 1) === 'ncwelllayer') {
+          let getPattern
+          let patternColors
+          if (layer === 'ncwelllayer1') {
+            if (this.ncwellmap1style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ncwellmap1style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ncwelllayer2') {
+            if (this.ncwellmap2style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ncwellmap2style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
           }
-        } else if (layer === 'acslayer2') {
-          if (this.acsmap2style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.acsmap2style === 'pattern2') {
-            getPattern = this.getPattern2
+          if (data[variable.substring(11)] === values[0]) {
+            this.varcolor = getPattern(patternColors[0])
+          } else if (data[variable.substring(11)] < values[1]) {
+            this.varcolor = getPattern(patternColors[1])
+          } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
+            this.varcolor = getPattern(patternColors[2])
+          } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
+            this.varcolor = getPattern(patternColors[3])
+          } else if (data[variable.substring(11)] >= values[3]) {
+            this.varcolor = getPattern(patternColors[4])
           }
-        } else if (layer === 'ejslayer1') {
-          if (this.ejsmap1style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.ejsmap1style === 'pattern2') {
-            getPattern = this.getPattern2
+        } else {
+          let getPattern
+          let patternColors
+          if (layer === 'acslayer1') {
+            if (this.acsmap1style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.acsmap1style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'acslayer2') {
+            if (this.acsmap2style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.acsmap2style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ejslayer1') {
+            if (this.ejsmap1style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ejsmap1style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ejslayer2') {
+            if (this.ejsmap2style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ejsmap2style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
           }
-        } else if (layer === 'ejslayer2') {
-          if (this.ejsmap2style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.ejsmap2style === 'pattern2') {
-            getPattern = this.getPattern2
+          if (data[variable] === values[0]) {
+            this.varcolor = getPattern(patternColors[0])
+          } else if (data[variable] < values[1]) {
+            this.varcolor = getPattern(patternColors[1])
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = getPattern(patternColors[2])
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = getPattern(patternColors[3])
+          } else if (data[variable] >= values[3]) {
+            this.varcolor = getPattern(patternColors[4])
           }
         }
-        if (data[variable] === values[0]) {
-          this.varcolor = getPattern(colors[0])
-        } else if (data[variable] < values[1]) {
-          this.varcolor = getPattern(colors[1])
-        } else if (data[variable] >= values[1] && data[variable] < values[2]) {
-          this.varcolor = getPattern(colors[2])
-        } else if (data[variable] >= values[2] && data[variable] < values[3]) {
-          this.varcolor = getPattern(colors[3])
-        } else if (data[variable] >= values[3] && data[variable] < values[4]) {
-          this.varcolor = getPattern(colors[4])
-        } else if (data[variable] >= values[4] && data[variable] < values[5]) {
-          this.varcolor = getPattern(colors[5])
-        } else if (data[variable] >= values[5]) {
-          this.varcolor = getPattern(colors[6])
-        }
-      } else if (colors.length === 6) {
-        let getPattern
-        if (layer === 'ncwelllayer1') {
-          if (this.ncwellmap1style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.ncwellmap1style === 'pattern2') {
-            getPattern = this.getPattern2
+      } else if (layer.substr(-1) === '2') {
+        if (layer.substring(0, layer.length - 1) === 'ncwelllayer') {
+          let getPattern
+          let patternColors
+          if (layer === 'ncwelllayer1') {
+            if (this.ncwellmap1style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ncwellmap1style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ncwelllayer2') {
+            if (this.ncwellmap2style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ncwellmap2style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
           }
-        } else if (layer === 'ncwelllayer2') {
-          if (this.ncwellmap2style === 'pattern1') {
-            getPattern = this.getPattern1
-          } else if (this.ncwellmap2style === 'pattern2') {
-            getPattern = this.getPattern2
+          if (data[variable.substring(11)] === values[0]) {
+            this.varcolor = getPattern(patternColors[0])
+          } else if (data[variable.substring(11)] < values[1]) {
+            this.varcolor = getPattern(patternColors[1])
+          } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
+            this.varcolor = getPattern(patternColors[2])
+          } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
+            this.varcolor = getPattern(patternColors[3])
+          } else if (data[variable.substring(11)] >= values[3]) {
+            this.varcolor = getPattern(patternColors[4])
           }
-        }
-        if (data[variable.substring(11)] === values[0]) {
-          this.varcolor = getPattern(colors[0])
-        } else if (data[variable.substring(11)] < values[1]) {
-          this.varcolor = getPattern(colors[1])
-        } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
-          this.varcolor = getPattern(colors[2])
-        } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
-          this.varcolor = getPattern(colors[3])
-        } else if (data[variable.substring(11)] >= values[3] && data[variable.substring(11)] < values[4]) {
-          this.varcolor = getPattern(colors[4])
-        } else if (data[variable.substring(11)] >= values[4]) {
-          this.varcolor = getPattern(colors[5])
+        } else {
+          let getPattern
+          let patternColors
+          if (layer === 'acslayer1') {
+            if (this.acsmap1style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.acsmap1style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'acslayer2') {
+            if (this.acsmap2style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.acsmap2style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ejslayer1') {
+            if (this.ejsmap1style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ejsmap1style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'ejslayer2') {
+            if (this.ejsmap2style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.ejsmap2style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          }
+          if (data[variable] === values[0]) {
+            this.varcolor = getPattern(patternColors[0])
+          } else if (data[variable] < values[1]) {
+            this.varcolor = getPattern(patternColors[1])
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = getPattern(patternColors[2])
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = getPattern(patternColors[3])
+          } else if (data[variable] >= values[3]) {
+            this.varcolor = getPattern(patternColors[4])
+          }
         }
       }
     },
@@ -2854,40 +2962,40 @@ export default {
         let values
         let variable = this.currentradiovariable1
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 6.83, 10.12, 13.42, 16.71]
+          values = [-999.99, 6.83, 12.0, 16.71]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 8.95, 14.93, 20.93, 26.9]
+          values = [-999.99, 8.95, 18.43, 26.9]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 16.0, 32.0, 48.0, 64.0]
+          values = [-999.99, 16.0, 40.0, 64.0]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.74, 0.77, 0.79, 0.82]
+          values = [-999.99, 0.74, 0.78, 0.82]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 2.71, 4.72, 6.71, 8.73]
+          values = [-999.99, 2.71, 5.72, 8.73]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 4.0, 8.0, 12.0, 16.0]
+          values = [-999.99, 4.0, 10.0, 16.0]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 11.69, 19.83, 27.98, 36.12]
+          values = [-999.99, 11.69, 23.83, 36.12]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 39.22, 75.53, 111.93, 148.14]
+          values = [-999.99, 39.22, 93.53, 148.14]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          values = [-999.99, 20.0, 50.0, 80.0]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 184.4, 350.8, 517.2, 683.6]
+          values = [-999.99, 184.4, 414.2, 683.6]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 213.09, 404.97, 596.85, 788.73]
+          values = [-999.99, 213.09, 500.0, 788.73]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          values = [-999.99, 20.0, 50.0, 80.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         }
         return [
@@ -2915,7 +3023,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values = [-999.99, 15, 30, 45, 60, 75]
+        let values = [-999.99, 25, 50, 75]
         let variable = this.currentacsvariable1
         getStyle(data, values, this.acscolors, variable, 'acslayer1')
         return [
@@ -2946,37 +3054,37 @@ export default {
         let values
         let variable = this.currentejsvariable1
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -200.0, 0.0, 200.0, 400.0, 600.0]
+          values = [-99999.9999, -100.0, 200.0, 500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -300.0, 0.0, 280.0, 580.0, 850.0]
+          values = [-99999.9999, -200.0, 300.0, 700.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, -45000.0, -20000.0, 5000.0, 30000.0, 55000.0]
+          values = [-99999.9999, -20000.0, 5000.0, 40000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -600.0, -250.0, 100.0, 450.0, 800.0]
+          values = [-99999.9999, -400.0, 100.0, 600.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 800000.0, 1700000.0, 2600000.0, 3500000.0, 4400000.0]
+          values = [-99999.9999, 2000000.0, 1000000.0, 4000000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -47000.0, -35000.0, -22000.0, -10000.0, 200.0]
+          values = [-99999.9999, -35000.0, -15000.0, 0.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -400.0, -120.0, 150.0, 420.0, 690.0]
+          values = [-99999.9999, -200.0, 150.0, 500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -450.0, 1000.0, 2450.0, 3900.0, 5350.0]
+          values = [-99999.9999, -0.0, 2500.0, 5000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -3200.0, -1000.0, 1800.0, 4600.0, 7300.0]
+          values = [-99999.9999, -2000.0, 2000.0, 6500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, -58000.0, -28000.0, 600.0, 38000.0, 70000.0]
+          values = [-99999.9999, -40000.0, 500.0, 50000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -11000.0, -5500.0, 1000.0, 7500.0, 15000.0]
+          values = [-99999.9999, -6000.0, 5000.0, 10000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         }
         return [
@@ -3039,40 +3147,40 @@ export default {
         let values
         let variable = this.currentradiovariable2
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 6.83, 10.12, 13.42, 16.71]
+          values = [-999.99, 6.83, 12.0, 16.71]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 8.95, 14.93, 20.93, 26.9]
+          values = [-999.99, 8.95, 18.43, 26.9]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 16.0, 32.0, 48.0, 64.0]
+          values = [-999.99, 16.0, 40.0, 64.0]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.74, 0.77, 0.79, 0.82]
+          values = [-999.99, 0.74, 0.78, 0.82]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 2.71, 4.72, 6.71, 8.73]
+          values = [-999.99, 2.71, 5.72, 8.73]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 4.0, 8.0, 12.0, 16.0]
+          values = [-999.99, 4.0, 10.0, 16.0]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 11.69, 19.83, 27.98, 36.12]
+          values = [-999.99, 11.69, 23.83, 36.12]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 39.22, 75.53, 111.93, 148.14]
+          values = [-999.99, 39.22, 93.53, 148.14]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          values = [-999.99, 20.0, 50.0, 80.0]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 184.4, 350.8, 517.2, 683.6]
+          values = [-999.99, 184.4, 414.2, 683.6]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 213.09, 404.97, 596.85, 788.73]
+          values = [-999.99, 213.09, 500.0, 788.73]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          values = [-999.99, 20.0, 50.0, 80.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         }
         return [
@@ -3100,7 +3208,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values = [-999.99, 15, 30, 45, 60, 75]
+        let values = [-999.99, 25, 50, 75]
         let variable = this.currentacsvariable2
         getStyle(data, values, this.acscolors, variable, 'acslayer2')
         return [
@@ -3131,37 +3239,37 @@ export default {
         let values
         let variable = this.currentejsvariable2
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -200.0, 0.0, 200.0, 400.0, 600.0]
+          values = [-99999.9999, -100.0, 200.0, 500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -300.0, 0.0, 280.0, 580.0, 850.0]
+          values = [-99999.9999, -200.0, 300.0, 700.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, -45000.0, -20000.0, 5000.0, 30000.0, 55000.0]
+          values = [-99999.9999, -20000.0, 5000.0, 40000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -600.0, -250.0, 100.0, 450.0, 800.0]
+          values = [-99999.9999, -400.0, 100.0, 600.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 800000.0, 1700000.0, 2600000.0, 3500000.0, 4400000.0]
+          values = [-99999.9999, 2000000.0, 1000000.0, 4000000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -47000.0, -35000.0, -22000.0, -10000.0, 200.0]
+          values = [-99999.9999, -35000.0, -15000.0, 0.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -400.0, -120.0, 150.0, 420.0, 690.0]
+          values = [-99999.9999, -200.0, 150.0, 500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -450.0, 1000.0, 2450.0, 3900.0, 5350.0]
+          values = [-99999.9999, -0.0, 2500.0, 5000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -3200.0, -1000.0, 1800.0, 4600.0, 7300.0]
+          values = [-99999.9999, -2000.0, 2000.0, 6500.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, -58000.0, -28000.0, 600.0, 38000.0, 70000.0]
+          values = [-99999.9999, -40000.0, 500.0, 50000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -11000.0, -5500.0, 1000.0, 7500.0, 15000.0]
+          values = [-99999.9999, -6000.0, 5000.0, 10000.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         }
         return [
@@ -3929,6 +4037,56 @@ export default {
       if (layer != null) {
         layer.visible = true
       }
+    },
+    onMap1Click: function (event) {
+      let pixel = event.pixel
+      let features = this.$refs.map1.$map.getFeaturesAtPixel(pixel)
+      let var1
+      let var2
+
+      if (this.map1pat1title.substring(0, 11) === 'ncwellwise_') {
+        var1 = this.map1pat1title.substring(11)
+        var2 = this.map1pat2title
+      }
+      if (this.map1pat2title.substring(0, 11) === 'ncwellwise_') {
+        var1 = this.map1pat1title
+        var2 = this.map1pat2title.substring(11)
+      }
+
+      for (let i = 0; i < features.length; i++) {
+        if (JSON.stringify(features[i].properties_).includes(var1) === true) {
+          this.map1var1 = var1 + ': ' + features[i].properties_[var1].toString()
+        }
+
+        if (JSON.stringify(features[i].properties_).includes(var2) === true) {
+          this.map1var2 = var2 + ': ' + features[i].properties_[var2].toString()
+        }
+      }
+    },
+    onMap2Click: function (event) {
+      let pixel = event.pixel
+      let features = this.$refs.map2.$map.getFeaturesAtPixel(pixel)
+      let var1
+      let var2
+
+      if (this.map2pat1title.substring(0, 11) === 'ncwellwise_') {
+        var1 = this.map2pat1title.substring(11)
+        var2 = this.map2pat2title
+      }
+      if (this.map2pat2title.substring(0, 11) === 'ncwellwise_') {
+        var1 = this.map2pat1title
+        var2 = this.map2pat2title.substring(11)
+      }
+
+      for (let i = 0; i < features.length; i++) {
+        if (JSON.stringify(features[i].properties_).includes(var1) === true) {
+          this.map2var1 = var1 + ': ' + features[i].properties_[var1].toString()
+        }
+
+        if (JSON.stringify(features[i].properties_).includes(var2) === true) {
+          this.map2var2 = var2 + ': ' + features[i].properties_[var2].toString()
+        }
+      }
     }
   }
 }
@@ -4026,13 +4184,13 @@ export default {
   .assqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(235, 52, 220, 0.65);
+    background-color: rgba(247, 121, 237, 0.65);
     display: inline-block;
   }
   .assqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(186, 52, 235, 0.65);
+    background-color: rgba(194, 76, 237, 0.65);
     display: inline-block;
   }
   .assqu3 {
@@ -4044,25 +4202,19 @@ export default {
   .assqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(143, 52, 235, 0.65);
-    display: inline-block;
-  }
-  .assqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(119, 52, 235, 0.65);
+    background-color: rgba(127, 3, 252, 0.65);
     display: inline-block;
   }
   .cdsqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(235, 89, 52, 0.65);
+    background-color: rgba(223, 235, 52, 0.65);
     display: inline-block;
   }
   .cdsqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(235, 131, 52, 0.65);
+    background-color: rgba(235, 192, 52, 0.65);
     display: inline-block;
   }
   .cdsqu3 {
@@ -4074,13 +4226,7 @@ export default {
   .cdsqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(235, 192, 52, 0.65);
-    display: inline-block;
-  }
-  .cdsqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(223, 235, 52, 0.65);
+    background-color: rgba(235, 89, 52, 0.65);
     display: inline-block;
   }
   .pbsqu1 {
@@ -4092,22 +4238,16 @@ export default {
   .pbsqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(156, 162, 173, 0.65);
+    background-color: rgba(155, 158, 163, 0.65);
     display: inline-block;
   }
   .pbsqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(116, 121, 130, 0.65);
+    background-color: rgba(108, 112, 120, 0.65);
     display: inline-block;
   }
   .pbsqu4 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(79, 82, 89, 0.65);
-    display: inline-block;
-  }
-  .pbsqu5 {
     height: 15px;
     width: 15px;
     background-color: rgba(39, 40, 43, 0.65);
@@ -4137,46 +4277,28 @@ export default {
     background-color: rgba(14, 82, 5, 0.65);
     display: inline-block;
   }
-  .mnsqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(5, 97, 76, 0.65);
-    display: inline-block;
-  }
   .acssqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 210, 211, 0.65);
+    background-color: rgba(252, 210, 211, 0.85);
     display: inline-block;
   }
   .acssqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 109, 114, 0.65);
+    background-color: rgba(247, 84, 90, 0.85);
     display: inline-block;
   }
   .acssqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(247, 59, 66, 0.65);
+    background-color: rgba(212, 4, 9, 0.85);
     display: inline-block;
   }
   .acssqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(250, 2, 11, 0.65);
-    display: inline-block;
-  }
-  .acssqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(181, 2, 6, 0.65);
-    display: inline-block;
-  }
-  .acssqu6 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(140, 1, 5, 0.65);
+    background-color: rgba(122, 1, 5, 0.85);
     display: inline-block;
   }
   .heasqu1 {
@@ -4224,31 +4346,19 @@ export default {
   .ejssqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 227, 3, 0.65);
+    background-color: rgba(252, 186, 3, 0.65);
     display: inline-block;
   }
   .ejssqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 186, 3, 0.65);
+    background-color: rgba(252, 128, 3, 0.65);
     display: inline-block;
   }
   .ejssqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 128, 3, 0.65);
-    display: inline-block;
-  }
-  .ejssqu5 {
-    height: 15px;
-    width: 15px;
     background-color: rgba(252, 82, 3, 0.65);
-    display: inline-block;
-  }
-  .ejssqu6 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(140, 1, 5, 0.65);
     display: inline-block;
   }
   .q-input {
@@ -4257,184 +4367,107 @@ export default {
   .q-select {
     height: 4.0em;
   }
+  .vstrfill {
+    border: solid 1px black;
+    background: repeating-linear-gradient( 90deg, rgba(246, 250, 5, 1.0), rgba(246, 250, 5, 1.0) 5px, rgba(91, 95, 99, 0.0) 5px, rgba(91, 95, 99, 0.0) 10px);
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+  }
   .vstr11 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(252, 210, 211, 0.75) 5px, rgba(252, 210, 211, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(2, 114, 250, 1.0), rgba(2, 114, 250, 1.0) 5px, rgba(0, 125, 125, 1.0) 5px, rgba(0, 125, 125, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr12 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(252, 210, 211, 0.75) 5px, rgba(252, 210, 211, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(2, 114, 250, 1.0), rgba(2, 114, 250, 1.0) 5px, rgba(91, 240, 245, 1.0) 5px, rgba(91, 240, 245, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr13 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(252, 210, 211, 0.75) 5px, rgba(252, 210, 211, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(2, 114, 250, 1.0), rgba(2, 114, 250, 1.0) 5px, rgba(250, 203, 92, 1.0) 5px, rgba(250, 203, 92, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr14 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(252, 210, 211, 0.75) 5px, rgba(252, 210, 211, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr15 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(252, 210, 211, 0.75) 5px, rgba(252, 210, 211, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(2, 114, 250, 1.0), rgba(2, 114, 250, 1.0) 5px, rgba(240, 129, 5, 1.0) 5px, rgba(240, 129, 5, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr21 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(252, 109, 114, 0.75) 5px, rgba(252, 109, 114, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(150, 215, 250, 1.0), rgba(150, 215, 250, 1.0) 5px, rgba(0, 125, 125, 1.0) 5px, rgba(0, 125, 125, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr22 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(252, 109, 114, 0.75) 5px, rgba(252, 109, 114, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(150, 215, 250, 1.0), rgba(150, 215, 250, 1.0) 5px, rgba(91, 240, 245, 1.0) 5px, rgba(91, 240, 245, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr23 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(252, 109, 114, 0.75) 5px, rgba(252, 109, 114, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(150, 215, 250, 1.0), rgba(150, 215, 250, 1.0) 5px, rgba(250, 203, 92, 1.0) 5px, rgba(250, 203, 92, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr24 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(252, 109, 114, 0.75) 5px, rgba(252, 109, 114, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr25 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(252, 109, 114, 0.75) 5px, rgba(252, 109, 114, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(150, 215, 250, 1.0), rgba(150, 215, 250, 1.0) 5px, rgba(240, 129, 5, 1.0) 5px, rgba(240, 129, 5, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr31 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(247, 59, 66, 0.75) 5px, rgba(247, 59, 66, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(250, 219, 202, 1.0), rgba(250, 219, 202, 1.0) 5px, rgba(0, 125, 125, 1.0) 5px, rgba(0, 125, 125, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr32 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(247, 59, 66, 0.75) 5px, rgba(247, 59, 66, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(250, 219, 202, 1.0), rgba(250, 219, 202, 1.0) 5px, rgba(91, 240, 245, 1.0) 5px, rgba(91, 240, 245, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr33 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(247, 59, 66, 0.75) 5px, rgba(247, 59, 66, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(250, 219, 202, 1.0), rgba(250, 219, 202, 1.0) 5px, rgba(250, 203, 92, 1.0) 5px, rgba(250, 203, 92, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr34 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(247, 59, 66, 0.75) 5px, rgba(247, 59, 66, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr35 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(247, 59, 66, 0.75) 5px, rgba(247, 59, 66, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(250, 219, 202, 1.0), rgba(250, 219, 202, 1.0) 5px, rgba(240, 129, 5, 1.0) 5px, rgba(240, 129, 5, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr41 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(250, 2, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(153, 55, 2, 1.0), rgba(153, 55, 2, 1.0) 5px, rgba(0, 125, 125, 1.0) 5px, rgba(0, 125, 125, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr42 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(250, 2, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(153, 55, 2, 1.0), rgba(153, 55, 2, 1.0) 5px, rgba(91, 240, 245, 1.0) 5px, rgba(91, 240, 245, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr43 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(153, 55, 2, 1.0), rgba(153, 55, 2, 1.0) 5px, rgba(250, 203, 92, 1.0) 5px, rgba(250, 203, 92, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
   .vstr44 {
     border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(250, 2, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr45 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(250, 2, 11, 0.75) 5px, rgba(250, 2, 11, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr51 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(181, 2, 6, 0.75) 5px, rgba(181, 2, 6, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr52 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(181, 2, 6, 0.75) 5px, rgba(181, 2, 6, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr53 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(181, 2, 6, 0.75) 5px, rgba(181, 2, 6, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr54 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(181, 2, 6, 0.75) 5px, rgba(181, 2, 6, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr55 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(181, 2, 6, 0.75) 5px, rgba(181, 2, 6, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr61 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(194, 232, 190, 0.75), rgba(194, 232, 190, 0.75) 5px, rgba(140, 1, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr62 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(81, 222, 67, 0.75), rgba(81, 222, 67, 0.75) 5px, rgba(140, 1, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr63 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(25, 128, 11, 0.75), rgba(25, 128, 11, 0.75) 5px, rgba(140, 1, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr64 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(14, 82, 5, 0.75), rgba(14, 82, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 10px);
-    height: 30px;
-    width: 30px;
-  }
-  .vstr65 {
-    border: solid 1px black;
-    background: repeating-linear-gradient( 90deg, rgba(5, 97, 76, 0.75), rgba(5, 97, 76, 0.75) 5px, rgba(140, 1, 5, 0.75) 5px, rgba(140, 1, 5, 0.75) 10px);
-    height: 30px;
-    width: 30px;
+    background: repeating-linear-gradient( 90deg, rgba(153, 55, 2, 1.0), rgba(153, 55, 2, 1.0) 5px, rgba(240, 129, 5, 1.0) 5px, rgba(240, 129, 5, 1.0) 10px);
+    height: 40px;
+    width: 40px;
   }
 </style>

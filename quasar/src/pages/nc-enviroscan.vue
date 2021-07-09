@@ -1195,7 +1195,7 @@ import { Style, Stroke, Fill } from 'ol/style'
 
 // geocoder
 const Nominatim = require('nominatim-geocoder')
-const geocoder = new Nominatim()
+const geocoder = new Nominatim({ delay: 1000, secure: true, host: 'nominatim.openstreetmap.org' })
 
 // pubhost and secrets import
 import pubhost from '../assets/pubhost.json'
@@ -2586,13 +2586,13 @@ export default {
     background-color: rgba(119, 52, 235, 0.65);
     display: inline-block;
   }
-  .cdsqu1 {
+  .cdsqu5 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 89, 52, 0.65);
     display: inline-block;
   }
-  .cdsqu2 {
+  .cdsqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 131, 52, 0.65);
@@ -2604,13 +2604,13 @@ export default {
     background-color: rgba(235, 162, 52, 0.65);
     display: inline-block;
   }
-  .cdsqu4 {
+  .cdsqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 192, 52, 0.65);
     display: inline-block;
   }
-  .cdsqu5 {
+  .cdsqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(223, 235, 52, 0.65);
