@@ -2035,18 +2035,11 @@
                      <td>&ge; <span v-html="map1pat1val3"></span></td>
                   </tr>
                   <tr>
-                    <td style="padding:5px"><div class="vstr11"></div></td>
-                    <td style="padding:5px"><div class="vstr12"></div></td>
-                    <td style="padding:5px"><div class="vstr13"></div></td>
-                    <td style="padding:5px"><div class="vstr14"></div></td>
-                    <td>&lt; <span v-html="map1pat2val1"></span></td>
-                  </tr>
-                  <tr>
-                    <td style="padding:5px"><div class="vstr21"></div></td>
-                    <td style="padding:5px"><div class="vstr22"></div></td>
-                    <td style="padding:5px"><div class="vstr23"></div></td>
-                    <td style="padding:5px"><div class="vstr24"></div></td>
-                    <td>&ge; <span v-html="map1pat2val1"></span> &amp; &lt; <span v-html="map1pat2val2"></span></td>
+                    <td style="padding:5px"><div class="vstr41"></div></td>
+                    <td style="padding:5px"><div class="vstr42"></div></td>
+                    <td style="padding:5px"><div class="vstr43"></div></td>
+                    <td style="padding:5px"><div class="vstr44"></div></td>
+                    <td>&ge; <span v-html="map1pat2val3"></span></td>
                   </tr>
                   <tr>
                     <td style="padding:5px"><div class="vstr31"></div></td>
@@ -2056,11 +2049,18 @@
                     <td>&ge; <span v-html="map1pat2val2"></span> &amp; &lt; <span v-html="map1pat2val3"></span></td>
                   </tr>
                   <tr>
-                    <td style="padding:5px"><div class="vstr41"></div></td>
-                    <td style="padding:5px"><div class="vstr42"></div></td>
-                    <td style="padding:5px"><div class="vstr43"></div></td>
-                    <td style="padding:5px"><div class="vstr44"></div></td>
-                    <td>&ge; <span v-html="map1pat2val3"></span></td>
+                    <td style="padding:5px"><div class="vstr21"></div></td>
+                    <td style="padding:5px"><div class="vstr22"></div></td>
+                    <td style="padding:5px"><div class="vstr23"></div></td>
+                    <td style="padding:5px"><div class="vstr24"></div></td>
+                    <td>&ge; <span v-html="map1pat2val1"></span> &amp; &lt; <span v-html="map1pat2val2"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr11"></div></td>
+                    <td style="padding:5px"><div class="vstr12"></div></td>
+                    <td style="padding:5px"><div class="vstr13"></div></td>
+                    <td style="padding:5px"><div class="vstr14"></div></td>
+                    <td>&lt; <span v-html="map1pat2val1"></span></td>
                   </tr>
                   <tr>
                     <td style="padding:5px"><span class="vstrfill"></span></td>
@@ -2095,18 +2095,11 @@
                      <td>&ge; <span v-html="map2pat1val3"></span></td>
                   </tr>
                   <tr>
-                    <td style="padding:5px"><div class="vstr11"></div></td>
-                    <td style="padding:5px"><div class="vstr12"></div></td>
-                    <td style="padding:5px"><div class="vstr13"></div></td>
-                    <td style="padding:5px"><div class="vstr14"></div></td>
-                    <td>&lt; <span v-html="map2pat2val1"></span></td>
-                  </tr>
-                  <tr>
-                    <td style="padding:5px"><div class="vstr21"></div></td>
-                    <td style="padding:5px"><div class="vstr22"></div></td>
-                    <td style="padding:5px"><div class="vstr23"></div></td>
-                    <td style="padding:5px"><div class="vstr24"></div></td>
-                    <td>&ge; <span v-html="map2pat2val1"></span> &amp; &lt; <span v-html="map2pat2val2"></span></td>
+                    <td style="padding:5px"><div class="vstr41"></div></td>
+                    <td style="padding:5px"><div class="vstr42"></div></td>
+                    <td style="padding:5px"><div class="vstr43"></div></td>
+                    <td style="padding:5px"><div class="vstr44"></div></td>
+                    <td>&ge; <span v-html="map2pat2val3"></span></td>
                   </tr>
                   <tr>
                     <td style="padding:5px"><div class="vstr31"></div></td>
@@ -2116,11 +2109,18 @@
                     <td>&ge; <span v-html="map2pat2val2"></span> &amp; &lt; <span v-html="map2pat2val3"></span></td>
                   </tr>
                   <tr>
-                    <td style="padding:5px"><div class="vstr41"></div></td>
-                    <td style="padding:5px"><div class="vstr42"></div></td>
-                    <td style="padding:5px"><div class="vstr43"></div></td>
-                    <td style="padding:5px"><div class="vstr44"></div></td>
-                    <td>&ge; <span v-html="map2pat2val3"></span></td>
+                    <td style="padding:5px"><div class="vstr21"></div></td>
+                    <td style="padding:5px"><div class="vstr22"></div></td>
+                    <td style="padding:5px"><div class="vstr23"></div></td>
+                    <td style="padding:5px"><div class="vstr24"></div></td>
+                    <td>&ge; <span v-html="map2pat2val1"></span> &amp; &lt; <span v-html="map2pat2val2"></span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:5px"><div class="vstr11"></div></td>
+                    <td style="padding:5px"><div class="vstr12"></div></td>
+                    <td style="padding:5px"><div class="vstr13"></div></td>
+                    <td style="padding:5px"><div class="vstr14"></div></td>
+                    <td>&lt; <span v-html="map2pat2val1"></span></td>
                   </tr>
                   <tr>
                     <td style="padding:5px"><span class="vstrfill"></span></td>
