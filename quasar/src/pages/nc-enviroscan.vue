@@ -1057,18 +1057,36 @@
       <!-- /vl-interaction-select -->
       <!--// click interactions -->
 
+      <!-- geolocation -->
+      <div v-if="currentlocation === 'True'">
+        <vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
+          <template slot-scope="geoloc">
+            <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
+              <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
+              <vl-style-box>
+                <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
+              </vl-style-box>
+            </vl-feature>
+          </template>
+        </vl-geoloc>
+      </div>
       <!--// geolocation -->
-      <!-- vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
-        <template slot-scope="geoloc">
-          <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
-            <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
+
+      <!-- address location marker -->
+      <div v-if="addresslocation === 'True'">
+        <vl-feature id="marker" ref="marker" :properties="{ start: Date.now(), duration: 2500 }">
+          <template slot-scope="feature">
+            <vl-geom-point :coordinates="addressloc"></vl-geom-point>
             <vl-style-box>
-              <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]"></vl-style-icon>
+              <vl-style-icon src="statics/marker.png" :scale="0.5" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
             </vl-style-box>
-          </vl-feature>
-        </template>
-      </vl-geoloc -->
-      <!--// geolocation -->
+            <!-- overlay binded to feature -->
+            <vl-overlay v-if="feature.geometry" :position="pointOnSurface(feature.geometry)" :offset="[0, 0]">
+            </vl-overlay>
+          </template>
+        </vl-feature>
+      </div>
+      <!--// address location marker -->
 
       <!--// base layers -->
       <vl-layer-tile v-for="layer in baseLayers" :key="layer.name" :id="layer.name" :visible="layer.visible">
@@ -1130,12 +1148,11 @@
     </q-page-sticky>
     <!--// right side drawer button -->
 
-    <!--// select location tool -->
+    <!--// select location tools -->
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
-      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Tools</q-tooltip>
-      <q-fab icon="keyboard_arrow_up" direction="up" color="teal text-black">
-        <q-tooltip anchor="top left" self="top right" :offset="[10, 10]">Change Location</q-tooltip>
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt">
+      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Geolocation Tools</q-tooltip>
+      <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Geolocation Tools">
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Location with Address">
           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
             <q-card class="bg-teal-1">
               <q-banner inline-actions class="bg-teal-1">
@@ -1158,9 +1175,29 @@
             </q-card>
           </q-popup-proxy>
         </q-fab-action>
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Get Current Location">
+          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+            <q-card class="bg-teal-1">
+              <q-banner inline-actions class="bg-teal-1">
+                <div class="q-pa-md" style="max-width: 400px">
+                    <div>
+                      <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                        <q-tab name="False" label="No" />
+                        <q-tab name="True" label="Yes" />
+                      </q-tabs>
+                    </div>
+                </div>
+                <template align="right" v-slot:action>
+                  <q-btn flat round dense icon="close" color="teal" v-close-popup />
+                </template>
+              </q-banner>
+              <q-separator />
+            </q-card>
+          </q-popup-proxy>
+        </q-fab-action>
       </q-fab>
     </q-page-sticky>
-    <!--// select location tool -->
+    <!--// select location tools -->
 
     <!--// base layer map attribution -->
     <q-page-sticky position="bottom-left" :offset="[200, 38]">
@@ -1188,7 +1225,7 @@ import Zoom from 'ol/control/Zoom'
 import Attribution from 'ol/control/Attribution'
 
 // Other ol imports
-import VectorTile from 'ol/layer/VectorTile'
+// import VectorTile from 'ol/layer/VectorTile'
 // import Feature from 'ol/Feature'
 // import MVT from 'ol/format/MVT'
 import { Style, Stroke, Fill } from 'ol/style'
@@ -1722,8 +1759,12 @@ export default {
         }]
       },
       // map parameters
-      // center: [-73.845, 40.72],
-      center: [NaN, NaN],
+      center: [-79.0193, 35.7596],
+      getlocation: 'False',
+      currentlocation: 'False',
+      addresslocation: 'False',
+      addressloc: [NaN, NaN],
+      // center: [NaN, NaN],
       zoom: 8,
       rotation: 0,
       mapVisible: true,
@@ -1891,16 +1932,16 @@ export default {
   },
   created: function () {
     // get current location, and use it for map center
-    this.$getLocation()
+    /* this.$getLocation()
       .then(coordinates => {
         this.center = [coordinates.lng, coordinates.lat]
-      })
+      }) */
   },
   methods: {
     openURL,
     camelCase,
     pointOnSurface: findPointOnSurface,
-    VectorTile,
+    // VectorTile,
     /* Feature,
     createMvtFormat () {
       return new MVT({
@@ -1910,11 +1951,30 @@ export default {
     vtFormatFactory () {
       return new MVT()
     }, */
+    getCurrentLocation () {
+      if (this.getlocation === 'True') {
+        this.addresslocation = 'False'
+        this.currentlocation = 'True'
+      } else if (this.getlocation === 'False') {
+        this.currentlocation = 'False'
+      }
+    },
+    onUpdatePosition: function (coordinate) {
+      this.deviceCoordinate = coordinate
+      this.center = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
+    },
+    onUpdateAccuracy: function (accuracy) {
+      this.coordinateAccuracy = accuracy
+    },
     address2Geoloc () {
       // 1 East Edenton St, Raleigh, NC, USA
       geocoder.search({ q: this.address })
         .then((response) => {
+          this.getlocation = 'False'
+          this.currentlocation = 'False'
+          this.addresslocation = 'True'
           this.center = [Number(response[0].lon), Number(response[0].lat)]
+          this.addressloc = [Number(response[0].lon), Number(response[0].lat)]
         })
         .catch((error) => {
           console.log(error)
@@ -2455,14 +2515,7 @@ export default {
           // this.$refs.layerStyle.refresh()
         }
       }
-    } /* ,
-    onUpdatePosition: function (coordinate) {
-      this.deviceCoordinate = coordinate
-      this.center = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
-    },
-    onUpdateAccuracy: function (accuracy) {
-      this.coordinateAccuracy = accuracy
-    } */
+    }
   }
 }
 </script>

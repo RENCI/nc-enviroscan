@@ -1898,23 +1898,55 @@
           <div v-else>
             <vl-view ref="view1" :center.sync="center" :zoom.sync="zoom" :rotation.sync="rotation"></vl-view>
           </div>
-            <!--// base layers -->
-            <vl-layer-tile v-for="layer in baseLayers1" :key="layer.name" :id="layer.name" :visible="layer.visible">
-              <component ref="baselayer1" :is="'vl-source-' + layer.name" v-bind="layer"></component>
-            </vl-layer-tile>
-            <!--// base layers1 -->
 
-            <!--// other layers1 from config -->
-            <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
-            <vl-layer-vector-tile v-for="layer in layers1" :is="layer.cmp" v-if="layer.visible" :key="layer.id" v-bind="layer">
-              <!--// add vl-source-* -->
-              <component :is="layer.source.cmp" v-bind="layer.source" ref="layer1Source" />
-              <!--// add style components if provided -->
-              <!--// create vl-style-box or vl-style-func -->
-              <component v-if="layer.style" v-for="(style, i) in layer.style" :key="i" :is="style.cmp" v-bind="style" ref="layer1Style" />
-            </vl-layer-vector-tile>
-            <!-- eslint-enable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
-            <!--// other layers1 -->
+          <!-- geolocation -->
+          <div v-if="currentlocation === 'True'">
+            <vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
+              <template slot-scope="geoloc">
+                <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
+                  <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
+                  <vl-style-box>
+                    <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
+                  </vl-style-box>
+                </vl-feature>
+              </template>
+            </vl-geoloc>
+          </div>
+          <!--// geolocation -->
+
+          <!-- address location marker -->
+          <div v-if="addresslocation === 'True'">
+            <vl-feature id="marker" ref="marker" :properties="{ start: Date.now(), duration: 2500 }">
+              <template slot-scope="feature">
+                <vl-geom-point :coordinates="addressloc"></vl-geom-point>
+                <vl-style-box>
+                  <vl-style-icon src="statics/marker.png" :scale="0.5" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
+                </vl-style-box>
+                <!-- overlay binded to feature -->
+                <vl-overlay v-if="feature.geometry" :position="pointOnSurface(feature.geometry)" :offset="[0, 0]">
+                </vl-overlay>
+              </template>
+            </vl-feature>
+          </div>
+          <!--// address location marker -->
+
+          <!--// base layers -->
+          <vl-layer-tile v-for="layer in baseLayers1" :key="layer.name" :id="layer.name" :visible="layer.visible">
+            <component ref="baselayer1" :is="'vl-source-' + layer.name" v-bind="layer"></component>
+          </vl-layer-tile>
+          <!--// base layers1 -->
+
+          <!--// other layers1 from config -->
+          <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
+          <vl-layer-vector-tile v-for="layer in layers1" :is="layer.cmp" v-if="layer.visible" :key="layer.id" v-bind="layer">
+            <!--// add vl-source-* -->
+            <component :is="layer.source.cmp" v-bind="layer.source" ref="layer1Source" />
+            <!--// add style components if provided -->
+            <!--// create vl-style-box or vl-style-func -->
+            <component v-if="layer.style" v-for="(style, i) in layer.style" :key="i" :is="style.cmp" v-bind="style" ref="layer1Style" />
+          </vl-layer-vector-tile>
+          <!-- eslint-enable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
+          <!--// other layers1 -->
         </vl-map>
         <!--// app map1 -->
 
@@ -1928,6 +1960,38 @@
           <div v-else>
             <vl-view ref="view2" :center.sync="center" :zoom.sync="zoom" :rotation.sync="rotation"></vl-view>
           </div>
+
+          <!-- geolocation -->
+          <div v-if="currentlocation === 'True'">
+            <vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
+              <template slot-scope="geoloc">
+                <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
+                  <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
+                  <vl-style-box>
+                    <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
+                  </vl-style-box>
+                </vl-feature>
+              </template>
+            </vl-geoloc>
+          </div>
+          <!--// geolocation -->
+
+          <!-- address location marker -->
+          <div v-if="addresslocation === 'True'">
+            <vl-feature id="marker" ref="marker" :properties="{ start: Date.now(), duration: 2500 }">
+              <template slot-scope="feature">
+                <vl-geom-point :coordinates="addressloc"></vl-geom-point>
+                <vl-style-box>
+                  <vl-style-icon src="statics/marker.png" :scale="0.5" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
+                </vl-style-box>
+                <!-- overlay binded to feature -->
+                <vl-overlay v-if="feature.geometry" :position="pointOnSurface(feature.geometry)" :offset="[0, 0]">
+                </vl-overlay>
+              </template>
+            </vl-feature>
+          </div>
+          <!--// address location marker -->
+
           <!--// base layers2 -->
           <vl-layer-tile v-for="layer in baseLayers2" :key="layer.name" :id="layer.name" :visible="layer.visible">
             <component  ref="baselayer2" :is="'vl-source-' + layer.name" v-bind="layer"></component>
@@ -1977,12 +2041,11 @@
       </q-page-sticky>
       <!--// Fullscreen button -->
 
-      <!--// select location tool -->
+      <!--// select location tools -->
       <q-page-sticky position="bottom-right" :offset="[18, 18]">
-        <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Tools</q-tooltip>
-        <q-fab icon="keyboard_arrow_up" direction="up" color="teal text-black">
-          <q-tooltip anchor="top left" self="top right" :offset="[10, 10]">Change Location</q-tooltip>
-          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt">
+        <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Geolocation Tools</q-tooltip>
+        <q-fab icon="keyboard_arrow_up" direction="up" external-label color="teal text-black" label="Geolocation Tools">
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Location with Address">
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <q-card class="bg-teal-1">
                 <q-banner inline-actions class="bg-teal-1">
@@ -2005,9 +2068,29 @@
               </q-card>
             </q-popup-proxy>
           </q-fab-action>
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Get Current Location">
+            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+              <q-card class="bg-teal-1">
+                <q-banner inline-actions class="bg-teal-1">
+                  <div class="q-pa-md" style="max-width: 400px">
+                      <div>
+                        <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                          <q-tab name="False" label="No" />
+                          <q-tab name="True" label="Yes" />
+                        </q-tabs>
+                      </div>
+                  </div>
+                  <template align="right" v-slot:action>
+                    <q-btn flat round dense icon="close" color="teal" v-close-popup />
+                  </template>
+                </q-banner>
+                <q-separator />
+              </q-card>
+            </q-popup-proxy>
+          </q-fab-action>
         </q-fab>
       </q-page-sticky>
-      <!--// select location tool -->
+      <!--// select location tools -->
 
       <!--// base layer map attribution -->
       <q-page-sticky position="bottom-left" :offset="[200, 38]">
@@ -2147,8 +2230,8 @@
 <script>
 // quasar and vuelayers import
 import { openURL } from 'quasar'
-// import { findPointOnSurface, createStyle } from 'vuelayers/lib/ol-ext'
-import { createStyle } from 'vuelayers/lib/ol-ext'
+import { findPointOnSurface, createStyle } from 'vuelayers/lib/ol-ext'
+// import { createStyle } from 'vuelayers/lib/ol-ext'
 import { camelCase } from 'lodash'
 
 // ol controls import
@@ -2180,12 +2263,15 @@ export default {
   data () {
     return {
       // map parameters
-      // center: [-73.845, 40.72],
       mapsynctab: 'syncmaps',
       mapSync: 'True',
-      center: [NaN, NaN],
-      center1: [NaN, NaN],
-      center2: [NaN, NaN],
+      center: [-79.0193, 35.7596],
+      center1: [-79.0193, 35.7596],
+      center2: [-79.0193, 35.7596],
+      getlocation: 'False',
+      currentlocation: 'False',
+      addresslocation: 'False',
+      addressloc: [NaN, NaN],
       zoom: 9,
       zoom1: 9,
       zoom2: 9,
@@ -2534,16 +2620,17 @@ export default {
   },
   created: function () {
     // get current location, and use it for map center
-    this.$getLocation()
+    /* this.$getLocation()
       .then(coordinates => {
         this.center = [coordinates.lng, coordinates.lat]
         this.center1 = [coordinates.lng, coordinates.lat]
         this.center2 = [coordinates.lng, coordinates.lat]
-      })
+      }) */
   },
   methods: {
     openURL,
     camelCase,
+    pointOnSurface: findPointOnSurface,
     MapSyncing () {
       if (this.mapsynctab === 'syncmaps') {
         this.mapSync = 'True'
@@ -2571,13 +2658,32 @@ export default {
       }
       return zoom
     },
+    getCurrentLocation () {
+      if (this.getlocation === 'True') {
+        this.addresslocation = 'False'
+        this.currentlocation = 'True'
+      } else if (this.getlocation === 'False') {
+        this.currentlocation = 'False'
+      }
+    },
+    onUpdatePosition: function (coordinate) {
+      this.deviceCoordinate = coordinate
+      this.center = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
+    },
+    onUpdateAccuracy: function (accuracy) {
+      this.coordinateAccuracy = accuracy
+    },
     address2Geoloc () {
       // 1 East Edenton St, Raleigh, NC, USA
       geocoder.search({ q: this.address })
         .then((response) => {
+          this.getlocation = 'False'
+          this.currentlocation = 'False'
+          this.addresslocation = 'True'
           this.center = [Number(response[0].lon), Number(response[0].lat)]
           this.center1 = [Number(response[0].lon), Number(response[0].lat)]
           this.center2 = [Number(response[0].lon), Number(response[0].lat)]
+          this.addressloc = [Number(response[0].lon), Number(response[0].lat)]
         })
         .catch((error) => {
           console.log(error)
