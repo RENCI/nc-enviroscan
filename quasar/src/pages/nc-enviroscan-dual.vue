@@ -1940,10 +1940,10 @@
           <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
           <vl-layer-vector-tile v-for="layer in layers1" :is="layer.cmp" v-if="layer.visible" :key="layer.id" v-bind="layer">
             <!--// add vl-source-* -->
-            <component :is="layer.source.cmp" v-bind="layer.source" ref="layer1Source" />
+            <component ref="layer1Source" :is="layer.source.cmp" v-bind="layer.source" />
             <!--// add style components if provided -->
             <!--// create vl-style-box or vl-style-func -->
-            <component v-if="layer.style" v-for="(style, i) in layer.style" :key="i" :is="style.cmp" v-bind="style" ref="layer1Style" />
+            <component ref="layer1Style" v-if="layer.style" v-for="(style, i) in layer.style" :key="i" :is="style.cmp" v-bind="style" />
           </vl-layer-vector-tile>
           <!-- eslint-enable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
           <!--// other layers1 -->
@@ -2032,6 +2032,14 @@
         <div id="Scale1Target"></div>
       </q-page-sticky>
       <!--// ol map1 controls -->
+
+      <!--// NC Enviroscan Icon -->
+      <q-page-sticky position="top-right" :offset="[98, 5]">
+        <q-avatar square size="110px">
+          <img src="statics/nc-enviroscan-110.png">
+        </q-avatar>
+      </q-page-sticky>
+      <!--// NC Enviroscan Icon -->
 
       <!--// Fullscreen button -->
       <q-page-sticky position="top-right" :offset="[18, 18]">
@@ -3107,11 +3115,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3135,11 +3143,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3196,11 +3204,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3228,11 +3236,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3292,11 +3300,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3320,11 +3328,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3381,11 +3389,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -3413,11 +3421,11 @@ export default {
         return [
           new Style({
             stroke: new Stroke({
-              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
-              width: selected ? 2 : (this.zoom / 8.0)
+              color: selected ? 'rgba(200,20,20,1.0)' : 'black',
+              width: selected ? 5 : (this.zoom / 8.0)
             }),
             fill: new Fill({
-              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+              color: selected ? 'rgba(200,20,20,0.0)' : this.varcolor
             })
           })
         ]
@@ -4150,22 +4158,54 @@ export default {
       let var1
       let var2
 
-      if (this.map1pat1title.substring(0, 11) === 'ncwellwise_') {
-        var1 = this.map1pat1title.substring(11)
-        var2 = this.map1pat2title
-      }
-      if (this.map1pat2title.substring(0, 11) === 'ncwellwise_') {
-        var1 = this.map1pat1title
-        var2 = this.map1pat2title.substring(11)
-      }
+      if (features) {
+        if (features.length > 1) {
+          if (this.map1pat1title.substring(0, 11) === 'ncwellwise_') {
+            var1 = this.map1pat1title.substring(11)
+            var2 = this.map1pat2title
+          } else {
+            var1 = this.map1pat1title
+            var2 = this.map1pat2title
+          }
+          if (this.map1pat2title.substring(0, 11) === 'ncwellwise_') {
+            var1 = this.map1pat1title
+            var2 = this.map1pat2title.substring(11)
+          } else {
+            var1 = this.map1pat1title
+            var2 = this.map1pat2title
+          }
 
-      for (let i = 0; i < features.length; i++) {
-        if (JSON.stringify(features[i].properties_).includes(var1) === true) {
-          this.map1var1 = var1 + ': ' + features[i].properties_[var1].toString()
+          for (let i = 0; i < features.length; i++) {
+            if (JSON.stringify(features[i].properties_).includes(var1) === true) {
+              this.vtSelection = {}
+              this.map1var1 = var1 + ': ' + features[i].properties_[var1].toString()
+              let feature = features[i]
+              let fid = feature.get(this.vtIdProp)
+              this.vtSelection[fid] = feature
+              this.$refs.layer1Style[i].refresh()
+              // console.log(var1, this.$refs.layer1Style)
+            }
+
+            if (JSON.stringify(features[i].properties_).includes(var2) === true) {
+              this.vtSelection = {}
+              this.map1var2 = var2 + ': ' + features[i].properties_[var2].toString()
+              let feature = features[i]
+              let fid = feature.get(this.vtIdProp)
+              this.vtSelection[fid] = feature
+              this.$refs.layer1Style[i].refresh()
+              // console.log(var2, this.$refs.layer1Style)
+            }
+          }
+        } else {
+          this.vtSelection = {}
+          for (let i = 0; i < this.$refs.layer1Style.length; i++) {
+            this.$refs.layer1Style[i].refresh()
+          }
         }
-
-        if (JSON.stringify(features[i].properties_).includes(var2) === true) {
-          this.map1var2 = var2 + ': ' + features[i].properties_[var2].toString()
+      } else if (!features) {
+        this.vtSelection = {}
+        for (let i = 0; i < this.$refs.layer1Style.length; i++) {
+          this.$refs.layer1Style[i].refresh()
         }
       }
     },
@@ -4174,23 +4214,52 @@ export default {
       let features = this.$refs.map2.$map.getFeaturesAtPixel(pixel)
       let var1
       let var2
+      if (features) {
+        if (features.length > 1) {
+          if (this.map2pat1title.substring(0, 11) === 'ncwellwise_') {
+            var1 = this.map2pat1title.substring(11)
+            var2 = this.map2pat2title
+          } else {
+            var1 = this.map2pat1title
+            var2 = this.map2pat2title
+          }
+          if (this.map2pat2title.substring(0, 11) === 'ncwellwise_') {
+            var1 = this.map2pat1title
+            var2 = this.map2pat2title.substring(11)
+          } else {
+            var1 = this.map2pat1title
+            var2 = this.map2pat2title
+          }
 
-      if (this.map2pat1title.substring(0, 11) === 'ncwellwise_') {
-        var1 = this.map2pat1title.substring(11)
-        var2 = this.map2pat2title
-      }
-      if (this.map2pat2title.substring(0, 11) === 'ncwellwise_') {
-        var1 = this.map2pat1title
-        var2 = this.map2pat2title.substring(11)
-      }
+          for (let i = 0; i < features.length; i++) {
+            if (JSON.stringify(features[i].properties_).includes(var1) === true) {
+              this.vtSelection = {}
+              this.map2var1 = var1 + ': ' + features[i].properties_[var1].toString()
+              let feature = features[i]
+              let fid = feature.get(this.vtIdProp)
+              this.vtSelection[fid] = feature
+              this.$refs.layer2Style[i].refresh()
+            }
 
-      for (let i = 0; i < features.length; i++) {
-        if (JSON.stringify(features[i].properties_).includes(var1) === true) {
-          this.map2var1 = var1 + ': ' + features[i].properties_[var1].toString()
+            if (JSON.stringify(features[i].properties_).includes(var2) === true) {
+              this.vtSelection = {}
+              this.map2var2 = var2 + ': ' + features[i].properties_[var2].toString()
+              let feature = features[i]
+              let fid = feature.get(this.vtIdProp)
+              this.vtSelection[fid] = feature
+              this.$refs.layer2Style[i].refresh()
+            }
+          }
+        } else {
+          this.vtSelection = {}
+          for (let i = 0; i < this.$refs.layer2Style.length; i++) {
+            this.$refs.layer2Style[i].refresh()
+          }
         }
-
-        if (JSON.stringify(features[i].properties_).includes(var2) === true) {
-          this.map2var2 = var2 + ': ' + features[i].properties_[var2].toString()
+      } else if (!features) {
+        this.vtSelection = {}
+        for (let i = 0; i < this.$refs.layer2Style.length; i++) {
+          this.$refs.layer2Style[i].refresh()
         }
       }
     }

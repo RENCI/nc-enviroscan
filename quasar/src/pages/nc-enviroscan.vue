@@ -1141,12 +1141,23 @@
         <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
       </q-btn>
     </q-page-sticky>
+    <!--// right side drawer button -->
+
+    <!--// full screen button -->
     <q-page-sticky position="top-right" :offset="[18, 58]">
       <q-btn color="teal" class="text-black" @click="$q.fullscreen.toggle()" round :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'">
         <q-tooltip>Open &amp; Close Full Screen</q-tooltip>
       </q-btn>
     </q-page-sticky>
-    <!--// right side drawer button -->
+    <!--// full screen button -->
+
+    <!--// NC Enviroscan Icon -->
+    <q-page-sticky position="top-right" :offset="[98, 5]">
+      <q-avatar square size="110px">
+        <img src="statics/nc-enviroscan-110.png">
+      </q-avatar>
+    </q-page-sticky>
+    <!--// NC Enviroscan Icon -->
 
     <!--// select location tools -->
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
@@ -1206,7 +1217,19 @@
     <!--// base layer map attribution -->
     <q-footer elevated class="bg-teal-1">
       <q-toolbar>
-        <div class="text-black">Built With: Vue/Quasar/VueLayers/OpenLayers/ApexCharts/Postgres/PostGIS/Django/Django Rest Framework (DRF)/DRF-GIS/DRF-MVT</div>
+        <div class="text-black">Built With:
+          <a href="https://vuejs.org/" target="_blank">Vue</a> /
+          <a href="https://quasar.dev/" target="_blank">Quasar</a> /
+          <a href="https://vuelayers.github.io/#/" target="_blank">VueLayers</a> /
+          <a href="https://openlayers.org/" target="_blank">OpenLayers</a> /
+          <a href="https://apexcharts.com/" target="_blank">ApexCharts</a> /
+          <a href="https://www.postgresql.org/" target="_blank">Postgres</a> /
+          <a href="https://postgis.net/" target="_blank">PostGIS</a> /
+          <a href="https://www.djangoproject.com/" target="_blank">Django</a> /
+          <a href="https://www.django-rest-framework.org/" target="_blank">Django Rest Framework (DRF)</a> /
+          <a href="https://github.com/openwisp/django-rest-framework-gis" target="_blank">DRF-GIS</a> /
+          <a href="https://github.com/corteva/djangorestframework-mvt" target="_blank">DRF-MVT</a>
+        </div>
       </q-toolbar>
     </q-footer>
   </q-layout>

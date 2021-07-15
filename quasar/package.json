@@ -2,7 +2,7 @@
   "name": "nc-enviroscan",
   "version": "0.0.1",
   "description": "Frontend to the nc-enviroscan project",
-  "productName": "NC Enviroscan App",
+  "productName": "NC Enviroscan Map App",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Jim McManus <jmpmcman@renci.org>",
   "private": true,
