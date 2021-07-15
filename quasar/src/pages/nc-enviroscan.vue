@@ -996,7 +996,8 @@
 
     <!--// app map -->
     <vl-map v-if="mapVisible" class="map" ref="map" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-      @singleclick="onMapClick" data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
+      @singleclick="onMapClick" data-projection="EPSG:4326" :default-controls="defaultControls" @mounted="onMapMounted"
+      :controls="false" style="height:1200px">
        <!--// map view aka ol.View -->
       <vl-view ref="view" :center.sync="center" :zoom.sync="zoom" :rotation.sync="rotation"></vl-view>
 
@@ -1163,7 +1164,7 @@
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
       <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Geolocation Tools</q-tooltip>
       <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Geolocation Tools">
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Location with Address">
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Map Location with Address">
           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
             <q-card class="bg-teal-1">
               <q-banner inline-actions class="bg-teal-1">
@@ -1186,17 +1187,18 @@
             </q-card>
           </q-popup-proxy>
         </q-fab-action>
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Get Current Location">
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Current Location">
           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
             <q-card class="bg-teal-1">
               <q-banner inline-actions class="bg-teal-1">
                 <div class="q-pa-md" style="max-width: 400px">
-                    <div>
-                      <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
-                        <q-tab name="False" label="No" />
-                        <q-tab name="True" label="Yes" />
-                      </q-tabs>
-                    </div>
+                  <b>Set map to your current location?</b>
+                  <div>
+                    <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                      <q-tab name="False" label="No" />
+                      <q-tab name="True" label="Yes" />
+                    </q-tabs>
+                  </div>
                 </div>
                 <template align="right" v-slot:action>
                   <q-btn flat round dense icon="close" color="teal" v-close-popup />
@@ -1671,7 +1673,7 @@ export default {
         legend: {
           show: true,
           floating: true,
-          fontSize: '16px',
+          fontSize: '12px',
           position: 'left',
           offsetX: -20,
           offsetY: 20,
@@ -1782,7 +1784,12 @@ export default {
         }]
       },
       // map parameters
-      center: [-79.0193, 35.7596],
+      defaultControls: {
+        attribution: true,
+        rotate: false,
+        zoom: false
+      },
+      center: [-79.0193, 35.0],
       getlocation: 'False',
       currentlocation: 'False',
       addresslocation: 'False',

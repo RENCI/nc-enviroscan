@@ -79,9 +79,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="ncwellmap1style" color="teal" /></td>
@@ -356,9 +356,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="acsmap1style" color="teal" /></td>
@@ -546,9 +546,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="ejsmap1style" color="teal" /></td>
@@ -1018,9 +1018,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="ncwellmap2style" color="teal" /></td>
@@ -1295,9 +1295,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="acsmap2style" color="teal" /></td>
@@ -1486,9 +1486,9 @@
                         <table cellspacing="1" cellpadding="1" style="width:100%">
                           <caption style="text-align:left">Select Map Style</caption>
                           <tr>
-                            <td>No Pattern</td>
-                            <td>Pattern One</td>
-                            <td>Pattern Two</td>
+                            <td>No Interleave</td>
+                            <td>Interleave One</td>
+                            <td>Interleave Two</td>
                           </tr>
                           <tr>
                             <td><q-radio val="nopattern" v-model="ejsmap2style" color="teal" /></td>
@@ -2053,7 +2053,7 @@
       <q-page-sticky position="bottom-right" :offset="[18, 18]">
         <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Geolocation Tools</q-tooltip>
         <q-fab icon="keyboard_arrow_up" direction="up" external-label color="teal text-black" label="Geolocation Tools">
-          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Location with Address">
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Map Location with Address">
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <q-card class="bg-teal-1">
                 <q-banner inline-actions class="bg-teal-1">
@@ -2076,17 +2076,18 @@
               </q-card>
             </q-popup-proxy>
           </q-fab-action>
-          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Get Current Location">
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Current Location">
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <q-card class="bg-teal-1">
                 <q-banner inline-actions class="bg-teal-1">
                   <div class="q-pa-md" style="max-width: 400px">
-                      <div>
-                        <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
-                          <q-tab name="False" label="No" />
-                          <q-tab name="True" label="Yes" />
-                        </q-tabs>
-                      </div>
+                    <b>Set map to your current location?</b>
+                    <div>
+                      <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                        <q-tab name="False" label="No" />
+                        <q-tab name="True" label="Yes" />
+                      </q-tabs>
+                    </div>
                   </div>
                   <template align="right" v-slot:action>
                     <q-btn flat round dense icon="close" color="teal" v-close-popup />
@@ -2109,9 +2110,9 @@
       <q-footer elevated class="bg-teal">
         <q-toolbar>
           <!-- q-toolbar-title class="q-mr-sm text-black">Footer</q-toolbar-title -->
-          <!-- // Map1 pattern legend -->
+          <!-- // Map1 interleave legend -->
           <div class="q-pa-md q-gutter-y-sm column text-black">
-            Map One Pattern Legend
+            Map One Interleave Legend
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <font size="2" face="Arial" >
                 <q-markup-table dense class="bg-brown-1">
@@ -2167,11 +2168,11 @@
               </font>
             </q-popup-proxy>
           </div>
-          <!-- // Map1 pattern legend -->
+          <!-- // Map1 interleave legend -->
           <q-space />
-          <!-- // Map2 pattern legend -->
+          <!-- // Map2 interleave legend -->
           <div class="q-pa-md q-gutter-y-sm column text-black">
-            Map Two Pattern Legend
+            Map Two Interleave Legend
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <font size="2" face="Arial" >
                 <q-markup-table dense class="bg-brown-1">
@@ -2273,9 +2274,9 @@ export default {
       // map parameters
       mapsynctab: 'syncmaps',
       mapSync: 'True',
-      center: [-79.0193, 35.7596],
-      center1: [-79.0193, 35.7596],
-      center2: [-79.0193, 35.7596],
+      center: [-79.0193, 35.3],
+      center1: [-79.0193, 35.3],
+      center2: [-79.0193, 35.3],
       getlocation: 'False',
       currentlocation: 'False',
       addresslocation: 'False',
@@ -4160,19 +4161,15 @@ export default {
 
       if (features) {
         if (features.length > 1) {
-          if (this.map1pat1title.substring(0, 11) === 'ncwellwise_') {
+          if ((this.map1pat1title.substring(0, 11) === 'ncwellwise_') && (this.map1pat2title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map1pat1title.substring(11)
             var2 = this.map1pat2title
-          } else {
+          } else if ((this.map1pat1title.substring(0, 11) !== 'ncwellwise_') && (this.map1pat2title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map1pat1title
             var2 = this.map1pat2title
-          }
-          if (this.map1pat2title.substring(0, 11) === 'ncwellwise_') {
+          } else if ((this.map1pat2title.substring(0, 11) === 'ncwellwise_') && (this.map1pat1title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map1pat1title
             var2 = this.map1pat2title.substring(11)
-          } else {
-            var1 = this.map1pat1title
-            var2 = this.map1pat2title
           }
 
           for (let i = 0; i < features.length; i++) {
@@ -4216,19 +4213,15 @@ export default {
       let var2
       if (features) {
         if (features.length > 1) {
-          if (this.map2pat1title.substring(0, 11) === 'ncwellwise_') {
+          if ((this.map2pat1title.substring(0, 11) === 'ncwellwise_') && (this.map2pat2title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map2pat1title.substring(11)
             var2 = this.map2pat2title
-          } else {
+          } else if ((this.map2pat1title.substring(0, 11) !== 'ncwellwise_') && (this.map2pat2title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map2pat1title
             var2 = this.map2pat2title
-          }
-          if (this.map2pat2title.substring(0, 11) === 'ncwellwise_') {
+          } else if ((this.map2pat2title.substring(0, 11) === 'ncwellwise_') && (this.map2pat1title.substring(0, 11) !== 'ncwellwise_')) {
             var1 = this.map2pat1title
             var2 = this.map2pat2title.substring(11)
-          } else {
-            var1 = this.map2pat1title
-            var2 = this.map2pat2title
           }
 
           for (let i = 0; i < features.length; i++) {
