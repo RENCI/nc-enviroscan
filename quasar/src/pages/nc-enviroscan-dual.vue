@@ -3077,40 +3077,40 @@ export default {
         let values
         let variable = this.currentradiovariable1
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 6.83, 12.0, 16.71]
+          values = [-999.99, 3.55, 6.847, 11.18]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 8.95, 18.43, 26.9]
+          values = [-999.99, 3.549, 3.71, 4.47]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 16.0, 40.0, 64.0]
+          values = [-999.99, 0.1, 2.607, 9.187]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.74, 0.78, 0.82]
+          values = [-999.99, 0.72, 0.76, 0.80]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 2.71, 5.72, 8.73]
+          values = [-999.99, 0.719, 0.73, 0.77]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 4.0, 10.0, 16.0]
+          values = [-999.99, 0.1, 0.993, 3.21]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 11.69, 23.83, 36.12]
+          values = [-999.99, 3.8, 5.77, 9.0]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 39.22, 93.53, 148.14]
+          values = [-999.99, 3.548, 4.033, 4.977]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 20.0, 50.0, 80.0]
+          values = [-999.99, 0.35, 2.61, 5.66]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 184.4, 414.2, 683.6]
+          values = [-999.99, 23.0, 40.0, 70.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 213.09, 500.0, 788.73]
+          values = [-999.99, 35.0, 55.0, 100.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 20.0, 50.0, 80.0]
+          values = [-999.99, 5, 25, 45.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
         }
         return [
@@ -3169,37 +3169,37 @@ export default {
         let values
         let variable = this.currentejsvariable1
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -100.0, 200.0, 500.0]
+          values = [-99999.9999, -20.0, 0.0, 27.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -200.0, 300.0, 700.0]
+          values = [-99999.9999, -50.0, 0.0, 60.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, -20000.0, 5000.0, 40000.0]
+          values = [-99999.9999, 2204.147, 7227.09, 7227.09]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -400.0, 100.0, 600.0]
+          values = [-99999.9999, -86.266, -14.005, 97.526]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 2000000.0, 1000000.0, 4000000.0]
+          values = [-99999.9999, 0.0, 8126.669, 74230.562]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -35000.0, -15000.0, 0.0]
+          values = [-99999.9999, -0.0000746, 0.0, 0.000039]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -200.0, 150.0, 500.0]
+          values = [-99999.9999, -8.798, 0.0, 8.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -0.0, 2500.0, 5000.0]
+          values = [-99999.9999, -34.097, -3.503, 50.083]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -2000.0, 2000.0, 6500.0]
+          values = [-99999.9999, -61.175, -3.583, 126.669]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, -40000.0, 500.0, 50000.0]
+          values = [-99999.9999, 3418.589, 9484.232, 17558.825]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -6000.0, 5000.0, 10000.0]
+          values = [-99999.9999, -167.385, 1043.186, 2801.709]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
         }
         return [
@@ -3262,40 +3262,40 @@ export default {
         let values
         let variable = this.currentradiovariable2
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 6.83, 12.0, 16.71]
+          values = [-999.99, 3.55, 6.847, 11.18]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 8.95, 18.43, 26.9]
+          values = [-999.99, 3.549, 3.71, 4.47]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 16.0, 40.0, 64.0]
+          values = [-999.99, 0.1, 2.607, 9.187]
           getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.74, 0.78, 0.82]
+          values = [-999.99, 0.72, 0.76, 0.80]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 2.71, 5.72, 8.73]
+          values = [-999.99, 0.719, 0.73, 0.77]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 4.0, 10.0, 16.0]
+          values = [-999.99, 0.1, 0.993, 3.21]
           getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 11.69, 23.83, 36.12]
+          values = [-999.99, 3.8, 5.77, 9.0]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 39.22, 93.53, 148.14]
+          values = [-999.99, 3.548, 4.033, 4.977]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 20.0, 50.0, 80.0]
+          values = [-999.99, 0.35, 2.61, 5.66]
           getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 184.4, 414.2, 683.6]
+          values = [-999.99, 23.0, 40.0, 70.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 213.09, 500.0, 788.73]
+          values = [-999.99, 35.0, 55.0, 100.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 20.0, 50.0, 80.0]
+          values = [-999.99, 5, 25, 45.0]
           getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
         }
         return [
@@ -3354,37 +3354,37 @@ export default {
         let values
         let variable = this.currentejsvariable2
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -100.0, 200.0, 500.0]
+          values = [-99999.9999, -20.0, 0.0, 27.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -200.0, 300.0, 700.0]
+          values = [-99999.9999, -50.0, 0.0, 60.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, -20000.0, 5000.0, 40000.0]
+          values = [-99999.9999, 2204.147, 7227.09, 7227.09]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -400.0, 100.0, 600.0]
+          values = [-99999.9999, -86.266, -14.005, 97.526]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 2000000.0, 1000000.0, 4000000.0]
+          values = [-99999.9999, 0.0, 8126.669, 74230.562]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -35000.0, -15000.0, 0.0]
+          values = [-99999.9999, -0.0000746, 0.0, 0.000039]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -200.0, 150.0, 500.0]
+          values = [-99999.9999, -8.798, 0.0, 8.0]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -0.0, 2500.0, 5000.0]
+          values = [-99999.9999, -34.097, -3.503, 50.083]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -2000.0, 2000.0, 6500.0]
+          values = [-99999.9999, -61.175, -3.583, 126.669]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, -40000.0, 500.0, 50000.0]
+          values = [-99999.9999, 3418.589, 9484.232, 17558.825]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -6000.0, 5000.0, 10000.0]
+          values = [-99999.9999, -167.385, 1043.186, 2801.709]
           getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
         }
         return [
