@@ -3,5 +3,6 @@ quasar dev
 quasar build
 docker-compose up -d --build
 docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose logs -f
 sudo fuser 80/tcp
 sudo ls -l /proc/2240650/exe

@@ -162,53 +162,43 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Arsenic Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                             <td style="text-align:center;" >Mean (ppb)</td>
-                             <td style="text-align:center;" >% Above Standard</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="assqu1"></span></td>
-                            <td>&gt; 6.83</td>
-                            <td>&gt; 8.95</td>
-                            <td>&gt; 16.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="assqu2"></span></td>
-                            <td>&ge; 6.83 &amp; &lt; 10.12</td>
-                            <td>&ge; 8.95 &amp; &lt; 14.93</td>
-                            <td>&ge; 16.0 &amp; &lt; 32.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="assqu3"></span></td>
-                            <td>&ge; 10.12 &amp; &lt; 13.42</td>
-                            <td>&ge; 14.93 &amp; &lt; 20.92</td>
-                            <td>&ge; 32.0 &amp; &lt; 48.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="assqu4"></span></td>
-                            <td>&ge; 13.42 &amp; &lt; 16.71</td>
-                            <td>&ge; 20.92 &amp; &lt; 26.9</td>
-                            <td>&ge; 48.0 &amp; &lt; 64.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="assqu5"></span></td>
-                            <td>&ge; 16.71</td>
-                            <td>&ge; 26.9</td>
-                            <td>&ge; 64.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="squfill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
+                      <tr>
+                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                         <td style="text-align:center;" >Mean (ppb)</td>
+                         <td style="text-align:center;" >% Above Standard</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="assqu1"></span></td>
+                        <td>&gt; {{ arsenic_med_values[1] }}</td>
+                        <td>&gt; {{ arsenic_mean_values[1] }}</td>
+                        <td>&gt; {{ arsenic_prcast_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="assqu2"></span></td>
+                        <td>&ge; {{ arsenic_med_values[1] }} &amp; &lt; {{ arsenic_med_values[2] }}</td>
+                        <td>&ge; {{ arsenic_mean_values[1] }} &amp; &lt; {{ arsenic_mean_values[2] }}</td>
+                        <td>&ge; {{ arsenic_prcast_values[1] }} &amp; &lt; {{ arsenic_prcast_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="assqu3"></span></td>
+                        <td>&ge; {{ arsenic_med_values[2] }} &amp; &lt; {{ arsenic_med_values[3] }}</td>
+                        <td>&ge; {{ arsenic_mean_values[2] }} &amp; &lt; {{ arsenic_mean_values[3] }}</td>
+                        <td>&ge; {{ arsenic_prcast_values[2] }} &amp; &lt; {{ arsenic_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="assqu4"></span></td>
+                        <td>&ge; {{ arsenic_med_values[3] }}</td>
+                        <td>&ge; {{ arsenic_mean_values[3] }}</td>
+                        <td>&ge; {{ arsenic_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ arsenic_med_values[0] }}</td>
+                      </tr>
                     </q-markup-table>
                   </font>
                 </q-popup-proxy>
@@ -235,53 +225,43 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Cadmium Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                             <td style="text-align:center;" >Mean (ppb)</td>
-                             <td style="text-align:center;" >% Above Standard</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="cdsqu1"></span></td>
-                            <td>&gt; 0.74</td>
-                            <td>&gt; 2.71</td>
-                            <td>&gt; 4.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="cdsqu2"></span></td>
-                            <td>&ge; 0.74 &amp; &lt; 0.77</td>
-                            <td>&ge; 2.71 &amp; &lt; 4.72</td>
-                            <td>&ge; 4.0 &amp; &lt; 8.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="cdsqu3"></span></td>
-                            <td>&ge; 0.77 &amp; &lt; 0.79</td>
-                            <td>&ge; 4.72 &amp; &lt; 6.72</td>
-                            <td>&ge; 8.0 &amp; &lt; 12.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="cdsqu4"></span></td>
-                            <td>&ge; 0.79 &amp; &lt; 0.82</td>
-                            <td>&ge; 6.72 &amp; &lt; 8.73</td>
-                            <td>&ge; 12.0 &amp; &lt; 16.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="cdsqu5"></span></td>
-                            <td>&ge; 0.82</td>
-                            <td>&ge; 8.73</td>
-                            <td>&ge; 16.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="squfill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
+                      <tr>
+                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                         <td style="text-align:center;" >Mean (ppb)</td>
+                         <td style="text-align:center;" >% Above Standard</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="cdsqu1"></span></td>
+                        <td>&gt; {{ cadmium_med_values[1] }}</td>
+                        <td>&gt; {{ cadmium_mean_values[1] }}</td>
+                        <td>&gt; {{ cadmium_prcast_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="cdsqu2"></span></td>
+                        <td>&ge; {{ cadmium_med_values[1] }} &amp; &lt; {{ cadmium_med_values[2] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="cdsqu3"></span></td>
+                        <td>&ge; {{ cadmium_med_values[2] }} &amp; &lt; {{ cadmium_med_values[3] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="cdsqu4"></span></td>
+                        <td>&ge; {{ cadmium_med_values[3] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                        <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ cadmium_med_values[0] }}</td>
+                      </tr>
                     </q-markup-table>
                   </font>
                 </q-popup-proxy>
@@ -308,53 +288,43 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Lead Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                             <td style="text-align:center;" >Mean (ppb)</td>
-                             <td style="text-align:center;" >% Above Standard</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqu1"></span></td>
-                            <td>&gt; 11.69</td>
-                            <td>&gt; 39.22</td>
-                            <td>&gt; 20.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqu2"></span></td>
-                            <td>&ge; 11.69 &amp; &lt; 19.83</td>
-                            <td>&ge; 39.22 &amp; &lt; 75.53</td>
-                            <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqu3"></span></td>
-                            <td>&ge; 19.83 &amp; &lt; 27.98</td>
-                            <td>&ge; 75.53 &amp; &lt; 111.83</td>
-                            <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqu4"></span></td>
-                            <td>&ge; 27.98 &amp; &lt; 36.12</td>
-                            <td>&ge; 111.83 &amp; &lt; 148.14</td>
-                            <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqu5"></span></td>
-                            <td>&ge; 36.12</td>
-                            <td>&ge; 148.14</td>
-                            <td>&ge; 80.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="pbsqufill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
+                      <tr>
+                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                         <td style="text-align:center;" >Mean (ppb)</td>
+                         <td style="text-align:center;" >% Above Standard</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="pbsqu1"></span></td>
+                        <td>&gt; {{ lead_med_values[1] }}</td>
+                        <td>&gt; {{ lead_mean_values[1] }}</td>
+                        <td>&gt; {{ lead_prcast_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="pbsqu2"></span></td>
+                        <td>&ge; {{ lead_med_values[1] }} &amp; &lt; {{ lead_med_values[2] }}</td>
+                        <td>&ge; {{ lead_mean_values[1] }} &amp; &lt; {{ lead_mean_values[2] }}</td>
+                        <td>&ge; {{ lead_prcast_values[1] }} &amp; &lt; {{ lead_prcast_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="pbsqu3"></span></td>
+                        <td>&ge; {{ lead_med_values[2] }} &amp; &lt; {{ lead_med_values[3] }}</td>
+                        <td>&ge; {{ lead_mean_values[2] }} &amp; &lt; {{ lead_mean_values[3] }}</td>
+                        <td>&ge; {{ lead_prcast_values[2] }} &amp; &lt; {{ lead_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="pbsqu4"></span></td>
+                        <td>&ge; {{ lead_med_values[3] }}</td>
+                        <td>&ge; {{ lead_mean_values[3] }}</td>
+                        <td>&ge; {{ lead_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="pbsqufill"></span></td>
+                        <td>Fill {{ lead_med_values[0] }}</td>
+                      </tr>
                     </q-markup-table>
                   </font>
                 </q-popup-proxy>
@@ -381,53 +351,43 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Manganese Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                             <td style="text-align:center;" >Mean (ppb)</td>
-                             <td style="text-align:center;" >% Above Standard</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="mnsqu1"></span></td>
-                            <td>&gt; 184.4</td>
-                            <td>&gt; 213.09</td>
-                            <td>&gt; 20.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="mnsqu2"></span></td>
-                            <td>&ge; 184.4 &amp; &lt; 350.8</td>
-                            <td>&ge; 213.09 &amp; &lt; 404.97</td>
-                            <td>&ge; 20.0 &amp; &lt; 40.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="mnsqu3"></span></td>
-                            <td>&ge; 350.8 &amp; &lt; 517.2</td>
-                            <td>&ge; 404.97 &amp; &lt; 596.85</td>
-                            <td>&ge; 40.0 &amp; &lt; 60.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="mnsqu4"></span></td>
-                            <td>&ge; 517.2 &amp; &lt; 683.6</td>
-                            <td>&ge; 596.85 &amp; &lt; 788.73</td>
-                            <td>&ge; 60.0 &amp; &lt; 80.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="mnsqu5"></span></td>
-                            <td>&ge; 683.6</td>
-                            <td>&ge; 788.73</td>
-                            <td>&ge; 80.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="squfill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
+                      <tr>
+                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                         <td style="text-align:center;" >Mean (ppb)</td>
+                         <td style="text-align:center;" >% Above Standard</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="mnsqu1"></span></td>
+                        <td>&gt; {{ manganese_med_values[1] }}</td>
+                        <td>&gt; {{ manganese_mean_values[1] }}</td>
+                        <td>&gt; {{ manganese_prcast_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="mnsqu2"></span></td>
+                        <td>&ge; {{ manganese_med_values[1] }} &amp; &lt; {{ manganese_med_values[2] }}</td>
+                        <td>&ge; {{ manganese_mean_values[1] }} &amp; &lt; {{ manganese_mean_values[2] }}</td>
+                        <td>&ge; {{ manganese_prcast_values[1] }} &amp; &lt; {{ manganese_prcast_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="mnsqu3"></span></td>
+                        <td>&ge; {{ manganese_med_values[2] }} &amp; &lt; {{ manganese_med_values[3] }}</td>
+                        <td>&ge; {{ manganese_mean_values[2] }} &amp; &lt; {{ manganese_mean_values[3] }}</td>
+                        <td>&ge; {{ manganese_prcast_values[2] }} &amp; &lt; {{ manganese_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="mnsqu4"></span></td>
+                        <td>&ge; {{ manganese_med_values[3] }}</td>
+                        <td>&ge; {{ manganese_mean_values[3] }}</td>
+                        <td>&ge; {{ manganese_prcast_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ manganese_med_values[0] }}</td>
+                      </tr>
                     </q-markup-table>
                   </font>
                 </q-popup-proxy>
@@ -444,37 +404,29 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Census ACS Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
                       <tr>
                         <td style="padding:5px"><span class="acssqu1"></span></td>
-                        <td>&gt; 15%</td>
+                        <td>&gt; {{ census_acs_values[1] }}%</td>
                       </tr>
                       <tr>
                         <td style="padding:5px"><span class="acssqu2"></span></td>
-                        <td>&ge; 15% &amp; &lt; 30%</td>
+                        <td>&ge; {{ census_acs_values[1] }}% &amp; &lt; {{ census_acs_values[2] }}%</td>
                       </tr>
                       <tr>
                         <td style="padding:5px"><span class="acssqu3"></span></td>
-                        <td>&ge; 30% &amp; &lt; 45%</td>
+                        <td>&ge; {{ census_acs_values[2] }}% &amp; &lt; {{ census_acs_values[3] }}%</td>
                       </tr>
                       <tr>
                         <td style="padding:5px"><span class="acssqu4"></span></td>
-                        <td>&ge; 45% &amp; &lt; 60%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu5"></span></td>
-                        <td>&ge; 60% &amp; &lt; 75%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu6"></span></td>
-                        <td>&ge; 75%</td>
+                        <td>&ge; {{ census_acs_values[3] }}%</td>
                       </tr>
                       <tr>
                         <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill -999.99</td>
+                        <td>Fill {{ census_acs_values[0] }}</td>
                       </tr>
                     </q-markup-table>
                   </font>
@@ -587,127 +539,9 @@
         <!-- // ACS Census layers -->
 
         <!-- // EJScreen layers -->
+        <!-- // d_ldpnt_2 -->
         <q-expansion-item dense dense-toggle expand-separator icon="list" label="Environmental Justice Layers, by Census Block Group">
           <div class="q-pa-md q-gutter-y-sm column">
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Lead Paint</td>
-                             <td style="text-align:center;" >Diesel Particulate</td>
-                             <td style="text-align:center;" >Air Toxics Cancer</td>
-                             <td style="text-align:center;" >Air toxics respiratory</td>
-                             <td style="text-align:center;" >Traffic</td>
-                             <td style="text-align:center;" >Direct Dischargers</td>
-                             <td style="text-align:center;" >National Priorities </td>
-                             <td style="text-align:center;" >Risk Management</td>
-                             <td style="text-align:center;" >Storage and Disposal</td>
-                             <td style="text-align:center;" >Ozone</td>
-                             <td style="text-align:center;" >PM2.5</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu1"></span></td>
-                            <td>&gt;-200.0</td>
-                            <td>&gt;-300.0</td>
-                            <td>&gt;-45000.0</td>
-                            <td>&gt;-600.0</td>
-                            <td>&gt;800000.0</td>
-                            <td>&gt;-47000.0</td>
-                            <td>&gt;-400.0</td>
-                            <td>&gt;-450.0</td>
-                            <td>&gt;-3200.0</td>
-                            <td>&gt;-58000.0</td>
-                            <td>&gt;-11000.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu2"></span></td>
-                            <td>&ge; -200.0 &amp; &lt; 0.0</td>
-                            <td>&ge; -300.0 &amp; &lt; 0.0</td>
-                            <td>&ge; -45000.0 &amp; &lt; -20000.0</td>
-                            <td>&ge; -600.0 &amp; &lt; -250</td>
-                            <td>&ge; 800000.0 &amp; &lt; 1700000.0</td>
-                            <td>&ge; -47000.0 &amp; &lt; -35000.0</td>
-                            <td>&ge; -400.0 &amp; &lt; -120.0</td>
-                            <td>&ge; -450.0 &amp; &lt; 1000.0</td>
-                            <td>&ge; -3200.0 &amp; &lt; -1000.0</td>
-                            <td>&ge; -58000.0 &amp; &lt; -28000.0</td>
-                            <td>&ge; -11000.0 &amp; &lt; -5500.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu3"></span></td>
-                            <td>&ge; 0.0 &amp; &lt; 200.0</td>
-                            <td>&ge; 0.0 &amp; &lt; 280.0</td>
-                            <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
-                            <td>&ge; -250.0 &amp; &lt; 100.0</td>
-                            <td>&ge; 1700000.0 &amp; &lt; 1700000.0</td>
-                            <td>&ge; -35000.0 &amp; &lt; -22000.0</td>
-                            <td>&ge; -120.0 &amp; &lt; 150.0</td>
-                            <td>&ge; 1000.0 &amp; &lt; 2450.0</td>
-                            <td>&ge; -1000.0 &amp; &lt; 1800.0</td>
-                            <td>&ge; -28000.0 &amp; &lt; 600.0</td>
-                            <td>&ge; -5500.0 &amp; &lt; 1000.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu4"></span></td>
-                            <td>&ge; 200.0 &amp; &lt; 400.0</td>
-                            <td>&ge; 280.0 &amp; &lt; 580.0</td>
-                            <td>&ge; 5000.0 &amp; &lt; 30000.0</td>
-                            <td>&ge; 100.0 &amp; &lt; 450.0</td>
-                            <td>&ge; 2600000.0 &amp; &lt; 2600000.0</td>
-                            <td>&ge; -22000.0 &amp; &lt; -10000.0</td>
-                            <td>&ge; 150.0 &amp; &lt; 420.0</td>
-                            <td>&ge; 2450.0 &amp; &lt; 3900.0</td>
-                            <td>&ge; 1800.0 &amp; &lt; 4600.0</td>
-                            <td>&ge; 600.0 &amp; &lt; 38000.0</td>
-                            <td>&ge; 1000.0 &amp; &lt; 7500.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu5"></span></td>
-                            <td>&ge; 400.0 &amp; &lt; 600.0</td>
-                            <td>&ge; 580.0 &amp; &lt; 850.0</td>
-                            <td>&ge; 30000.0 &amp; &lt; 55000.0</td>
-                            <td>&ge; 450.0 &amp; &lt; 800.0</td>
-                            <td>&ge; 3500000.0 &amp; &lt; 4400000.0</td>
-                            <td>&ge; -10000.0 &amp; &lt; 200.0</td>
-                            <td>&ge; 420.0 &amp; &lt; 690.0</td>
-                            <td>&ge; 3900.0 &amp; &lt; 5350.0</td>
-                            <td>&ge; 4600.0 &amp; &lt; 7300.0</td>
-                            <td>&ge; 38000.0 &amp; &lt; 70000.0</td>
-                            <td>&ge; 7500.0 &amp; &lt; 15000.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="ejssqu6"></span></td>
-                            <td>&ge; 600.0</td>
-                            <td>&ge; 850.0</td>
-                            <td>&ge; 55000.0</td>
-                            <td>&ge; 800.0</td>
-                            <td>&ge; 4400000.0</td>
-                            <td>&ge; 200.0</td>
-                            <td>&ge; 690.0</td>
-                            <td>&ge; 5350.0</td>
-                            <td>&ge; 7300.0</td>
-                            <td>&ge; 70000.0</td>
-                            <td>&ge; 15000.0</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="squfill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -717,7 +551,44 @@
                 <q-item-label>EJ Index for % pre-1960 housing (lead paint indicator)</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_ldpnt_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_ldpnt_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Lead Paint
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Lead Paint</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_ldpnt_2_values[1] }} &amp; &lt; {{ d_ldpnt_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_ldpnt_2_values[2] }} &amp; &lt; {{ d_ldpnt_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_ldpnt_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_ldpnt_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_ldpnt_2_values legend -->
+            </q-item>
+            <!-- // d_dslpm_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -727,7 +598,44 @@
                 <q-item-label>EJ Index for Diesel particulate matter level in air</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_dslpm_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_dslpm_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Diesel Particulate
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Diesel Particulate</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_dslpm_2_values[1] }} &amp; &lt; {{ d_dslpm_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_dslpm_2_values[2] }} &amp; &lt; {{ d_dslpm_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_dslpm_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_dslpm_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_dslpm_2_values legend -->
+            </q-item>
+            <!-- // d_cancr_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -737,7 +645,44 @@
                 <q-item-label>EJ Index for Air toxics cancer risk</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_cancr_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_cancr_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Air Toxics Cancer
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Air Toxics Cancer</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_cancr_2_values[1] }} &amp; &lt; {{ d_cancr_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_cancr_2_values[2] }} &amp; &lt; {{ d_cancr_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_cancr_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_cancr_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_cancr_2_values legend -->
+            </q-item>
+            <!-- // d_resp_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -747,7 +692,44 @@
                 <q-item-label>EJ Index for Air toxics respiratory hazard index</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_resp_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_resp_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Air toxics respiratory
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Air toxics respiratory</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_resp_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_resp_2_values[1] }} &amp; &lt; {{ d_resp_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_resp_2_values[2] }} &amp; &lt; {{ d_resp_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_resp_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_resp_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_resp_2_values legend -->
+            </q-item>
+            <!-- // d_ptraf_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -757,7 +739,44 @@
                 <q-item-label>EJ Index for Traffic proximity and volume</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_ptraf_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_ptraf_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Traffic
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Traffic</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_ptraf_2_values[1] }} &amp; &lt; {{ d_ptraf_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_ptraf_2_values[2] }} &amp; &lt; {{ d_ptraf_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_ptraf_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_ptraf_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_ptraf_2_values legend -->
+            </q-item>
+            <!-- // d_pwdis_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -767,7 +786,44 @@
                 <q-item-label>EJ Index for Indicator for major direct dischargers to water</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_pwdis_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_pwdis_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Direct Discharges
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Direct Discharges</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_pwdis_2_values[1] }} &amp; &lt; {{ d_pwdis_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_pwdis_2_values[2] }} &amp; &lt; {{ d_pwdis_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_pwdis_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_pwdis_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_pwdis_2_values legend -->
+            </q-item>
+            <!-- // d_pnpl_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -777,7 +833,44 @@
                 <q-item-label>EJ Index for Proximity to National Priorities List (NPL) sites</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_pnpl_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_pnpl_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for National Priorities
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">National Priorities</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_pnpl_2_values[1] }} &amp; &lt; {{ d_pnpl_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_pnpl_2_values[2] }} &amp; &lt; {{ d_pnpl_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_pnpl_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_pnpl_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_pnpl_2_values legend -->
+            </q-item>
+             <!-- // d_prmp_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -787,7 +880,44 @@
                 <q-item-label>EJ Index for Proximity to Risk Management Plan (RMP) facilities</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_prmp_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_prmp_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Risk Management
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Risk Management</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_prmp_2_values[1] }} &amp; &lt; {{ d_prmp_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_prmp_2_values[2] }} &amp; &lt; {{ d_prmp_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_prmp_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_prmp_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_prmp_2_values legend -->
+            </q-item>
+            <!-- // d_ptsdf_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -797,7 +927,44 @@
                 <q-item-label>EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_ptsdf_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_ptsdf_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Storage and Disposal
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Storage and Disposal</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_ptsdf_2_values[1] }} &amp; &lt; {{ d_ptsdf_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_ptsdf_2_values[2] }} &amp; &lt; {{ d_ptsdf_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_ptsdf_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_ptsdf_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_ptsdf_2_values legend -->
+            </q-item>
+            <!-- // d_ozone_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -807,7 +974,44 @@
                 <q-item-label>EJ Index for Ozone level in air</q-item-label>
               </q-item-section>
             </q-item>
-
+            <!-- // d_ozone_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_ozone_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for Tropospheric Ozone
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">Tropospheric Ozone</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_ozone_2_values[1] }} &amp; &lt; {{ d_ozone_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_ozone_2_values[2] }} &amp; &lt; {{ d_ozone_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_ozone_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_ozone_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_ozone_2_values legend -->
+            </q-item>
+            <!-- // d_pm25_2 -->
             <q-item tag="label" v-ripple>
               <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
               <q-item-section avatar>
@@ -816,6 +1020,43 @@
               <q-item-section>
                 <q-item-label>EJ Index for PM2.5 level in air</q-item-label>
               </q-item-section>
+            </q-item>
+            <!-- // d_pm25_2 -->
+            <q-item dense tag="label" v-ripple>
+              <!-- // d_pm25_2_values legend -->
+              <div class="q-pa-md q-gutter-y-sm column">
+                Legend for PM2.5
+                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                  <font size="2" face="Arial" >
+                    <q-markup-table dense class="bg-teal-1">
+                      <tr>
+                        <td style="text-align:center;" colspan="2">PM2.5</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu1"></span></td>
+                        <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu2"></span></td>
+                        <td>&ge; {{ d_pm25_2_values[1] }} &amp; &lt; {{ d_pm25_2_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu3"></span></td>
+                        <td>&ge; {{ d_pm25_2_values[2] }} &amp; &lt; {{ d_pm25_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="ejssqu4"></span></td>
+                        <td>&ge; {{ d_pm25_2_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ d_pm25_2_values[0] }}</td>
+                      </tr>
+                    </q-markup-table>
+                  </font>
+                </q-popup-proxy>
+              </div>
+              <!-- // d_pm25_2_values legend -->
             </q-item>
           </div>
         </q-expansion-item>
@@ -827,66 +1068,62 @@
             <q-item dense tag="label" v-ripple>
               <!-- // legend -->
               <div class="q-pa-md q-gutter-y-sm column">
-                LEGEND
+                Covid 19 Legend
                 <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                   <font size="2" face="Arial" >
                     <q-markup-table dense class="bg-teal-1">
-                      <!-- tr>
-                        <td id="nested" -->
-                          <tr>
-                             <td style="text-align:center;" colspan="2">Total Cases</td>
-                             <td style="text-align:center;" >Cases Per 10,000 Residents</td>
-                             <td style="text-align:center;" >Cases Per 100,000 Residents</td>
-                             <td style="text-align:center;" >Deaths</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu1"></span></td>
-                            <td>&gt; 1328</td>
-                            <td>&gt; 586.0</td>
-                            <td>&gt; 5859.0</td>
-                            <td>&gt; 17</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu2"></span></td>
-                            <td>&ge; 1328 &amp; &lt; 2656</td>
-                            <td>&ge; 586.0 &amp; &lt; 1172.0</td>
-                            <td>&ge; 5859.0 &amp; &lt; 11718.0</td>
-                            <td>&ge; 17 &amp; &lt; 34</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu3"></span></td>
-                            <td>&ge; 2656 &amp; &lt; 3984</td>
-                            <td>&ge; 1172.0 &amp; &lt; 1758.0</td>
-                            <td>&ge; 11718.0 &amp; &lt; 17577.0</td>
-                            <td>&ge; 34 &amp; &lt; 51</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu4"></span></td>
-                            <td>&ge; 3984 &amp; &lt; 5416</td>
-                            <td>&ge; 1758.0 &amp; &lt; 2344.0</td>
-                            <td>&ge; 17577.0 &amp; &lt; 23436.0</td>
-                            <td>&ge; 51 &amp; &lt; 65</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu5"></span></td>
-                            <td>&ge; 5416 &amp; &lt; 6644</td>
-                            <td>&ge; 2344.0 &amp; &lt; 2930.0</td>
-                            <td>&ge; 23436.0 &amp; &lt; 29295.0</td>
-                            <td>&ge; 65 &amp; &lt; 85</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="heasqu6"></span></td>
-                              <td>&ge; 6644</td>
-                              <td>&ge; 2930.0
-                              <td>&ge; 29295.0</td>
-                              <td>&ge; 85</td>
-                          </tr>
-                          <tr>
-                            <td style="padding:5px"><span class="squfill"></span></td>
-                            <td>Fill -999.99</td>
-                          </tr>
-                        <!-- /td>
-                      </tr -->
+                      <tr>
+                         <td style="text-align:center;" colspan="2">Total Cases</td>
+                         <td style="text-align:center;" >Cases Per 10,000 Residents</td>
+                         <td style="text-align:center;" >Cases Per 100,000 Residents</td>
+                         <td style="text-align:center;" >Deaths</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu1"></span></td>
+                        <td>&gt; {{ covid_cases_values[1] }}</td>
+                        <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                        <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                        <td>&gt; {{ covid_deaths_values[1] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu2"></span></td>
+                        <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                        <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                        <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                        <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu3"></span></td>
+                        <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                        <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                        <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                        <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu4"></span></td>
+                        <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                        <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                        <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                        <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu5"></span></td>
+                        <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                        <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                        <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                        <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="heasqu6"></span></td>
+                          <td>&ge; {{ covid_cases_values[5] }}</td>
+                          <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                          <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                          <td>&ge; {{ covid_deaths_values[5] }}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px"><span class="squfill"></span></td>
+                        <td>Fill {{ covid_cases_values[0] }}</td>
+                      </tr>
                     </q-markup-table>
                   </font>
                 </q-popup-proxy>
@@ -1805,20 +2042,41 @@ export default {
       pid: undefined,
       // variable colors
       varcolor: null,
-      arsncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 52, 220, 0.65)', 'rgba(186, 52, 235, 0.65)', 'rgba(165, 52, 235, 0.65)',
-        'rgba(143, 52, 235, 0.65)', 'rgba(119, 52, 235, 0.65)'],
-      cadmcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(223, 235, 52, 0.65)', 'rgba(235, 192, 52, 0.65)', 'rgba(235, 162, 52, 0.65)',
-        'rgba(235, 131, 52, 0.65)', 'rgba(235, 89, 52, 0.65)'],
-      leadcolors: ['rgba(50, 110, 219, 0.65)', 'rgba(196, 200, 207, 0.65)', 'rgba(156, 162, 173, 0.65)', 'rgba(116, 121, 130, 0.65)',
-        'rgba(79, 82, 89, 0.65)', 'rgba(39, 40, 43, 0.65)'],
-      mngncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(194, 232, 190, 0.65)', 'rgba(81, 222, 67, 0.65)', 'rgba(25, 128, 11, 0.65)',
-        'rgba(14, 82, 5, 0.65)', 'rgba(5, 97, 76, 0.65)'],
-      acscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(252, 210, 211, 0.65)', 'rgba(252, 109, 114, 0.65)', 'rgba(247, 59, 66, 0.65)',
-        'rgba(250, 2, 11, 0.65)', 'rgba(181, 2, 6, 0.65)', 'rgba(140, 1, 5, 0.65)'],
-      ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 227, 3, 0.65)', 'rgba(252, 186, 3, 0.65)',
-        'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)', 'rgba(140, 1, 5, 0.65)'],
-      covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)',
-        'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      arsncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(247, 121, 237, 0.65)', 'rgba(194, 76, 237, 0.65)', 'rgba(165, 52, 235, 0.65)', 'rgba(127, 3, 252, 0.65)'],
+      cadmcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(223, 235, 52, 0.65)', 'rgba(235, 192, 52, 0.65)', 'rgba(235, 162, 52, 0.65)', 'rgba(235, 89, 52, 0.65)'],
+      leadcolors: ['rgba(50, 110, 219, 0.65)', 'rgba(196, 200, 207, 0.65)', 'rgba(155, 158, 163, 0.65)', 'rgba(108, 112, 120, 0.65)', 'rgba(39, 40, 43, 0.65)'],
+      mngncolors: ['rgba(91, 95, 99, 0.65)', 'rgba(194, 232, 190, 0.65)', 'rgba(81, 222, 67, 0.65)', 'rgba(25, 128, 11, 0.65)', 'rgba(14, 82, 5, 0.65)'],
+      acscolors: ['rgba(91, 95, 99, 0.85)', 'rgba(252, 210, 211, 0.85)', 'rgba(247, 84, 90, 0.85)', 'rgba(212, 4, 9, 0.85)', 'rgba(122, 1, 5, 0.85)'],
+      ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
+      covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
+      arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
+      arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
+      cadmium_med_values: [-999.99, 0.72, 0.76, 0.80],
+      cadmium_mean_values: [-999.99, 0.719, 0.73, 0.77],
+      cadmium_prcast_values: [-999.99, 0.1, 0.993, 3.21],
+      lead_med_values: [-999.99, 3.8, 5.77, 9.0],
+      lead_mean_values: [-999.99, 3.548, 4.033, 4.977],
+      lead_prcast_values: [-999.99, 0.35, 2.61, 5.66],
+      manganese_med_values: [-999.99, 23.0, 40.0, 70.0],
+      manganese_mean_values: [-999.99, 35.0, 55.0, 100.0],
+      manganese_prcast_values: [-999.99, 5, 25, 45.0],
+      census_acs_values: [-999.99, 25, 50, 75],
+      d_ldpnt_2_values: [-99999.9999, -20.0, 0.0, 27.0],
+      d_dslpm_2_values: [-99999.9999, -50.0, 0.0, 60.0],
+      d_cancr_2_values: [-99999.9999, 2204.147, 7227.09, 7227.09],
+      d_resp_2_values: [-99999.9999, -86.266, -14.005, 97.526],
+      d_ptraf_2_values: [-99999.9999, 0.0, 8126.669, 74230.562],
+      d_pwdis_2_values: [-99999.9999, -0.0000746, 0.0, 0.000039],
+      d_pnpl_2_values: [-99999.9999, -8.798, 0.0, 8.0],
+      d_prmp_2_values: [-99999.9999, -34.097, -3.503, 50.083],
+      d_ptsdf_2_values: [-99999.9999, -61.175, -3.583, 126.669],
+      d_ozone_2_values: [-99999.9999, 3418.589, 9484.232, 17558.825],
+      d_pm25_2_values: [-99999.9999, -167.385, 1043.186, 2801.709],
+      covid_cases_values: [-999.99, 1328, 2656, 3984, 5416, 6644],
+      covid_cases_per_10000_res_values: [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0],
+      covid_cases_per_100000_res_values: [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0],
+      covid_deaths_values: [-999.99, 17, 34, 51, 65, 85],
       // ncwellwise features
       selectedFeature: [],
       selectedFeatureMeanBarBox: [],
@@ -2039,7 +2297,7 @@ export default {
           break
       }
     }, */
-    getColors: function (data, values, colors) {
+    getColors: function (data, values, colors, variable, layer) {
       if (colors.length === 7) {
         if (data[this.currentvariable] === values[0]) {
           this.varcolor = colors[0]
@@ -2070,50 +2328,78 @@ export default {
         } else if (data[this.currentvariable.substring(11)] >= values[4]) {
           this.varcolor = colors[5]
         }
+      } else if (colors.length === 5) {
+        if (layer === 'ncwelllayer') {
+          if (data[variable.substring(11)] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable.substring(11)] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable.substring(11)] >= values[3]) {
+            this.varcolor = colors[4]
+          }
+        } else {
+          if (data[variable] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable] >= values[3]) {
+            this.varcolor = colors[4]
+          }
+        }
       }
     },
     getncwellwiseStyle: function () {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
+        let variable = this.currentvariable
         if (this.currentvariable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 6.83, 10.12, 13.42, 16.71]
-          this.getColors(data, values, this.arsncolors)
+          // values = [-999.99, 6.83, 10.12, 13.42, 16.71]
+          this.getColors(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 8.95, 14.93, 20.93, 26.9]
-          this.getColors(data, values, this.arsncolors)
+          // values = [-999.99, 8.95, 14.93, 20.93, 26.9]
+          this.getColors(data, this.arsenic_mean_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 16.0, 32.0, 48.0, 64.0]
-          this.getColors(data, values, this.arsncolors)
+          // values = [-999.99, 16.0, 32.0, 48.0, 64.0]
+          this.getColors(data, this.arsenic_prcast_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.74, 0.77, 0.79, 0.82]
-          this.getColors(data, values, this.cadmcolors)
+          // values = [-999.99, 0.74, 0.77, 0.79, 0.82]
+          this.getColors(data, this.cadmium_med_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 2.71, 4.72, 6.71, 8.73]
-          this.getColors(data, values, this.cadmcolors)
+          // values = [-999.99, 2.71, 4.72, 6.71, 8.73]
+          this.getColors(data, this.cadmium_mean_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 4.0, 8.0, 12.0, 16.0]
-          this.getColors(data, values, this.cadmcolors)
+          // values = [-999.99, 4.0, 8.0, 12.0, 16.0]
+          this.getColors(data, this.cadmium_prcast_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_med') {
-          values = [-999.99, 11.69, 19.83, 27.98, 36.12]
-          this.getColors(data, values, this.leadcolors)
+          // values = [-999.99, 11.69, 19.83, 27.98, 36.12]
+          this.getColors(data, this.lead_med_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 39.22, 75.53, 111.93, 148.14]
-          this.getColors(data, values, this.leadcolors)
+          // values = [-999.99, 39.22, 75.53, 111.93, 148.14]
+          this.getColors(data, this.lead_mean_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
-          this.getColors(data, values, this.leadcolors)
+          // values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          this.getColors(data, this.lead_prcast_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 184.4, 350.8, 517.2, 683.6]
-          this.getColors(data, values, this.mngncolors)
+          // values = [-999.99, 184.4, 350.8, 517.2, 683.6]
+          this.getColors(data, this.manganese_med_values, this.mngncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 213.09, 404.97, 596.85, 788.73]
-          this.getColors(data, values, this.mngncolors)
+          // values = [-999.99, 213.09, 404.97, 596.85, 788.73]
+          this.getColors(data, this.manganese_mean_values, this.mngncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 20.0, 40.0, 60.0, 80.0]
-          this.getColors(data, values, this.mngncolors)
+          // values = [-999.99, 20.0, 40.0, 60.0, 80.0]
+          this.getColors(data, this.manganese_prcast_values, this.mngncolors, variable, 'ncwelllayer')
         }
+
         return [
           new Style({
             stroke: new Stroke({
@@ -2132,8 +2418,9 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values = [-999.99, 15, 30, 45, 60, 75]
-        this.getColors(data, values, this.acscolors)
+        // let values = [-999.99, 15, 30, 45, 60, 75]
+        let variable = this.currentvariable
+        this.getColors(data, this.census_acs_values, this.acscolors, variable, 'acslayer')
         return [
           new Style({
             stroke: new Stroke({
@@ -2152,41 +2439,43 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
+        let variable = this.currentvariable
         if (this.currentvariable === 'd_ldpnt_2') {
-          values = [-99999.9999, -200.0, 0.0, 200.0, 400.0, 600.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -200.0, 0.0, 200.0, 400.0, 600.0]
+          this.getColors(data, this.d_ldpnt_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_dslpm_2') {
-          values = [-99999.9999, -300.0, 0.0, 280.0, 580.0, 850.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -300.0, 0.0, 280.0, 580.0, 850.0]
+          this.getColors(data, this.d_dslpm_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_cancr_2') {
-          values = [-99999.9999, -45000.0, -20000.0, 5000.0, 30000.0, 55000.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -45000.0, -20000.0, 5000.0, 30000.0, 55000.0]
+          this.getColors(data, this.d_cancr_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_resp_2') {
-          values = [-99999.9999, -600.0, -250.0, 100.0, 450.0, 800.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -600.0, -250.0, 100.0, 450.0, 800.0]
+          this.getColors(data, this.d_resp_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ptraf_2') {
-          values = [-99999.9999, 800000.0, 1700000.0, 2600000.0, 3500000.0, 4400000.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, 800000.0, 1700000.0, 2600000.0, 3500000.0, 4400000.0]
+          this.getColors(data, this.d_ptraf_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pwdis_2') {
-          values = [-99999.9999, -47000.0, -35000.0, -22000.0, -10000.0, 200.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -47000.0, -35000.0, -22000.0, -10000.0, 200.0]
+          this.getColors(data, this.d_pwdis_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pnpl_2') {
-          values = [-99999.9999, -400.0, -120.0, 150.0, 420.0, 690.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -400.0, -120.0, 150.0, 420.0, 690.0]
+          this.getColors(data, this.d_pnpl_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_prmp_2') {
-          values = [-99999.9999, -450.0, 1000.0, 2450.0, 3900.0, 5350.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -450.0, 1000.0, 2450.0, 3900.0, 5350.0]
+          this.getColors(data, this.d_prmp_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ptsdf_2') {
-          values = [-99999.9999, -3200.0, -1000.0, 1800.0, 4600.0, 7300.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -3200.0, -1000.0, 1800.0, 4600.0, 7300.0]
+          this.getColors(data, this.d_ptsdf_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ozone_2') {
-          values = [-99999.9999, -58000.0, -28000.0, 600.0, 38000.0, 70000.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -58000.0, -28000.0, 600.0, 38000.0, 70000.0]
+          this.getColors(data, this.d_ozone_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pm25_2') {
-          values = [-99999.9999, -11000.0, -5500.0, 1000.0, 7500.0, 15000.0]
-          this.getColors(data, values, this.ejscolors)
+          // values = [-99999.9999, -11000.0, -5500.0, 1000.0, 7500.0, 15000.0]
+          this.getColors(data, this.d_pm25_2_values, this.ejscolors, variable, 'ejslayer')
         }
+
         return [
           new Style({
             stroke: new Stroke({
@@ -2205,19 +2494,20 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
+        let variable = this.currentvariable
         if (this.currentvariable === 'cases') {
-          values = [-999.99, 1328, 2656, 3984, 5416, 6644]
-          this.getColors(data, values, this.covidcolors)
+          // values = [-999.99, 1328, 2656, 3984, 5416, 6644]
+          this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'cases_per_10000_res') {
-          values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
-          this.getColors(data, values, this.covidcolors)
+          // values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
+          this.getColors(data, this.covid_cases_per_10000_res_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'cases_per_100000_res') {
-          values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
-          this.getColors(data, values, this.covidcolors)
+          // values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
+          this.getColors(data, this.covid_cases_per_100000_res_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'deaths') {
-          values = [-999.99, 17, 34, 51, 65, 85]
-          this.getColors(data, values, this.covidcolors)
+          // values = [-999.99, 17, 34, 51, 65, 85]
+          this.getColors(data, this.covid_deaths_values, this.covidcolors, variable, 'covidlayer')
         }
         return [
           new Style({
@@ -2642,13 +2932,13 @@ export default {
   .assqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(235, 52, 220, 0.65);
+    background-color: rgba(247, 121, 237, 0.65);
     display: inline-block;
   }
   .assqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(186, 52, 235, 0.65);
+    background-color: rgba(194, 76, 237, 0.65);
     display: inline-block;
   }
   .assqu3 {
@@ -2660,31 +2950,13 @@ export default {
   .assqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(143, 52, 235, 0.65);
+    background-color: rgba(127, 3, 252, 0.65);
     display: inline-block;
   }
-  .assqu5 {
+  .cdsqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(119, 52, 235, 0.65);
-    display: inline-block;
-  }
-  .cdsqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(235, 89, 52, 0.65);
-    display: inline-block;
-  }
-  .cdsqu4 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(235, 131, 52, 0.65);
-    display: inline-block;
-  }
-  .cdsqu3 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(235, 162, 52, 0.65);
+    background-color: rgba(223, 235, 52, 0.65);
     display: inline-block;
   }
   .cdsqu2 {
@@ -2693,10 +2965,16 @@ export default {
     background-color: rgba(235, 192, 52, 0.65);
     display: inline-block;
   }
-  .cdsqu1 {
+  .cdsqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(223, 235, 52, 0.65);
+    background-color: rgba(235, 162, 52, 0.65);
+    display: inline-block;
+  }
+  .cdsqu4 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(235, 89, 52, 0.65);
     display: inline-block;
   }
   .pbsqu1 {
@@ -2708,22 +2986,16 @@ export default {
   .pbsqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(156, 162, 173, 0.65);
+    background-color: rgba(155, 158, 163, 0.65);
     display: inline-block;
   }
   .pbsqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(116, 121, 130, 0.65);
+    background-color: rgba(108, 112, 120, 0.65);
     display: inline-block;
   }
   .pbsqu4 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(79, 82, 89, 0.65);
-    display: inline-block;
-  }
-  .pbsqu5 {
     height: 15px;
     width: 15px;
     background-color: rgba(39, 40, 43, 0.65);
@@ -2753,46 +3025,28 @@ export default {
     background-color: rgba(14, 82, 5, 0.65);
     display: inline-block;
   }
-  .mnsqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(5, 97, 76, 0.65);
-    display: inline-block;
-  }
   .acssqu1 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 210, 211, 0.65);
+    background-color: rgba(252, 210, 211, 0.85);
     display: inline-block;
   }
   .acssqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 109, 114, 0.65);
+    background-color: rgba(247, 84, 90, 0.85);
     display: inline-block;
   }
   .acssqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(247, 59, 66, 0.65);
+    background-color: rgba(212, 4, 9, 0.85);
     display: inline-block;
   }
   .acssqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(250, 2, 11, 0.65);
-    display: inline-block;
-  }
-  .acssqu5 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(181, 2, 6, 0.65);
-    display: inline-block;
-  }
-  .acssqu6 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(140, 1, 5, 0.65);
+    background-color: rgba(122, 1, 5, 0.85);
     display: inline-block;
   }
   .heasqu1 {
@@ -2840,31 +3094,19 @@ export default {
   .ejssqu2 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 227, 3, 0.65);
+    background-color: rgba(252, 186, 3, 0.65);
     display: inline-block;
   }
   .ejssqu3 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 186, 3, 0.65);
+    background-color: rgba(252, 128, 3, 0.65);
     display: inline-block;
   }
   .ejssqu4 {
     height: 15px;
     width: 15px;
-    background-color: rgba(252, 128, 3, 0.65);
-    display: inline-block;
-  }
-  .ejssqu5 {
-    height: 15px;
-    width: 15px;
     background-color: rgba(252, 82, 3, 0.65);
-    display: inline-block;
-  }
-  .ejssqu6 {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(140, 1, 5, 0.65);
     display: inline-block;
   }
   .q-input {

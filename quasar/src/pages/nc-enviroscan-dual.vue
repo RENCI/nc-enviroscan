@@ -109,7 +109,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Arsenic Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -120,31 +120,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu1"></span></td>
-                                  <td>&gt; 6.83</td>
-                                  <td>&gt; 8.95</td>
-                                  <td>&gt; 16.0</td>
+                                  <td>&gt; {{ arsenic_med_values[1] }}</td>
+                                  <td>&gt; {{ arsenic_mean_values[1] }}</td>
+                                  <td>&gt; {{ arsenic_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu2"></span></td>
-                                  <td>&ge; 6.83 &amp; &lt; 12.0</td>
-                                  <td>&ge; 8.95 &amp; &lt; 18.43</td>
-                                  <td>&ge; 16.0 &amp; &lt; 40.0</td>
+                                  <td>&ge; {{ arsenic_med_values[1] }} &amp; &lt; {{ arsenic_med_values[2] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[1] }} &amp; &lt; {{ arsenic_mean_values[2] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[1] }} &amp; &lt; {{ arsenic_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu3"></span></td>
-                                  <td>&ge; 12.0 &amp; &lt; 16.71</td>
-                                  <td>&ge; 18.43 &amp; &lt; 26.9</td>
-                                  <td>&ge; 40.0 &amp; &lt; 64.0</td>
+                                  <td>&ge; {{ arsenic_med_values[2] }} &amp; &lt; {{ arsenic_med_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[2] }} &amp; &lt; {{ arsenic_mean_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[2] }} &amp; &lt; {{ arsenic_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu4"></span></td>
-                                  <td>&ge; 66.71</td>
-                                  <td>&ge; 26.9</td>
-                                  <td>&ge; 64.0</td>
+                                  <td>&ge; {{ arsenic_med_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ arsenic_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -171,7 +171,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Cadmium Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -182,31 +182,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                  <td>&gt; 0.74</td>
-                                  <td>&gt; 2.71</td>
-                                  <td>&gt; 4.0</td>
+                                  <td>&gt; {{ cadmium_med_values[1] }}</td>
+                                  <td>&gt; {{ cadmium_mean_values[1] }}</td>
+                                  <td>&gt; {{ cadmium_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu2"></span></td>
-                                  <td>&ge; 0.74 &amp; &lt; 0.78</td>
-                                  <td>&ge; 2.71 &amp; &lt; 5.72</td>
-                                  <td>&ge; 4.0 &amp; &lt; 10.0</td>
+                                  <td>&ge; {{ cadmium_med_values[1] }} &amp; &lt; {{ cadmium_med_values[2] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu3"></span></td>
-                                  <td>&ge; 0.78 &amp; &lt; 0.82</td>
-                                  <td>&ge; 5.72 &amp; &lt; 8.63</td>
-                                  <td>&ge; 10.0 &amp; &lt; 16.0</td>
+                                  <td>&ge; {{ cadmium_med_values[2] }} &amp; &lt; {{ cadmium_med_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu4"></span></td>
-                                  <td>&ge; 0.82</td>
-                                  <td>&ge; 8.73</td>
-                                  <td>&ge; 16.0</td>
+                                  <td>&ge; {{ cadmium_med_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ cadmium_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -234,7 +234,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Lead Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -245,31 +245,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                  <td>&gt; 11.69</td>
-                                  <td>&gt; 39.22</td>
-                                  <td>&gt; 20.0</td>
+                                  <td>&gt; {{ lead_med_values[1] }}</td>
+                                  <td>&gt; {{ lead_mean_values[1] }}</td>
+                                  <td>&gt; {{ lead_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu2"></span></td>
-                                  <td>&ge; 11.69 &amp; &lt; 23.83</td>
-                                  <td>&ge; 39.22 &amp; &lt; 93.53</td>
-                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                  <td>&ge; {{ lead_med_values[1] }} &amp; &lt; {{ lead_med_values[2] }}</td>
+                                  <td>&ge; {{ lead_mean_values[1] }} &amp; &lt; {{ lead_mean_values[2] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[1] }} &amp; &lt; {{ lead_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu3"></span></td>
-                                  <td>&ge; 23.83 &amp; &lt; 36.12</td>
-                                  <td>&ge; 93.53 &amp; &lt; 148.14</td>
-                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                  <td>&ge; {{ lead_med_values[2] }} &amp; &lt; {{ lead_med_values[3] }}</td>
+                                  <td>&ge; {{ lead_mean_values[2] }} &amp; &lt; {{ lead_mean_values[3] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[2] }} &amp; &lt; {{ lead_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu4"></span></td>
-                                  <td>&ge; 36.12</td>
-                                  <td>&ge; 148.14</td>
-                                  <td>&ge; 80.0</td>
+                                  <td>&ge; {{ lead_med_values[3] }}</td>
+                                  <td>&ge; {{ lead_mean_values[3] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqufill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ lead_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -297,7 +297,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Manganese Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -308,31 +308,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                  <td>&gt; 184.4</td>
-                                  <td>&gt; 213.09</td>
-                                  <td>&gt; 20.0</td>
+                                  <td>&gt; {{ manganese_med_values[1] }}</td>
+                                  <td>&gt; {{ manganese_mean_values[1] }}</td>
+                                  <td>&gt; {{ manganese_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu2"></span></td>
-                                  <td>&ge; 184.4 &amp; &lt; 414.2</td>
-                                  <td>&ge; 213.09 &amp; &lt; 500.0</td>
-                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                  <td>&ge; {{ manganese_med_values[1] }} &amp; &lt; {{ manganese_med_values[2] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[1] }} &amp; &lt; {{ manganese_mean_values[2] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[1] }} &amp; &lt; {{ manganese_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu3"></span></td>
-                                  <td>&ge; 414.2 &amp; &lt; 683.6</td>
-                                  <td>&ge; 500.0 &amp; &lt; 788.73</td>
-                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                  <td>&ge; {{ manganese_med_values[2] }} &amp; &lt; {{ manganese_med_values[3] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[2] }} &amp; &lt; {{ manganese_mean_values[3] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[2] }} &amp; &lt; {{ manganese_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu4"></span></td>
-                                  <td>&ge; 683.6</td>
-                                  <td>&ge; 788.73</td>
-                                  <td>&ge; 80.0</td>
+                                  <td>&ge; {{ manganese_med_values[3] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[3] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ manganese_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -370,29 +370,29 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Census ACS Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu1"></span></td>
-                                  <td>&gt; 25%</td>
+                                  <td>&gt; {{ census_acs_values[1] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu2"></span></td>
-                                  <td>&ge; 25% &amp; &lt; 50%</td>
+                                  <td>&ge; {{ census_acs_values[1] }}% &amp; &lt; {{ census_acs_values[2] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu3"></span></td>
-                                  <td>&ge; 50% &amp; &lt; 75%</td>
+                                  <td>&ge; {{ census_acs_values[2] }}% &amp; &lt; {{ census_acs_values[3] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu4"></span></td>
-                                  <td>&ge; 75%</td>
+                                  <td>&ge; {{ census_acs_values[3] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ census_acs_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -557,92 +557,7 @@
                           </tr>
                         </table>
                       </q-item>
-                      <q-item dense tag="label" v-ripple>
-                        <!-- // legend -->
-                        <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
-                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                            <font size="2" face="Arial" >
-                              <q-markup-table dense class="bg-teal-1">
-                                <tr>
-                                   <td style="text-align:center;" colspan="2">Lead Paint</td>
-                                   <td style="text-align:center;" >Diesel Particulate</td>
-                                   <td style="text-align:center;" >Air Toxics Cancer</td>
-                                   <td style="text-align:center;" >Air toxics respiratory</td>
-                                   <td style="text-align:center;" >Traffic</td>
-                                   <td style="text-align:center;" >Direct Dischargers</td>
-                                   <td style="text-align:center;" >National Priorities </td>
-                                   <td style="text-align:center;" >Risk Management</td>
-                                   <td style="text-align:center;" >Storage and Disposal</td>
-                                   <td style="text-align:center;" >Ozone</td>
-                                   <td style="text-align:center;" >PM2.5</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                  <td>&gt;-100.0</td>
-                                  <td>&gt;-200.0</td>
-                                  <td>&gt;-20000.0</td>
-                                  <td>&gt;-400.0</td>
-                                  <td>&gt;200000.0</td>
-                                  <td>&gt;-35000.0</td>
-                                  <td>&gt;-200.0</td>
-                                  <td>&gt;0.0</td>
-                                  <td>&gt;-2000.0</td>
-                                  <td>&gt;-40000.0</td>
-                                  <td>&gt;-6000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
-                                  <td>&ge; -100.0 &amp; &lt; 200.0</td>
-                                  <td>&ge; -200.0 &amp; &lt; 300.0</td>
-                                  <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
-                                  <td>&ge; -400.0 &amp; &lt; 100</td>
-                                  <td>&ge; 200000.0 &amp; &lt; 1000000.0</td>
-                                  <td>&ge; -35000.0 &amp; &lt; -15000.0</td>
-                                  <td>&ge; -200.0 &amp; &lt; 150.0</td>
-                                  <td>&ge; 0.0 &amp; &lt; 2500.0</td>
-                                  <td>&ge; -2000.0 &amp; &lt; 2000.0</td>
-                                  <td>&ge; -40000.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; -6000.0 &amp; &lt; 5000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
-                                  <td>&ge; 200.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; 300.0 &amp; &lt; 700.0</td>
-                                  <td>&ge; 5000.0 &amp; &lt; 40000.0</td>
-                                  <td>&ge; 100.0 &amp; &lt; 600.0</td>
-                                  <td>&ge; 100000.0 &amp; &lt; 4000000.0</td>
-                                  <td>&ge; -15000.0 &amp; &lt; 0.0</td>
-                                  <td>&ge; 150.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; 2500.0 &amp; &lt; 5000.0</td>
-                                  <td>&ge; 2000.0 &amp; &lt; 6500.0</td>
-                                  <td>&ge; 500.0 &amp; &lt; 50000.0</td>
-                                  <td>&ge; 5000.0 &amp; &lt; 10000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
-                                  <td>&ge; 500.0</td>
-                                  <td>&ge; 700.0</td>
-                                  <td>&ge; 40000.0</td>
-                                  <td>&ge; 600.0</td>
-                                  <td>&ge; 4000000.0</td>
-                                  <td>&ge; 0.0</td>
-                                  <td>&ge; 500.0</td>
-                                  <td>&ge; 5000.0</td>
-                                  <td>&ge; 6500.0</td>
-                                  <td>&ge; 50000.0</td>
-                                  <td>&ge; 10000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
-                                </tr>
-                              </q-markup-table>
-                            </font>
-                          </q-popup-proxy>
-                        </div>
-                        <!-- // legend -->
-                      </q-item>
+                      <!-- // d_ldpnt_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for % pre-1960 housing (lead paint indicator) ${ d_ldpnt_2Model1 }`"
@@ -655,7 +570,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ldpnt_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ldpnt_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Lead Paint
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Lead Paint</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[1] }} &amp; &lt; {{ d_ldpnt_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[2] }} &amp; &lt; {{ d_ldpnt_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ldpnt_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ldpnt_2_values legend -->
+                      </q-item>
+                      <!-- // d_dslpm_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Diesel particulate matter level in air ${ d_dslpm_2Model1 }`"
@@ -668,7 +620,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_dslpm_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_dslpm_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Diesel Particulate
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Diesel Particulate</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[1] }} &amp; &lt; {{ d_dslpm_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[2] }} &amp; &lt; {{ d_dslpm_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_dslpm_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_dslpm_2_values legend -->
+                      </q-item>
+                       <!-- // d_cancr_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Air toxics cancer risk ${ d_cancr_2Model1 }`"
@@ -681,7 +670,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                       <!-- // d_cancr_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_cancr_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Air Toxics Cancer
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Air Toxics Cancer</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[1] }} &amp; &lt; {{ d_cancr_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[2] }} &amp; &lt; {{ d_cancr_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_cancr_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_cancr_2_values legend -->
+                      </q-item>
+                      <!-- // d_resp_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Air toxics respiratory hazard index ${ d_resp_2Model1 }`"
@@ -694,7 +720,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_resp_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_resp_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Air toxics respiratory
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Air toxics respiratory</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_resp_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[1] }} &amp; &lt; {{ d_resp_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[2] }} &amp; &lt; {{ d_resp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_resp_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_resp_2_values legend -->
+                      </q-item>
+                      <!-- // d_ptraf_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Traffic proximity and volume ${ d_ptraf_2Model1 }`"
@@ -707,7 +770,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ptraf_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ptraf_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Traffic
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Traffic</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[1] }} &amp; &lt; {{ d_ptraf_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[2] }} &amp; &lt; {{ d_ptraf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ptraf_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ptraf_2_values legend -->
+                      </q-item>
+                      <!-- // d_pwdis_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Indicator for major direct dischargers to water ${ d_pwdis_2Model1 }`"
@@ -720,7 +820,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_pwdis_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pwdis_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Direct Discharges
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Direct Discharges</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[1] }} &amp; &lt; {{ d_pwdis_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[2] }} &amp; &lt; {{ d_pwdis_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pwdis_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pwdis_2_values legend -->
+                      </q-item>
+                      <!-- // d_pnpl_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to National Priorities List (NPL) sites ${ d_pnpl_2Model1 }`"
@@ -733,7 +870,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_pnpl_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pnpl_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for National Priorities
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">National Priorities</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[1] }} &amp; &lt; {{ d_pnpl_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[2] }} &amp; &lt; {{ d_pnpl_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pnpl_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pnpl_2_values legend -->
+                      </q-item>
+                       <!-- // d_prmp_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to Risk Management Plan (RMP) facilities ${ d_prmp_2Model1 }`"
@@ -746,7 +920,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                       <!-- // d_prmp_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_prmp_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Risk Management
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Risk Management</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[1] }} &amp; &lt; {{ d_prmp_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[2] }} &amp; &lt; {{ d_prmp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_prmp_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_prmp_2_values legend -->
+                      </q-item>
+                      <!-- // d_ptsdf_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities ${ d_ptsdf_2Model1 }`"
@@ -759,7 +970,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ptsdf_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ptsdf_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Storage and Disposal
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Storage and Disposal</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[1] }} &amp; &lt; {{ d_ptsdf_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[2] }} &amp; &lt; {{ d_ptsdf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ptsdf_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ptsdf_2_values legend -->
+                      </q-item>
+                      <!-- // d_ozone_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Ozone level in air ${ d_ozone_2Model1 }`"
@@ -772,7 +1020,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ozone_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ozone_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Tropospheric Ozone
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Tropospheric Ozone</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[1] }} &amp; &lt; {{ d_ozone_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[2] }} &amp; &lt; {{ d_ozone_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ozone_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ozone_2_values legend -->
+                      </q-item>
+                      <!-- // d_pm25_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for PM2.5 level in air ${ d_pm25_2Model1 }`"
@@ -784,6 +1069,43 @@
                         >
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
+                      </q-item>
+                      <!-- // d_pm25_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pm25_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for PM2.5
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">PM2.5</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[1] }} &amp; &lt; {{ d_pm25_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[2] }} &amp; &lt; {{ d_pm25_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pm25_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pm25_2_values legend -->
                       </q-item>
                     </q-list>
                   </q-menu>
@@ -799,7 +1121,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Covid 19 Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -813,49 +1135,49 @@
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu1"></span></td>
-                                      <td>&gt; 1328</td>
-                                      <td>&gt; 586.0</td>
-                                      <td>&gt; 5859.0</td>
-                                      <td>&gt; 17</td>
+                                      <td>&gt; {{ covid_cases_values[1] }}</td>
+                                      <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                                      <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                                      <td>&gt; {{ covid_deaths_values[1] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu2"></span></td>
-                                      <td>&ge; 1328 &amp; &lt; 2656</td>
-                                      <td>&ge; 586.0 &amp; &lt; 1172.0</td>
-                                      <td>&ge; 5859.0 &amp; &lt; 11718.0</td>
-                                      <td>&ge; 17 &amp; &lt; 34</td>
+                                      <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu3"></span></td>
-                                      <td>&ge; 2656 &amp; &lt; 3984</td>
-                                      <td>&ge; 1172.0 &amp; &lt; 1758.0</td>
-                                      <td>&ge; 11718.0 &amp; &lt; 17577.0</td>
-                                      <td>&ge; 34 &amp; &lt; 51</td>
+                                      <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu4"></span></td>
-                                      <td>&ge; 3984 &amp; &lt; 5416</td>
-                                      <td>&ge; 1758.0 &amp; &lt; 2344.0</td>
-                                      <td>&ge; 17577.0 &amp; &lt; 23436.0</td>
-                                      <td>&ge; 51 &amp; &lt; 65</td>
+                                      <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu5"></span></td>
-                                      <td>&ge; 5416 &amp; &lt; 6644</td>
-                                      <td>&ge; 2344.0 &amp; &lt; 2930.0</td>
-                                      <td>&ge; 23436.0 &amp; &lt; 29295.0</td>
-                                      <td>&ge; 65 &amp; &lt; 85</td>
+                                      <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu6"></span></td>
-                                        <td>&ge; 6644</td>
-                                        <td>&ge; 2930.0
-                                        <td>&ge; 29295.0</td>
-                                        <td>&ge; 85</td>
+                                        <td>&ge; {{ covid_cases_values[5] }}</td>
+                                        <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                        <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                        <td>&ge; {{ covid_deaths_values[5] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
+                                      <td>Fill {{ covid_cases_values[0] }}</td>
                                     </tr>
                                   <!-- /td>
                                 </tr -->
@@ -1048,7 +1370,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Arsenic Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -1059,31 +1381,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu1"></span></td>
-                                  <td>&gt; 6.83</td>
-                                  <td>&gt; 8.95</td>
-                                  <td>&gt; 16.0</td>
+                                  <td>&gt; {{ arsenic_med_values[1] }}</td>
+                                  <td>&gt; {{ arsenic_mean_values[1] }}</td>
+                                  <td>&gt; {{ arsenic_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu2"></span></td>
-                                  <td>&ge; 6.83 &amp; &lt; 12.0</td>
-                                  <td>&ge; 8.95 &amp; &lt; 18.43</td>
-                                  <td>&ge; 16.0 &amp; &lt; 40.0</td>
+                                  <td>&ge; {{ arsenic_med_values[1] }} &amp; &lt; {{ arsenic_med_values[2] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[1] }} &amp; &lt; {{ arsenic_mean_values[2] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[1] }} &amp; &lt; {{ arsenic_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu3"></span></td>
-                                  <td>&ge; 12.0 &amp; &lt; 16.71</td>
-                                  <td>&ge; 18.43 &amp; &lt; 26.9</td>
-                                  <td>&ge; 40.0 &amp; &lt; 64.0</td>
+                                  <td>&ge; {{ arsenic_med_values[2] }} &amp; &lt; {{ arsenic_med_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[2] }} &amp; &lt; {{ arsenic_mean_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[2] }} &amp; &lt; {{ arsenic_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="assqu4"></span></td>
-                                  <td>&ge; 66.71</td>
-                                  <td>&ge; 26.9</td>
-                                  <td>&ge; 64.0</td>
+                                  <td>&ge; {{ arsenic_med_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_mean_values[3] }}</td>
+                                  <td>&ge; {{ arsenic_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ arsenic_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -1110,7 +1432,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Cadmium Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -1121,31 +1443,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                  <td>&gt; 0.74</td>
-                                  <td>&gt; 2.71</td>
-                                  <td>&gt; 4.0</td>
+                                  <td>&gt; {{ cadmium_med_values[1] }}</td>
+                                  <td>&gt; {{ cadmium_mean_values[1] }}</td>
+                                  <td>&gt; {{ cadmium_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu2"></span></td>
-                                  <td>&ge; 0.74 &amp; &lt; 0.78</td>
-                                  <td>&ge; 2.71 &amp; &lt; 5.72</td>
-                                  <td>&ge; 4.0 &amp; &lt; 10.0</td>
+                                  <td>&ge; {{ cadmium_med_values[1] }} &amp; &lt; {{ cadmium_med_values[2] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu3"></span></td>
-                                  <td>&ge; 0.78 &amp; &lt; 0.82</td>
-                                  <td>&ge; 5.72 &amp; &lt; 8.63</td>
-                                  <td>&ge; 10.0 &amp; &lt; 16.0</td>
+                                  <td>&ge; {{ cadmium_med_values[2] }} &amp; &lt; {{ cadmium_med_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="cdsqu4"></span></td>
-                                  <td>&ge; 0.82</td>
-                                  <td>&ge; 8.73</td>
-                                  <td>&ge; 16.0</td>
+                                  <td>&ge; {{ cadmium_med_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                                  <td>&ge; {{ cadmium_mean_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ cadmium_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -1173,7 +1495,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Lead Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -1184,31 +1506,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                  <td>&gt; 11.69</td>
-                                  <td>&gt; 39.22</td>
-                                  <td>&gt; 20.0</td>
+                                  <td>&gt; {{ lead_med_values[1] }}</td>
+                                  <td>&gt; {{ lead_mean_values[1] }}</td>
+                                  <td>&gt; {{ lead_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu2"></span></td>
-                                  <td>&ge; 11.69 &amp; &lt; 23.83</td>
-                                  <td>&ge; 39.22 &amp; &lt; 93.53</td>
-                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                  <td>&ge; {{ lead_med_values[1] }} &amp; &lt; {{ lead_med_values[2] }}</td>
+                                  <td>&ge; {{ lead_mean_values[1] }} &amp; &lt; {{ lead_mean_values[2] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[1] }} &amp; &lt; {{ lead_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu3"></span></td>
-                                  <td>&ge; 23.83 &amp; &lt; 36.12</td>
-                                  <td>&ge; 93.53 &amp; &lt; 148.14</td>
-                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                  <td>&ge; {{ lead_med_values[2] }} &amp; &lt; {{ lead_med_values[3] }}</td>
+                                  <td>&ge; {{ lead_mean_values[2] }} &amp; &lt; {{ lead_mean_values[3] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[2] }} &amp; &lt; {{ lead_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqu4"></span></td>
-                                  <td>&ge; 36.12</td>
-                                  <td>&ge; 148.14</td>
-                                  <td>&ge; 80.0</td>
+                                  <td>&ge; {{ lead_med_values[3] }}</td>
+                                  <td>&ge; {{ lead_mean_values[3] }}</td>
+                                  <td>&ge; {{ lead_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="pbsqufill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ lead_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -1236,7 +1558,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Manganese Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -1247,31 +1569,31 @@
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                  <td>&gt; 184.4</td>
-                                  <td>&gt; 213.09</td>
-                                  <td>&gt; 20.0</td>
+                                  <td>&gt; {{ manganese_med_values[1] }}</td>
+                                  <td>&gt; {{ manganese_mean_values[1] }}</td>
+                                  <td>&gt; {{ manganese_prcast_values[1] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu2"></span></td>
-                                  <td>&ge; 184.4 &amp; &lt; 414.2</td>
-                                  <td>&ge; 213.09 &amp; &lt; 500.0</td>
-                                  <td>&ge; 20.0 &amp; &lt; 50.0</td>
+                                  <td>&ge; {{ manganese_med_values[1] }} &amp; &lt; {{ manganese_med_values[2] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[1] }} &amp; &lt; {{ manganese_mean_values[2] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[1] }} &amp; &lt; {{ manganese_prcast_values[2] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu3"></span></td>
-                                  <td>&ge; 414.2 &amp; &lt; 683.6</td>
-                                  <td>&ge; 500.0 &amp; &lt; 788.73</td>
-                                  <td>&ge; 50.0 &amp; &lt; 80.0</td>
+                                  <td>&ge; {{ manganese_med_values[2] }} &amp; &lt; {{ manganese_med_values[3] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[2] }} &amp; &lt; {{ manganese_mean_values[3] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[2] }} &amp; &lt; {{ manganese_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="mnsqu4"></span></td>
-                                  <td>&ge; 683.6</td>
-                                  <td>&ge; 788.73</td>
-                                  <td>&ge; 80.0</td>
+                                  <td>&ge; {{ manganese_med_values[3] }}</td>
+                                  <td>&ge; {{ manganese_mean_values[3] }}</td>
+                                  <td>&ge; {{ manganese_prcast_values[3] }}</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ manganese_med_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -1309,29 +1631,29 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Census ACS Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu1"></span></td>
-                                  <td>&gt; 25%</td>
+                                  <td>&gt; {{ census_acs_values[1] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu2"></span></td>
-                                  <td>&ge; 25% &amp; &lt; 50%</td>
+                                  <td>&ge; {{ census_acs_values[1] }}% &amp; &lt; {{ census_acs_values[2] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu3"></span></td>
-                                  <td>&ge; 50% &amp; &lt; 75%</td>
+                                  <td>&ge; {{ census_acs_values[2] }}% &amp; &lt; {{ census_acs_values[3] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="acssqu4"></span></td>
-                                  <td>&ge; 75%</td>
+                                  <td>&ge; {{ census_acs_values[3] }}%</td>
                                 </tr>
                                 <tr>
                                   <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
+                                  <td>Fill {{ census_acs_values[0] }}</td>
                                 </tr>
                               </q-markup-table>
                             </font>
@@ -1497,92 +1819,7 @@
                           </tr>
                         </table>
                       </q-item>
-                      <q-item dense tag="label" v-ripple>
-                        <!-- // legend -->
-                        <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
-                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                            <font size="2" face="Arial" >
-                              <q-markup-table dense class="bg-teal-1">
-                                <tr>
-                                   <td style="text-align:center;" colspan="2">Lead Paint</td>
-                                   <td style="text-align:center;" >Diesel Particulate</td>
-                                   <td style="text-align:center;" >Air Toxics Cancer</td>
-                                   <td style="text-align:center;" >Air toxics respiratory</td>
-                                   <td style="text-align:center;" >Traffic</td>
-                                   <td style="text-align:center;" >Direct Dischargers</td>
-                                   <td style="text-align:center;" >National Priorities </td>
-                                   <td style="text-align:center;" >Risk Management</td>
-                                   <td style="text-align:center;" >Storage and Disposal</td>
-                                   <td style="text-align:center;" >Ozone</td>
-                                   <td style="text-align:center;" >PM2.5</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                  <td>&gt;-100.0</td>
-                                  <td>&gt;-200.0</td>
-                                  <td>&gt;-20000.0</td>
-                                  <td>&gt;-400.0</td>
-                                  <td>&gt;200000.0</td>
-                                  <td>&gt;-35000.0</td>
-                                  <td>&gt;-200.0</td>
-                                  <td>&gt;0.0</td>
-                                  <td>&gt;-2000.0</td>
-                                  <td>&gt;-40000.0</td>
-                                  <td>&gt;-6000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
-                                  <td>&ge; -100.0 &amp; &lt; 200.0</td>
-                                  <td>&ge; -200.0 &amp; &lt; 300.0</td>
-                                  <td>&ge; -20000.0 &amp; &lt; 5000.0</td>
-                                  <td>&ge; -400.0 &amp; &lt; 100</td>
-                                  <td>&ge; 200000.0 &amp; &lt; 1000000.0</td>
-                                  <td>&ge; -35000.0 &amp; &lt; -15000.0</td>
-                                  <td>&ge; -200.0 &amp; &lt; 150.0</td>
-                                  <td>&ge; 0.0 &amp; &lt; 2500.0</td>
-                                  <td>&ge; -2000.0 &amp; &lt; 2000.0</td>
-                                  <td>&ge; -40000.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; -6000.0 &amp; &lt; 5000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
-                                  <td>&ge; 200.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; 300.0 &amp; &lt; 700.0</td>
-                                  <td>&ge; 5000.0 &amp; &lt; 40000.0</td>
-                                  <td>&ge; 100.0 &amp; &lt; 600.0</td>
-                                  <td>&ge; 100000.0 &amp; &lt; 4000000.0</td>
-                                  <td>&ge; -15000.0 &amp; &lt; 0.0</td>
-                                  <td>&ge; 150.0 &amp; &lt; 500.0</td>
-                                  <td>&ge; 2500.0 &amp; &lt; 5000.0</td>
-                                  <td>&ge; 2000.0 &amp; &lt; 6500.0</td>
-                                  <td>&ge; 500.0 &amp; &lt; 50000.0</td>
-                                  <td>&ge; 5000.0 &amp; &lt; 10000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
-                                  <td>&ge; 500.0</td>
-                                  <td>&ge; 700.0</td>
-                                  <td>&ge; 40000.0</td>
-                                  <td>&ge; 600.0</td>
-                                  <td>&ge; 4000000.0</td>
-                                  <td>&ge; 0.0</td>
-                                  <td>&ge; 500.0</td>
-                                  <td>&ge; 5000.0</td>
-                                  <td>&ge; 6500.0</td>
-                                  <td>&ge; 50000.0</td>
-                                  <td>&ge; 10000.0</td>
-                                </tr>
-                                <tr>
-                                  <td style="padding:5px"><span class="squfill"></span></td>
-                                  <td>Fill -999.99</td>
-                                </tr>
-                              </q-markup-table>
-                            </font>
-                          </q-popup-proxy>
-                        </div>
-                        <!-- // legend -->
-                      </q-item>
+                      <!-- // d_ldpnt_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for % pre-1960 housing (lead paint indicator) ${ d_ldpnt_2Model2 }`"
@@ -1595,7 +1832,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ldpnt_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ldpnt_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Lead Paint
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Lead Paint</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[1] }} &amp; &lt; {{ d_ldpnt_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[2] }} &amp; &lt; {{ d_ldpnt_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ldpnt_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ldpnt_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ldpnt_2_values legend -->
+                      </q-item>
+                      <!-- // d_dslpm_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Diesel particulate matter level in air ${ d_dslpm_2Model2 }`"
@@ -1608,7 +1882,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_dslpm_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_dslpm_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Diesel Particulate
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Diesel Particulate</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[1] }} &amp; &lt; {{ d_dslpm_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[2] }} &amp; &lt; {{ d_dslpm_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_dslpm_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_dslpm_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_dslpm_2_values legend -->
+                      </q-item>
+                       <!-- // d_cancr_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Air toxics cancer risk ${ d_cancr_2Model2 }`"
@@ -1621,7 +1932,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                       <!-- // d_cancr_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_cancr_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Air Toxics Cancer
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Air Toxics Cancer</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[1] }} &amp; &lt; {{ d_cancr_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[2] }} &amp; &lt; {{ d_cancr_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_cancr_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_cancr_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_cancr_2_values legend -->
+                      </q-item>
+                      <!-- // d_resp_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Air toxics respiratory hazard index ${ d_resp_2Model2 }`"
@@ -1634,7 +1982,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_resp_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_resp_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Air toxics respiratory
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Air toxics respiratory</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_resp_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[1] }} &amp; &lt; {{ d_resp_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[2] }} &amp; &lt; {{ d_resp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_resp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_resp_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_resp_2_values legend -->
+                      </q-item>
+                      <!-- // d_ptraf_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Traffic proximity and volume ${ d_ptraf_2Model2 }`"
@@ -1647,7 +2032,45 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ptraf_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ptraf_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Traffic
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Traffic</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[1] }} &amp; &lt; {{ d_ptraf_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[2] }} &amp; &lt; {{ d_ptraf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ptraf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ptraf_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ptraf_2_values legend -->
+                      </q-item>
+                      <!-- // d_pwdis_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Indicator for major direct dischargers to water ${ d_pwdis_2Model2 }`"
@@ -1660,7 +2083,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_pwdis_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pwdis_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Direct Discharges
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Direct Discharges</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[1] }} &amp; &lt; {{ d_pwdis_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[2] }} &amp; &lt; {{ d_pwdis_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pwdis_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pwdis_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pwdis_2_values legend -->
+                      </q-item>
+                      <!-- // d_pnpl_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to National Priorities List (NPL) sites ${ d_pnpl_2Model2 }`"
@@ -1673,7 +2133,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_pnpl_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pnpl_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for National Priorities
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">National Priorities</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[1] }} &amp; &lt; {{ d_pnpl_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[2] }} &amp; &lt; {{ d_pnpl_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pnpl_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pnpl_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pnpl_2_values legend -->
+                      </q-item>
+                       <!-- // d_prmp_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to Risk Management Plan (RMP) facilities ${ d_prmp_2Model2 }`"
@@ -1686,7 +2183,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                       <!-- // d_prmp_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_prmp_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Risk Management
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Risk Management</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[1] }} &amp; &lt; {{ d_prmp_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[2] }} &amp; &lt; {{ d_prmp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_prmp_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_prmp_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_prmp_2_values legend -->
+                      </q-item>
+                      <!-- // d_ptsdf_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities ${ d_ptsdf_2Model2 }`"
@@ -1699,7 +2233,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ptsdf_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ptsdf_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Storage and Disposal
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Storage and Disposal</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[1] }} &amp; &lt; {{ d_ptsdf_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[2] }} &amp; &lt; {{ d_ptsdf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ptsdf_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ptsdf_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ptsdf_2_values legend -->
+                      </q-item>
+                      <!-- // d_ozone_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for Ozone level in air ${ d_ozone_2Model2 }`"
@@ -1712,7 +2283,44 @@
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
                       </q-item>
-
+                      <!-- // d_ozone_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_ozone_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for Tropospheric Ozone
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">Tropospheric Ozone</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[1] }} &amp; &lt; {{ d_ozone_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[2] }} &amp; &lt; {{ d_ozone_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_ozone_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_ozone_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_ozone_2_values legend -->
+                      </q-item>
+                      <!-- // d_pm25_2 -->
                       <q-item tag="label" v-ripple>
                         <q-toggle
                           :label="`EJ Index for PM2.5 level in air ${ d_pm25_2Model2 }`"
@@ -1724,6 +2332,43 @@
                         >
                           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
                         </q-toggle>
+                      </q-item>
+                      <!-- // d_pm25_2 -->
+                      <q-item dense tag="label" v-ripple>
+                        <!-- // d_pm25_2_values legend -->
+                        <div class="q-pa-md q-gutter-y-sm column">
+                          Legend for PM2.5
+                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                            <font size="2" face="Arial" >
+                              <q-markup-table dense class="bg-teal-1">
+                                <tr>
+                                  <td style="text-align:center;" colspan="2">PM2.5</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu1"></span></td>
+                                  <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu2"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[1] }} &amp; &lt; {{ d_pm25_2_values[2] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu3"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[2] }} &amp; &lt; {{ d_pm25_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="ejssqu4"></span></td>
+                                  <td>&ge; {{ d_pm25_2_values[3] }}</td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                  <td>Fill {{ d_pm25_2_values[0] }}</td>
+                                </tr>
+                              </q-markup-table>
+                            </font>
+                          </q-popup-proxy>
+                        </div>
+                        <!-- // d_pm25_2_values legend -->
                       </q-item>
                     </q-list>
                   </q-menu>
@@ -1739,7 +2384,7 @@
                       <q-item dense tag="label" v-ripple>
                         <!-- // legend -->
                         <div class="q-pa-md q-gutter-y-sm column">
-                          LEGEND
+                          Covid 19 Legend
                           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
                             <font size="2" face="Arial" >
                               <q-markup-table dense class="bg-teal-1">
@@ -1753,49 +2398,49 @@
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu1"></span></td>
-                                      <td>&gt; 1328</td>
-                                      <td>&gt; 586.0</td>
-                                      <td>&gt; 5859.0</td>
-                                      <td>&gt; 17</td>
+                                      <td>&gt; {{ covid_cases_values[1] }}</td>
+                                      <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                                      <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                                      <td>&gt; {{ covid_deaths_values[1] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu2"></span></td>
-                                      <td>&ge; 1328 &amp; &lt; 2656</td>
-                                      <td>&ge; 586.0 &amp; &lt; 1172.0</td>
-                                      <td>&ge; 5859.0 &amp; &lt; 11718.0</td>
-                                      <td>&ge; 17 &amp; &lt; 34</td>
+                                      <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu3"></span></td>
-                                      <td>&ge; 2656 &amp; &lt; 3984</td>
-                                      <td>&ge; 1172.0 &amp; &lt; 1758.0</td>
-                                      <td>&ge; 11718.0 &amp; &lt; 17577.0</td>
-                                      <td>&ge; 34 &amp; &lt; 51</td>
+                                      <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu4"></span></td>
-                                      <td>&ge; 3984 &amp; &lt; 5416</td>
-                                      <td>&ge; 1758.0 &amp; &lt; 2344.0</td>
-                                      <td>&ge; 17577.0 &amp; &lt; 23436.0</td>
-                                      <td>&ge; 51 &amp; &lt; 65</td>
+                                      <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu5"></span></td>
-                                      <td>&ge; 5416 &amp; &lt; 6644</td>
-                                      <td>&ge; 2344.0 &amp; &lt; 2930.0</td>
-                                      <td>&ge; 23436.0 &amp; &lt; 29295.0</td>
-                                      <td>&ge; 65 &amp; &lt; 85</td>
+                                      <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                                      <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                      <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                      <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="heasqu6"></span></td>
-                                        <td>&ge; 6644</td>
-                                        <td>&ge; 2930.0
-                                        <td>&ge; 29295.0</td>
-                                        <td>&ge; 85</td>
+                                        <td>&ge; {{ covid_cases_values[5] }}</td>
+                                        <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                        <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                        <td>&ge; {{ covid_deaths_values[5] }}</td>
                                     </tr>
                                     <tr>
                                       <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>Fill -999.99</td>
+                                      <td>Fill {{ covid_cases_values[0] }}</td>
                                     </tr>
                                   <!-- /td>
                                 </tr -->
@@ -2364,6 +3009,34 @@ export default {
       acscolors: ['rgba(91, 95, 99, 0.85)', 'rgba(252, 210, 211, 0.85)', 'rgba(247, 84, 90, 0.85)', 'rgba(212, 4, 9, 0.85)', 'rgba(122, 1, 5, 0.85)'],
       ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
       covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
+      arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
+      arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
+      cadmium_med_values: [-999.99, 0.72, 0.76, 0.80],
+      cadmium_mean_values: [-999.99, 0.719, 0.73, 0.77],
+      cadmium_prcast_values: [-999.99, 0.1, 0.993, 3.21],
+      lead_med_values: [-999.99, 3.8, 5.77, 9.0],
+      lead_mean_values: [-999.99, 3.548, 4.033, 4.977],
+      lead_prcast_values: [-999.99, 0.35, 2.61, 5.66],
+      manganese_med_values: [-999.99, 23.0, 40.0, 70.0],
+      manganese_mean_values: [-999.99, 35.0, 55.0, 100.0],
+      manganese_prcast_values: [-999.99, 5, 25, 45.0],
+      census_acs_values: [-999.99, 25, 50, 75],
+      d_ldpnt_2_values: [-99999.9999, -20.0, 0.0, 27.0],
+      d_dslpm_2_values: [-99999.9999, -50.0, 0.0, 60.0],
+      d_cancr_2_values: [-99999.9999, 2204.147, 7227.09, 7227.09],
+      d_resp_2_values: [-99999.9999, -86.266, -14.005, 97.526],
+      d_ptraf_2_values: [-99999.9999, 0.0, 8126.669, 74230.562],
+      d_pwdis_2_values: [-99999.9999, -0.0000746, 0.0, 0.000039],
+      d_pnpl_2_values: [-99999.9999, -8.798, 0.0, 8.0],
+      d_prmp_2_values: [-99999.9999, -34.097, -3.503, 50.083],
+      d_ptsdf_2_values: [-99999.9999, -61.175, -3.583, 126.669],
+      d_ozone_2_values: [-99999.9999, 3418.589, 9484.232, 17558.825],
+      d_pm25_2_values: [-99999.9999, -167.385, 1043.186, 2801.709],
+      covid_cases_values: [-999.99, 1328, 2656, 3984, 5416, 6644],
+      covid_cases_per_10000_res_values: [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0],
+      covid_cases_per_100000_res_values: [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0],
+      covid_deaths_values: [-999.99, 17, 34, 51, 65, 85],
       map1pat1val1: 0,
       map1pat1val2: 0,
       map1pat1val3: 0,
@@ -3074,44 +3747,56 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentradiovariable1
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 3.55, 6.847, 11.18]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 3.55, 6.847, 11.18]
+          // arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
+          getStyle(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 3.549, 3.71, 4.47]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 3.549, 3.71, 4.47]
+          // arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
+          getStyle(data, this.arsenic_mean_values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 0.1, 2.607, 9.187]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 0.1, 2.607, 9.187]
+          // arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
+          getStyle(data, this.arsenic_prcast_values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.72, 0.76, 0.80]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 0.72, 0.76, 0.80]
+          // cadmium_med_values: [-999.99, 0.72, 0.76, 0.80],
+          getStyle(data, this.cadmium_med_values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 0.719, 0.73, 0.77]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 0.719, 0.73, 0.77]
+          // cadmium_mean_values: [-999.99, 0.719, 0.73, 0.77],
+          getStyle(data, this.cadmium_mean_values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 0.1, 0.993, 3.21]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 0.1, 0.993, 3.21]
+          // cadmium_prcast_values: [-999.99, 0.1, 0.993, 3.21],
+          getStyle(data, this.cadmium_prcast_values, this.cadmcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 3.8, 5.77, 9.0]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 3.8, 5.77, 9.0]
+          // lead_med_values: [-999.99, 3.8, 5.77, 9.0],
+          getStyle(data, this.lead_med_values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 3.548, 4.033, 4.977]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 3.548, 4.033, 4.977]
+          // lead_mean_values: [-999.99, 3.548, 4.033, 4.977],
+          getStyle(data, this.lead_mean_values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 0.35, 2.61, 5.66]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 0.35, 2.61, 5.66]
+          // lead_prcast_values: [-999.99, 0.35, 2.61, 5.66],
+          getStyle(data, this.lead_prcast_values, this.leadcolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 23.0, 40.0, 70.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 23.0, 40.0, 70.0]
+          // manganese_med_values: [-999.99, 23.0, 40.0, 70.0],
+          getStyle(data, this.manganese_med_values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 35.0, 55.0, 100.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 35.0, 55.0, 100.0]
+          // manganese_mean_values: [-999.99, 35.0, 55.0, 100.0],
+          getStyle(data, this.manganese_mean_values, this.mngncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 5, 25, 45.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer1')
+          // values = [-999.99, 5, 25, 45.0]
+          // manganese_prcast_values: [-999.99, 5, 25, 45.0],
+          getStyle(data, this.manganese_prcast_values, this.mngncolors, variable, 'ncwelllayer1')
         }
         return [
           new Style({
@@ -3138,9 +3823,10 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values = [-999.99, 25, 50, 75]
+        // let values = [-999.99, 25, 50, 75]
+        // census_acs_values: [-999.99, 25, 50, 75],
         let variable = this.currentacsvariable1
-        getStyle(data, values, this.acscolors, variable, 'acslayer1')
+        getStyle(data, this.census_acs_values, this.acscolors, variable, 'acslayer1')
         return [
           new Style({
             stroke: new Stroke({
@@ -3166,41 +3852,52 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentejsvariable1
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -20.0, 0.0, 27.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -20.0, 0.0, 27.0]
+          // d_ldpnt_2_values: [-99999.9999, -20.0, 0.0, 27.0]
+          getStyle(data, this.d_ldpnt_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -50.0, 0.0, 60.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -50.0, 0.0, 60.0]
+          // d_dslpm_2_values: [-99999.9999, -50.0, 0.0, 60.0],
+          getStyle(data, this.d_dslpm_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, 2204.147, 7227.09, 7227.09]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, 2204.147, 7227.09, 7227.09]
+          // d_cancr_2_values:  [-99999.9999, 2204.147, 7227.09, 7227.09],
+          getStyle(data, this.d_cancr_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -86.266, -14.005, 97.526]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -86.266, -14.005, 97.526]
+          // d_resp_2_values: [-99999.9999, -86.266, -14.005, 97.526],
+          getStyle(data, this.d_resp_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 0.0, 8126.669, 74230.562]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, 0.0, 8126.669, 74230.562]
+          // d_ptraf_2_values: [-99999.9999, 0.0, 8126.669, 74230.562],
+          getStyle(data, this.d_ptraf_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -0.0000746, 0.0, 0.000039]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -0.0000746, 0.0, 0.000039]
+          // d_pwdis_2_values: [-99999.9999, -0.0000746, 0.0, 0.000039],
+          getStyle(data, this.d_pwdis_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -8.798, 0.0, 8.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -8.798, 0.0, 8.0]
+          // d_pnpl_2_values: [-99999.9999, -8.798, 0.0, 8.0],
+          getStyle(data, this.d_pnpl_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -34.097, -3.503, 50.083]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -34.097, -3.503, 50.083]
+          // d_prmp_2_values: [-99999.9999, -34.097, -3.503, 50.083],
+          getStyle(data, this.d_prmp_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -61.175, -3.583, 126.669]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -61.175, -3.583, 126.669]
+          // d_ptsdf_2_values: [-99999.9999, -61.175, -3.583, 126.669],
+          getStyle(data, this.d_ptsdf_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, 3418.589, 9484.232, 17558.825]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, 3418.589, 9484.232, 17558.825]
+          // d_ozone_2_values: [-99999.9999, 3418.589, 9484.232, 17558.825],
+          getStyle(data, this.d_ozone_2_values, this.ejscolors, variable, 'ejslayer1')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -167.385, 1043.186, 2801.709]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer1')
+          // values = [-99999.9999, -167.385, 1043.186, 2801.709]
+          // d_pm25_2_values: [-99999.9999, -167.385, 1043.186, 2801.709],
+          getStyle(data, this.d_pm25_2_values, this.ejscolors, variable, 'ejslayer1')
         }
         return [
           new Style({
@@ -3219,20 +3916,24 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentradiovariable1
         if (variable === 'cases') {
-          values = [-999.99, 1328, 2656, 3984, 5416, 6644]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer1')
+          // values = [-999.99, 1328, 2656, 3984, 5416, 6644]
+          // covid_cases_values: [-999.99, 1328, 2656, 3984, 5416, 6644],
+          this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer1')
         } else if (variable === 'cases_per_10000_res') {
-          values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer1')
+          // values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
+          // covid_cases_per_10000_res_values: [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0],
+          this.getColors(data, this.covid_cases_per_10000_res_values, this.covidcolors, variable, 'covidlayer1')
         } else if (variable === 'cases_per_100000_res') {
-          values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer1')
+          // values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
+          // covid_cases_per_100000_res_values: [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0],
+          this.getColors(data, this.covid_cases_per_100000_res_values, this.covidcolors, variable, 'covidlayer1')
         } else if (variable === 'deaths') {
-          values = [-999.99, 17, 34, 51, 65, 85]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer1')
+          // values = [-999.99, 17, 34, 51, 65, 85]
+          // covid_deaths_values: [-999.99, 17, 34, 51, 65, 85],
+          this.getColors(data, this.covid_deaths_values, this.covidcolors, variable, 'covidlayer1')
         }
         return [
           new Style({
@@ -3259,44 +3960,44 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentradiovariable2
         if (variable === 'ncwellwise_arsenic_med') {
-          values = [-999.99, 3.55, 6.847, 11.18]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 3.55, 6.847, 11.18]
+          getStyle(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_mean') {
-          values = [-999.99, 3.549, 3.71, 4.47]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 3.549, 3.71, 4.47]
+          getStyle(data, this.arsenic_mean_values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_prcast') {
-          values = [-999.99, 0.1, 2.607, 9.187]
-          getStyle(data, values, this.arsncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 0.1, 2.607, 9.187]
+          getStyle(data, this.arsenic_prcast_values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_med') {
-          values = [-999.99, 0.72, 0.76, 0.80]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 0.72, 0.76, 0.80]
+          getStyle(data, this.cadmium_med_values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_mean') {
-          values = [-999.99, 0.719, 0.73, 0.77]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 0.719, 0.73, 0.77]
+          getStyle(data, this.cadmium_mean_values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_cadmium_prcast') {
-          values = [-999.99, 0.1, 0.993, 3.21]
-          getStyle(data, values, this.cadmcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 0.1, 0.993, 3.21]
+          getStyle(data, this.cadmium_prcast_values, this.cadmcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_med') {
-          values = [-999.99, 3.8, 5.77, 9.0]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 3.8, 5.77, 9.0]
+          getStyle(data, this.lead_med_values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_mean') {
-          values = [-999.99, 3.548, 4.033, 4.977]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 3.548, 4.033, 4.977]
+          getStyle(data, this.lead_mean_values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_lead_prcast') {
-          values = [-999.99, 0.35, 2.61, 5.66]
-          getStyle(data, values, this.leadcolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 0.35, 2.61, 5.66]
+          getStyle(data, this.lead_prcast_values, this.leadcolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_med') {
-          values = [-999.99, 23.0, 40.0, 70.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 23.0, 40.0, 70.0]
+          getStyle(data, this.manganese_med_values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_mean') {
-          values = [-999.99, 35.0, 55.0, 100.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 35.0, 55.0, 100.0]
+          getStyle(data, this.manganese_mean_values, this.mngncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_manganese_prcast') {
-          values = [-999.99, 5, 25, 45.0]
-          getStyle(data, values, this.mngncolors, variable, 'ncwelllayer2')
+          // values = [-999.99, 5, 25, 45.0]
+          getStyle(data, this.manganese_prcast_values, this.mngncolors, variable, 'ncwelllayer2')
         }
         return [
           new Style({
@@ -3323,9 +4024,9 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values = [-999.99, 25, 50, 75]
+        // let values = [-999.99, 25, 50, 75]
         let variable = this.currentacsvariable2
-        getStyle(data, values, this.acscolors, variable, 'acslayer2')
+        getStyle(data, this.census_acs_values, this.acscolors, variable, 'acslayer2')
         return [
           new Style({
             stroke: new Stroke({
@@ -3351,41 +4052,41 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentejsvariable2
         if (variable === 'd_ldpnt_2') {
-          values = [-99999.9999, -20.0, 0.0, 27.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -20.0, 0.0, 27.0]
+          getStyle(data, this.d_ldpnt_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_dslpm_2') {
-          values = [-99999.9999, -50.0, 0.0, 60.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -50.0, 0.0, 60.0]
+          getStyle(data, this.d_dslpm_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_cancr_2') {
-          values = [-99999.9999, 2204.147, 7227.09, 7227.09]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, 2204.147, 7227.09, 7227.09]
+          getStyle(data, this.d_cancr_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_resp_2') {
-          values = [-99999.9999, -86.266, -14.005, 97.526]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -86.266, -14.005, 97.526]
+          getStyle(data, this.d_resp_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptraf_2') {
-          values = [-99999.9999, 0.0, 8126.669, 74230.562]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, 0.0, 8126.669, 74230.562]
+          getStyle(data, this.d_ptraf_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pwdis_2') {
-          values = [-99999.9999, -0.0000746, 0.0, 0.000039]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -0.0000746, 0.0, 0.000039]
+          getStyle(data, this.d_pwdis_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pnpl_2') {
-          values = [-99999.9999, -8.798, 0.0, 8.0]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -8.798, 0.0, 8.0]
+          getStyle(data, this.d_pnpl_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_prmp_2') {
-          values = [-99999.9999, -34.097, -3.503, 50.083]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -34.097, -3.503, 50.083]
+          getStyle(data, this.d_prmp_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ptsdf_2') {
-          values = [-99999.9999, -61.175, -3.583, 126.669]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -61.175, -3.583, 126.669]
+          getStyle(data, this.d_ptsdf_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_ozone_2') {
-          values = [-99999.9999, 3418.589, 9484.232, 17558.825]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, 3418.589, 9484.232, 17558.825]
+          getStyle(data, this.d_ozone_2_values, this.ejscolors, variable, 'ejslayer2')
         } else if (variable === 'd_pm25_2') {
-          values = [-99999.9999, -167.385, 1043.186, 2801.709]
-          getStyle(data, values, this.ejscolors, variable, 'ejslayer2')
+          // values = [-99999.9999, -167.385, 1043.186, 2801.709]
+          getStyle(data, this.d_pm25_2_values, this.ejscolors, variable, 'ejslayer2')
         }
         return [
           new Style({
@@ -3404,20 +4105,20 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let values
+        // let values
         let variable = this.currentradiovariable2
         if (variable === 'cases') {
-          values = [-999.99, 1328, 2656, 3984, 5416, 6644]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer2')
+          // values = [-999.99, 1328, 2656, 3984, 5416, 6644]
+          this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer2')
         } else if (variable === 'cases_per_10000_res') {
-          values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer2')
+          // values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
+          this.getColors(data, this.covid_cases_per_10000_res_values, this.covidcolors, variable, 'covidlayer2')
         } else if (variable === 'cases_per_100000_res') {
-          values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer2')
+          // values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
+          this.getColors(data, this.covid_cases_per_100000_res_values, this.covidcolors, variable, 'covidlayer2')
         } else if (variable === 'deaths') {
-          values = [-999.99, 17, 34, 51, 65, 85]
-          this.getColors(data, values, this.covidcolors, variable, 'covidlayer2')
+          // values = [-999.99, 17, 34, 51, 65, 85]
+          this.getColors(data, this.covid_deaths_values, this.covidcolors, variable, 'covidlayer2')
         }
         return [
           new Style({
