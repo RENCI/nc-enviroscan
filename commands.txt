@@ -20,7 +20,7 @@ docker volume inspect nc-enviroscan_postgres_data
 docker volume remove nc-enviroscan_postgres_data
 
 docker-compose -f docker-compose.prod.yml exec db psql -U ncenviroscan --password -d ncenviroscan_prod -p 5432 -h localhost
-t
+
 # Django Commands
 python manage.py migrate --fake drf zero
 python manage.py makemigrations
