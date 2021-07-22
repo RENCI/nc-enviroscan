@@ -1,96 +1,117 @@
 <template>
   <q-layout view="lhr lpr lfr">
     <!--// Left Drawer Starts-->
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :content-style="{ backgroundColor: 'rgba(199, 235, 235, 0.5)' }">
+    <q-drawer v-model="leftDrawerOpen" :width="320" show-if-above bordered :content-style="{ backgroundColor: 'rgba(199, 235, 235, 0.5)' }">
+      <font size="4" face="Arial" >
+        <div style="text-align:center">Census Tract Details</div>
+      </font>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeatureMedBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxmedoptions" :series="selectedFeatureMedBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeatureMedBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxmedoptions" :series="selectedFeatureMedBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeatureMeanBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxmeanoptions" :series="selectedFeatureMeanBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeatureMeanBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxmeanoptions" :series="selectedFeatureMeanBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeaturePrcastBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxprcastoptions" :series="selectedFeaturePrcastBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeaturePrcastBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxprcastoptions" :series="selectedFeaturePrcastBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeatureMinBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxminoptions" :series="selectedFeatureMinBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeatureMinBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxminoptions" :series="selectedFeatureMinBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeatureMaxBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxmaxoptions" :series="selectedFeatureMaxBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeatureMaxBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxmaxoptions" :series="selectedFeatureMaxBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
       <q-space />
       <q-separator />
       <q-space />
-      <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
-        <table class="table is-fullwidth">
-          <div v-if="Object.keys(selectedFeatureStdBarBox).length > 0">
-            <tr>
-              <td>
-                <apexchart width="280" type="radialBar" :options="apxstdoptions" :series="selectedFeatureStdBarBox" />
-              </td>
-            </tr>
-          </div>
-        </table>
-      </q-card>
+      <center>
+        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
+          <table class="table is-fullwidth">
+            <div v-if="Object.keys(selectedFeatureStdBarBox).length > 0">
+              <tr>
+                <td>
+                  <apexchart width="280" type="radialBar" :options="apxstdoptions" :series="selectedFeatureStdBarBox" />
+                </td>
+              </tr>
+            </div>
+          </table>
+        </q-card>
+      </center>
     </q-drawer>
     <!--// Left Drawer Ends -->
 
     <!--// right side drawer Starts -->
-    <q-drawer side="right" v-model="rightDrawerOpen" show-if-above bordered content-class="teal bg-teal-1">
+    <q-drawer side="right" v-model="rightDrawerOpen" :width="400" show-if-above bordered content-class="teal bg-teal-1">
       <q-list bordered class="rounded-borders">
         <!-- // baselayers -->
         <q-expansion-item default-opened expand-separator icon="list" label="Base Layers">
@@ -124,7 +145,7 @@
         <!-- // baselayers -->
 
         <!-- // nolayer -->
-        <q-expansion-item expand-separator icon="list" label="No Overlay Layer">
+        <q-expansion-item expand-separator icon="list" label="Clear Data">
           <div class="q-pa-md" style="min-width: 200px">
             <q-list link>
               <q-item tag="label" v-ripple>
@@ -132,7 +153,7 @@
                   <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
                 </q-item-section>
                 <q-item-section>
-                  <q-item-label>No Overlay Layer</q-item-label>
+                  <q-item-label>Clear Data</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -141,1045 +162,1008 @@
         <!-- // nolayer -->
 
         <!-- // NC wellwise layers -->
-        <q-expansion-item default-opened dense dense-toggle expand-separator icon="list" label="NC Well Data Layers, by Census Tracts">
+        <q-expansion-item default-opened dense dense-toggle expand-separator icon="list" label="Environmental Indicators, by Census Tracts">
           <div class="q-pa-md q-gutter-y-sm column">
-            <q-item dense tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arsenic (ppb and %)</q-tooltip>
-              <table cellspacing="0" cellpadding="0" style="width:100%">
-                <caption style="text-align:left">Arsenic</caption>
-                <tr>
-                  <td>Median</td>
-                  <td>Mean</td>
-                  <td>% Above Standard</td>
-                </tr>
-                <tr>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_mean" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_prcast" v-model="currentvariable" color="teal" /></td>
-                </tr>
-              </table>
-            </q-item>
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Arsenic Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                         <td style="text-align:center;" >Mean (ppb)</td>
-                         <td style="text-align:center;" >% Above Standard</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="assqu1"></span></td>
-                        <td>&gt; {{ arsenic_med_values[1] }}</td>
-                        <td>&gt; {{ arsenic_mean_values[1] }}</td>
-                        <td>&gt; {{ arsenic_prcast_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="assqu2"></span></td>
-                        <td>&ge; {{ arsenic_med_values[1] }} &amp; &lt; {{ arsenic_med_values[2] }}</td>
-                        <td>&ge; {{ arsenic_mean_values[1] }} &amp; &lt; {{ arsenic_mean_values[2] }}</td>
-                        <td>&ge; {{ arsenic_prcast_values[1] }} &amp; &lt; {{ arsenic_prcast_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="assqu3"></span></td>
-                        <td>&ge; {{ arsenic_med_values[2] }} &amp; &lt; {{ arsenic_med_values[3] }}</td>
-                        <td>&ge; {{ arsenic_mean_values[2] }} &amp; &lt; {{ arsenic_mean_values[3] }}</td>
-                        <td>&ge; {{ arsenic_prcast_values[2] }} &amp; &lt; {{ arsenic_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="assqu4"></span></td>
-                        <td>&ge; {{ arsenic_med_values[3] }}</td>
-                        <td>&ge; {{ arsenic_mean_values[3] }}</td>
-                        <td>&ge; {{ arsenic_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ arsenic_med_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
-            <q-item dense tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Cadmium (ppb and %)</q-tooltip>
-              <table cellspacing="0" cellpadding="0" style="width:100%">
-                <caption style="text-align:left">Cadmium</caption>
-                <tr>
-                  <td>Median</td>
-                  <td>Mean</td>
-                  <td>% Above Standard</td>
-                </tr>
-                <tr>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_mean" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_prcast" v-model="currentvariable" color="teal" /></td>
-                </tr>
-              </table>
-            </q-item>
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Cadmium Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                         <td style="text-align:center;" >Mean (ppb)</td>
-                         <td style="text-align:center;" >% Above Standard</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="cdsqu1"></span></td>
-                        <td>&gt; {{ cadmium_med_values[1] }}</td>
-                        <td>&gt; {{ cadmium_mean_values[1] }}</td>
-                        <td>&gt; {{ cadmium_prcast_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="cdsqu2"></span></td>
-                        <td>&ge; {{ cadmium_med_values[1] }} &amp; &lt; {{ cadmium_med_values[2] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="cdsqu3"></span></td>
-                        <td>&ge; {{ cadmium_med_values[2] }} &amp; &lt; {{ cadmium_med_values[3] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="cdsqu4"></span></td>
-                        <td>&ge; {{ cadmium_med_values[3] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[3] }}</td>
-                        <td>&ge; {{ cadmium_mean_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ cadmium_med_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
-            <q-item dense tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Lead (ppb and %)</q-tooltip>
-              <table cellspacing="0" cellpadding="0" style="width:100%">
-                <caption style="text-align:left">Lead</caption>
-                <tr>
-                  <td>Median</td>
-                  <td>Mean</td>
-                  <td>% Above Standard</td>
-                </tr>
-                <tr>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_med" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_mean" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_prcast" v-model="currentvariable" color="teal" /></td>
-                </tr>
-              </table>
-            </q-item>
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Lead Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                         <td style="text-align:center;" >Mean (ppb)</td>
-                         <td style="text-align:center;" >% Above Standard</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="pbsqu1"></span></td>
-                        <td>&gt; {{ lead_med_values[1] }}</td>
-                        <td>&gt; {{ lead_mean_values[1] }}</td>
-                        <td>&gt; {{ lead_prcast_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="pbsqu2"></span></td>
-                        <td>&ge; {{ lead_med_values[1] }} &amp; &lt; {{ lead_med_values[2] }}</td>
-                        <td>&ge; {{ lead_mean_values[1] }} &amp; &lt; {{ lead_mean_values[2] }}</td>
-                        <td>&ge; {{ lead_prcast_values[1] }} &amp; &lt; {{ lead_prcast_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="pbsqu3"></span></td>
-                        <td>&ge; {{ lead_med_values[2] }} &amp; &lt; {{ lead_med_values[3] }}</td>
-                        <td>&ge; {{ lead_mean_values[2] }} &amp; &lt; {{ lead_mean_values[3] }}</td>
-                        <td>&ge; {{ lead_prcast_values[2] }} &amp; &lt; {{ lead_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="pbsqu4"></span></td>
-                        <td>&ge; {{ lead_med_values[3] }}</td>
-                        <td>&ge; {{ lead_mean_values[3] }}</td>
-                        <td>&ge; {{ lead_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="pbsqufill"></span></td>
-                        <td>Fill {{ lead_med_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
-            <q-item dense ag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Maganese (ppb and %)</q-tooltip>
-              <table cellspacing="0" cellpadding="0" style="width:100%">
-                <caption style="text-align:left">Manganese</caption>
-                <tr>
-                  <td>Median</td>
-                  <td>Mean</td>
-                  <td>% Above Standard</td>
-                </tr>
-                <tr>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_mean" v-model="currentvariable" color="teal" /></td>
-                  <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_prcast" v-model="currentvariable" color="teal" /></td>
-                </tr>
-              </table>
-            </q-item>
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Manganese Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                         <td style="text-align:center;" colspan="2">Median (ppb)</td>
-                         <td style="text-align:center;" >Mean (ppb)</td>
-                         <td style="text-align:center;" >% Above Standard</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="mnsqu1"></span></td>
-                        <td>&gt; {{ manganese_med_values[1] }}</td>
-                        <td>&gt; {{ manganese_mean_values[1] }}</td>
-                        <td>&gt; {{ manganese_prcast_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="mnsqu2"></span></td>
-                        <td>&ge; {{ manganese_med_values[1] }} &amp; &lt; {{ manganese_med_values[2] }}</td>
-                        <td>&ge; {{ manganese_mean_values[1] }} &amp; &lt; {{ manganese_mean_values[2] }}</td>
-                        <td>&ge; {{ manganese_prcast_values[1] }} &amp; &lt; {{ manganese_prcast_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="mnsqu3"></span></td>
-                        <td>&ge; {{ manganese_med_values[2] }} &amp; &lt; {{ manganese_med_values[3] }}</td>
-                        <td>&ge; {{ manganese_mean_values[2] }} &amp; &lt; {{ manganese_mean_values[3] }}</td>
-                        <td>&ge; {{ manganese_prcast_values[2] }} &amp; &lt; {{ manganese_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="mnsqu4"></span></td>
-                        <td>&ge; {{ manganese_med_values[3] }}</td>
-                        <td>&ge; {{ manganese_mean_values[3] }}</td>
-                        <td>&ge; {{ manganese_prcast_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ manganese_med_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
+            <table cellspacing="0" cellpadding="0" style="width:100%">
+              <tr>
+                <td></td>
+                <td>Median</td>
+                <td>Mean</td>
+                <td>% Above Standard</td>
+                <td>Legend</td>
+              </tr>
+              <tr>
+                <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arsenic (ppb and %)</q-tooltip>
+                <td>Arsenic</td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_mean" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_arsenic_prcast" v-model="currentvariable" color="teal" /></td>
+                <td>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                            <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                            <td style="text-align:center;" >Mean (ppb)</td>
+                            <td style="text-align:center;" >% Above Standard</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="assqu1"></span></td>
+                            <td>&gt; {{ arsenic_med_values[1] }}</td>
+                            <td>&gt; {{ arsenic_mean_values[1] }}</td>
+                            <td>&gt; {{ arsenic_prcast_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="assqu2"></span></td>
+                            <td>&ge; {{ arsenic_med_values[1] }} &amp; &lt; {{ arsenic_med_values[2] }}</td>
+                            <td>&ge; {{ arsenic_mean_values[1] }} &amp; &lt; {{ arsenic_mean_values[2] }}</td>
+                            <td>&ge; {{ arsenic_prcast_values[1] }} &amp; &lt; {{ arsenic_prcast_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="assqu3"></span></td>
+                            <td>&ge; {{ arsenic_med_values[2] }} &amp; &lt; {{ arsenic_med_values[3] }}</td>
+                            <td>&ge; {{ arsenic_mean_values[2] }} &amp; &lt; {{ arsenic_mean_values[3] }}</td>
+                            <td>&ge; {{ arsenic_prcast_values[2] }} &amp; &lt; {{ arsenic_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="assqu4"></span></td>
+                            <td>&ge; {{ arsenic_med_values[3] }}</td>
+                            <td>&ge; {{ arsenic_mean_values[3] }}</td>
+                            <td>&ge; {{ arsenic_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="squfill"></span></td>
+                            <td>No Data {{ arsenic_med_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+              </tr>
+              <tr>
+                <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Cadmium (ppb and %)</q-tooltip>
+                <td>Cadmium</td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_mean" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_cadmium_prcast" v-model="currentvariable" color="teal" /></td>
+                <td>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                            <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                            <td style="text-align:center;" >Mean (ppb)</td>
+                            <td style="text-align:center;" >% Above Standard</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="cdsqu1"></span></td>
+                            <td>&gt; {{ cadmium_med_values[1] }}</td>
+                            <td>&gt; {{ cadmium_mean_values[1] }}</td>
+                            <td>&gt; {{ cadmium_prcast_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="cdsqu2"></span></td>
+                            <td>&ge; {{ cadmium_med_values[1] }} &amp; &lt; {{ cadmium_med_values[2] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[1] }} &amp; &lt; {{ cadmium_mean_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="cdsqu3"></span></td>
+                            <td>&ge; {{ cadmium_med_values[2] }} &amp; &lt; {{ cadmium_med_values[3] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[2] }} &amp; &lt; {{ cadmium_mean_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="cdsqu4"></span></td>
+                            <td>&ge; {{ cadmium_med_values[3] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                            <td>&ge; {{ cadmium_mean_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="squfill"></span></td>
+                            <td>No Data {{ cadmium_med_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+              </tr>
+              <tr>
+                <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Lead (ppb and %)</q-tooltip>
+                <td>Lead</td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_med" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_mean" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_lead_prcast" v-model="currentvariable" color="teal" /></td>
+                <td>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                             <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                             <td style="text-align:center;" >Mean (ppb)</td>
+                             <td style="text-align:center;" >% Above Standard</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="pbsqu1"></span></td>
+                            <td>&gt; {{ lead_med_values[1] }}</td>
+                            <td>&gt; {{ lead_mean_values[1] }}</td>
+                            <td>&gt; {{ lead_prcast_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="pbsqu2"></span></td>
+                            <td>&ge; {{ lead_med_values[1] }} &amp; &lt; {{ lead_med_values[2] }}</td>
+                            <td>&ge; {{ lead_mean_values[1] }} &amp; &lt; {{ lead_mean_values[2] }}</td>
+                            <td>&ge; {{ lead_prcast_values[1] }} &amp; &lt; {{ lead_prcast_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="pbsqu3"></span></td>
+                            <td>&ge; {{ lead_med_values[2] }} &amp; &lt; {{ lead_med_values[3] }}</td>
+                            <td>&ge; {{ lead_mean_values[2] }} &amp; &lt; {{ lead_mean_values[3] }}</td>
+                            <td>&ge; {{ lead_prcast_values[2] }} &amp; &lt; {{ lead_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="pbsqu4"></span></td>
+                            <td>&ge; {{ lead_med_values[3] }}</td>
+                            <td>&ge; {{ lead_mean_values[3] }}</td>
+                            <td>&ge; {{ lead_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="pbsqufill"></span></td>
+                            <td>No Data {{ lead_med_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+              </tr>
+              <tr>
+                <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Manganese (ppb and %)</q-tooltip>
+                <td>Manganese</td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_mean" v-model="currentvariable" color="teal" /></td>
+                <td><q-radio v-on:input="showMapPanelRadioLayer" val="ncwellwise_manganese_prcast" v-model="currentvariable" color="teal" /></td>
+                <td>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                            <td style="text-align:center;" colspan="2">Median (ppb)</td>
+                            <td style="text-align:center;" >Mean (ppb)</td>
+                            <td style="text-align:center;" >% Above Standard</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="mnsqu1"></span></td>
+                            <td>&gt; {{ manganese_med_values[1] }}</td>
+                            <td>&gt; {{ manganese_mean_values[1] }}</td>
+                            <td>&gt; {{ manganese_prcast_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="mnsqu2"></span></td>
+                            <td>&ge; {{ manganese_med_values[1] }} &amp; &lt; {{ manganese_med_values[2] }}</td>
+                            <td>&ge; {{ manganese_mean_values[1] }} &amp; &lt; {{ manganese_mean_values[2] }}</td>
+                            <td>&ge; {{ manganese_prcast_values[1] }} &amp; &lt; {{ manganese_prcast_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="mnsqu3"></span></td>
+                            <td>&ge; {{ manganese_med_values[2] }} &amp; &lt; {{ manganese_med_values[3] }}</td>
+                            <td>&ge; {{ manganese_mean_values[2] }} &amp; &lt; {{ manganese_mean_values[3] }}</td>
+                            <td>&ge; {{ manganese_prcast_values[2] }} &amp; &lt; {{ manganese_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="mnsqu4"></span></td>
+                            <td>&ge; {{ manganese_med_values[3] }}</td>
+                            <td>&ge; {{ manganese_mean_values[3] }}</td>
+                            <td>&ge; {{ manganese_prcast_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="squfill"></span></td>
+                            <td>No Data {{ manganese_med_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+              </tr>
+            </table>
           </div>
         </q-expansion-item>
         <!-- // NC wellwise layers -->
 
         <!-- // ACS Census layers -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Socioeconomic Layers, by Census Tracts">
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Sociodemographic Indicators, by Census Tracts">
           <div class="q-pa-md q-gutter-y-sm column">
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Census ACS Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu1"></span></td>
-                        <td>&gt; {{ census_acs_values[1] }}%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu2"></span></td>
-                        <td>&ge; {{ census_acs_values[1] }}% &amp; &lt; {{ census_acs_values[2] }}%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu3"></span></td>
-                        <td>&ge; {{ census_acs_values[2] }}% &amp; &lt; {{ census_acs_values[3] }}%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="acssqu4"></span></td>
-                        <td>&ge; {{ census_acs_values[3] }}%</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ census_acs_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="percent_below_poverty_level" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Below the Poverty Level</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="american_indian_and_alaska_native_alone" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Native American</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="asian_alone" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Asian</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="black_or_african_american_alone" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Non-Hispanic Black</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="native_hawaiian_and_other_pacific_islander_alone" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Non-Hispanic Native Hawaiian and other Pacific Islander</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="white_alone" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Non-Hispanic White</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="two_or_more_races" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Two or more Races</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="hispanic_or_latino_of_any_race" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Hispanic</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="not_hispanic_or_latino" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent Non-Hispanic</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="speak_a_language_other_than_english" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Percent of Population, 5 Years and Over, who Speak a language other than English</q-item-label>
-              </q-item-section>
-            </q-item>
+            <table cellspacing="3" cellpadding="0" style="width:100%">
+              <tr>
+                <td>
+                  <!-- // legend -->
+                  Legend
+                </td>
+                <td>
+                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                            <td style="padding:5px"><span class="acssqu1"></span></td>
+                            <td>&gt; {{ census_acs_values[1] }}%</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="acssqu2"></span></td>
+                            <td>&ge; {{ census_acs_values[1] }}% &amp; &lt; {{ census_acs_values[2] }}%</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="acssqu3"></span></td>
+                            <td>&ge; {{ census_acs_values[2] }}% &amp; &lt; {{ census_acs_values[3] }}%</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="acssqu4"></span></td>
+                            <td>&ge; {{ census_acs_values[3] }}%</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="squfill"></span></td>
+                            <td>No Data {{ census_acs_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                    </q-btn>
+                  <!-- // legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="percent_below_poverty_level" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Below the Poverty Level
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="american_indian_and_alaska_native_alone" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Native American
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="asian_alone" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Asian
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="black_or_african_american_alone" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Non-Hispanic Black
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="native_hawaiian_and_other_pacific_islander_alone" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Non-Hispanic Native Hawaiian and other Pacific Islander
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="white_alone" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Non-Hispanic White
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="two_or_more_races" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Two or more Races
+                </td>
+              </tr>
+              <tr>
+              <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="hispanic_or_latino_of_any_race" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Hispanic
+                </td>
+              </tr>
+                <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="not_hispanic_or_latino" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent Non-Hispanic
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From US Census American Community Survey, 2019 5 year estimate</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="speak_a_language_other_than_english" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  Percent of Population, 5 Years and Over, who Speak a language other than English
+                </td>
+              </tr>
+            </table>
           </div>
         </q-expansion-item>
         <!-- // ACS Census layers -->
 
         <!-- // EJScreen layers -->
         <!-- // d_ldpnt_2 -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Environmental Justice Layers, by Census Block Group">
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Environmental Justice Indicators, by Census Block Group">
           <div class="q-pa-md q-gutter-y-sm column">
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_ldpnt_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for % pre-1960 housing (lead paint indicator)</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_ldpnt_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_ldpnt_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Lead Paint
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Lead Paint</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_ldpnt_2_values[1] }} &amp; &lt; {{ d_ldpnt_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_ldpnt_2_values[2] }} &amp; &lt; {{ d_ldpnt_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_ldpnt_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_ldpnt_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_ldpnt_2_values legend -->
-            </q-item>
-            <!-- // d_dslpm_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_dslpm_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Diesel particulate matter level in air</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_dslpm_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_dslpm_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Diesel Particulate
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Diesel Particulate</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_dslpm_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_dslpm_2_values[1] }} &amp; &lt; {{ d_dslpm_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_dslpm_2_values[2] }} &amp; &lt; {{ d_dslpm_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_dslpm_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_dslpm_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_dslpm_2_values legend -->
-            </q-item>
-            <!-- // d_cancr_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_cancr_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Air toxics cancer risk</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_cancr_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_cancr_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Air Toxics Cancer
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Air Toxics Cancer</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_cancr_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_cancr_2_values[1] }} &amp; &lt; {{ d_cancr_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_cancr_2_values[2] }} &amp; &lt; {{ d_cancr_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_cancr_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_cancr_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_cancr_2_values legend -->
-            </q-item>
-            <!-- // d_resp_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_resp_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Air toxics respiratory hazard index</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_resp_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_resp_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Air toxics respiratory
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Air toxics respiratory</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_resp_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_resp_2_values[1] }} &amp; &lt; {{ d_resp_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_resp_2_values[2] }} &amp; &lt; {{ d_resp_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_resp_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_resp_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_resp_2_values legend -->
-            </q-item>
-            <!-- // d_ptraf_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_ptraf_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Traffic proximity and volume</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_ptraf_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_ptraf_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Traffic
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Traffic</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_ptraf_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_ptraf_2_values[1] }} &amp; &lt; {{ d_ptraf_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_ptraf_2_values[2] }} &amp; &lt; {{ d_ptraf_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_ptraf_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_ptraf_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_ptraf_2_values legend -->
-            </q-item>
-            <!-- // d_pwdis_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_pwdis_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Indicator for major direct dischargers to water</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_pwdis_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_pwdis_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Direct Discharges
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Direct Discharges</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_pwdis_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_pwdis_2_values[1] }} &amp; &lt; {{ d_pwdis_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_pwdis_2_values[2] }} &amp; &lt; {{ d_pwdis_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_pwdis_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_pwdis_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_pwdis_2_values legend -->
-            </q-item>
-            <!-- // d_pnpl_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_pnpl_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Proximity to National Priorities List (NPL) sites</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_pnpl_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_pnpl_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for National Priorities
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">National Priorities</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_pnpl_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_pnpl_2_values[1] }} &amp; &lt; {{ d_pnpl_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_pnpl_2_values[2] }} &amp; &lt; {{ d_pnpl_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_pnpl_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_pnpl_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_pnpl_2_values legend -->
-            </q-item>
-             <!-- // d_prmp_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_prmp_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Proximity to Risk Management Plan (RMP) facilities</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_prmp_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_prmp_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Risk Management
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Risk Management</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_prmp_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_prmp_2_values[1] }} &amp; &lt; {{ d_prmp_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_prmp_2_values[2] }} &amp; &lt; {{ d_prmp_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_prmp_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_prmp_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_prmp_2_values legend -->
-            </q-item>
-            <!-- // d_ptsdf_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_ptsdf_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_ptsdf_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_ptsdf_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Storage and Disposal
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Storage and Disposal</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_ptsdf_2_values[1] }} &amp; &lt; {{ d_ptsdf_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_ptsdf_2_values[2] }} &amp; &lt; {{ d_ptsdf_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_ptsdf_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_ptsdf_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_ptsdf_2_values legend -->
-            </q-item>
-            <!-- // d_ozone_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_ozone_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for Ozone level in air</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_ozone_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_ozone_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for Tropospheric Ozone
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">Tropospheric Ozone</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_ozone_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_ozone_2_values[1] }} &amp; &lt; {{ d_ozone_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_ozone_2_values[2] }} &amp; &lt; {{ d_ozone_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_ozone_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_ozone_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_ozone_2_values legend -->
-            </q-item>
-            <!-- // d_pm25_2 -->
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="d_pm25_2" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>EJ Index for PM2.5 level in air</q-item-label>
-              </q-item-section>
-            </q-item>
-            <!-- // d_pm25_2 -->
-            <q-item dense tag="label" v-ripple>
-              <!-- // d_pm25_2_values legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Legend for PM2.5
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                        <td style="text-align:center;" colspan="2">PM2.5</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu1"></span></td>
-                        <td>&gt; {{ d_pm25_2_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu2"></span></td>
-                        <td>&ge; {{ d_pm25_2_values[1] }} &amp; &lt; {{ d_pm25_2_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu3"></span></td>
-                        <td>&ge; {{ d_pm25_2_values[2] }} &amp; &lt; {{ d_pm25_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="ejssqu4"></span></td>
-                        <td>&ge; {{ d_pm25_2_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ d_pm25_2_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // d_pm25_2_values legend -->
-            </q-item>
+            <table cellspacing="0" cellpadding="0" style="width:100%">
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_ldpnt_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for % pre-1960 housing (lead paint indicator)
+                </td>
+                <td>
+                  <!-- // d_ldpnt_2 -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Lead Paint</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_ldpnt_2_values[1] }} &amp; &lt; {{ d_ldpnt_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_ldpnt_2_values[2] }} &amp; &lt; {{ d_ldpnt_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_ldpnt_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_ldpnt_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_ldpnt_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_dslpm_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_dslpm_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Diesel particulate matter level in air
+                  <!-- // d_dslpm_2 -->
+                </td>
+                <td>
+                    <!-- // d_dslpm_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Diesel Particulate</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_dslpm_2_values[1] }} &amp; &lt; {{ d_dslpm_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_dslpm_2_values[2] }} &amp; &lt; {{ d_dslpm_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_dslpm_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_dslpm_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_dslpm_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_cancr_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_cancr_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Air toxics cancer risk
+                  <!-- // d_cancr_2 -->
+                </td>
+                <td>
+                    <!-- // d_cancr_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Air Toxics Cancer</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_cancr_2_values[1] }} &amp; &lt; {{ d_cancr_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_cancr_2_values[2] }} &amp; &lt; {{ d_cancr_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_cancr_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_cancr_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_cancr_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_resp_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_resp_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Air toxics respiratory hazard index
+                  <!-- // d_resp_2 -->
+                </td>
+                <td>
+                    <!-- // d_resp_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Air toxics respiratory</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_resp_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_resp_2_values[1] }} &amp; &lt; {{ d_resp_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_resp_2_values[2] }} &amp; &lt; {{ d_resp_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_resp_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_resp_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_resp_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_ptraf_2 -->
+                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                    <q-radio v-on:input="showMapPanelRadioLayer" val="d_ptraf_2" v-model="currentvariable" color="teal" />
+                  </td>
+                  <td>
+                      EJ Index for Traffic proximity and volume
+                  <!-- // d_ptraf_2 -->
+                </td>
+                <td>
+                    <!-- // d_ptraf_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Traffic</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_ptraf_2_values[1] }} &amp; &lt; {{ d_ptraf_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_ptraf_2_values[2] }} &amp; &lt; {{ d_ptraf_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_ptraf_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_ptraf_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_ptraf_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_pwdis_2 -->
+                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                    <q-radio v-on:input="showMapPanelRadioLayer" val="d_pwdis_2" v-model="currentvariable" color="teal" />
+                  </td>
+                  <td>
+                      EJ Index for Indicator for major direct dischargers to water
+                  <!-- // d_pwdis_2 -->
+                </td>
+                <td>
+                    <!-- // d_pwdis_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Direct Discharges</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_pwdis_2_values[1] }} &amp; &lt; {{ d_pwdis_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_pwdis_2_values[2] }} &amp; &lt; {{ d_pwdis_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_pwdis_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_pwdis_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_pwdis_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_pnpl_2 -->
+                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                    <q-radio v-on:input="showMapPanelRadioLayer" val="d_pnpl_2" v-model="currentvariable" color="teal" />
+                  </td>
+                  <td>
+                      EJ Index for Proximity to National Priorities List (NPL) sites
+                  <!-- // d_pnpl_2 -->
+                </td>
+                <td>
+                    <!-- // d_pnpl_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">National Priorities</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_pnpl_2_values[1] }} &amp; &lt; {{ d_pnpl_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_pnpl_2_values[2] }} &amp; &lt; {{ d_pnpl_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_pnpl_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_pnpl_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_pnpl_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_prmp_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_prmp_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Proximity to Risk Management Plan (RMP) facilities
+                  <!-- // d_prmp_2 -->
+                </td>
+                <td>
+                    <!-- // d_prmp_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Risk Management</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_prmp_2_values[1] }} &amp; &lt; {{ d_prmp_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_prmp_2_values[2] }} &amp; &lt; {{ d_prmp_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_prmp_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_prmp_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_prmp_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_ptsdf_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_ptsdf_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities
+                  <!-- // d_ptsdf_2 -->
+                </td>
+                <td>
+                    <!-- // d_ptsdf_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Storage and Disposal</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_ptsdf_2_values[1] }} &amp; &lt; {{ d_ptsdf_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_ptsdf_2_values[2] }} &amp; &lt; {{ d_ptsdf_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_ptsdf_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_ptsdf_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_ptsdf_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_ozone_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_ozone_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for Ozone level in air
+                  <!-- // d_ozone_2 -->
+                </td>
+                <td>
+                    <!-- // d_ozone_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">Tropospheric Ozone</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_ozone_2_values[1] }} &amp; &lt; {{ d_ozone_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_ozone_2_values[2] }} &amp; &lt; {{ d_ozone_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_ozone_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_ozone_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_ozone_2_values legend -->
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!-- // d_pm25_2 -->
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From the US Environmental Protection Agency</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="d_pm25_2" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  EJ Index for PM2.5 level in air
+                  <!-- // d_pm25_2 -->
+                </td>
+                <td>
+                    <!-- // d_pm25_2_values legend -->
+                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                      <q-tooltip>Click to View Map Legend</q-tooltip>
+                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                        <font size="2" face="Arial" >
+                          <q-markup-table dense class="bg-teal-1">
+                            <tr>
+                              <td style="text-align:center;" colspan="2">PM2.5</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu1"></span></td>
+                              <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu2"></span></td>
+                              <td>&ge; {{ d_pm25_2_values[1] }} &amp; &lt; {{ d_pm25_2_values[2] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu3"></span></td>
+                              <td>&ge; {{ d_pm25_2_values[2] }} &amp; &lt; {{ d_pm25_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="ejssqu4"></span></td>
+                              <td>&ge; {{ d_pm25_2_values[3] }}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:5px"><span class="squfill"></span></td>
+                              <td>No Data {{ d_pm25_2_values[0] }}</td>
+                            </tr>
+                          </q-markup-table>
+                        </font>
+                      </q-popup-proxy>
+                    </q-btn>
+                    <!-- // d_pm25_2_values legend -->
+                </td>
+              </tr>
+            </table>
           </div>
         </q-expansion-item>
         <!-- // EJScreen layers -->
 
         <!-- // Health layers -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Health Layers, by Zip Code">
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Health Outcomes, by Zip Code">
           <div class="q-pa-md q-gutter-y-sm column">
-            <q-item dense tag="label" v-ripple>
-              <!-- // legend -->
-              <div class="q-pa-md q-gutter-y-sm column">
-                Covid 19 Legend
-                <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                  <font size="2" face="Arial" >
-                    <q-markup-table dense class="bg-teal-1">
-                      <tr>
-                         <td style="text-align:center;" colspan="2">Total Cases</td>
-                         <td style="text-align:center;" >Cases Per 10,000 Residents</td>
-                         <td style="text-align:center;" >Cases Per 100,000 Residents</td>
-                         <td style="text-align:center;" >Deaths</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu1"></span></td>
-                        <td>&gt; {{ covid_cases_values[1] }}</td>
-                        <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
-                        <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
-                        <td>&gt; {{ covid_deaths_values[1] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu2"></span></td>
-                        <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
-                        <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
-                        <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
-                        <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu3"></span></td>
-                        <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                        <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
-                        <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
-                        <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu4"></span></td>
-                        <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                        <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
-                        <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
-                        <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu5"></span></td>
-                        <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
-                        <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
-                        <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
-                        <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="heasqu6"></span></td>
-                          <td>&ge; {{ covid_cases_values[5] }}</td>
-                          <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
-                          <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
-                          <td>&ge; {{ covid_deaths_values[5] }}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding:5px"><span class="squfill"></span></td>
-                        <td>Fill {{ covid_cases_values[0] }}</td>
-                      </tr>
-                    </q-markup-table>
-                  </font>
-                </q-popup-proxy>
-              </div>
-              <!-- // legend -->
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="cases" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Covid-19 Total Cases</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="cases_per_10000_res" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="cases_per_100000_res" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item tag="label" v-ripple>
-              <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-              <q-item-section avatar>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="deaths" v-model="currentvariable" color="teal" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Covid-19 Deaths</q-item-label>
-              </q-item-section>
-            </q-item>
+            <table cellspacing="3" cellpadding="0" style="width:100%">
+              <tr>
+                <!-- // legend -->
+                <td>
+                  Legend
+                </td>
+                <td>
+                  <q-tooltip>Click to View Map Legend</q-tooltip>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                             <td style="text-align:center;" colspan="2">Total Cases</td>
+                             <td style="text-align:center;" >Cases Per 10,000 Residents</td>
+                             <td style="text-align:center;" >Cases Per 100,000 Residents</td>
+                             <td style="text-align:center;" >Deaths</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu1"></span></td>
+                            <td>&gt; {{ covid_cases_values[1] }}</td>
+                            <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                            <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                            <td>&gt; {{ covid_deaths_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu2"></span></td>
+                            <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                            <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                            <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                            <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu3"></span></td>
+                            <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                            <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                            <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                            <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu4"></span></td>
+                            <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                            <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                            <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                            <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu5"></span></td>
+                            <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                            <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                            <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                            <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="heasqu6"></span></td>
+                              <td>&ge; {{ covid_cases_values[5] }}</td>
+                              <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                              <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                              <td>&ge; {{ covid_deaths_values[5] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="squfill"></span></td>
+                            <td>No Data {{ covid_cases_values[0] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+                <!-- // legend -->
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="cases" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  <q-item-label>Covid-19 Total Cases</q-item-label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="cases_per_10000_res" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="cases_per_100000_res" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="deaths" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  <q-item-label>Covid-19 Deaths</q-item-label>
+                </td>
+              </tr>
+            </table>
            </div>
         </q-expansion-item>
         <!-- // Health layers -->
 
-        <!-- // Ancillary layers -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Ancillary Layers">
+        <!-- // Additional Features -->
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Additional Features">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina One Map</q-tooltip>
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
-              :label="`North Carolina Counties ${ ncCountiesModel }`"
+              :label="`North Carolina County Boundaries${ ncCountiesModel }`"
               :key="layers[4].id"
               v-on:input="showMapPanelToggleLayer(layers)"
               :class="{ 'is-active': layers[4].visible }"
@@ -1349,16 +1333,23 @@
     <!--// app map -->
 
     <!--// left side drawer buttons -->
-      <q-page-sticky position="top-left" :offset="[58, 18]">
-        <q-btn flat dense round icon="fas fa-sign-out-alt" class="bg-teal text-black" aria-label="Dual Screen Map" @click="$router.replace('/dual')">
-          <q-tooltip>Go to Side by Side Screen Map</q-tooltip>
-        </q-btn>
-      </q-page-sticky>
-      <q-page-sticky position="top-left" :offset="[18, 18]">
-        <q-btn flat dense round icon="menu" class="bg-teal text-black" @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
+    <q-page-sticky position="top-left" :offset="[58, 18]">
+      <q-btn flat dense round icon="fas fa-columns" class="bg-teal text-black" aria-label="Dual Screen Map" @click="$router.replace('/dual')">
+        <q-tooltip>Go to Side by Side Screen Map</q-tooltip>
+      </q-btn>
+    </q-page-sticky>
+    <q-page-sticky position="top-left" :offset="[18, 18]">
+      <div v-if="!leftDrawerOpen">
+        <q-btn flat dense round icon="fas fa-sign-out-alt" class="bg-teal text-black" @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
           <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
         </q-btn>
-      </q-page-sticky>
+      </div>
+      <div v-else>
+        <q-btn flat dense round icon="fas fa-sign-in-alt fa-rotate-180" class="bg-teal text-black" @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
+          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+        </q-btn>
+      </div>
+    </q-page-sticky>
     <!--// left side drawer buttons -->
 
     <!--// ol map controls -->
@@ -1375,9 +1366,16 @@
 
     <!--// right side drawer button -->
     <q-page-sticky position="top-right" :offset="[18, 18]">
-      <q-btn flat dense round icon="menu" class="bg-teal text-black" @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
-        <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
-      </q-btn>
+      <div v-if="!rightDrawerOpen">
+        <q-btn flat dense round icon="fas fa-sign-out-alt fa-rotate-180" class="bg-teal text-black" @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
+          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+        </q-btn>
+      </div>
+      <div v-else>
+        <q-btn flat dense round icon="fas fa-sign-in-alt" class="bg-teal text-black" @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
+          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+        </q-btn>
+      </div>
     </q-page-sticky>
     <!--// right side drawer button -->
 
@@ -1399,15 +1397,15 @@
 
     <!--// select location tools -->
     <q-page-sticky position="bottom-right" :offset="[18, 18]">
-      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Geolocation Tools</q-tooltip>
-      <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Geolocation Tools">
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Change Map Location with Address">
+      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Map Location Tools</q-tooltip>
+      <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Map Location Tools">
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Map an Address">
           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
             <q-card class="bg-teal-1">
               <q-banner inline-actions class="bg-teal-1">
                 <div class="q-pa-md" style="max-width: 400px">
                   <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
-                    <q-input filled v-model="address" label="Address *" hint="Address, City, State and Country" lazy-rules
+                    <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
                       :rules="[ val => val && val.length > 0 || 'Please type something']"
                     ></q-input>
                     <div>
@@ -1424,7 +1422,7 @@
             </q-card>
           </q-popup-proxy>
         </q-fab-action>
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Current Location">
+        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Your Current Location">
           <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
             <q-card class="bg-teal-1">
               <q-banner inline-actions class="bg-teal-1">
@@ -2225,6 +2223,43 @@ export default {
         this.center = [coordinates.lng, coordinates.lat]
       }) */
   },
+  computed: {
+    arsenicColors () {
+      return {
+        '--arsenic-colors': this.arsncolors
+      }
+    },
+    cadmiumColors () {
+      return {
+        '--cadmium-colors': this.cadmcolors
+      }
+    },
+    leadColors () {
+      return {
+        '--lead-colors': this.leadcolors
+      }
+    },
+    manganeseColors () {
+      return {
+        '--manganese-colors': this.mngncolors
+      }
+    },
+    acsColors () {
+      return {
+        '--acs-colors': this.acscolors
+      }
+    },
+    ejscreenColors () {
+      return {
+        '--ejscreen-colors': this.ejscolors
+      }
+    },
+    covidColors () {
+      return {
+        '--covid-colors': this.covidcolors
+      }
+    }
+  },
   methods: {
     openURL,
     camelCase,
@@ -2243,8 +2278,11 @@ export default {
       if (this.getlocation === 'True') {
         this.addresslocation = 'False'
         this.currentlocation = 'True'
+        this.zoom = 10
       } else if (this.getlocation === 'False') {
         this.currentlocation = 'False'
+        this.zoom = 8
+        this.center = [-79.0193, 35.0]
       }
     },
     onUpdatePosition: function (coordinate) {
@@ -2263,6 +2301,7 @@ export default {
           this.addresslocation = 'True'
           this.center = [Number(response[0].lon), Number(response[0].lat)]
           this.addressloc = [Number(response[0].lon), Number(response[0].lat)]
+          this.zoom = 10
         })
         .catch((error) => {
           console.log(error)
@@ -2360,43 +2399,30 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        // let values
         let variable = this.currentvariable
         if (this.currentvariable === 'ncwellwise_arsenic_med') {
-          // values = [-999.99, 6.83, 10.12, 13.42, 16.71]
           this.getColors(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_arsenic_mean') {
-          // values = [-999.99, 8.95, 14.93, 20.93, 26.9]
           this.getColors(data, this.arsenic_mean_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_arsenic_prcast') {
-          // values = [-999.99, 16.0, 32.0, 48.0, 64.0]
           this.getColors(data, this.arsenic_prcast_values, this.arsncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_med') {
-          // values = [-999.99, 0.74, 0.77, 0.79, 0.82]
           this.getColors(data, this.cadmium_med_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_mean') {
-          // values = [-999.99, 2.71, 4.72, 6.71, 8.73]
           this.getColors(data, this.cadmium_mean_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_cadmium_prcast') {
-          // values = [-999.99, 4.0, 8.0, 12.0, 16.0]
           this.getColors(data, this.cadmium_prcast_values, this.cadmcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_med') {
-          // values = [-999.99, 11.69, 19.83, 27.98, 36.12]
           this.getColors(data, this.lead_med_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_mean') {
-          // values = [-999.99, 39.22, 75.53, 111.93, 148.14]
           this.getColors(data, this.lead_mean_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_lead_prcast') {
-          // values = [-999.99, 20.0, 40.0, 60.0, 80.0]
           this.getColors(data, this.lead_prcast_values, this.leadcolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_med') {
-          // values = [-999.99, 184.4, 350.8, 517.2, 683.6]
           this.getColors(data, this.manganese_med_values, this.mngncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_mean') {
-          // values = [-999.99, 213.09, 404.97, 596.85, 788.73]
           this.getColors(data, this.manganese_mean_values, this.mngncolors, variable, 'ncwelllayer')
         } else if (this.currentvariable === 'ncwellwise_manganese_prcast') {
-          // values = [-999.99, 20.0, 40.0, 60.0, 80.0]
           this.getColors(data, this.manganese_prcast_values, this.mngncolors, variable, 'ncwelllayer')
         }
 
@@ -2414,11 +2440,9 @@ export default {
       }
     },
     getacsStyle: function () {
-      // console.log(this.currentvariable)
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        // let values = [-999.99, 15, 30, 45, 60, 75]
         let variable = this.currentvariable
         this.getColors(data, this.census_acs_values, this.acscolors, variable, 'acslayer')
         return [
@@ -2435,44 +2459,31 @@ export default {
       }
     },
     getejscreenStyle: function () {
-      // console.log(this.currentvariable)
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        // let values
         let variable = this.currentvariable
         if (this.currentvariable === 'd_ldpnt_2') {
-          // values = [-99999.9999, -200.0, 0.0, 200.0, 400.0, 600.0]
           this.getColors(data, this.d_ldpnt_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_dslpm_2') {
-          // values = [-99999.9999, -300.0, 0.0, 280.0, 580.0, 850.0]
           this.getColors(data, this.d_dslpm_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_cancr_2') {
-          // values = [-99999.9999, -45000.0, -20000.0, 5000.0, 30000.0, 55000.0]
           this.getColors(data, this.d_cancr_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_resp_2') {
-          // values = [-99999.9999, -600.0, -250.0, 100.0, 450.0, 800.0]
           this.getColors(data, this.d_resp_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ptraf_2') {
-          // values = [-99999.9999, 800000.0, 1700000.0, 2600000.0, 3500000.0, 4400000.0]
           this.getColors(data, this.d_ptraf_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pwdis_2') {
-          // values = [-99999.9999, -47000.0, -35000.0, -22000.0, -10000.0, 200.0]
           this.getColors(data, this.d_pwdis_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pnpl_2') {
-          // values = [-99999.9999, -400.0, -120.0, 150.0, 420.0, 690.0]
           this.getColors(data, this.d_pnpl_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_prmp_2') {
-          // values = [-99999.9999, -450.0, 1000.0, 2450.0, 3900.0, 5350.0]
           this.getColors(data, this.d_prmp_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ptsdf_2') {
-          // values = [-99999.9999, -3200.0, -1000.0, 1800.0, 4600.0, 7300.0]
           this.getColors(data, this.d_ptsdf_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_ozone_2') {
-          // values = [-99999.9999, -58000.0, -28000.0, 600.0, 38000.0, 70000.0]
           this.getColors(data, this.d_ozone_2_values, this.ejscolors, variable, 'ejslayer')
         } else if (this.currentvariable === 'd_pm25_2') {
-          // values = [-99999.9999, -11000.0, -5500.0, 1000.0, 7500.0, 15000.0]
           this.getColors(data, this.d_pm25_2_values, this.ejscolors, variable, 'ejslayer')
         }
 
@@ -2490,23 +2501,17 @@ export default {
       }
     },
     getcovid19Style: function () {
-      // console.log(this.currentvariable)
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        // let values
         let variable = this.currentvariable
         if (this.currentvariable === 'cases') {
-          // values = [-999.99, 1328, 2656, 3984, 5416, 6644]
           this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'cases_per_10000_res') {
-          // values = [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0]
           this.getColors(data, this.covid_cases_per_10000_res_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'cases_per_100000_res') {
-          // values = [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0]
           this.getColors(data, this.covid_cases_per_100000_res_values, this.covidcolors, variable, 'covidlayer')
         } else if (this.currentvariable === 'deaths') {
-          // values = [-999.99, 17, 34, 51, 65, 85]
           this.getColors(data, this.covid_deaths_values, this.covidcolors, variable, 'covidlayer')
         }
         return [
@@ -2527,7 +2532,7 @@ export default {
         return [
           createStyle({
             strokeColor: '#000',
-            strokeWidth: (this.zoom / 4.0),
+            strokeWidth: (this.zoom / 2.0),
             strokeLineCap: 'round',
             strokeLineJoin: 'bevel'
           })
@@ -2933,180 +2938,210 @@ export default {
     height: 15px;
     width: 15px;
     background-color: rgba(247, 121, 237, 0.65);
+    // background-color: var(--arsenic-colors[1]);
     display: inline-block;
   }
   .assqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(194, 76, 237, 0.65);
+    // background-color: var(--arsenic-colors[2]);
     display: inline-block;
   }
   .assqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(165, 52, 235, 0.65);
+    // background-color: var(--arsenic-colors[3]);
     display: inline-block;
   }
   .assqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(127, 3, 252, 0.65);
+    // background-color: var(--arsenic-colors[4]);
     display: inline-block;
   }
   .cdsqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(223, 235, 52, 0.65);
+    // background-color: var(--cadmium-colors[1]);
     display: inline-block;
   }
   .cdsqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 192, 52, 0.65);
+    // background-color: var(--cadmium-colors[2]);
     display: inline-block;
   }
   .cdsqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 162, 52, 0.65);
+    // background-color: var(--cadmium-colors[3]);
     display: inline-block;
   }
   .cdsqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 89, 52, 0.65);
+    // background-color: var(--cadmium-colors[4]);
     display: inline-block;
   }
   .pbsqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(196, 200, 207, 0.65);
+    // background-color: var(--lead-colors[1]);
     display: inline-block;
   }
   .pbsqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(155, 158, 163, 0.65);
+    // background-color: var(--lead-colors[2]);
     display: inline-block;
   }
   .pbsqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(108, 112, 120, 0.65);
+    // background-color: var(--lead-colors[3]);
     display: inline-block;
   }
   .pbsqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(39, 40, 43, 0.65);
+    // background-color: var(--lead-colors[4]);
     display: inline-block;
   }
   .mnsqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(194, 232, 190, 0.65);
+    // background-color: var(--manganese-colors[1]);
     display: inline-block;
   }
   .mnsqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(81, 222, 67, 0.65);
+    // background-color: var(--manganese-colors[2]);
     display: inline-block;
   }
   .mnsqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(25, 128, 11, 0.65);
+    // background-color: var(--manganese-colors[3]);
     display: inline-block;
   }
   .mnsqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(14, 82, 5, 0.65);
+    // background-color: var(--manganese-colors[4]);
     display: inline-block;
   }
   .acssqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(252, 210, 211, 0.85);
+    // background-color: var(--acs-colors[1]);
     display: inline-block;
   }
   .acssqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(247, 84, 90, 0.85);
+    // background-color: var(--acs-colors[2]);
     display: inline-block;
   }
   .acssqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(212, 4, 9, 0.85);
+    // background-color: var(--acs-colors[3]);
     display: inline-block;
   }
   .acssqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(122, 1, 5, 0.85);
+    // background-color: var(--acs-colors[4]);
     display: inline-block;
   }
   .heasqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(34, 240, 219, 0.65);
+    // background-color: var(--covid-colors[1]);
     display: inline-block;
   }
   .heasqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(34, 223, 240, 0.65);
+    // background-color: var(--covid-colors[2]);
     display: inline-block;
   }
   .heasqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(34, 185, 240, 0.65);
+    // background-color: var(--covid-colors[3]);
     display: inline-block;
   }
   .heasqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(22, 141, 245, 0.65);
+    // background-color: var(--covid-colors[4]);
     display: inline-block;
   }
   .heasqu5 {
     height: 15px;
     width: 15px;
     background-color: rgba(22, 74, 245, 0.65);
+    // background-color: var(--covid-colors[5]);
     display: inline-block;
   }
   .heasqu6 {
     height: 15px;
     width: 15px;
     background-color: rgba(23, 2, 247, 0.65);
+    // background-color: var(--covid-colors[6]);
     display: inline-block;
   }
   .ejssqu1 {
     height: 15px;
     width: 15px;
     background-color: rgba(235, 252, 3, 0.65);
+    // background-color: var(--manganese-colors[1]);
     display: inline-block;
   }
   .ejssqu2 {
     height: 15px;
     width: 15px;
     background-color: rgba(252, 186, 3, 0.65);
+    // background-color: var(--manganese-colors[2]);
     display: inline-block;
   }
   .ejssqu3 {
     height: 15px;
     width: 15px;
     background-color: rgba(252, 128, 3, 0.65);
+    // background-color: var(--manganese-colors[3]);
     display: inline-block;
   }
   .ejssqu4 {
     height: 15px;
     width: 15px;
     background-color: rgba(252, 82, 3, 0.65);
+    // background-color: var(--manganese-colors[4]);
     display: inline-block;
   }
   .q-input {
