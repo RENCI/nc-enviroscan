@@ -18,7 +18,7 @@ docker-compose -f docker-compose.prod.yml logs -f
 docker-compose -f docker-compose.staging.yml logs -f
 docker volume inspect nc-enviroscan_postgres_data
 docker volume remove nc-enviroscan_postgres_data
-test
+
 docker-compose -f docker-compose.prod.yml exec db psql -U ncenviroscan --password -d ncenviroscan_prod -p 5432 -h localhost
 
 # Django Commands
