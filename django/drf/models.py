@@ -37,23 +37,6 @@ class ncwellwise_subset_20102019(models.Model):
     manganese_maximum = models.FloatField(null=True)
     manganese_std = models.FloatField(null=True)
 
-class ltdb_std_2012_sample_subset(models.Model):
-    geoid10 = models.TextField(11,null=False)
-    pnhwht12 = models.FloatField(null=True)
-    pnhblk12 = models.FloatField(null=True)
-    phisp12 = models.FloatField(null=True)
-    pasian12 = models.FloatField(null=True)
-    pntv12 = models.FloatField(null=True)
-    hincw12 = models.FloatField(null=True)
-    hincb12 = models.FloatField(null=True)
-    hinch12 = models.FloatField(null=True)
-    hinca12 = models.FloatField(null=True)
-    pwpov12 = models.FloatField(null=True)
-    pbpov12 = models.FloatField(null=True)
-    phpov12 = models.FloatField(null=True)
-    papov12 = models.FloatField(null=True)
-    pnapov12 = models.FloatField(null=True)
-
 class acs_2019_5y_estimates(models.Model):
     geoid10 = models.TextField(2,null=False)
     percent_below_poverty_level = models.FloatField(null=True)
@@ -88,24 +71,20 @@ class nc_covid_zipcode(models.Model):
     cases_per_100000_res = models.FloatField(null=True) 
     deaths = models.IntegerField()
 
-class triangle_tracts(models.Model):
-    geom = models.MultiPolygonField(null=True)
-    statefp10 = models.TextField(2,null=True)
-    countyfp10 = models.TextField(3,null=True)
-    tractce10 = models.TextField(6,null=True)
-    geoid10 = models.TextField(11,null=True)
-    name10 = models.TextField(7,null=True)
-    namelsad10 = models.TextField(20,null=True)
-    mtfcc10 = models.TextField(5,null=True)
-    funcstat10 = models.TextField(1,null=True)
-    aland10 = models.FloatField(null=True)
-    awater10 = models.FloatField(null=True)
-    intptlat10 = models.TextField(11,null=True)
-    intptlon10 = models.TextField(12,null=True)
-    layer = models.TextField(254,null=True)
-    path = models.TextField(254,null=True)
-    objects = models.Manager()
-    vector_tiles = MVTManager()
+class nc_preterm_subset(models.Model):
+    geoid10 = models.TextField(11, null=True)
+    fc_calcega_mean_avg = models.FloatField(null=True)
+    fc_calcega_med = models.FloatField(null=True) 
+    fc_calcpreterm_percentage = models.FloatField(null=True)
+    fc_clinega_mean_avg = models.FloatField(null=True)
+    fc_clinega_med = models.FloatField(null=True)
+    fc_clinpreterm_percentage = models.FloatField(null=True)
+    sc_calcega_mean_avg = models.FloatField(null=True)
+    sc_calcega_med = models.FloatField(null=True)
+    sc_calcpreterm_percentage = models.FloatField(null=True)
+    sc_clinega_mean_avg = models.FloatField(null=True)
+    sc_clinega_med = models.FloatField(null=True)
+    sc_clinpreterm_percentage = models.FloatField(null=True)
 
 class nc_census_tracks_4326(models.Model):
     geoid10 = models.TextField(11, null=True)
@@ -124,7 +103,6 @@ class nc_census_bg_4326(models.Model):
     shapestare = models.FloatField(null=True)
     shapestlen = models.FloatField(null=True)
     geom = models.MultiPolygonField(null=True)
-    #vector_tiles = MVTManager()
     objects = models.Manager()
     vector_tiles = MVTManager()
 
@@ -161,38 +139,6 @@ class ncdot_county_boundaries(models.Model):
     objects = models.Manager()
     vector_tiles = MVTManager()
 
-class ncwellwise_triangle_20102019_geom(models.Model):
-    geoid10 = models.TextField(2,null=False)
-    arsenic_mean = models.FloatField(null=True)
-    arsenic_med = models.FloatField(null=True)
-    arsenic_prcast = models.FloatField(null=True)
-    arsenic_minimum = models.FloatField(null=True)
-    arsenic_maximum = models.FloatField(null=True)
-    arsenic_std = models.FloatField(null=True)
-    cadmium_mean = models.FloatField(null=True)
-    cadmium_med = models.FloatField(null=True)
-    cadmium_prcast = models.FloatField(null=True)
-    cadmium_minimum = models.FloatField(null=True)
-    cadmium_maximum = models.FloatField(null=True)
-    cadmium_std = models.FloatField(null=True)
-    lead_mean = models.FloatField(null=True)
-    lead_med = models.FloatField(null=True)
-    lead_prcast = models.FloatField(null=True)
-    lead_minimum = models.FloatField(null=True)
-    lead_maximum = models.FloatField(null=True)
-    lead_std = models.FloatField(null=True)
-    manganese_mean = models.FloatField(null=True)
-    manganese_med = models.FloatField(null=True)
-    manganese_prcast = models.FloatField(null=True)
-    manganese_minimum = models.FloatField(null=True)
-    manganese_maximum = models.FloatField(null=True)
-    manganese_std = models.FloatField(null=True)
-    geom = models.MultiPolygonField(null=True)
-
-    class Meta:
-        managed = False
-        db_table = "drf_ncwellwise_triangle_20102019_geom"
-
 class ncwellwise_subset_20102019_geom(models.Model):
     geoid10 = models.TextField(2,null=False)
     arsenic_mean = models.FloatField(null=True)
@@ -226,30 +172,6 @@ class ncwellwise_subset_20102019_geom(models.Model):
     class Meta:
         managed = False
         db_table = "drf_ncwellwise_subset_20102019_geom"
-
-class ltdb_std_2012_sample_subset_geom(models.Model):
-    geoid10 = models.TextField(2,null=False)
-    pnhwht12 = models.FloatField(null=True)
-    pnhblk12 = models.FloatField(null=True)
-    phisp12 = models.FloatField(null=True)
-    pasian12 = models.FloatField(null=True)
-    pntv12 = models.FloatField(null=True)
-    hincw12 = models.FloatField(null=True)
-    hincb12 = models.FloatField(null=True)
-    hinch12 = models.FloatField(null=True)
-    hinca12 = models.FloatField(null=True)
-    pwpov12 = models.FloatField(null=True)
-    pbpov12 = models.FloatField(null=True)
-    phpov12 = models.FloatField(null=True)
-    papov12 = models.FloatField(null=True)
-    pnapov12 = models.FloatField(null=True)
-    geom = models.MultiPolygonField(null=True)
-    objects = models.Manager()
-    vector_tiles = MVTManager()
-
-    class Meta:
-        managed = False
-        db_table = "drf_ltdb_std_2012_sample_subset_geom"
 
 class acs_2019_5y_estimates_geom(models.Model):
     geoid10 = models.TextField(2,null=False)
@@ -305,4 +227,26 @@ class nc_covid_zipcode_geom(models.Model):
     class Meta:
         managed = False
         db_table = "drf_nc_covid_zipcode_geom"
+
+class nc_preterm_subset_geom(models.Model):
+    geoid10 = models.TextField(11, null=True)
+    fc_calcega_mean_avg = models.FloatField(null=True)
+    fc_calcega_med = models.FloatField(null=True)
+    fc_calcpreterm_percentage = models.FloatField(null=True)
+    fc_clinega_mean_avg = models.FloatField(null=True)
+    fc_clinega_med = models.FloatField(null=True)
+    fc_clinpreterm_percentage = models.FloatField(null=True)
+    sc_calcega_mean_avg = models.FloatField(null=True)
+    sc_calcega_med = models.FloatField(null=True)
+    sc_calcpreterm_percentage = models.FloatField(null=True)
+    sc_clinega_mean_avg = models.FloatField(null=True)
+    sc_clinega_med = models.FloatField(null=True) 
+    sc_clinpreterm_percentage = models.FloatField(null=True)
+    geom = models.MultiPolygonField(null=True)
+    objects = models.Manager()
+    vector_tiles = MVTManager()
+
+    class Meta:
+        managed = False
+        db_table = "drf_nc_preterm_subset_geom"
 

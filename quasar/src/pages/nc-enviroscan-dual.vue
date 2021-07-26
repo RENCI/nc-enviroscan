@@ -118,9 +118,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="assqu1"></span></td>
-                                        <td>&gt; {{ arsenic_med_values[1] }}</td>
-                                        <td>&gt; {{ arsenic_mean_values[1] }}</td>
-                                        <td>&gt; {{ arsenic_prcast_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_med_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_mean_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="assqu2"></span></td>
@@ -169,9 +169,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                        <td>&gt; {{ cadmium_med_values[1] }}</td>
-                                        <td>&gt; {{ cadmium_mean_values[1] }}</td>
-                                        <td>&gt; {{ cadmium_prcast_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_med_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_mean_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="cdsqu2"></span></td>
@@ -220,9 +220,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                        <td>&gt; {{ lead_med_values[1] }}</td>
-                                        <td>&gt; {{ lead_mean_values[1] }}</td>
-                                        <td>&gt; {{ lead_prcast_values[1] }}</td>
+                                        <td>&lt; {{ lead_med_values[1] }}</td>
+                                        <td>&lt; {{ lead_mean_values[1] }}</td>
+                                        <td>&lt; {{ lead_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="pbsqu2"></span></td>
@@ -271,9 +271,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                        <td>&gt; {{ manganese_med_values[1] }}</td>
-                                        <td>&gt; {{ manganese_mean_values[1] }}</td>
-                                        <td>&gt; {{ manganese_prcast_values[1] }}</td>
+                                        <td>&lt; {{ manganese_med_values[1] }}</td>
+                                        <td>&lt; {{ manganese_mean_values[1] }}</td>
+                                        <td>&lt; {{ manganese_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="mnsqu2"></span></td>
@@ -346,7 +346,7 @@
                                     <q-markup-table dense class="bg-teal-1">
                                       <tr>
                                         <td style="padding:5px"><span class="acssqu1"></span></td>
-                                        <td>&gt; {{ census_acs_values[1] }}%</td>
+                                        <td>&lt; {{ census_acs_values[1] }}%</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="acssqu2"></span></td>
@@ -570,7 +570,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ldpnt_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -622,7 +622,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                                          <td>&lt; {{ d_dslpm_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -674,7 +674,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                                          <td>&lt; {{ d_cancr_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -726,7 +726,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_resp_2_values[1] }}</td>
+                                          <td>&lt; {{ d_resp_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -778,7 +778,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ptraf_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -830,7 +830,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pwdis_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -882,7 +882,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pnpl_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -934,7 +934,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                                          <td>&lt; {{ d_prmp_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -986,7 +986,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ptsdf_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -1038,7 +1038,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ozone_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -1090,7 +1090,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pm25_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -1121,129 +1121,371 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+
+                <!-- // Health layers -->
                 <q-item clickable>
-                  <q-item-section>Health Outcomes, by Zip Code</q-item-section>
+                  <q-item-section>Health Outcomes</q-item-section>
                   <q-item-section side>
                     <q-icon name="keyboard_arrow_right"></q-icon>
                   </q-item-section>
-
                   <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
                     <q-list>
-                     <!-- // Health layers -->
-                     <div class="q-pa-md q-gutter-y-sm column">
-                       <table cellspacing="3" cellpadding="0" style="width:100%">
-                         <tr>
-                           <!-- // legend -->
-                           <td>
-                             Legend
-                           </td>
-                           <td>
-                             <q-tooltip>Click to View Map Legend</q-tooltip>
-                             <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
-                               <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                                 <font size="2" face="Arial" >
-                                   <q-markup-table dense class="bg-teal-1">
-                                     <tr>
-                                        <td style="text-align:center;" colspan="2">Total Cases</td>
-                                        <td style="text-align:center;" >Cases Per 10,000 Residents</td>
-                                        <td style="text-align:center;" >Cases Per 100,000 Residents</td>
-                                        <td style="text-align:center;" >Deaths</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu1"></span></td>
-                                       <td>&gt; {{ covid_cases_values[1] }}</td>
-                                       <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
-                                       <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
-                                       <td>&gt; {{ covid_deaths_values[1] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu2"></span></td>
-                                       <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
-                                       <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
-                                       <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
-                                       <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu3"></span></td>
-                                       <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                                       <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
-                                       <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
-                                       <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu4"></span></td>
-                                       <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                                       <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
-                                       <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
-                                       <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu5"></span></td>
-                                       <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
-                                       <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
-                                       <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
-                                       <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="heasqu6"></span></td>
-                                         <td>&ge; {{ covid_cases_values[5] }}</td>
-                                         <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
-                                         <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
-                                         <td>&ge; {{ covid_deaths_values[5] }}</td>
-                                     </tr>
-                                     <tr>
-                                       <td style="padding:5px"><span class="squfill"></span></td>
-                                       <td>No Data {{ covid_cases_values[0] }}</td>
-                                     </tr>
-                                   </q-markup-table>
-                                 </font>
-                               </q-popup-proxy>
-                             </q-btn>
-                           </td>
-                           <!-- // legend -->
-                         </tr>
-                         <tr>
-                           <td>
-                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                             <q-radio v-on:input="showMap1PanelRadioLayer" val="cases" v-model="currentradiovariable1" color="teal" />
-                           </td>
-                           <td>
-                             <q-item-label>Covid-19 Total Cases</q-item-label>
-                           </td>
-                         </tr>
-                         <tr>
-                           <td>
-                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                             <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable1" color="teal" />
-                           </td>
-                           <td>
-                             <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
-                           </td>
-                         </tr>
-                         <tr>
-                           <td>
-                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                             <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable1" color="teal" />
-                           </td>
-                           <td>
-                             <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
-                           </td>
-                         </tr>
-                         <tr>
-                           <td>
-                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                             <q-radio v-on:input="showMap1PanelRadioLayer" val="deaths" v-model="currentradiovariable1" color="teal" />
-                           </td>
-                           <td>
-                             <q-item-label>Covid-19 Deaths</q-item-label>
-                           </td>
-                         </tr>
-                       </table>
-                      </div>
-                      <!-- // Health layers -->
+                      <q-item clickable>
+                        <q-item-section>Covide-19, by Zip Code</q-item-section>
+                        <q-item-section side>
+                          <q-icon name="keyboard_arrow_right"></q-icon>
+                        </q-item-section>
+                        <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                          <q-list>
+                            <div class="q-pa-md q-gutter-y-sm column">
+                              <table cellspacing="3" cellpadding="0" style="width:100%">
+                                <tr>
+                                  <!-- // legend -->
+                                  <td>
+                                    Legend
+                                  </td>
+                                  <td>
+                                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                        <font size="2" face="Arial" >
+                                          <q-markup-table dense class="bg-teal-1">
+                                            <tr>
+                                               <td style="text-align:center;" colspan="2">Total Cases</td>
+                                               <td style="text-align:center;" >Cases Per 10,000 Residents</td>
+                                               <td style="text-align:center;" >Cases Per 100,000 Residents</td>
+                                               <td style="text-align:center;" >Deaths</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu1"></span></td>
+                                              <td>&lt; {{ covid_cases_values[1] }}</td>
+                                              <td>&lt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                                              <td>&lt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                                              <td>&lt; {{ covid_deaths_values[1] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu2"></span></td>
+                                              <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu3"></span></td>
+                                              <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu4"></span></td>
+                                              <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu5"></span></td>
+                                              <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu6"></span></td>
+                                                <td>&ge; {{ covid_cases_values[5] }}</td>
+                                                <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                                <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                                <td>&ge; {{ covid_deaths_values[5] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="squfill"></span></td>
+                                              <td>No Data {{ covid_cases_values[0] }}</td>
+                                            </tr>
+                                          </q-markup-table>
+                                        </font>
+                                      </q-popup-proxy>
+                                    </q-btn>
+                                  </td>
+                                  <!-- // legend -->
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases" v-model="currentradiovariable1" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Total Cases</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable1" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable1" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="deaths" v-model="currentradiovariable1" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Deaths</q-item-label>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </q-list>
+                        </q-menu>
+                      </q-item>
+                      <q-item clickable>
+                        <q-item-section>Births, by Census Tracts</q-item-section>
+                        <q-item-section side>
+                          <q-icon name="keyboard_arrow_right"></q-icon>
+                        </q-item-section>
+                        <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                          <q-list>
+                            <div class="q-pa-md q-gutter-y-sm column">
+                              <table cellspacing="3" cellpadding="0" style="width:100%">
+                                <q-item dense tag="label" v-ripple>
+                                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Select Map Style</q-tooltip>
+                                  <table cellspacing="1" cellpadding="1" style="width:100%">
+                                    <caption style="text-align:left">Select Map Style</caption>
+                                    <tr>
+                                      <td>No Interleave</td>
+                                      <td>Interleave One</td>
+                                      <td>Interleave Two</td>
+                                    </tr>
+                                    <tr>
+                                      <td><q-radio val="nopattern" v-model="pretermmap1style" color="teal" /></td>
+                                      <td><q-radio val="pattern1" v-model="pretermmap1style" color="teal" /></td>
+                                      <td><q-radio val="pattern2" v-model="pretermmap1style" color="teal" /></td>
+                                    </tr>
+                                  </table>
+                                </q-item>
+                                <tr>
+                                  <!-- // legend -->
+                                  <table cellspacing="3" cellpadding="0" style="width:100%">
+                                    <tr>
+                                      <td>
+                                        Gestational age at delivery Legend
+                                      </td>
+                                      <td>
+                                        <q-tooltip>Click to View Map Legend</q-tooltip>
+                                        <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                            <font size="2" face="Arial" >
+                                              <q-markup-table dense class="bg-teal-1">
+                                                <tr>
+                                                   <td style="text-align:center;" colspan="2">mean of gestational age at delivery </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu1"></span></td>
+                                                  <td>&lt; {{ ega_mean_avg_values[1] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu2"></span></td>
+                                                  <td>&ge; {{ ega_mean_avg_values[1] }} &amp; &lt; {{ ega_mean_avg_values[2] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu3"></span></td>
+                                                  <td>&ge; {{ ega_mean_avg_values[2] }} &amp; &lt; {{ ega_mean_avg_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu4"></span></td>
+                                                    <td>&ge; {{ ega_mean_avg_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                                  <td>No Data {{ ega_mean_avg_values[0] }}</td>
+                                                </tr>
+                                              </q-markup-table>
+                                            </font>
+                                          </q-popup-proxy>
+                                        </q-btn>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                  <!-- // legend -->
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age calculated from last menstrual period (LMP) full cohort ${ fc_calcega_mean_avgModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('fc_calcega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_calcega_mean_avgModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age calculated from last menstrual period (LMP) for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age based on clinical estimate full cohorts ${ fc_clinega_mean_avgModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('fc_clinega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_clinega_mean_avgModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age based on clinical estimate for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age calculated from last menstrual period (LMP) singleton cohort ${ sc_calcega_mean_avgModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('sc_calcega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_calcega_mean_avgModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">arithmetic mean of gestational age calculated from last menstrual period (LMP) for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age based on clinical estimate singleton cohorts ${ sc_clinega_mean_avgModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('sc_clinega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_clinega_mean_avgModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age based on clinical estimate for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <table cellspacing="3" cellpadding="0" style="width:100%">
+                                    <tr>
+                                      <!-- // legend -->
+                                      <td>
+                                        Preterm births Legend
+                                      </td>
+                                      <td>
+                                        <q-tooltip>Click to View Map Legend</q-tooltip>
+                                        <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                            <font size="2" face="Arial" >
+                                              <q-markup-table dense class="bg-teal-1">
+                                                <tr>
+                                                   <td style="text-align:center;" colspan="2">Percent preterm births</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu1"></span></td>
+                                                  <td>&lt; {{ preterm_percentage_values[1] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu2"></span></td>
+                                                  <td>&ge; {{ preterm_percentage_values[1] }} &amp; &lt; {{ preterm_percentage_values[2] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu3"></span></td>
+                                                  <td>&ge; {{ preterm_percentage_values[2] }} &amp; &lt; {{ preterm_percentage_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu4"></span></td>
+                                                    <td>&ge; {{ preterm_percentage_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                                  <td>No Data {{ preterm_percentage_values[0] }}</td>
+                                                </tr>
+                                              </q-markup-table>
+                                            </font>
+                                          </q-popup-proxy>
+                                        </q-btn>
+                                      </td>
+                                      <!-- // legend -->
+                                    </tr>
+                                  </table>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, calculated from last menstrual period (LMP) for full cohort ${ fc_calcpreterm_percentageModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('fc_calcpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_calcpreterm_percentageModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is derived from gestational age calculated from last menstrual period (LMP) for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, based on clinical estimate full cohorts ${ fc_clinpreterm_percentageModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('fc_clinpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_clinpreterm_percentageModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is based on clinical estimate for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, calculated from last menstrual period (LMP) singleton cohort ${ sc_calcpreterm_percentageModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('sc_calcpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_calcpreterm_percentageModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is derived from gestational age calculated from last menstrual period (LMP) for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, based on clinical estimate singleton cohorts ${ sc_clinpreterm_percentageModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('sc_clinpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_clinpreterm_percentageModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is based on clinical estimate singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </q-list>
+                        </q-menu>
+                      </q-item>
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // Health layers -->
 
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
@@ -1393,9 +1635,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="assqu1"></span></td>
-                                        <td>&gt; {{ arsenic_med_values[1] }}</td>
-                                        <td>&gt; {{ arsenic_mean_values[1] }}</td>
-                                        <td>&gt; {{ arsenic_prcast_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_med_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_mean_values[1] }}</td>
+                                        <td>&lt; {{ arsenic_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="assqu2"></span></td>
@@ -1444,9 +1686,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="cdsqu1"></span></td>
-                                        <td>&gt; {{ cadmium_med_values[1] }}</td>
-                                        <td>&gt; {{ cadmium_mean_values[1] }}</td>
-                                        <td>&gt; {{ cadmium_prcast_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_med_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_mean_values[1] }}</td>
+                                        <td>&lt; {{ cadmium_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="cdsqu2"></span></td>
@@ -1495,9 +1737,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="pbsqu1"></span></td>
-                                        <td>&gt; {{ lead_med_values[1] }}</td>
-                                        <td>&gt; {{ lead_mean_values[1] }}</td>
-                                        <td>&gt; {{ lead_prcast_values[1] }}</td>
+                                        <td>&lt; {{ lead_med_values[1] }}</td>
+                                        <td>&lt; {{ lead_mean_values[1] }}</td>
+                                        <td>&lt; {{ lead_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="pbsqu2"></span></td>
@@ -1546,9 +1788,9 @@
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="mnsqu1"></span></td>
-                                        <td>&gt; {{ manganese_med_values[1] }}</td>
-                                        <td>&gt; {{ manganese_mean_values[1] }}</td>
-                                        <td>&gt; {{ manganese_prcast_values[1] }}</td>
+                                        <td>&lt; {{ manganese_med_values[1] }}</td>
+                                        <td>&lt; {{ manganese_mean_values[1] }}</td>
+                                        <td>&lt; {{ manganese_prcast_values[1] }}</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="mnsqu2"></span></td>
@@ -1621,7 +1863,7 @@
                                     <q-markup-table dense class="bg-teal-1">
                                       <tr>
                                         <td style="padding:5px"><span class="acssqu1"></span></td>
-                                        <td>&gt; {{ census_acs_values[1] }}%</td>
+                                        <td>&lt; {{ census_acs_values[1] }}%</td>
                                       </tr>
                                       <tr>
                                         <td style="padding:5px"><span class="acssqu2"></span></td>
@@ -1845,7 +2087,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ldpnt_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ldpnt_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -1897,7 +2139,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_dslpm_2_values[1] }}</td>
+                                          <td>&lt; {{ d_dslpm_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -1949,7 +2191,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_cancr_2_values[1] }}</td>
+                                          <td>&lt; {{ d_cancr_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2001,7 +2243,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_resp_2_values[1] }}</td>
+                                          <td>&lt; {{ d_resp_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2053,7 +2295,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ptraf_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ptraf_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2105,7 +2347,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pwdis_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pwdis_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2157,7 +2399,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pnpl_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pnpl_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2209,7 +2451,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_prmp_2_values[1] }}</td>
+                                          <td>&lt; {{ d_prmp_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2261,7 +2503,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ptsdf_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ptsdf_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2313,7 +2555,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_ozone_2_values[1] }}</td>
+                                          <td>&lt; {{ d_ozone_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2365,7 +2607,7 @@
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu1"></span></td>
-                                          <td>&gt; {{ d_pm25_2_values[1] }}</td>
+                                          <td>&lt; {{ d_pm25_2_values[1] }}</td>
                                         </tr>
                                         <tr>
                                           <td style="padding:5px"><span class="ejssqu2"></span></td>
@@ -2396,129 +2638,372 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+
+                <!-- // Health layers -->
                 <q-item clickable>
-                  <q-item-section>Health Outcomes, by Zip Code</q-item-section>
+                  <q-item-section>Health Outcomes</q-item-section>
                   <q-item-section side>
                     <q-icon name="keyboard_arrow_right"></q-icon>
                   </q-item-section>
-
                   <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
                     <q-list>
-                     <!-- // Health layers -->
-                     <div class="q-pa-md q-gutter-y-sm column">
-                      <table cellspacing="3" cellpadding="0" style="width:100%">
-                        <tr>
-                          <!-- // legend -->
-                          <td>
-                            Legend
-                          </td>
-                          <td>
-                            <q-tooltip>Click to View Map Legend</q-tooltip>
-                            <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
-                              <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-                                <font size="2" face="Arial" >
-                                  <q-markup-table dense class="bg-teal-1">
+                      <q-item clickable>
+                        <q-item-section>Covide-19, by Zip Code</q-item-section>
+                        <q-item-section side>
+                          <q-icon name="keyboard_arrow_right"></q-icon>
+                        </q-item-section>
+                        <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                          <q-list>
+                            <div class="q-pa-md q-gutter-y-sm column">
+                              <table cellspacing="3" cellpadding="0" style="width:100%">
+                                <tr>
+                                  <!-- // legend -->
+                                  <td>
+                                    Legend
+                                  </td>
+                                  <td>
+                                    <q-tooltip>Click to View Map Legend</q-tooltip>
+                                    <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                      <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                        <font size="2" face="Arial" >
+                                          <q-markup-table dense class="bg-teal-1">
+                                            <tr>
+                                               <td style="text-align:center;" colspan="2">Total Cases</td>
+                                               <td style="text-align:center;" >Cases Per 10,000 Residents</td>
+                                               <td style="text-align:center;" >Cases Per 100,000 Residents</td>
+                                               <td style="text-align:center;" >Deaths</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu1"></span></td>
+                                              <td>&lt; {{ covid_cases_values[1] }}</td>
+                                              <td>&lt; {{ covid_cases_per_10000_res_values[1] }}</td>
+                                              <td>&lt; {{ covid_cases_per_100000_res_values[1] }}</td>
+                                              <td>&lt; {{ covid_deaths_values[1] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu2"></span></td>
+                                              <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu3"></span></td>
+                                              <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu4"></span></td>
+                                              <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu5"></span></td>
+                                              <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
+                                              <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                              <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                              <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="heasqu6"></span></td>
+                                                <td>&ge; {{ covid_cases_values[5] }}</td>
+                                                <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                                                <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                                                <td>&ge; {{ covid_deaths_values[5] }}</td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding:5px"><span class="squfill"></span></td>
+                                              <td>No Data {{ covid_cases_values[0] }}</td>
+                                            </tr>
+                                          </q-markup-table>
+                                        </font>
+                                      </q-popup-proxy>
+                                    </q-btn>
+                                  </td>
+                                  <!-- // legend -->
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases" v-model="currentradiovariable2" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Total Cases</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable2" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable2" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
+                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="deaths" v-model="currentradiovariable2" color="teal" />
+                                  </td>
+                                  <td>
+                                    <q-item-label>Covid-19 Deaths</q-item-label>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </q-list>
+                        </q-menu>
+                      </q-item>
+                      <q-item clickable>
+                        <q-item-section>Births, by Census Tracts</q-item-section>
+                        <q-item-section side>
+                          <q-icon name="keyboard_arrow_right"></q-icon>
+                        </q-item-section>
+                        <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                          <q-list>
+                            <div class="q-pa-md q-gutter-y-sm column">
+                              <table cellspacing="3" cellpadding="0" style="width:100%">
+                                <q-item dense tag="label" v-ripple>
+                                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Select Map Style</q-tooltip>
+                                  <table cellspacing="1" cellpadding="1" style="width:100%">
+                                    <caption style="text-align:left">Select Map Style</caption>
                                     <tr>
-                                       <td style="text-align:center;" colspan="2">Total Cases</td>
-                                       <td style="text-align:center;" >Cases Per 10,000 Residents</td>
-                                       <td style="text-align:center;" >Cases Per 100,000 Residents</td>
-                                       <td style="text-align:center;" >Deaths</td>
+                                      <td>No Interleave</td>
+                                      <td>Interleave One</td>
+                                      <td>Interleave Two</td>
                                     </tr>
                                     <tr>
-                                      <td style="padding:5px"><span class="heasqu1"></span></td>
-                                      <td>&gt; {{ covid_cases_values[1] }}</td>
-                                      <td>&gt; {{ covid_cases_per_10000_res_values[1] }}</td>
-                                      <td>&gt; {{ covid_cases_per_100000_res_values[1] }}</td>
-                                      <td>&gt; {{ covid_deaths_values[1] }}</td>
+                                      <td><q-radio val="nopattern" v-model="pretermmap2style" color="teal" /></td>
+                                      <td><q-radio val="pattern1" v-model="pretermmap2style" color="teal" /></td>
+                                      <td><q-radio val="pattern2" v-model="pretermmap2style" color="teal" /></td>
                                     </tr>
+                                  </table>
+                                </q-item>
+                                <tr>
+                                  <!-- // legend -->
+                                  <table cellspacing="3" cellpadding="0" style="width:100%">
                                     <tr>
-                                      <td style="padding:5px"><span class="heasqu2"></span></td>
-                                      <td>&ge; {{ covid_cases_values[1] }} &amp; &lt; {{ covid_cases_values[2] }}</td>
-                                      <td>&ge; {{ covid_cases_per_10000_res_values[1] }} &amp; &lt; {{ covid_cases_per_10000_res_values[2] }}</td>
-                                      <td>&ge; {{ covid_cases_per_100000_res_values[1] }} &amp; &lt; {{ covid_cases_per_100000_res_values[2] }}</td>
-                                      <td>&ge; {{ covid_deaths_values[1] }} &amp; &lt; {{ covid_deaths_values[2] }}</td>
+                                      <td>
+                                        Gestational age at delivery Legend
+                                      </td>
+                                      <td>
+                                        <q-tooltip>Click to View Map Legend</q-tooltip>
+                                        <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                            <font size="2" face="Arial" >
+                                              <q-markup-table dense class="bg-teal-1">
+                                                <tr>
+                                                   <td style="text-align:center;" colspan="2">mean of gestational age at delivery </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu1"></span></td>
+                                                  <td>&lt; {{ ega_mean_avg_values[1] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu2"></span></td>
+                                                  <td>&ge; {{ ega_mean_avg_values[1] }} &amp; &lt; {{ ega_mean_avg_values[2] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu3"></span></td>
+                                                  <td>&ge; {{ ega_mean_avg_values[2] }} &amp; &lt; {{ ega_mean_avg_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu4"></span></td>
+                                                    <td>&ge; {{ ega_mean_avg_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                                  <td>No Data {{ ega_mean_avg_values[0] }}</td>
+                                                </tr>
+                                              </q-markup-table>
+                                            </font>
+                                          </q-popup-proxy>
+                                        </q-btn>
+                                      </td>
                                     </tr>
+                                  </table>
+                                  <!-- // legend -->
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age calculated from last menstrual period (LMP) full cohort ${ fc_calcega_mean_avgModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('fc_calcega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_calcega_mean_avgModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age calculated from last menstrual period (LMP) for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age based on clinical estimate full cohorts ${ fc_clinega_mean_avgModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('fc_clinega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_clinega_mean_avgModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age based on clinical estimate for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age calculated from last menstrual period (LMP) singleton cohort ${ sc_calcega_mean_avgModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('sc_calcega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_calcega_mean_avgModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">arithmetic mean of gestational age calculated from last menstrual period (LMP) for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`mean of gestational age based on clinical estimate singleton cohorts ${ sc_clinega_mean_avgModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('sc_clinega_mean_avg')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_clinega_mean_avgModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arithmetic mean of gestational age based on clinical estimate for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <table cellspacing="3" cellpadding="0" style="width:100%">
                                     <tr>
-                                      <td style="padding:5px"><span class="heasqu3"></span></td>
-                                      <td>&ge; {{ covid_cases_values[2] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                                      <td>&ge; {{ covid_cases_per_10000_res_values[2] }} &amp; &lt; {{ covid_cases_per_10000_res_values[3] }}</td>
-                                      <td>&ge; {{ covid_cases_per_100000_res_values[2] }} &amp; &lt; {{ covid_cases_per_100000_res_values[3] }}</td>
-                                      <td>&ge; {{ covid_deaths_values[2] }} &amp; &lt; {{ covid_deaths_values[3] }}</td>
+                                      <!-- // legend -->
+                                      <td>
+                                        Preterm births Legend
+                                      </td>
+                                      <td>
+                                        <q-tooltip>Click to View Map Legend</q-tooltip>
+                                        <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                                          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                                            <font size="2" face="Arial" >
+                                              <q-markup-table dense class="bg-teal-1">
+                                                <tr>
+                                                   <td style="text-align:center;" colspan="2">Percent preterm births</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu1"></span></td>
+                                                  <td>&lt; {{ preterm_percentage_values[1] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu2"></span></td>
+                                                  <td>&ge; {{ preterm_percentage_values[1] }} &amp; &lt; {{ preterm_percentage_values[2] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu3"></span></td>
+                                                  <td>&ge; {{ preterm_percentage_values[2] }} &amp; &lt; {{ preterm_percentage_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="pretsqu4"></span></td>
+                                                    <td>&ge; {{ preterm_percentage_values[3] }}</td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding:5px"><span class="squfill"></span></td>
+                                                  <td>No Data {{ preterm_percentage_values[0] }}</td>
+                                                </tr>
+                                              </q-markup-table>
+                                            </font>
+                                          </q-popup-proxy>
+                                        </q-btn>
+                                      </td>
+                                      <!-- // legend -->
                                     </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="heasqu4"></span></td>
-                                      <td>&ge; {{ covid_cases_values[3] }} &amp; &lt; {{ covid_cases_values[3] }}</td>
-                                      <td>&ge; {{ covid_cases_per_10000_res_values[3] }} &amp; &lt; {{ covid_cases_per_10000_res_values[4] }}</td>
-                                      <td>&ge; {{ covid_cases_per_100000_res_values[3] }} &amp; &lt; {{ covid_cases_per_100000_res_values[4] }}</td>
-                                      <td>&ge; {{ covid_deaths_values[3] }} &amp; &lt; {{ covid_deaths_values[4] }}</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="heasqu5"></span></td>
-                                      <td>&ge; {{ covid_cases_values[4] }} &amp; &lt; {{ covid_cases_values[5] }}</td>
-                                      <td>&ge; {{ covid_cases_per_10000_res_values[4] }} &amp; &lt; {{ covid_cases_per_10000_res_values[5] }}</td>
-                                      <td>&ge; {{ covid_cases_per_100000_res_values[4] }} &amp; &lt; {{ covid_cases_per_100000_res_values[5] }}</td>
-                                      <td>&ge; {{ covid_deaths_values[4] }} &amp; &lt; {{ covid_deaths_values[5] }}</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="heasqu6"></span></td>
-                                        <td>&ge; {{ covid_cases_values[5] }}</td>
-                                        <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
-                                        <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
-                                        <td>&ge; {{ covid_deaths_values[5] }}</td>
-                                    </tr>
-                                    <tr>
-                                      <td style="padding:5px"><span class="squfill"></span></td>
-                                      <td>No Data {{ covid_cases_values[0] }}</td>
-                                    </tr>
-                                  </q-markup-table>
-                                </font>
-                              </q-popup-proxy>
-                            </q-btn>
-                          </td>
-                          <!-- // legend -->
-                        </tr>
-                        <tr>
-                          <td>
-                            <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                            <q-radio v-on:input="showMap2PanelRadioLayer" val="cases" v-model="currentradiovariable2" color="teal" />
-                          </td>
-                          <td>
-                            <q-item-label>Covid-19 Total Cases</q-item-label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                            <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable2" color="teal" />
-                          </td>
-                          <td>
-                            <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                            <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable2" color="teal" />
-                          </td>
-                          <td>
-                            <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                            <q-radio v-on:input="showMap2PanelRadioLayer" val="deaths" v-model="currentradiovariable2" color="teal" />
-                          </td>
-                          <td>
-                            <q-item-label>Covid-19 Deaths</q-item-label>
-                          </td>
-                        </tr>
-                      </table>
-                     </div>
-                     <!-- // Health layers -->
+                                  </table>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, calculated from last menstrual period (LMP) for full cohort ${ fc_calcpreterm_percentageModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('fc_calcpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_calcpreterm_percentageModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is derived from gestational age calculated from last menstrual period (LMP) for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, based on clinical estimate full cohorts ${ fc_clinpreterm_percentageModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('fc_clinpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="fc_clinpreterm_percentageModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is based on clinical estimate for full cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, calculated from last menstrual period (LMP) singleton cohort ${ sc_calcpreterm_percentageModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('sc_calcpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_calcpreterm_percentageModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is derived from gestational age calculated from last menstrual period (LMP) for singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <q-toggle
+                                      :label="`percent preterm births, based on clinical estimate singleton cohorts ${ sc_clinpreterm_percentageModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('sc_clinpreterm_percentage')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="sc_clinpreterm_percentageModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">percentage of all observations with complete data that are preterm births, where preterm birth status is based on clinical estimate singleton cohort</q-tooltip>
+                                    </q-toggle>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </q-list>
+                        </q-menu>
+                      </q-item>
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // Health layers -->
+
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
                   <q-item-section side>
@@ -2561,7 +3046,8 @@
       <div class="wrapper">
         <!--// app map1 -->
         <vl-map v-if="mapVisible" class="dualmap" ref="map1" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-          @singleclick="onMap1Click" data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
+          @singleclick="onMap1Click" data-projection="EPSG:4326" :default-controls="defaultControls" @mounted="onMapMounted"
+          :controls="false" style="height:1200px">
           <!--//map1 view aka ol.View -->
           <div v-if="mapSync === 'False'">
             <vl-view ref="view1" :center.sync="center1" :zoom.sync="zoom1" :rotation.sync="rotation"></vl-view>
@@ -2623,7 +3109,8 @@
 
         <!--// app map2 -->
         <vl-map v-if="mapVisible" class="dualmap" ref="map2" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-          @singleclick="onMap2Click" data-projection="EPSG:4326" @mounted="onMapMounted" :controls="false" style="height:1200px">
+          @singleclick="onMap2Click" data-projection="EPSG:4326"  :default-controls="defaultControls" @mounted="onMapMounted"
+          :controls="false" style="height:1200px">
            <!--// map2 view aka ol.View -->
           <div v-if="mapSync === 'False'">
             <vl-view ref="view2" :center.sync="center2" :zoom.sync="zoom2" :rotation.sync="rotation"></vl-view>
@@ -2685,7 +3172,7 @@
       </div>
 
       <!--// Go to Single Screen Map button -->
-      <q-page-sticky position="top-left" :offset="[58, 18]">
+      <q-page-sticky position="top-left" :offset="[78, 28]">
         <q-btn flat round dense icon="far fa-square" class="bg-teal text-black" aria-label="Single Screen Map" @click="$router.replace('/')">
           <q-tooltip>Go to Single Screen Map</q-tooltip>
         </q-btn>
@@ -2693,9 +3180,9 @@
       <!--// Go to Single Screen Map button -->
 
       <!--// ol map1 controls -->
-      <!-- q-page-sticky position="top-left" :offset="[18, 58]">
+      <q-page-sticky position="top-left" :offset="[18, 18]">
         <div id="Zoom1Target"></div>
-      </q-page-sticky -->
+      </q-page-sticky>
       <!-- q-page-sticky position="bottom-left" :offset="[8, 38]">
         <div id="OverviewMap1Target"></div>
       </q-page-sticky -->
@@ -2712,8 +3199,14 @@
       </q-page-sticky>
       <!--// NC Enviroscan Icon -->
 
+      <!--// ol map2 controls -->
+      <q-page-sticky position="top-right" :offset="[58, 18]">
+        <div id="Zoom2Target"></div>
+      </q-page-sticky>
+      <!--// ol map2 controls -->
+
       <!--// Fullscreen button -->
-      <q-page-sticky position="top-right" :offset="[18, 18]">
+      <q-page-sticky position="top-right" :offset="[18, 98]">
         <q-btn color="teal" class="text-black" @click="$q.fullscreen.toggle()" round :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'">
           <q-tooltip>Open &amp; Close Full Screen</q-tooltip>
         </q-btn>
@@ -2917,7 +3410,7 @@ import { camelCase } from 'lodash'
 // ol controls import
 import ScaleLine from 'ol/control/ScaleLine'
 // import OverviewMap from 'ol/control/OverviewMap'
-// import Zoom from 'ol/control/Zoom'
+import Zoom from 'ol/control/Zoom'
 import Attribution from 'ol/control/Attribution'
 
 // other ol imports
@@ -2943,6 +3436,11 @@ export default {
   data () {
     return {
       // map parameters
+      defaultControls: {
+        attribution: true,
+        rotate: false,
+        zoom: false
+      },
       mapsynctab: 'syncmaps',
       mapSync: 'True',
       center: [-79.0193, 35.0],
@@ -2987,6 +3485,15 @@ export default {
       d_ptsdf_2Model1: 'Not Selected',
       d_ozone_2Model1: 'Not Selected',
       d_pm25_2Model1: 'Not Selected',
+      pretermlayer1: undefined,
+      fc_calcega_mean_avgModel1: 'Not Selected',
+      fc_clinega_mean_avgModel1: 'Not Selected',
+      sc_calcega_mean_avgModel1: 'Not Selected',
+      sc_clinega_mean_avgModel1: 'Not Selected',
+      fc_calcpreterm_percentageModel1: 'Not Selected',
+      fc_clinpreterm_percentageModel1: 'Not Selected',
+      sc_calcpreterm_percentageModel1: 'Not Selected',
+      sc_clinpreterm_percentageModel1: 'Not Selected',
       casespertenModel1: 'Not Selected',
       casesperhundredModel1: 'Not Selected',
       deathsModel1: 'Not Selected',
@@ -3018,6 +3525,15 @@ export default {
       casespertenModel2: 'Not Selected',
       casesperhundredModel2: 'Not Selected',
       deathsModel2: 'Not Selected',
+      pretermlayer2: undefined,
+      fc_calcega_mean_avgModel2: 'Not Selected',
+      fc_clinega_mean_avgModel2: 'Not Selected',
+      sc_calcega_mean_avgModel2: 'Not Selected',
+      sc_clinega_mean_avgModel2: 'Not Selected',
+      fc_calcpreterm_percentageModel2: 'Not Selected',
+      fc_clinpreterm_percentageModel2: 'Not Selected',
+      sc_calcpreterm_percentageModel2: 'Not Selected',
+      sc_clinpreterm_percentageModel2: 'Not Selected',
       // variable colors
       ncwellmap1style: 'nopattern',
       ncwellmap2style: 'nopattern',
@@ -3025,6 +3541,8 @@ export default {
       acsmap2style: 'nopattern',
       ejsmap1style: 'nopattern',
       ejsmap2style: 'nopattern',
+      pretermmap1style: 'nopattern',
+      pretermmap2style: 'nopattern',
       varcolor: null,
       pattern1colors: ['rgba(246, 250, 5, 1.0)', 'rgba(0, 125, 125, 1.0)', 'rgba(91, 240, 245, 1.0)', 'rgba(250, 203, 92, 1.0)', 'rgba(240, 129, 5, 1.0)'],
       // patternt1colors: ['246, 250, 5, 1.0', '0, 125, 125, 1.0', '91, 240, 245, 1.0', '250, 203, 92, 1.0', '240, 129, 5, 1.0'],
@@ -3037,6 +3555,7 @@ export default {
       acscolors: ['rgba(91, 95, 99, 0.85)', 'rgba(252, 210, 211, 0.85)', 'rgba(247, 84, 90, 0.85)', 'rgba(212, 4, 9, 0.85)', 'rgba(122, 1, 5, 0.85)'],
       ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
       covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
+      pretermcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(207, 252, 242, 0.65)', 'rgba(140, 250, 224, 0.65)', 'rgba(46, 240, 162, 0.65)', 'rgba(3, 148, 90, 0.65)'],
       arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
       arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
       arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
@@ -3065,6 +3584,16 @@ export default {
       covid_cases_per_10000_res_values: [-999.99, 586.0, 1172.0, 1758.0, 2344.0, 2930.0],
       covid_cases_per_100000_res_values: [-999.99, 5859.0, 11718.0, 17577.0, 23436.0, 29295.0],
       covid_deaths_values: [-999.99, 17, 34, 51, 65, 85],
+      ega_mean_avg_values: [-999.99, 38.469, 38.633, 38.779],
+      // fc_calcega_mean_avg_values: [-999.99, 38.469, 38.633, 38.779],
+      // fc_clinega_mean_avg_values: [-999.99, 38.35, 38.497, 38.626],
+      // sc_calcega_mean_avg_values: [-999.99, 38.593, 38.753, 38.911],
+      // sc_clinega_mean_avg_values: [-999.99, 38.481, 38.627, 38.761],
+      preterm_percentage_values: [-999.99, 9.554, 11.285, 13.197],
+      // fc_calcpreterm_percentage_values: [-999.99, 11.242, 12.871, 14.779],
+      // fc_clinpreterm_percentage_values: [-999.99, 9.253, 10.41, 11.936],
+      // sc_calcpreterm_percentage_values: [-999.99, 9.554, 11.285, 13.197],
+      // sc_clinpreterm_percentage_values: [-999.99, 7.429, 8.621, 10.0],
       map1pat1val1: 0,
       map1pat1val2: 0,
       map1pat1val3: 0,
@@ -3121,9 +3650,11 @@ export default {
       // layers config
       currentradiovariable1: 'ncwellwise_arsenic_med',
       currentacsvariable1: 'percent_below_poverty_level',
+      currentpretermvariable1: 'fc_calcega_mean_avg',
       currentejsvariable1: 'd_ldpnt_2',
       currentradiovariable2: 'ncwellwise_arsenic_med',
       currentacsvariable2: 'percent_below_poverty_level',
+      currentpretermvariable2: 'fc_calcega_mean_avg',
       layers1: [
         {
           id: this.getNCWellwiseLayer1ID(),
@@ -3189,6 +3720,22 @@ export default {
             {
               cmp: 'vl-style-func',
               factory: this.getcovid19Style1
+            }
+          ]
+        },
+        {
+          id: this.getPreTermLayer1ID(),
+          title: 'PreTerm',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getpretermStyle1
             }
           ]
         },
@@ -3294,6 +3841,22 @@ export default {
           ]
         },
         {
+          id: this.getPreTermLayer2ID(),
+          title: 'PreTerm',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getpretermStyle2
+            }
+          ]
+        },
+        {
           id: 'ncCounties2',
           title: 'NC Counties2',
           cmp: 'vl-layer-vector-tile',
@@ -3381,6 +3944,11 @@ export default {
     covidColors () {
       return {
         '--covid-colors': this.covidcolors
+      }
+    },
+    pretermColors () {
+      return {
+        '--preterm-colors': this.pretermcolors
       }
     }
   },
@@ -3679,6 +4247,38 @@ export default {
               getPattern = this.getPattern2
               patternColors = this.pattern2colors
             }
+          } else if (layer === 'pretermlayer1') {
+            if (this.pretermmap1style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.pretermmap1style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'pretermlayer2') {
+            if (this.pretermmap2style === 'pattern1') {
+              this.map1pat1val1 = values[1]
+              this.map1pat1val2 = values[2]
+              this.map1pat1val3 = values[3]
+              this.map1pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.pretermmap2style === 'pattern2') {
+              this.map1pat2val1 = values[1]
+              this.map1pat2val2 = values[2]
+              this.map1pat2val3 = values[3]
+              this.map1pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
           }
           if (data[variable] === values[0]) {
             this.varcolor = getPattern(patternColors[0])
@@ -3800,6 +4400,38 @@ export default {
               getPattern = this.getPattern1
               patternColors = this.pattern1colors
             } else if (this.ejsmap2style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'pretermlayer1') {
+            if (this.pretermmap1style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.pretermmap1style === 'pattern2') {
+              this.map2pat2val1 = values[1]
+              this.map2pat2val2 = values[2]
+              this.map2pat2val3 = values[3]
+              this.map2pat2title = variable
+              getPattern = this.getPattern2
+              patternColors = this.pattern2colors
+            }
+          } else if (layer === 'pretermlayer2') {
+            if (this.pretermmap2style === 'pattern1') {
+              this.map2pat1val1 = values[1]
+              this.map2pat1val2 = values[2]
+              this.map2pat1val3 = values[3]
+              this.map2pat1title = variable
+              getPattern = this.getPattern1
+              patternColors = this.pattern1colors
+            } else if (this.pretermmap2style === 'pattern2') {
               this.map2pat2val1 = values[1]
               this.map2pat2val2 = values[2]
               this.map2pat2val3 = values[3]
@@ -3976,6 +4608,49 @@ export default {
         ]
       }
     },
+    getpretermStyle1: function () {
+      let getStyle
+      if (this.pretermmap1style === 'nopattern') {
+        getStyle = this.getColors
+      } else if (this.pretermmap1style === 'pattern1') {
+        getStyle = this.getPatternColors
+      } else if (this.pretermmap1style === 'pattern2') {
+        getStyle = this.getPatternColors
+      }
+      return feature => {
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let data = feature.getProperties()
+        let variable = this.currentpretermvariable1
+        if (this.currentpretermvariable1 === 'fc_calcega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'fc_calcpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'fc_clinega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'fc_clinpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'sc_calcega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'sc_calcpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'sc_clinega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer1')
+        } else if (this.currentpretermvariable1 === 'sc_clinpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer1')
+        }
+        return [
+          new Style({
+            stroke: new Stroke({
+              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
+              width: selected ? 2 : (this.zoom / 8.0)
+            }),
+            fill: new Fill({
+              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+            })
+          })
+        ]
+      }
+    },
     getncwellwiseStyle2: function () {
       let getStyle
       if (this.ncwellmap2style === 'nopattern') {
@@ -4130,6 +4805,49 @@ export default {
         ]
       }
     },
+    getpretermStyle2: function () {
+      let getStyle
+      if (this.pretermmap2style === 'nopattern') {
+        getStyle = this.getColors
+      } else if (this.pretermmap2style === 'pattern1') {
+        getStyle = this.getPatternColors
+      } else if (this.pretermmap2style === 'pattern2') {
+        getStyle = this.getPatternColors
+      }
+      return feature => {
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let data = feature.getProperties()
+        let variable = this.currentpretermvariable2
+        if (this.currentpretermvariable2 === 'fc_calcega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'fc_calcpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'fc_clinega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'fc_clinpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'sc_calcega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'sc_calcpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'sc_clinega_mean_avg') {
+          getStyle(data, this.ega_mean_avg_values, this.pretermcolors, variable, 'pretermlayer2')
+        } else if (this.currentpretermvariable2 === 'sc_clinpreterm_percentage') {
+          getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer2')
+        }
+        return [
+          new Style({
+            stroke: new Stroke({
+              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
+              width: selected ? 2 : (this.zoom / 8.0)
+            }),
+            fill: new Fill({
+              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+            })
+          })
+        ]
+      }
+    },
     getNCCountiesStyle: function () {
       // let zoom = this.getZoom2() // this.zoom
       return feature => {
@@ -4168,6 +4886,9 @@ export default {
     getCovid19Layer1ID: function () {
       return 'covid19_layer1'
     },
+    getPreTermLayer1ID: function () {
+      return 'preterm_layer1'
+    },
     getNCWellwiseLayer2ID: function () {
       return 'ncwellwise_layer2'
     },
@@ -4180,12 +4901,12 @@ export default {
     getCovid19Layer2ID: function () {
       return 'covid19_layer2'
     },
+    getPreTermLayer2ID: function () {
+      return 'preterm_layer2'
+    },
     onMapMounted: function (map1) {
       // now ol.Map instance is ready and we can work with it directly
       this.$refs.map1.$map.getControls().extend([
-        /* new Zoom({
-          target: 'Zoom1Target'
-        }), */
         new ScaleLine({
           target: 'Scale1Target'
         }),
@@ -4194,6 +4915,9 @@ export default {
           collapsible: true,
           target: 'OverviewMap1Target'
         }), */
+        new Zoom({
+          target: 'Zoom1Target'
+        }),
         new Attribution({
           collapsed: false,
           collapsible: false,
@@ -4201,10 +4925,10 @@ export default {
         })
       ])
       this.$refs.map2.$map.getControls().extend([
-        /* new Zoom({
+        new Zoom({
           target: 'Zoom2Target'
-        }),
-        new ScaleLine({
+        })
+        /* new ScaleLine({
           target: 'Scale2Target'
         }),
         new OverviewMap({
@@ -4463,6 +5187,86 @@ export default {
         } else if (this.d_pm25_2Model1 === 'Not Selected') {
           this.ejslayer1.visible = false
         }
+      } else if (variable === 'fc_calcega_mean_avg') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.fc_calcega_mean_avgModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.fc_calcega_mean_avgModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'fc_clinega_mean_avg') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.fc_clinega_mean_avgModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.fc_clinega_mean_avgModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'sc_calcega_mean_avg') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.sc_calcega_mean_avgModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.sc_calcega_mean_avgModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'sc_clinega_mean_avg') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.sc_clinega_mean_avgModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.sc_clinega_mean_avgModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'fc_calcpreterm_percentage') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.fc_calcpreterm_percentageModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.fc_calcpreterm_percentageModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'fc_clinpreterm_percentage') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.fc_clinpreterm_percentageModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.fc_clinpreterm_percentageModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'sc_calcpreterm_percentage') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.sc_calcpreterm_percentageModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.sc_calcpreterm_percentageModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
+      } else if (variable === 'sc_clinpreterm_percentage') {
+        if (this.pretermlayer1 === undefined) {
+          this.pretermlayer1 = this.layers1[4]
+        }
+        if (this.sc_clinpreterm_percentageModel1 === 'Selected') {
+          this.pretermlayer1.visible = true
+          this.currentpretermvariable1 = variable
+        } else if (this.sc_clinpreterm_percentageModel1 === 'Not Selected') {
+          this.pretermlayer1.visible = false
+        }
       }
     },
     showMap2PanelToggleLayer: function (variable) {
@@ -4684,6 +5488,86 @@ export default {
           this.currentejsvariable2 = variable
         } else if (this.d_pm25_2Model2 === 'Not Selected') {
           this.ejslayer2.visible = false
+        }
+      } else if (variable === 'fc_calcega_mean_avg') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.fc_calcega_mean_avgModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.fc_calcega_mean_avgModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'fc_clinega_mean_avg') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.fc_clinega_mean_avgModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.fc_clinega_mean_avgModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'sc_calcega_mean_avg') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.sc_calcega_mean_avgModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.sc_calcega_mean_avgModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'sc_clinega_mean_avg') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.sc_clinega_mean_avgModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.sc_clinega_mean_avgModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'fc_calcpreterm_percentage') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.fc_calcpreterm_percentageModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.fc_calcpreterm_percentageModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'fc_clinpreterm_percentage') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.fc_clinpreterm_percentageModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.fc_clinpreterm_percentageModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'sc_calcpreterm_percentage') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.sc_calcpreterm_percentageModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.sc_calcpreterm_percentageModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
+        }
+      } else if (variable === 'sc_clinpreterm_percentage') {
+        if (this.pretermlayer2 === undefined) {
+          this.pretermlayer2 = this.layers2[4]
+        }
+        if (this.sc_clinpreterm_percentageModel2 === 'Selected') {
+          this.pretermlayer2.visible = true
+          this.currentpretermvariable2 = variable
+        } else if (this.sc_clinpreterm_percentageModel2 === 'Not Selected') {
+          this.pretermlayer2.visible = false
         }
       }
     },
@@ -5254,6 +6138,34 @@ export default {
     height: 15px;
     width: 15px;
     background-color: rgba(252, 82, 3, 0.65);
+    // background-color: var(--manganese-colors[4]);
+    display: inline-block;
+  }
+  .pretsqu1 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(207, 252, 242, 0.65);
+    // background-color: var(--manganese-colors[1]);
+    display: inline-block;
+  }
+  .pretsqu2 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(140, 250, 224, 0.65);
+    // background-color: var(--manganese-colors[2]);
+    display: inline-block;
+  }
+  .pretsqu3 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(46, 240, 162, 0.65);
+    // background-color: var(--manganese-colors[3]);
+    display: inline-block;
+  }
+  .pretsqu4 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(3, 148, 90, 0.65);
     // background-color: var(--manganese-colors[4]);
     display: inline-block;
   }

@@ -13,8 +13,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from six.moves.urllib import request as req
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
-from .serializers import ncwellwise_triangle_20102019_geom_Serializer, ncwellwise_subset_20102019_geom_Serializer, ltdb_std_2012_sample_subset_geom_Serializer, acs_2019_5y_estimates_geom_Serializer, ejscreen_subset_geom_Serializer, nc_covid_zipcode_geom_Serializer, ncdot_county_boundaries_Serializer
-from .models import ncwellwise_triangle_20102019_geom, ncwellwise_subset_20102019_geom, ltdb_std_2012_sample_subset_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, ncdot_county_boundaries
+from .serializers import ncwellwise_subset_20102019_geom_Serializer, acs_2019_5y_estimates_geom_Serializer, ejscreen_subset_geom_Serializer, nc_covid_zipcode_geom_Serializer, nc_preterm_subset_geom_Serializer, ncdot_county_boundaries_Serializer
+from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries
 from url_filter.integrations.drf import DjangoFilterBackend
 from rest_framework_gis.filters import InBBoxFilter
 
@@ -110,28 +110,12 @@ def ncwellwise_subset_20102019_geom_detail(request, id):
         ncwellwise_subset_20102019.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class drf_ncwellwise_triangle_20102019_geom_View(viewsets.ModelViewSet):
-    queryset = ncwellwise_triangle_20102019_geom.objects.all()
-    serializer_class = ncwellwise_triangle_20102019_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id', 'geoid10','arsenic_mean','arsenic_med','arsenic_prcast','arsenic_minimum','arsenic_maximum','arsenic_std','cadmium_mean','cadmium_med','cadmium_prcast','cadmium_minimum','cadmium_maximum','cadmium_std','lead_mean','lead_med','lead_prcast','lead_minimum','lead_maximum','lead_std','manganese_mean','manganese_med','manganese_prcast','manganese_minimum','manganese_maximum','manganese_std']
-    bbox_filter_include_overlapping = True
-
 class drf_ncwellwise_subset_20102019_geom_View(viewsets.ModelViewSet):
     queryset = ncwellwise_subset_20102019_geom.objects.all()
     serializer_class = ncwellwise_subset_20102019_geom_Serializer
     bbox_filter_field = 'geom'
     filter_backends = [DjangoFilterBackend, InBBoxFilter]
     fileter_fields = ['id', 'geoid10','arsenic_mean','arsenic_med','arsenic_prcast','arsenic_minimum','arsenic_maximum','arsenic_std','cadmium_mean','cadmium_med','cadmium_prcast','cadmium_minimum','cadmium_maximum','cadmium_std','lead_mean','lead_med','lead_prcast','lead_minimum','lead_maximum','lead_std','manganese_mean','manganese_med','manganese_prcast','manganese_minimum','manganese_maximum','manganese_std']
-    bbox_filter_include_overlapping = True
-
-class drf_ltdb_std_2012_sample_subset_geom_View(viewsets.ModelViewSet):
-    queryset = ltdb_std_2012_sample_subset_geom.objects.all()
-    serializer_class = ltdb_std_2012_sample_subset_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id', 'geoid10','pnhwht12','pnhblk12','phisp12','pasian12','pntv12','hincw12','hincb12','hinch12','hinca12','pwpov12','pbpov12','phpov12','papov12','pnapov12']
     bbox_filter_include_overlapping = True
 
 class drf_acs_2019_5y_estimates_geom_View(viewsets.ModelViewSet):
@@ -156,6 +140,14 @@ class drf_nc_covid_zipcode_geom_View(viewsets.ModelViewSet):
     bbox_filter_field = 'geom'
     filter_backends = [DjangoFilterBackend, InBBoxFilter]
     fileter_fields = ['id','zipcode','cases,cases_per_10000_res','cases_per_100000_res','deaths']
+    bbox_filter_include_overlapping = True
+
+class drf_nc_preterm_subset_geom_View(viewsets.ModelViewSet):
+    queryset = nc_preterm_subset_geom.objects.all()
+    serializer_class = nc_preterm_subset_geom_Serializer
+    bbox_filter_field = 'geom'
+    filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    fileter_fields = ['id','geoid10','fc_calcega_mean_avg','fc_calcega_med','fc_calcpreterm_percentage','fc_clinega_mean_avg','fc_clinega_med','fc_clinpreterm_percentage','sc_calcega_mean_avg,sc_calcega_med','sc_calcpreterm_percentage','sc_clinega_mean_avg','sc_clinega_med','sc_clinpreterm_percentage']
     bbox_filter_include_overlapping = True
 
 class drf_ncdot_county_boundaries_View(viewsets.ModelViewSet):
