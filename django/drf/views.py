@@ -1,23 +1,24 @@
 from __future__ import unicode_literals
-import os
-import jwt
-import json
-from functools import wraps
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+#import os
+#import jwt
+#import json
+#from functools import wraps
+#from rest_framework import status
+#from rest_framework.decorators import api_view
+#from rest_framework.response import Response
 from rest_framework import viewsets
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from six.moves.urllib import request as req
-from cryptography.x509 import load_pem_x509_certificate
-from cryptography.hazmat.backends import default_backend
-from .serializers import ncwellwise_subset_20102019_geom_Serializer, acs_2019_5y_estimates_geom_Serializer, ejscreen_subset_geom_Serializer, nc_covid_zipcode_geom_Serializer, nc_preterm_subset_geom_Serializer, ncdot_county_boundaries_Serializer
-from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries
-from url_filter.integrations.drf import DjangoFilterBackend
-from rest_framework_gis.filters import InBBoxFilter
+#from django.http import JsonResponse
+#from django.views.decorators.csrf import csrf_exempt
+#from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+#from six.moves.urllib import request as req
+#from cryptography.x509 import load_pem_x509_certificate
+#from cryptography.hazmat.backends import default_backend
+from .serializers import ncwellwise_subset_20102019_geom_Serializer, acs_2019_5y_estimates_geom_Serializer, ejscreen_subset_geom_Serializer, nc_covid_zipcode_geom_Serializer, nc_preterm_subset_geom_Serializer, ncdot_county_boundaries_Serializer, nc_superfund_sites_Serializer
+from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries, nc_superfund_sites
+#from url_filter.integrations.drf import DjangoFilterBackend
+#from rest_framework_gis.filters import InBBoxFilter
 
+"""
 def get_token_auth_header(request):
     #Obtains the access token from the Authorization Header
     auth = request.META.get("HTTP_AUTHORIZATION", None)
@@ -54,6 +55,7 @@ def requires_scope(required_scope):
         return decorated
     return require_scope
 
+
 @csrf_exempt
 @api_view(['GET', 'POST'])
 def ncwellwise_subset_20102019_geom_list(request):
@@ -87,6 +89,7 @@ def ncwellwise_subset_20102019_geom_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(['GET', 'PUT', 'DELETE'])
 def ncwellwise_subset_20102019_geom_detail(request, id):
     #Retrieve, update or delete a ncwellwise_subset_20102019_geom instance.
@@ -109,52 +112,61 @@ def ncwellwise_subset_20102019_geom_detail(request, id):
     elif request.method == 'DELETE':
         ncwellwise_subset_20102019.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+"""
 
 class drf_ncwellwise_subset_20102019_geom_View(viewsets.ModelViewSet):
     queryset = ncwellwise_subset_20102019_geom.objects.all()
     serializer_class = ncwellwise_subset_20102019_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id', 'geoid10','arsenic_mean','arsenic_med','arsenic_prcast','arsenic_minimum','arsenic_maximum','arsenic_std','cadmium_mean','cadmium_med','cadmium_prcast','cadmium_minimum','cadmium_maximum','cadmium_std','lead_mean','lead_med','lead_prcast','lead_minimum','lead_maximum','lead_std','manganese_mean','manganese_med','manganese_prcast','manganese_minimum','manganese_maximum','manganese_std']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id', 'geoid10','arsenic_mean','arsenic_med','arsenic_prcast','arsenic_minimum','arsenic_maximum','arsenic_std','cadmium_mean','cadmium_med','cadmium_prcast','cadmium_minimum','cadmium_maximum','cadmium_std','lead_mean','lead_med','lead_prcast','lead_minimum','lead_maximum','lead_std','manganese_mean','manganese_med','manganese_prcast','manganese_minimum','manganese_maximum','manganese_std']
+    #bbox_filter_include_overlapping = True
 
 class drf_acs_2019_5y_estimates_geom_View(viewsets.ModelViewSet):
     queryset = acs_2019_5y_estimates_geom.objects.all()
     serializer_class = acs_2019_5y_estimates_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id', 'geoid10','percent_below_poverty_level','speak_a_language_other_than_english','two_or_more_races','asian_alone','american_indian_and_alaska_native_alone','native_hawaiian_and_other_pacific_islander_alone','white_alone','black_or_african_american_alone','not_hispanic_or_latino','hispanic_or_latino_of_any_race']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id', 'geoid10','percent_below_poverty_level','speak_a_language_other_than_english','two_or_more_races','asian_alone','american_indian_and_alaska_native_alone','native_hawaiian_and_other_pacific_islander_alone','white_alone','black_or_african_american_alone','not_hispanic_or_latino','hispanic_or_latino_of_any_race']
+    #bbox_filter_include_overlapping = True
 
 class drf_ejscreen_subset_geom_View(viewsets.ModelViewSet):
     queryset = ejscreen_subset_geom.objects.all()
     serializer_class = ejscreen_subset_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id','geoid10','d_ldpnt_2','d_dslpm_2','d_cancr_2','d_resp_2','d_ptraf_2','d_pwdis_2','d_pnpl_2','d_prmp_2','d_ptsdf_2','d_ozone_2','d_pm25_2']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id','geoid10','d_ldpnt_2','d_dslpm_2','d_cancr_2','d_resp_2','d_ptraf_2','d_pwdis_2','d_pnpl_2','d_prmp_2','d_ptsdf_2','d_ozone_2','d_pm25_2']
+    #bbox_filter_include_overlapping = True
 
 class drf_nc_covid_zipcode_geom_View(viewsets.ModelViewSet):
     queryset = nc_covid_zipcode_geom.objects.all()
     serializer_class = nc_covid_zipcode_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id','zipcode','cases,cases_per_10000_res','cases_per_100000_res','deaths']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id','zipcode','cases,cases_per_10000_res','cases_per_100000_res','deaths']
+    #bbox_filter_include_overlapping = True
 
 class drf_nc_preterm_subset_geom_View(viewsets.ModelViewSet):
     queryset = nc_preterm_subset_geom.objects.all()
     serializer_class = nc_preterm_subset_geom_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id','geoid10','fc_calcega_mean_avg','fc_calcega_med','fc_calcpreterm_percentage','fc_clinega_mean_avg','fc_clinega_med','fc_clinpreterm_percentage','sc_calcega_mean_avg,sc_calcega_med','sc_calcpreterm_percentage','sc_clinega_mean_avg','sc_clinega_med','sc_clinpreterm_percentage']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id','geoid10','fc_calcega_mean_avg','fc_calcega_med','fc_calcpreterm_percentage','fc_clinega_mean_avg','fc_clinega_med','fc_clinpreterm_percentage','sc_calcega_mean_avg,sc_calcega_med','sc_calcpreterm_percentage','sc_clinega_mean_avg','sc_clinega_med','sc_clinpreterm_percentage']
+    #bbox_filter_include_overlapping = True
 
 class drf_ncdot_county_boundaries_View(viewsets.ModelViewSet):
     queryset = ncdot_county_boundaries.objects.all()
     serializer_class = ncdot_county_boundaries_Serializer
-    bbox_filter_field = 'geom'
-    filter_backends = [DjangoFilterBackend, InBBoxFilter]
-    fileter_fields = ['id','objectid','fips','countyname','uppercount','sapcountyi','dotdistric','dotdivisio','sap_cnty_n','cnty_nbr','dstrct_nbr','div_nbr','name','shapestare','shapestlen']
-    bbox_filter_include_overlapping = True
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id','objectid','fips','countyname','uppercount','sapcountyi','dotdistric','dotdivisio','sap_cnty_n','cnty_nbr','dstrct_nbr','div_nbr','name','shapestare','shapestlen']
+    #bbox_filter_include_overlapping = True
+
+class drf_nc_superfund_sites_View(viewsets.ModelViewSet):
+    queryset = nc_superfund_sites.objects.all()
+    serializer_class = nc_superfund_sites_Serializer
+    #bbox_filter_field = 'geom'
+    #filter_backends = [DjangoFilterBackend, InBBoxFilter]
+    #filter_fields = ['id','superfund_site','city','county','state','country','region','year_proposed','year_listed','year_complete','year_deleted','years_listed_current','years_listed_deleted','partial_deletion','hazard_rank_sys_score','status']
+    #bbox_filter_include_overlapping = True
 

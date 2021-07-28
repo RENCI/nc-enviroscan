@@ -1044,7 +1044,7 @@
         <!-- // EJScreen layers -->
 
         <!-- // Health layers -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Health Outcomes, by Zip Code">
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Health Outcomes, by Zip Code and Census Tract">
           <div class="q-pa-md q-gutter-y-sm column">
             <table cellspacing="3" cellpadding="0" style="width:100%">
               <tr>
@@ -1101,10 +1101,10 @@
                           </tr>
                           <tr>
                             <td style="padding:5px"><span class="heasqu6"></span></td>
-                              <td>&ge; {{ covid_cases_values[5] }}</td>
-                              <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
-                              <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
-                              <td>&ge; {{ covid_deaths_values[5] }}</td>
+                            <td>&ge; {{ covid_cases_values[5] }}</td>
+                            <td>&ge; {{ covid_cases_per_10000_res_values[5] }}</td>
+                            <td>&ge; {{ covid_cases_per_100000_res_values[5] }}</td>
+                            <td>&ge; {{ covid_deaths_values[5] }}</td>
                           </tr>
                           <tr>
                             <td style="padding:5px"><span class="squfill"></span></td>
@@ -1318,13 +1318,26 @@
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`North Carolina County Boundaries${ ncCountiesModel }`"
-              :key="layers[4].id"
-              v-on:input="showMapPanelToggleLayer(layers)"
-              :class="{ 'is-active': layers[4].visible }"
+              :key="layers[5].id"
+              v-on:input="showMapPanelToggleLayer('nccounties')"
+              :class="{ 'is-active': layers[5].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
               v-model="ncCountiesModel"
+            />
+          </div>
+          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Super Fund Sites</q-tooltip>
+          <div class="q-pa-md q-gutter-y-sm column">
+            <q-toggle
+              :label="`Super Fund Sites${ ncSuperFundModel }`"
+              :key="layers[7].id"
+              v-on:input="showMapPanelToggleLayer('superfundsites')"
+              :class="{ 'is-active': layers[7].visible }"
+              color="teal"
+              false-value="Not Selected"
+              true-value="Selected"
+              v-model="ncSuperFundModel"
             />
           </div>
         </q-expansion-item>
@@ -1642,7 +1655,7 @@ import Attribution from 'ol/control/Attribution'
 // import VectorTile from 'ol/layer/VectorTile'
 // import Feature from 'ol/Feature'
 // import MVT from 'ol/format/MVT'
-import { Style, Stroke, Fill } from 'ol/style'
+import { Style, Stroke, Fill, Circle } from 'ol/style'
 
 // geocoder
 const Nominatim = require('nominatim-geocoder')
@@ -2250,6 +2263,7 @@ export default {
       selectedFeatureStdBarBox: [],
       // Other layers attributes
       ncCountiesModel: 'Not Selected',
+      ncSuperFundModel: 'Not Selected',
       address: null,
       acceptaddress: false,
       vtSelection: {},
@@ -2391,6 +2405,22 @@ export default {
             {
               cmp: 'vl-style-func',
               factory: this.getNoLayerStyle
+            }
+          ]
+        },
+        {
+          id: 'superFundSites',
+          title: 'NC Super Fund Sites',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSuperFundStyle
             }
           ]
         }
@@ -2772,6 +2802,24 @@ export default {
         ]
       }
     },
+    getSuperFundStyle: function () {
+      return feature => {
+        return [
+          new Style({
+            image: new Circle({
+              radius: 5.0,
+              stroke: new Stroke({
+                color: 'rgb(145, 7, 4, 1)',
+                width: 3
+              }),
+              fill: new Fill({
+                color: 'rgba(145, 7, 4, 1)'
+              })
+            })
+          })
+        ]
+      }
+    },
     getNCWellwiseLayerID: function () {
       return 'ncwellwise'
     },
@@ -2826,12 +2874,21 @@ export default {
         layer.visible = true
       }
     },
-    showMapPanelToggleLayer: function () {
-      let cntlayer = this.layers[4]
-      if (this.ncCountiesModel === 'Selected') {
-        cntlayer.visible = true
-      } else if (this.ncCountiesModel === 'Not Selected') {
-        cntlayer.visible = false
+    showMapPanelToggleLayer: function (variable) {
+      if (variable === 'nccounties') {
+        let cntlayer = this.layers[5]
+        if (this.ncCountiesModel === 'Selected') {
+          cntlayer.visible = true
+        } else if (this.ncCountiesModel === 'Not Selected') {
+          cntlayer.visible = false
+        }
+      } else if (variable === 'superfundsites') {
+        let sfslayer = this.layers[7]
+        if (this.ncSuperFundModel === 'Selected') {
+          sfslayer.visible = true
+        } else if (this.ncCountiesModel === 'Not Selected') {
+          sfslayer.visible = false
+        }
       }
     },
     showMapPanelRadioLayer: function () {

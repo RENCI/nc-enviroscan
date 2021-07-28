@@ -4970,7 +4970,7 @@ export default {
     showMap1PanelToggleLayer: function (variable) {
       if (variable === 'nccounties') {
         if (this.cntlayer1 === undefined) {
-          this.cntlayer1 = this.layers1[4]
+          this.cntlayer1 = this.layers1[5]
         }
         if (this.ncCountiesModel1 === 'Selected') {
           this.cntlayer1.visible = true
@@ -5272,7 +5272,7 @@ export default {
     showMap2PanelToggleLayer: function (variable) {
       if (variable === 'nccounties') {
         if (this.cntlayer2 === undefined) {
-          this.cntlayer2 = this.layers2[4]
+          this.cntlayer2 = this.layers2[5]
         }
         if (this.ncCountiesModel2 === 'Selected') {
           this.cntlayer2.visible = true

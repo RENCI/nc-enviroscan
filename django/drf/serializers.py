@@ -1,7 +1,7 @@
 #from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 from rest_framework.serializers import ModelSerializer
-from .models import ncwellwise_subset_20102019, acs_2019_5y_estimates, ejscreen_subset, nc_covid_zipcode, nc_preterm_subset, nc_census_tracks_4326, nc_census_bg_4326, ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries
+from .models import ncwellwise_subset_20102019, acs_2019_5y_estimates, ejscreen_subset, nc_covid_zipcode, nc_preterm_subset, nc_census_tracks_4326, nc_census_bg_4326, ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries, nc_superfund_sites
 from drf_queryfields import QueryFieldsMixin
 
 class ncwellwise_subset_20102019_Serializer(QueryFieldsMixin,):
@@ -85,4 +85,11 @@ class ncdot_county_boundaries_Serializer(QueryFieldsMixin,GeoFeatureModelSeriali
         geo_field = 'geom'
         id_field = 'id'
         fields = ('id','objectid','fips','countyname','uppercount','sapcountyi','dotdistric','dotdivisio','sap_cnty_n','cnty_nbr','dstrct_nbr','div_nbr','name','shapestare','shapestlen')
+
+class nc_superfund_sites_Serializer(QueryFieldsMixin,GeoFeatureModelSerializer):
+    class Meta:
+        model = nc_superfund_sites
+        geo_field = 'geom'
+        id_field = 'id'
+        fields = ('id','superfund_site','city','county','state','country','region','year_proposed','year_listed','year_complete','year_deleted','years_listed_current','years_listed_deleted','partial_deletion','hazard_rank_sys_score','status','latitude','longitude','geom')
 

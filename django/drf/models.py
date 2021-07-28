@@ -250,3 +250,25 @@ class nc_preterm_subset_geom(models.Model):
         managed = False
         db_table = "drf_nc_preterm_subset_geom"
 
+class nc_superfund_sites(models.Model):
+    superfund_site = models.TextField(55, null=True)
+    city = models.TextField(15, null=True)
+    county = models.TextField(16, null=True)
+    state = models.TextField(2, null=True)
+    country = models.TextField(2, null=True)
+    region = models.IntegerField()
+    year_proposed = models.FloatField()
+    year_listed = models.FloatField()
+    year_complete = models.FloatField()
+    year_deleted = models.TextField(12, null=True)
+    years_listed_current = models.TextField(17, null=True)
+    years_listed_deleted = models.TextField(17, null=True)
+    partial_deletion = models.TextField(4, null=True)
+    hazard_rank_sys_score = models.FloatField(null=True)
+    status = models.TextField(31, null=True)
+    latitude = models.FloatField(null=True)
+    longitude = models.FloatField(null=True)
+    geom = models.PointField(null=True)
+    objects = models.Manager()
+    vector_tiles = MVTManager()
+
