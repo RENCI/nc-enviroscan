@@ -19,17 +19,13 @@
                   <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
                     <q-list>
                       <q-item tag="label" v-ripple>
-                        <q-item-section avatar>
-                          <q-radio v-on:input="showBaseLayer1" val="osm" v-model="baselayer1" color="teal" />
-                        </q-item-section>
+                        <q-radio v-on:input="showBaseLayer1" val="osm" v-model="baselayer1" color="teal" />
                         <q-item-section>
                           <q-item-label>OpenStreetMap</q-item-label>
                         </q-item-section>
                       </q-item>
                       <q-item tag="label" v-ripple>
-                        <q-item-section avatar>
-                          <q-radio v-on:input="showBaseLayer1" val="mapbox" v-model="baselayer1" color="teal" />
-                        </q-item-section>
+                        <q-radio v-on:input="showBaseLayer1" val="mapbox" v-model="baselayer1" color="teal" />
                         <q-item-section>
                           <q-item-label>MapBox Satellite</q-item-label>
                         </q-item-section>
@@ -51,9 +47,7 @@
                       <div class="q-pa-md" style="min-width: 200px">
                         <q-list link>
                           <q-item tag="label" v-ripple>
-                            <q-item-section avatar>
-                              <q-radio v-on:input="showMap1PanelRadioLayer" val="nolayer1" v-model="currentradiovariable1" color="teal" />
-                            </q-item-section>
+                            <q-radio v-on:input="showMap1PanelRadioLayer" val="nolayer1" v-model="currentradiovariable1" color="teal" />
                             <q-item-section>
                               <q-item-label>Clear Data</q-item-label>
                             </q-item-section>
@@ -1536,17 +1530,13 @@
                   <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
                     <q-list>
                       <q-item tag="label" v-ripple>
-                        <q-item-section avatar>
-                          <q-radio v-on:input="showBaseLayer2" val="osm" v-model="baselayer2" color="teal" />
-                        </q-item-section>
+                        <q-radio v-on:input="showBaseLayer2" val="osm" v-model="baselayer2" color="teal" />
                         <q-item-section>
                           <q-item-label>OpenStreetMap</q-item-label>
                         </q-item-section>
                       </q-item>
                       <q-item tag="label" v-ripple>
-                        <q-item-section avatar>
-                          <q-radio v-on:input="showBaseLayer2" val="mapbox" v-model="baselayer2" color="teal" />
-                        </q-item-section>
+                        <q-radio v-on:input="showBaseLayer2" val="mapbox" v-model="baselayer2" color="teal" />
                         <q-item-section>
                           <q-item-label>MapBox Satellite</q-item-label>
                         </q-item-section>
@@ -1568,9 +1558,7 @@
                       <div class="q-pa-md" style="min-width: 200px">
                         <q-list link>
                           <q-item tag="label" v-ripple>
-                            <q-item-section avatar>
-                              <q-radio v-on:input="showMap2PanelRadioLayer" val="nolayer2" v-model="currentradiovariable2" color="teal" />
-                            </q-item-section>
+                            <q-radio v-on:input="showMap2PanelRadioLayer" val="nolayer2" v-model="currentradiovariable2" color="teal" />
                             <q-item-section>
                               <q-item-label>Clear Data</q-item-label>
                             </q-item-section>
@@ -3193,9 +3181,7 @@
 
       <!--// NC Enviroscan Icon -->
       <q-page-sticky position="top-right" :offset="[98, 5]">
-        <q-avatar square size="110px">
-          <img src="statics/nc-enviroscan-110.png">
-        </q-avatar>
+        <img src="statics/nc-enviroscan-110.png">
       </q-page-sticky>
       <!--// NC Enviroscan Icon -->
 

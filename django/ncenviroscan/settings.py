@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'corsheaders',  # new
     'rest_framework',  # new
     'rest_framework_gis',  # new
-    'rest_framework_jwt',  # auth0
 
     'drf',  # new
 ]
@@ -70,15 +69,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
     ],
-    'DEFAULT_FILTER_BACKENDS': [
-        'url_filter.integrations.drf.DjangoFilterBackend',
-    ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',  # auth0
     ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',  # auth0
-    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 MIDDLEWARE = [

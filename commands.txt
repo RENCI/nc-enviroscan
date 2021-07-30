@@ -36,6 +36,7 @@ python manage.py runserver
 127.0.0.1:1337/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile=12/1148/1609
 127.0.0.1:1337/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile=12/1148/1609
 127.0.0.1:1337/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile=12/1148/1609
+127.0.0.1:1337/drf/api/v1/data/nc_superfund_sites/?format=json
 http://enviroscan-drf.edc.renci.org/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile=12/1148/1609
 https://enviroscan-drf.edc.renci.org/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile=12/1148/1609
 http://enviroscan-drf.renci.org/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile=12/1148/1609

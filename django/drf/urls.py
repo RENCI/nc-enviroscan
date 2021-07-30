@@ -21,12 +21,6 @@ from . import views
 from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries, nc_superfund_sites
 
 router = routers.DefaultRouter()
-#router.register(r'ncwellwise_subset_20102019_geom', views.drf_ncwellwise_subset_20102019_geom_View)
-#router.register(r'acs_2019_5y_estimates_geom', views.drf_acs_2019_5y_estimates_geom_View)
-#router.register(r'ejscreen_subset_geom', views.drf_ejscreen_subset_geom_View)
-#router.register(r'nc_covid_zipcode_geom', views.drf_nc_covid_zipcode_geom_View)
-#router.register(r'nc_preterm_subset_geom', views.drf_nc_preterm_subset_geom_View)
-#router.register(r'ncdot_county_boundaries', views.drf_ncdot_county_boundaries_View)
 router.register(r'nc_superfund_sites', views.drf_nc_superfund_sites_View)
 
 urlpatterns = [

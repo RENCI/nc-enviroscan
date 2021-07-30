@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lhr lpr lfr">
     <!--// Left Drawer Starts-->
-    <q-drawer v-model="leftDrawerOpen" :width="320" show-if-above bordered :content-style="{ backgroundColor: 'rgba(199, 235, 235, 0.5)' }">
+    <q-drawer v-model="leftDrawerOpen" :width="320" bordered :content-style="{ backgroundColor: 'rgba(199, 235, 235, 0.5)' }">
       <font size="4" face="Arial" >
         <div style="text-align:center">Census Tract Details</div>
       </font>
@@ -9,16 +9,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeatureMedBarBox).length > 0">
-              <tr>
-                <td>
-                  <apexchart width="280" type="radialBar" :options="apxmedoptions" :series="selectedFeatureMedBarBox" />
-                </td>
-              </tr>
-            </div>
+            <tr>
+              <td>
+                <apexchart ref='medianChart' width="280" type="radialBar" :options="apxoptions" :series="selectedFeatureMedBarBox" />
+              </td>
+            </tr>
           </table>
         </q-card>
       </center>
@@ -26,16 +24,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeatureMeanBarBox).length > 0">
-              <tr>
-                <td>
-                  <apexchart width="280" type="radialBar" :options="apxmeanoptions" :series="selectedFeatureMeanBarBox" />
-                </td>
-              </tr>
-            </div>
+            <tr>
+              <td>
+                <apexchart ref="meanChart" width="280" type="radialBar" :options="apxoptions" :series="selectedFeatureMeanBarBox" />
+              </td>
+            </tr>
           </table>
         </q-card>
       </center>
@@ -43,16 +39,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeaturePrcastBarBox).length > 0">
-              <tr>
-                <td>
-                  <apexchart width="280" type="radialBar" :options="apxprcastoptions" :series="selectedFeaturePrcastBarBox" />
-                </td>
-              </tr>
-            </div>
+            <tr>
+              <td>
+                <apexchart ref="prcastChart" width="280" type="radialBar" :options="apxoptions" :series="selectedFeaturePrcastBarBox" />
+              </td>
+            </tr>
           </table>
         </q-card>
       </center>
@@ -60,16 +54,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeatureMinBarBox).length > 0">
               <tr>
                 <td>
-                  <apexchart width="280" type="radialBar" :options="apxminoptions" :series="selectedFeatureMinBarBox" />
+                  <apexchart ref="minChart" width="280" type="radialBar" :options="apxoptions" :series="selectedFeatureMinBarBox" />
                 </td>
               </tr>
-            </div>
           </table>
         </q-card>
       </center>
@@ -77,16 +69,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeatureMaxBarBox).length > 0">
-              <tr>
-                <td>
-                  <apexchart width="280" type="radialBar" :options="apxmaxoptions" :series="selectedFeatureMaxBarBox" />
-                </td>
-              </tr>
-            </div>
+            <tr>
+              <td>
+                <apexchart ref="maxChart" width="280" type="radialBar" :options="apxoptions" :series="selectedFeatureMaxBarBox" />
+              </td>
+            </tr>
           </table>
         </q-card>
       </center>
@@ -94,16 +84,14 @@
       <q-separator />
       <q-space />
       <center>
-        <q-card class="q-pa-md bg-teal-1" style="max-width: 300px">
+        <q-card class="flat bordered bg-teal-1" style="max-width: 300px">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Click Census tract feature in map to display graph</q-tooltip>
           <table class="table is-fullwidth">
-            <div v-if="Object.keys(selectedFeatureStdBarBox).length > 0">
-              <tr>
-                <td>
-                  <apexchart width="280" type="radialBar" :options="apxstdoptions" :series="selectedFeatureStdBarBox" />
-                </td>
-              </tr>
-            </div>
+            <tr>
+              <td>
+                <apexchart ref="stdChart" width="280" type="radialBar" :options="apxoptions" :series="selectedFeatureStdBarBox" />
+              </td>
+            </tr>
           </table>
         </q-card>
       </center>
@@ -123,18 +111,14 @@
                 change Toggle state.
               -->
               <q-item tag="label" v-ripple>
-                <q-item-section avatar>
-                  <q-radio v-on:input="showBaseLayer" val="osm" v-model="baselayer" color="teal" />
-                </q-item-section>
+                <q-radio v-on:input="showBaseLayer" val="osm" v-model="baselayer" color="teal" />
                 <q-item-section>
                   <q-item-label>OpenStreetMap</q-item-label>
                 </q-item-section>
               </q-item>
 
               <q-item tag="label" v-ripple>
-                <q-item-section avatar>
-                  <q-radio v-on:input="showBaseLayer" val="mapbox" v-model="baselayer" color="teal" />
-                </q-item-section>
+                <q-radio v-on:input="showBaseLayer" val="mapbox" v-model="baselayer" color="teal" />
                 <q-item-section>
                   <q-item-label>MapBox Satellite</q-item-label>
                 </q-item-section>
@@ -149,9 +133,7 @@
           <div class="q-pa-md" style="min-width: 200px">
             <q-list link>
               <q-item tag="label" v-ripple>
-                <q-item-section avatar>
-                  <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
-                </q-item-section>
+                <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
                 <q-item-section>
                   <q-item-label>Clear Data</q-item-label>
                 </q-item-section>
@@ -1506,14 +1488,14 @@
       </q-btn>
     </q-page-sticky>
     <q-page-sticky position="top-left" :offset="[18, 18]">
-      <div v-if="!leftDrawerOpen">
+      <div v-if="leftDrawerOpen === false">
         <q-btn flat dense round icon="fas fa-sign-out-alt" class="bg-teal text-black" @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
-          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+          <q-tooltip>Open Side Drawer</q-tooltip>
         </q-btn>
       </div>
       <div v-else>
         <q-btn flat dense round icon="fas fa-sign-in-alt fa-rotate-180" class="bg-teal text-black" @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu">
-          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+          <q-tooltip>Close Side Drawer</q-tooltip>
         </q-btn>
       </div>
     </q-page-sticky>
@@ -1533,14 +1515,14 @@
 
     <!--// right side drawer button -->
     <q-page-sticky position="top-right" :offset="[18, 18]">
-      <div v-if="!rightDrawerOpen">
+      <div v-if="rightDrawerOpen === false">
         <q-btn flat dense round icon="fas fa-sign-out-alt fa-rotate-180" class="bg-teal text-black" @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
-          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+          <q-tooltip>Open Side Drawer</q-tooltip>
         </q-btn>
       </div>
       <div v-else>
         <q-btn flat dense round icon="fas fa-sign-in-alt" class="bg-teal text-black" @click="rightDrawerOpen = !rightDrawerOpen" aria-label="Menu">
-          <q-tooltip>Open &amp; Close Side Drawer</q-tooltip>
+          <q-tooltip>Close Side Drawer</q-tooltip>
         </q-btn>
       </div>
     </q-page-sticky>
@@ -1556,9 +1538,7 @@
 
     <!--// NC Enviroscan Icon -->
     <q-page-sticky position="top-right" :offset="[98, 5]">
-      <q-avatar square size="110px">
-        <img src="statics/nc-enviroscan-110.png">
-      </q-avatar>
+      <img src="statics/nc-enviroscan-110.png">
     </q-page-sticky>
     <!--// NC Enviroscan Icon -->
 
@@ -1655,7 +1635,7 @@ import Attribution from 'ol/control/Attribution'
 // import VectorTile from 'ol/layer/VectorTile'
 // import Feature from 'ol/Feature'
 // import MVT from 'ol/format/MVT'
-import { Style, Stroke, Fill, Circle } from 'ol/style'
+import { Style, Stroke, Fill, Icon } from 'ol/style'
 
 // geocoder
 const Nominatim = require('nominatim-geocoder')
@@ -1673,15 +1653,16 @@ export default {
   name: 'NC-Enviroscan',
   components: {
   },
-  props: {
+  /* props: {
     varid: {
       type: String,
       default: ''
     }
-  },
+  }, */
   data () {
     return {
-      apxmedoptions: {
+      apxopttext: 'Median Values',
+      apxoptions: {
         colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
         animations: {
           enabled: true,
@@ -1706,427 +1687,7 @@ export default {
           }
         },
         title: {
-          text: 'Median Values',
-          align: 'left',
-          style: {
-            color: '#000'
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            offsetX: 0,
-            startAngle: 0,
-            endAngle: 250,
-            hollow: {
-              margin: 0,
-              size: '25%',
-              background: 'transparent',
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-
-              },
-              value: {
-                show: false
-              }
-            }
-          }
-        },
-        labels: ['Arsenic', 'Cadmium', 'Lead', 'Manganese'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '12px',
-          position: 'left',
-          offsetX: -20,
-          offsetY: 15,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function (seriesName, opts) {
-            return seriesName + ':  ' + opts.w.globals.series[opts.seriesIndex] + ' ppb'
-          },
-          itemMargin: {
-            horizontal: 1
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              show: false
-            }
-          }
-        }]
-      },
-      apxmeanoptions: {
-        colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 1000
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.05,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-          }
-        },
-        chart: {
-          toolbar: {
-            show: true
-          }
-        },
-        title: {
-          text: 'Mean Values',
-          align: 'left',
-          style: {
-            color: '#000'
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            offsetX: 0,
-            startAngle: 0,
-            endAngle: 250,
-            hollow: {
-              margin: 0,
-              size: '25%',
-              background: 'transparent',
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-
-              },
-              value: {
-                show: false
-              }
-            }
-          }
-        },
-        labels: ['Arsenic', 'Cadmium', 'Lead', 'Manganese'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '12px',
-          position: 'left',
-          offsetX: -20,
-          offsetY: 15,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function (seriesName, opts) {
-            return seriesName + ':  ' + opts.w.globals.series[opts.seriesIndex] + ' ppb'
-          },
-          itemMargin: {
-            horizontal: 1
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              show: false
-            }
-          }
-        }]
-      },
-      apxprcastoptions: {
-        colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 1000
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.05,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-          }
-        },
-        chart: {
-          toolbar: {
-            show: true
-          }
-        },
-        title: {
-          text: '% Above Standard Value',
-          align: 'left',
-          style: {
-            color: '#000'
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            offsetX: 0,
-            startAngle: 0,
-            endAngle: 250,
-            hollow: {
-              margin: 0,
-              size: '25%',
-              background: 'transparent',
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-
-              },
-              value: {
-                show: false
-              }
-            }
-          }
-        },
-        labels: ['Arsenic', 'Cadmium', 'Lead', 'Manganese'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '12px',
-          position: 'left',
-          offsetX: -20,
-          offsetY: 15,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function (seriesName, opts) {
-            return seriesName + ':  ' + opts.w.globals.series[opts.seriesIndex] + ' %'
-          },
-          itemMargin: {
-            horizontal: 1
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              show: false
-            }
-          }
-        }]
-      },
-      apxminoptions: {
-        colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 1000
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.05,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-          }
-        },
-        chart: {
-          toolbar: {
-            show: true
-          }
-        },
-        title: {
-          text: 'Minimum Values',
-          align: 'left',
-          style: {
-            color: '#000'
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            offsetX: 0,
-            startAngle: 0,
-            endAngle: 250,
-            hollow: {
-              margin: 0,
-              size: '25%',
-              background: 'transparent',
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-
-              },
-              value: {
-                show: false
-              }
-            }
-          }
-        },
-        labels: ['Arsenic', 'Cadmium', 'Lead', 'Manganese'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '12px',
-          position: 'left',
-          offsetX: -20,
-          offsetY: 15,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function (seriesName, opts) {
-            return seriesName + ':  ' + opts.w.globals.series[opts.seriesIndex] + ' ppb'
-          },
-          itemMargin: {
-            horizontal: 1
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              show: false
-            }
-          }
-        }]
-      },
-      apxmaxoptions: {
-        colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 1000
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.05,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-          }
-        },
-        chart: {
-          toolbar: {
-            show: true
-          }
-        },
-        title: {
-          text: 'Maximum Values',
-          align: 'left',
-          style: {
-            color: '#000'
-          }
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: -10,
-            offsetX: 0,
-            startAngle: 0,
-            endAngle: 250,
-            hollow: {
-              margin: 5,
-              size: '30%',
-              background: 'transparent',
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-
-              },
-              value: {
-                show: false
-              }
-            }
-          }
-        },
-        labels: ['Arsenic', 'Cadmium', 'Lead', 'Manganese'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '12px',
-          position: 'left',
-          offsetX: -20,
-          offsetY: 20,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function (seriesName, opts) {
-            return seriesName + ':  ' + opts.w.globals.series[opts.seriesIndex] + ' ppb'
-          },
-          itemMargin: {
-            horizontal: 1
-          }
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            legend: {
-              show: false
-            }
-          }
-        }]
-      },
-      apxstdoptions: {
-        colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
-        animations: {
-          enabled: true,
-          easing: 'easeinout',
-          speed: 1000
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.05,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.9,
-            stops: [0, 100]
-          }
-        },
-        chart: {
-          toolbar: {
-            show: true
-          }
-        },
-        title: {
-          text: 'Standard Deviation Values',
+          text: undefined,
           align: 'left',
           style: {
             color: '#000'
@@ -2427,13 +1988,6 @@ export default {
       ]
     }
   },
-  created: function () {
-    // get current location, and use it for map center
-    /* this.$getLocation()
-      .then(coordinates => {
-        this.center = [coordinates.lng, coordinates.lat]
-      }) */
-  },
   computed: {
     arsenicColors () {
       return {
@@ -2490,6 +2044,14 @@ export default {
     vtFormatFactory () {
       return new MVT()
     }, */
+    updateChartTitle: function () {
+      this.$refs.medianChart.updateOptions({ title: { text: 'Median Values' } })
+      this.$refs.meanChart.updateOptions({ title: { text: 'Mean Values' } })
+      this.$refs.prcastChart.updateOptions({ title: { text: '% Above Standard Values' } })
+      this.$refs.minChart.updateOptions({ title: { text: 'Minimum Values' } })
+      this.$refs.maxChart.updateOptions({ title: { text: 'Maximum Values' } })
+      this.$refs.stdChart.updateOptions({ title: { text: 'Stadard Deviation Values' } })
+    },
     getCurrentLocation () {
       if (this.getlocation === 'True') {
         this.addresslocation = 'False'
@@ -2527,31 +2089,6 @@ export default {
       this.address = null
       this.acceptaddress = false
     },
-    /* onRadarChartAction (params) {
-      // console.log(params)
-      const { origin, act, payload } = params
-      let dothing
-      if (this.dimensions[payload] === 'As') {
-        dothing = 'Parts Per Million'
-      } else if (this.dimensions[payload] === 'Cd') {
-        dothing = 'Parts Per Million'
-      } else if (this.dimensions[payload] === 'Pb') {
-        dothing = 'Parts Per Million'
-      } else if (this.dimensions[payload] === 'Mn') {
-        dothing = 'Parts Per Thousand'
-      }
-
-      switch (act) {
-        case origin.ACT_CLICK:
-          alert(`Region ${payload} clicked`)
-          break
-        case origin.ACT_CLICK_DIMENSION_LABEL:
-          alert(this.dimensions[payload] + ' ' + dothing)
-          break
-        default:
-          break
-      }
-    }, */
     getColors: function (data, values, colors, variable, layer) {
       if (colors.length === 7) {
         if (data[this.currentvariable] === values[0]) {
@@ -2806,15 +2343,11 @@ export default {
       return feature => {
         return [
           new Style({
-            image: new Circle({
-              radius: 5.0,
-              stroke: new Stroke({
-                color: 'rgb(145, 7, 4, 1)',
-                width: 3
-              }),
-              fill: new Fill({
-                color: 'rgba(145, 7, 4, 1)'
-              })
+            image: new Icon({
+              size: [96, 93],
+              imgSize: [96, 93],
+              scale: 0.4,
+              src: 'statics/biohazard-red.png'
             })
           })
         ]
@@ -2886,7 +2419,7 @@ export default {
         let sfslayer = this.layers[7]
         if (this.ncSuperFundModel === 'Selected') {
           sfslayer.visible = true
-        } else if (this.ncCountiesModel === 'Not Selected') {
+        } else if (this.ncSuperFundModel === 'Not Selected') {
           sfslayer.visible = false
         }
       }
@@ -3099,31 +2632,34 @@ export default {
       let layer = this.layers.find(layer => layer.visible)
       if (!features) {
         this.vtSelection = {}
-        this.selectedFeatureMeanBarBox = []
         this.selectedFeatureMedBarBox = []
+        this.selectedFeatureMeanBarBox = []
         this.selectedFeaturePrcastBarBox = []
         this.selectedFeatureMinBarBox = []
         this.selectedFeatureMaxBarBox = []
         this.selectedFeatureStdBarBox = []
         this.selectedFeature = []
         this.$refs.layerStyle[0].refresh()
-        // this.$refs.layerStyle.refresh()
+        this.leftDrawerOpen = false
       } else if (features) {
         if (layer.id === 'ncwellwise') {
           this.vtSelection = {}
-          this.selectedFeatureMeanBarBox = []
-          this.selectedFeatureMedBarBox = []
-          this.selectedFeaturePrcastBarBox = []
-          this.selectedFeatureMinBarBox = []
-          this.selectedFeatureMaxBarBox = []
-          this.selectedFeatureStdBarBox = []
           this.eventCoordinate = event.coordinate
           let feature = features[0]
           let fid = feature.get(this.vtIdProp)
           this.vtSelection[fid] = feature
           let properties = feature.getProperties()
           if (properties['geoid10']) {
+            this.leftDrawerOpen = true
             this.pid = properties['geoid10']
+            if (this.selectedFeatureMedBarBox.length > 0) {
+              this.selectedFeatureMedBarBox = []
+              this.selectedFeatureMeanBarBox = []
+              this.selectedFeaturePrcastBarBox = []
+              this.selectedFeatureMinBarBox = []
+              this.selectedFeatureMaxBarBox = []
+              this.selectedFeatureStdBarBox = []
+            }
             this.selectedFeatureMedBarBox.push(properties['arsenic_med'])
             this.selectedFeatureMedBarBox.push(properties['cadmium_med'])
             this.selectedFeatureMedBarBox.push(properties['lead_med'])
@@ -3148,6 +2684,14 @@ export default {
             this.selectedFeatureStdBarBox.push(properties['cadmium_std'])
             this.selectedFeatureStdBarBox.push(properties['lead_std'])
             this.selectedFeatureStdBarBox.push(properties['manganese_std'])
+            this.updateChartTitle()
+          } else {
+            this.selectedFeatureMedBarBox = []
+            this.selectedFeatureMeanBarBox = []
+            this.selectedFeaturePrcastBarBox = []
+            this.selectedFeatureMinBarBox = []
+            this.selectedFeatureMaxBarBox = []
+            this.selectedFeatureStdBarBox = []
           }
           this.$refs.layerStyle[0].refresh()
           // this.$refs.layerStyle.refresh()
