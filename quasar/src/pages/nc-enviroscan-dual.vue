@@ -10,6 +10,7 @@
             <q-tooltip>Map One Menu</q-tooltip>
             <q-menu content-class="bg-teal-1">
               <q-list dense style="min-width: 100px">
+                <!-- Base layers -->
                 <q-item clickable>
                   <q-item-section>Base Layers</q-item-section>
                   <q-item-section side>
@@ -33,33 +34,11 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- Base layers -->
                 <q-separator></q-separator>
 
-                <q-item clickable>
-                  <q-item-section>Clear Data</q-item-section>
-                  <q-item-section side>
-                    <q-icon name="keyboard_arrow_right"></q-icon>
-                  </q-item-section>
-
-                  <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
-                    <q-list>
-                      <!-- // nolayer -->
-                      <div class="q-pa-md" style="min-width: 200px">
-                        <q-list link>
-                          <q-item tag="label" v-ripple>
-                            <q-radio v-on:input="showMap1PanelRadioLayer" val="nolayer1" v-model="currentradiovariable1" color="teal" />
-                            <q-item-section>
-                              <q-item-label>Clear Data</q-item-label>
-                            </q-item-section>
-                          </q-item>
-                        </q-list>
-                      </div>
-                      <!-- // nolayer -->
-                    </q-list>
-                  </q-menu>
-                </q-item>
-
                 <q-separator></q-separator>
+                <!-- // NC wellwise layers -->
                 <q-item clickable>
                   <q-item-section>Environmental Indicators, by Census Tracts</q-item-section>
                   <q-item-section side>
@@ -83,7 +62,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // NC wellwise layers -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="0" cellpadding="0" style="width:100%">
                           <tr>
@@ -96,9 +74,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arsenic (ppb and %)</q-tooltip>
                             <td>Arsenic</td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_arsenic_mean" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_arsenic_prcast" v-model="currentradiovariable1" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_arsenic_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicMedModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_arsenic_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicMeanModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_arsenic_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicPrcastModel1"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -147,9 +152,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Cadmium (ppb and %)</q-tooltip>
                             <td>Cadmium</td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_cadmium_mean" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_cadmium_prcast" v-model="currentradiovariable1" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_cadmium_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumMedModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_cadmium_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumMeanModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_cadmium_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumPrcastModel1"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -198,9 +230,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Lead (ppb and %)</q-tooltip>
                             <td>Lead</td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_lead_med" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_lead_mean" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_lead_prcast" v-model="currentradiovariable1" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_lead_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadMedModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_lead_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadMeanModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_lead_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadPrcastModel1"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -249,9 +308,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Manganese (ppb and %)</q-tooltip>
                             <td>Manganese</td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_manganese_mean" v-model="currentradiovariable1" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap1PanelRadioLayer" val="ncwellwise_manganese_prcast" v-model="currentradiovariable1" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_manganese_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganeseMedModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_manganese_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganeseMeanModel1"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap1PanelToggleLayer('ncwellwise_manganese_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganesePrcastModel1"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -299,10 +385,11 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // NC wellwise layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // NC wellwise layers -->
+                <!-- // ACS Census layers -->
                 <q-item clickable>
                   <q-item-section>Sociodemographic Indicators, by Census Tracts</q-item-section>
                   <q-item-section side>
@@ -327,7 +414,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // ACS Census layers -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="3" cellpadding="3" style="width:100%">
                           <tr>
@@ -507,10 +593,11 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // ACS Census layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // ACS Census layers -->
+                <!-- // EJScreen layers -->
                 <q-item clickable>
                   <q-item-section>Environmental Justice Indicators, by Census Block Group</q-item-section>
                   <q-item-section side>
@@ -535,7 +622,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // EJScreen layers -->
                       <!-- // d_ldpnt_2 -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="0" cellpadding="0" style="width:100%">
@@ -1111,11 +1197,10 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // EJScreen layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
-
+                <!-- // EJScreen layers -->
                 <!-- // Health layers -->
                 <q-item clickable>
                   <q-item-section>Health Outcomes</q-item-section>
@@ -1205,38 +1290,58 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases" v-model="currentradiovariable1" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Total Cases</q-item-label>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable1" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 total cases ${ totalcasesModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('cases')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="totalcasesModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 total cases from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable1" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 cases per 10,000 residents ${ casespertenModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('cases_per_10000_res')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="casespertenModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 cases per 10,000 residents from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap1PanelRadioLayer" val="deaths" v-model="currentradiovariable1" color="teal" />
+                                    <q-toggle
+                                      :label="`covid 19 cases per 100,00 residents ${ casesperhundredModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('cases_per_100000_res')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="casesperhundredModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 cases per 100,000 residents from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
+                                </tr>
+                                <tr>
                                   <td>
-                                    <q-item-label>Covid-19 Deaths</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 total deaths ${ deathsModel1 }`"
+                                      v-on:input="showMap1PanelToggleLayer('deaths')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="deathsModel1"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 total deaths from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                               </table>
@@ -1480,7 +1585,7 @@
                   </q-menu>
                 </q-item>
                 <!-- // Health layers -->
-
+                <!-- Additiona features -->
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
                   <q-item-section side>
@@ -1503,6 +1608,7 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- Additiona features -->
                 <q-separator></q-separator>
                 <q-item clickable v-close-popup>
                   <q-item-section>Close</q-item-section>
@@ -1521,6 +1627,7 @@
             <q-tooltip>Map Two Menu</q-tooltip>
             <q-menu content-class="bg-teal-1">
               <q-list dense style="min-width: 100px">
+                <!-- Base layers -->
                 <q-item clickable>
                   <q-item-section>Base Layers</q-item-section>
                   <q-item-section side>
@@ -1544,32 +1651,10 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- Base layers -->
                 <q-separator></q-separator>
 
-                <q-item clickable>
-                  <q-item-section>Clear Data</q-item-section>
-                  <q-item-section side>
-                    <q-icon name="keyboard_arrow_right"></q-icon>
-                  </q-item-section>
-
-                  <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
-                    <q-list>
-                      <!-- // nolayer -->
-                      <div class="q-pa-md" style="min-width: 200px">
-                        <q-list link>
-                          <q-item tag="label" v-ripple>
-                            <q-radio v-on:input="showMap2PanelRadioLayer" val="nolayer2" v-model="currentradiovariable2" color="teal" />
-                            <q-item-section>
-                              <q-item-label>Clear Data</q-item-label>
-                            </q-item-section>
-                          </q-item>
-                        </q-list>
-                      </div>
-                      <!-- // nolayer -->
-                    </q-list>
-                  </q-menu>
-                </q-item>
-
+                <!-- // NC wellwise layers -->
                 <q-separator></q-separator>
                 <q-item clickable>
                   <q-item-section>Environmental Indicators, by Census Tracts</q-item-section>
@@ -1594,7 +1679,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // NC wellwise layers -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="0" cellpadding="0" style="width:100%">
                           <tr>
@@ -1607,9 +1691,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Arsenic (ppb and %)</q-tooltip>
                             <td>Arsenic</td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_arsenic_med" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_arsenic_mean" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_arsenic_prcast" v-model="currentradiovariable2" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_arsenic_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicMedModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_arsenic_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicMeanModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_arsenic_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="arsenicPrcastModel2"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -1658,9 +1769,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Cadmium (ppb and %)</q-tooltip>
                             <td>Cadmium</td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_cadmium_med" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_cadmium_mean" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_cadmium_prcast" v-model="currentradiovariable2" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_cadmium_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumMedModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_cadmium_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumMeanModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_cadmium_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="cadmiumPrcastModel2"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -1709,9 +1847,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Lead (ppb and %)</q-tooltip>
                             <td>Lead</td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_lead_med" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_lead_mean" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_lead_prcast" v-model="currentradiovariable2" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_lead_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadMedModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_lead_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadMeanModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_lead_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="leadPrcastModel2"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -1760,9 +1925,36 @@
                           <tr>
                             <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Manganese (ppb and %)</q-tooltip>
                             <td>Manganese</td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_manganese_med" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_manganese_mean" v-model="currentradiovariable2" color="teal" /></td>
-                            <td><q-radio v-on:input="showMap2PanelRadioLayer" val="ncwellwise_manganese_prcast" v-model="currentradiovariable2" color="teal" /></td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_manganese_med')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganeseMedModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_manganese_mean')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganeseMeanModel2"
+                              >
+                              </q-toggle>
+                            </td>
+                            <td>
+                              <q-toggle
+                                v-on:input="showMap2PanelToggleLayer('ncwellwise_manganese_prcast')"
+                                color="teal"
+                                false-value="Not Selected"
+                                true-value="Selected"
+                                v-model="manganesePrcastModel2"
+                              >
+                              </q-toggle>
+                            </td>
                             <td>
                               <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
                                 <q-tooltip>Click to View Map Legend</q-tooltip>
@@ -1810,10 +2002,12 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // NC wellwise layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // NC wellwise layers -->
+
+                <!-- // ACS Census layers -->
                 <q-item clickable>
                   <q-item-section>Sociodemographic Indicators, by Census Tracts</q-item-section>
                   <q-item-section side>
@@ -1838,7 +2032,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // ACS Census layers -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="3" cellpadding="3" style="width:100%">
                           <tr>
@@ -2018,10 +2211,12 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // ACS Census layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // ACS Census layers -->
+
+                <!-- // EJScreen layers -->
                 <q-item clickable>
                   <q-item-section>Environmental Justice Indicators, by Census Block Group</q-item-section>
                   <q-item-section side>
@@ -2046,7 +2241,6 @@
                           </tr>
                         </table>
                       </q-item>
-                      <!-- // EJScreen layers -->
                       <!-- // d_ldpnt_2 -->
                       <div class="q-pa-md q-gutter-y-sm column">
                         <table cellspacing="0" cellpadding="0" style="width:100%">
@@ -2622,10 +2816,10 @@
                           </tr>
                         </table>
                       </div>
-                      <!-- // EJScreen layers -->
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // EJScreen layers -->
 
                 <!-- // Health layers -->
                 <q-item clickable>
@@ -2716,38 +2910,58 @@
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases" v-model="currentradiovariable2" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Total Cases</q-item-label>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_10000_res" v-model="currentradiovariable2" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Cases Per 10,000 Residents</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 total cases ${ totalcasesModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('cases')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="totalcasesModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 total cases from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="cases_per_100000_res" v-model="currentradiovariable2" color="teal" />
-                                  </td>
-                                  <td>
-                                    <q-item-label>Covid-19 Cases Per 100,000 Residents-</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 cases per 10,000 residents ${ casespertenModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('cases_per_10000_res')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="casespertenModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 cases per 10,000 residents from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                                 <tr>
                                   <td>
-                                    <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina Department of Health and Human Services</q-tooltip>
-                                    <q-radio v-on:input="showMap2PanelRadioLayer" val="deaths" v-model="currentradiovariable2" color="teal" />
+                                    <q-toggle
+                                      :label="`covid 19 cases per 100,00 residents ${ casesperhundredModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('cases_per_100000_res')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="casesperhundredModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 cases per 100,000 residents from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
+                                </tr>
+                                <tr>
                                   <td>
-                                    <q-item-label>Covid-19 Deaths</q-item-label>
+                                    <q-toggle
+                                      :label="`covid 19 total deaths ${ deathsModel2 }`"
+                                      v-on:input="showMap2PanelToggleLayer('deaths')"
+                                      color="teal"
+                                      false-value="Not Selected"
+                                      true-value="Selected"
+                                      v-model="deathsModel2"
+                                    >
+                                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Covid 19 total deaths from North Carolina Department of Health and Human Services</q-tooltip>
+                                    </q-toggle>
                                   </td>
                                 </tr>
                               </table>
@@ -2774,9 +2988,9 @@
                                       <td>Interleave Two</td>
                                     </tr>
                                     <tr>
-                                      <td><q-radio val="nopattern" v-model="pretermmap2style" color="teal" /></td>
-                                      <td><q-radio val="pattern1" v-model="pretermmap2style" color="teal" /></td>
-                                      <td><q-radio val="pattern2" v-model="pretermmap2style" color="teal" /></td>
+                                      <td><q-radio val="nopattern" v-model="pretermmap1style" color="teal" /></td>
+                                      <td><q-radio val="pattern1" v-model="pretermmap1style" color="teal" /></td>
+                                      <td><q-radio val="pattern2" v-model="pretermmap1style" color="teal" /></td>
                                     </tr>
                                   </table>
                                 </q-item>
@@ -2992,6 +3206,7 @@
                 </q-item>
                 <!-- // Health layers -->
 
+                <!-- // Additiona feature -->
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
                   <q-item-section side>
@@ -3014,6 +3229,7 @@
                     </q-list>
                   </q-menu>
                 </q-item>
+                <!-- // Additiona feature -->
                 <q-separator></q-separator>
                 <q-item clickable v-close-popup>
                   <q-item-section>Close</q-item-section>
@@ -3446,8 +3662,20 @@ export default {
       acceptaddress: false,
       vtSelection: {},
       vtIdProp: 'geoid10',
-      cntlayer1: undefined,
-      ncCountiesModel1: 'Not Selected',
+      // Toggle Models and layers for color patterns
+      // ncwelllayer1: undefined,
+      arsenicMedModel1: 'Selected',
+      arsenicMeanModel1: 'Not Selected',
+      arsenicPrcastModel1: 'Not Selected',
+      cadmiumMedModel1: 'Not Selected',
+      cadmiumMeanModel1: 'Not Selected',
+      cadmiumPrcastModel1: 'Not Selected',
+      leadMedModel1: 'Not Selected',
+      leadMeanModel1: 'Not Selected',
+      leadPrcastModel1: 'Not Selected',
+      manganeseMedModel1: 'Not Selected',
+      manganeseMeanModel1: 'Not Selected',
+      manganesePrcastModel1: 'Not Selected',
       acslayer1: undefined,
       povertyModel1: 'Not Selected',
       nativeModel1: 'Not Selected',
@@ -3480,11 +3708,26 @@ export default {
       fc_clinpreterm_percentageModel1: 'Not Selected',
       sc_calcpreterm_percentageModel1: 'Not Selected',
       sc_clinpreterm_percentageModel1: 'Not Selected',
+      covid19layer1: undefined,
+      totalcasesModel1: 'Not Selected',
       casespertenModel1: 'Not Selected',
       casesperhundredModel1: 'Not Selected',
       deathsModel1: 'Not Selected',
-      cntlayer2: undefined,
-      ncCountiesModel2: 'Not Selected',
+      cntlayer1: undefined,
+      ncCountiesModel1: 'Not Selected',
+      // ncwelllayer2: undefined,
+      arsenicMedModel2: 'Selected',
+      arsenicMeanModel2: 'Not Selected',
+      arsenicPrcastModel2: 'Not Selected',
+      cadmiumMedModel2: 'Not Selected',
+      cadmiumMeanModel2: 'Not Selected',
+      cadmiumPrcastModel2: 'Not Selected',
+      leadMedModel2: 'Not Selected',
+      leadMeanModel2: 'Not Selected',
+      leadPrcastModel2: 'Not Selected',
+      manganeseMedModel2: 'Not Selected',
+      manganeseMeanModel2: 'Not Selected',
+      manganesePrcastModel2: 'Not Selected',
       acslayer2: undefined,
       povertyModel2: 'Not Selected',
       nativeModel2: 'Not Selected',
@@ -3508,6 +3751,8 @@ export default {
       d_ptsdf_2Model2: 'Not Selected',
       d_ozone_2Model2: 'Not Selected',
       d_pm25_2Model2: 'Not Selected',
+      covid19layer2: undefined,
+      totalcasesModel2: 'Not Selected',
       casespertenModel2: 'Not Selected',
       casesperhundredModel2: 'Not Selected',
       deathsModel2: 'Not Selected',
@@ -3520,6 +3765,8 @@ export default {
       fc_clinpreterm_percentageModel2: 'Not Selected',
       sc_calcpreterm_percentageModel2: 'Not Selected',
       sc_clinpreterm_percentageModel2: 'Not Selected',
+      cntlayer2: undefined,
+      ncCountiesModel2: 'Not Selected',
       // variable colors
       ncwellmap1style: 'nopattern',
       ncwellmap2style: 'nopattern',
@@ -3634,13 +3881,16 @@ export default {
         }
       ],
       // layers config
-      currentradiovariable1: 'ncwellwise_arsenic_med',
+      currentncwellvariable1: 'ncwellwise_arsenic_med',
       currentacsvariable1: 'percent_below_poverty_level',
-      currentpretermvariable1: 'fc_calcega_mean_avg',
       currentejsvariable1: 'd_ldpnt_2',
-      currentradiovariable2: 'ncwellwise_arsenic_med',
+      currentpretermvariable1: 'fc_calcega_mean_avg',
+      currentconfic19variable1: 'cases',
+      currentncwellvariable2: 'ncwellwise_arsenic_med',
       currentacsvariable2: 'percent_below_poverty_level',
       currentpretermvariable2: 'fc_calcega_mean_avg',
+      currentejsvariable2: 'd_ldpnt_2',
+      currentconfic19variable2: 'cases',
       layers1: [
         {
           id: this.getNCWellwiseLayer1ID(),
@@ -4452,7 +4702,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let variable = this.currentradiovariable1
+        let variable = this.currentncwellvariable1
         if (variable === 'ncwellwise_arsenic_med') {
           getStyle(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer1')
         } else if (variable === 'ncwellwise_arsenic_mean') {
@@ -4571,7 +4821,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let variable = this.currentradiovariable1
+        let variable = this.currentcovid19variable1
         if (variable === 'cases') {
           this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer1')
         } else if (variable === 'cases_per_10000_res') {
@@ -4649,7 +4899,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let variable = this.currentradiovariable2
+        let variable = this.currentncwellvariable2
         if (variable === 'ncwellwise_arsenic_med') {
           getStyle(data, this.arsenic_med_values, this.arsncolors, variable, 'ncwelllayer2')
         } else if (variable === 'ncwellwise_arsenic_mean') {
@@ -4768,7 +5018,7 @@ export default {
       return feature => {
         let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
         let data = feature.getProperties()
-        let variable = this.currentradiovariable2
+        let variable = this.currentcovid19variable2
         if (variable === 'cases') {
           this.getColors(data, this.covid_cases_values, this.covidcolors, variable, 'covidlayer2')
         } else if (variable === 'cases_per_10000_res') {
@@ -4954,14 +5204,125 @@ export default {
       }
     },
     showMap1PanelToggleLayer: function (variable) {
-      if (variable === 'nccounties') {
-        if (this.cntlayer1 === undefined) {
-          this.cntlayer1 = this.layers1[5]
+      if (variable === 'ncwellwise_arsenic_med') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
         }
-        if (this.ncCountiesModel1 === 'Selected') {
-          this.cntlayer1.visible = true
-        } else if (this.ncCountiesModel1 === 'Not Selected') {
-          this.cntlayer1.visible = false
+        if (this.arsenicMedModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.arsenicMedModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_arsenic_mean') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.arsenicMeanModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.arsenicMeanModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_arsenic_prcast') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.arsenicPrcastModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.arsenicPrcastModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_med') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.cadmiumMedModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.cadmiumMedModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_mean') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.cadmiumMeanModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.cadmiumMeanModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_prcast') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.cadmiumPrcastModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.cadmiumPrcastModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_med') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.leadMedModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.leadMedModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_mean') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.leadMeanModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.leadMeanModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_prcast') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.leadPrcastModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.leadPrcastModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_med') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.manganeseMedModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.manganeseMedModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_mean') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.manganeseMeanModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.manganeseMeanModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_prcast') {
+        if (this.ncwelllayer1 === undefined) {
+          this.ncwelllayer1 = this.layers1[0]
+        }
+        if (this.manganesePrcastModel1 === 'Selected') {
+          this.ncwelllayer1.visible = true
+          this.currentncwellvariable1 = variable
+        } else if (this.manganesePrcastModel1 === 'Not Selected') {
+          this.ncwelllayer1.visible = false
         }
       } else if (variable === 'percent_below_poverty_level') {
         if (this.acslayer1 === undefined) {
@@ -5173,6 +5534,46 @@ export default {
         } else if (this.d_pm25_2Model1 === 'Not Selected') {
           this.ejslayer1.visible = false
         }
+      } else if (variable === 'cases') {
+        if (this.covid19layer1 === undefined) {
+          this.covid19layer1 = this.layers1[3]
+        }
+        if (this.totalcasesModel1 === 'Selected') {
+          this.covid19layer1.visible = true
+          this.currentcovid19variable1 = variable
+        } else if (this.totalcasesModel1 === 'Not Selected') {
+          this.covid19layer1.visible = false
+        }
+      } else if (variable === 'cases_per_10000_res') {
+        if (this.covid19layer1 === undefined) {
+          this.covid19layer1 = this.layers1[3]
+        }
+        if (this.casespertenModel1 === 'Selected') {
+          this.covid19layer1.visible = true
+          this.currentcovid19variable1 = variable
+        } else if (this.casespertenModel1 === 'Not Selected') {
+          this.covid19layer1.visible = false
+        }
+      } else if (variable === 'cases_per_100000_res') {
+        if (this.covid19layer1 === undefined) {
+          this.covid19layer1 = this.layers1[3]
+        }
+        if (this.casesperhundredModel1 === 'Selected') {
+          this.covid19layer1.visible = true
+          this.currentcovid19variable1 = variable
+        } else if (this.casesperhundredModel1 === 'Not Selected') {
+          this.covid19layer1.visible = false
+        }
+      } else if (variable === 'deaths') {
+        if (this.covid19layer1 === undefined) {
+          this.covid19layer1 = this.layers1[3]
+        }
+        if (this.deathsModel1 === 'Selected') {
+          this.covid19layer1.visible = true
+          this.currentcovid19variable1 = variable
+        } else if (this.deathsModel1 === 'Not Selected') {
+          this.covid19layer1.visible = false
+        }
       } else if (variable === 'fc_calcega_mean_avg') {
         if (this.pretermlayer1 === undefined) {
           this.pretermlayer1 = this.layers1[4]
@@ -5253,17 +5654,137 @@ export default {
         } else if (this.sc_clinpreterm_percentageModel1 === 'Not Selected') {
           this.pretermlayer1.visible = false
         }
+      } else if (variable === 'nccounties') {
+        if (this.cntlayer1 === undefined) {
+          this.cntlayer1 = this.layers1[5]
+        }
+        if (this.ncCountiesModel1 === 'Selected') {
+          this.cntlayer1.visible = true
+        } else if (this.ncCountiesModel1 === 'Not Selected') {
+          this.cntlayer1.visible = false
+        }
       }
     },
     showMap2PanelToggleLayer: function (variable) {
-      if (variable === 'nccounties') {
-        if (this.cntlayer2 === undefined) {
-          this.cntlayer2 = this.layers2[5]
+      if (variable === 'ncwellwise_arsenic_med') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
         }
-        if (this.ncCountiesModel2 === 'Selected') {
-          this.cntlayer2.visible = true
-        } else if (this.ncCountiesModel2 === 'Not Selected') {
-          this.cntlayer2.visible = false
+        if (this.arsenicMedModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.arsenicMedModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_arsenic_mean') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.arsenicMeanModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.arsenicMeanModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_arsenic_prcast') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.arsenicPrcastModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.arsenicPrcastModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_med') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.cadmiumMedModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.cadmiumMedModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_mean') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.cadmiumMeanModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.cadmiumMeanModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_cadmium_prcast') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.cadmiumPrcastModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.cadmiumPrcastModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_med') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.leadMedModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.leadMedModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_mean') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.leadMeanModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.leadMeanModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_lead_prcast') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.leadPrcastModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.leadPrcastModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_med') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.manganeseMedModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.manganeseMedModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_mean') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.manganeseMeanModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.manganeseMeanModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
+        }
+      } else if (variable === 'ncwellwise_manganese_prcast') {
+        if (this.ncwelllayer2 === undefined) {
+          this.ncwelllayer2 = this.layers2[0]
+        }
+        if (this.manganesePrcastModel2 === 'Selected') {
+          this.ncwelllayer2.visible = true
+          this.currentncwellvariable2 = variable
+        } else if (this.manganesePrcastModel2 === 'Not Selected') {
+          this.ncwelllayer2.visible = false
         }
       } else if (variable === 'percent_below_poverty_level') {
         if (this.acslayer2 === undefined) {
@@ -5475,6 +5996,46 @@ export default {
         } else if (this.d_pm25_2Model2 === 'Not Selected') {
           this.ejslayer2.visible = false
         }
+      } else if (variable === 'cases') {
+        if (this.covid19layer2 === undefined) {
+          this.covid19layer2 = this.layers2[3]
+        }
+        if (this.totalcasesModel2 === 'Selected') {
+          this.covid19layer2.visible = true
+          this.currentcovid19variable2 = variable
+        } else if (this.totalcasesModel2 === 'Not Selected') {
+          this.covid19layer2.visible = false
+        }
+      } else if (variable === 'cases_per_10000_res') {
+        if (this.covid19layer2 === undefined) {
+          this.covid19layer2 = this.layers2[3]
+        }
+        if (this.casespertenModel2 === 'Selected') {
+          this.covid19layer2.visible = true
+          this.currentcovid19variable2 = variable
+        } else if (this.casespertenModel2 === 'Not Selected') {
+          this.covid19layer2.visible = false
+        }
+      } else if (variable === 'cases_per_100000_res') {
+        if (this.covid19layer2 === undefined) {
+          this.covid19layer2 = this.layers2[3]
+        }
+        if (this.casesperhundredModel2 === 'Selected') {
+          this.covid19layer2.visible = true
+          this.currentcovid19variable2 = variable
+        } else if (this.casesperhundredModel2 === 'Not Selected') {
+          this.covid19layer2.visible = false
+        }
+      } else if (variable === 'deaths') {
+        if (this.covid19layer2 === undefined) {
+          this.covid19layer2 = this.layers2[3]
+        }
+        if (this.deathsModel2 === 'Selected') {
+          this.covid19layer2.visible = true
+          this.currentcovid19variable2 = variable
+        } else if (this.deathsModel2 === 'Not Selected') {
+          this.covid19layer2.visible = false
+        }
       } else if (variable === 'fc_calcega_mean_avg') {
         if (this.pretermlayer2 === undefined) {
           this.pretermlayer2 = this.layers2[4]
@@ -5555,170 +6116,15 @@ export default {
         } else if (this.sc_clinpreterm_percentageModel2 === 'Not Selected') {
           this.pretermlayer2.visible = false
         }
-      }
-    },
-    showMap1PanelRadioLayer: function () {
-      let layer = this.layers1.find(layer => layer.visible)
-
-      if (layer != null) {
-        layer.visible = false
-      }
-
-      var i
-      if (this.currentradiovariable1 === 'ncwellwise_arsenic_med') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_arsenic_mean') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_arsenic_prcast') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_cadmium_med') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_cadmium_mean') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_cadmium_prcast') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_lead_med') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_lead_mean') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_lead_prcast') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_manganese_med') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_manganese_mean') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'ncwellwise_manganese_prcast') {
-        layer = this.layers1.find(layer => layer.id === 'ncwellwise_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'cases') {
-        layer = this.layers1.find(layer => layer.id === 'covid19_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'cases_per_10000_res') {
-        layer = this.layers1.find(layer => layer.id === 'covid19_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'cases_per_100000_res') {
-        layer = this.layers1.find(layer => layer.id === 'covid19_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'deaths') {
-        layer = this.layers1.find(layer => layer.id === 'covid19_layer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      } else if (this.currentradiovariable1 === 'nolayer1') {
-        layer = this.layers1.find(layer => layer.id === 'noLayer1')
-        for (i = 0; i < this.$refs.layer1Style.length; i++) { this.$refs.layer1Style[i].refresh() }
-        // this.$refs.layer1Style.refresh()
-      }
-
-      if (layer != null) {
-        layer.visible = true
-      }
-    },
-    showMap2PanelRadioLayer: function () {
-      let layer = this.layers2.find(layer => layer.visible)
-
-      if (layer != null) {
-        layer.visible = false
-      }
-
-      var i
-      if (this.currentradiovariable2 === 'ncwellwise_arsenic_med') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_arsenic_mean') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_arsenic_prcast') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_cadmium_med') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_cadmium_mean') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_cadmium_prcast') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_lead_med') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_lead_mean') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_lead_prcast') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_manganese_med') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_manganese_mean') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'ncwellwise_manganese_prcast') {
-        layer = this.layers2.find(layer => layer.id === 'ncwellwise_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'cases') {
-        layer = this.layers2.find(layer => layer.id === 'covid19_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'cases_per_10000_res') {
-        layer = this.layers2.find(layer => layer.id === 'covid19_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'cases_per_100000_res') {
-        layer = this.layers2.find(layer => layer.id === 'covid19_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'deaths') {
-        layer = this.layers2.find(layer => layer.id === 'covid19_layer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      } else if (this.currentradiovariable2 === 'nolayer2') {
-        layer = this.layers2.find(layer => layer.id === 'noLayer2')
-        for (i = 0; i < this.$refs.layer2Style.length; i++) { this.$refs.layer2Style[i].refresh() }
-        // this.$refs.layer2Style.refresh()
-      }
-
-      if (layer != null) {
-        layer.visible = true
+      } else if (variable === 'nccounties') {
+        if (this.cntlayer2 === undefined) {
+          this.cntlayer2 = this.layers2[5]
+        }
+        if (this.ncCountiesModel2 === 'Selected') {
+          this.cntlayer2.visible = true
+        } else if (this.ncCountiesModel2 === 'Not Selected') {
+          this.cntlayer2.visible = false
+        }
       }
     },
     onMap1Click: function (event) {
