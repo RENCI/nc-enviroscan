@@ -1365,7 +1365,7 @@
         <!-- // Ancilary layers -->
 
         <!-- // state -->
-        <q-expansion-item dense dense-toggle expand-separator icon="list" label="State">
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Map geolocation, zoom and feature information">
           <q-markup-table class="table is-fullwidth bg-teal-1" dense>
             <tr>
               <th class="text-left">Map center</th>
@@ -1398,7 +1398,12 @@
           </q-markup-table>
         </q-expansion-item>
         <!-- // state -->
-
+        <q-separator />
+        <font size="2" face="Arial" >
+          <div class="text-center">
+            <a :href="helpURL" target="_blank" style="color: #000;">Download Map Help Tips<q-tooltip>Download Map Help Tips</q-tooltip></a>
+          </div>
+        </font>
       </q-list>
     </q-drawer>
     <!--// left side drawer Ends -->
@@ -1700,6 +1705,7 @@ export default {
   }, */
   data () {
     return {
+      helpURL: pubhost[0].PUBHOSTQ_URL + '/statics/nc-enviroscan-map-use-tips.pdf',
       apxopttext: 'Median Values',
       apxoptions: {
         colors: ['#a534eb', '#eba234', '#747982', '#19800b'],
@@ -1894,7 +1900,7 @@ export default {
       ],
       // layers config
       currentvariable: 'ncwellwise_arsenic_med',
-      // vtUrl: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}',
+      // vtUrl: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}',
       layers: [
         {
           id: this.getNCWellwiseLayerID(),
@@ -1903,10 +1909,8 @@ export default {
           cmp: 'vl-layer-vector-tile',
           visible: true,
           source: {
-            // cmp: 'vl-source-vector',
             cmp: 'vl-source-vector-tile',
-            // url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/api/ncwellwise_subset_20102019_geom/?format=json'
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -1922,7 +1926,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -1938,7 +1942,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -1954,7 +1958,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -1970,7 +1974,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -1986,7 +1990,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -2002,7 +2006,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -2018,7 +2022,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -2034,7 +2038,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/hospitals_4326.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/hospitals_4326.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -2050,7 +2054,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/public_schools_4326.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/public_schools_4326.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -2066,7 +2070,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/non_public_schools_4326.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/non_public_schools_4326.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {

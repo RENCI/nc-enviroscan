@@ -3264,7 +3264,7 @@
           <div v-if="currentlocation === 'True'">
             <vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
               <template slot-scope="geoloc">
-                <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
+                <vl-feature v-if="geoloc.position" id="position-feature" ref="geoposition1">
                   <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
                   <vl-style-box>
                     <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
@@ -3327,7 +3327,7 @@
           <div v-if="currentlocation === 'True'">
             <vl-geoloc ref="geoloc" @update:position="onUpdatePosition" enableHighAccuracy="true" maximumAge="0" timeout="Infinity" >
               <template slot-scope="geoloc">
-                <vl-feature v-if="geoloc.position" id="position-feature" ref="position">
+                <vl-feature v-if="geoloc.position" id="position-feature" ref="geoposition2">
                   <vl-geom-point :coordinates="geoloc.position"></vl-geom-point>
                   <vl-style-box>
                     <vl-style-icon src="statics/marker.png" :scale="0.4" :anchor="[0.5, 1]" :size="[128, 128]"></vl-style-icon>
@@ -3648,6 +3648,7 @@ export default {
       center: [-79.0193, 35.0],
       center1: [-79.0193, 35.0],
       center2: [-79.0193, 35.0],
+      geolocPosition: undefined,
       getlocation: 'False',
       currentlocation: 'False',
       addresslocation: 'False',
@@ -3899,10 +3900,8 @@ export default {
           cmp: 'vl-layer-vector-tile',
           visible: true,
           source: {
-            // cmp: 'vl-source-vector',
             cmp: 'vl-source-vector-tile',
-            // url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/api/ncwellwise_subset_20102019_geom/?format=json'
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3918,7 +3917,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3934,7 +3933,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3950,7 +3949,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3966,7 +3965,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3982,7 +3981,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -3998,7 +3997,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4016,10 +4015,8 @@ export default {
           cmp: 'vl-layer-vector-tile',
           visible: true,
           source: {
-            // cmp: 'vl-source-vector',
             cmp: 'vl-source-vector-tile',
-            // url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/api/ncwellwise_subset_20102019_geom/?format=json'
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4035,7 +4032,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4051,7 +4048,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4067,7 +4064,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4083,7 +4080,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_preterm_subset_geom.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4099,7 +4096,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4115,7 +4112,7 @@ export default {
           visible: false,
           source: {
             cmp: 'vl-source-vector-tile',
-            url: 'http://' + pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
           },
           style: [
             {
@@ -4239,6 +4236,8 @@ export default {
     onUpdatePosition: function (coordinate) {
       this.deviceCoordinate = coordinate
       this.center = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
+      this.center1 = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
+      this.center2 = [this.deviceCoordinate[0], this.deviceCoordinate[1]]
     },
     onUpdateAccuracy: function (accuracy) {
       this.coordinateAccuracy = accuracy
