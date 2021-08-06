@@ -1605,6 +1605,50 @@
                           v-model="ncCountiesModel1"
                         />
                       </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Super Fund Sites</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Super Fund Sites${ ncSuperFundModel1 }`"
+                          v-on:input="showMap1PanelToggleLayer('superfundsites')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="ncSuperFundModel1"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Hospitals</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Hospitals ${ hospitalsModel1 }`"
+                          v-on:input="showMap1PanelToggleLayer('hospitals')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="hospitalsModel1"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Public Schools</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Public Schools ${ publicSchoolsModel1 }`"
+                          v-on:input="showMap1PanelToggleLayer('public_schools')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="publicSchoolsModel1"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Private Schools</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Private Schools ${ nonPublicSchoolsModel1 }`"
+                          v-on:input="showMap1PanelToggleLayer('non_public_schools')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="nonPublicSchoolsModel1"
+                        />
+                      </div>
                     </q-list>
                   </q-menu>
                 </q-item>
@@ -3226,6 +3270,50 @@
                           v-model="ncCountiesModel2"
                         />
                       </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Super Fund Sites</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Super Fund Sites${ ncSuperFundModel2 }`"
+                          v-on:input="showMap2PanelToggleLayer('superfundsites')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="ncSuperFundModel2"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Hospitals</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Hospitals ${ hospitalsModel2 }`"
+                          v-on:input="showMap2PanelToggleLayer('hospitals')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="hospitalsModel2"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Public Schools</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Public Schools ${ publicSchoolsModel2 }`"
+                          v-on:input="showMap2PanelToggleLayer('public_schools')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="publicSchoolsModel2"
+                        />
+                      </div>
+                      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Private Schools</q-tooltip>
+                      <div class="q-pa-md q-gutter-y-sm column">
+                        <q-toggle
+                          :label="`Private Schools ${ nonPublicSchoolsModel2 }`"
+                          v-on:input="showMap2PanelToggleLayer('non_public_schools')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="nonPublicSchoolsModel2"
+                        />
+                      </div>
                     </q-list>
                   </q-menu>
                 </q-item>
@@ -3616,7 +3704,7 @@ import Zoom from 'ol/control/Zoom'
 import Attribution from 'ol/control/Attribution'
 
 // other ol imports
-import { Style, Stroke, Fill } from 'ol/style'
+import { Style, Stroke, Fill, Icon } from 'ol/style'
 import { DEVICE_PIXEL_RATIO } from 'ol/has.js'
 
 // geocoder
@@ -3716,6 +3804,10 @@ export default {
       deathsModel1: 'Not Selected',
       cntlayer1: undefined,
       ncCountiesModel1: 'Not Selected',
+      ncSuperFundModel1: 'Not Selected',
+      hospitalsModel1: 'Not Selected',
+      publicSchoolsModel1: 'Not Selected',
+      nonPublicSchoolsModel1: 'Not Selected',
       // ncwelllayer2: undefined,
       arsenicMedModel2: 'Selected',
       arsenicMeanModel2: 'Not Selected',
@@ -3768,6 +3860,10 @@ export default {
       sc_clinpreterm_percentageModel2: 'Not Selected',
       cntlayer2: undefined,
       ncCountiesModel2: 'Not Selected',
+      ncSuperFundModel2: 'Not Selected',
+      hospitalsModel2: 'Not Selected',
+      publicSchoolsModel2: 'Not Selected',
+      nonPublicSchoolsModel2: 'Not Selected',
       // variable colors
       ncwellmap1style: 'nopattern',
       ncwellmap2style: 'nopattern',
@@ -4005,6 +4101,70 @@ export default {
               factory: this.getNoLayerStyle
             }
           ]
+        },
+        {
+          id: 'superFundSites',
+          title: 'NC Super Fund Sites',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSuperFundStyle
+            }
+          ]
+        },
+        {
+          id: 'hospitals',
+          title: 'Hospitals',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/hospitals_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getHospitalsStyle
+            }
+          ]
+        },
+        {
+          id: 'public_schools',
+          title: 'Public Schools',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/public_schools_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSchoolsStyle
+            }
+          ]
+        },
+        {
+          id: 'non_public_schools',
+          title: 'Private Schools',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/non_public_schools_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSchoolsStyle
+            }
+          ]
         }
       ],
       layers2: [
@@ -4118,6 +4278,70 @@ export default {
             {
               cmp: 'vl-style-func',
               factory: this.getNoLayerStyle
+            }
+          ]
+        },
+        {
+          id: 'superFundSites',
+          title: 'NC Super Fund Sites',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_superfund_sites.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSuperFundStyle
+            }
+          ]
+        },
+        {
+          id: 'hospitals',
+          title: 'Hospitals',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/hospitals_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getHospitalsStyle
+            }
+          ]
+        },
+        {
+          id: 'public_schools',
+          title: 'Public Schools',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/public_schools_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSchoolsStyle
+            }
+          ]
+        },
+        {
+          id: 'non_public_schools',
+          title: 'Private Schools',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/non_public_schools_4326.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getSchoolsStyle
             }
           ]
         }
@@ -5109,6 +5333,48 @@ export default {
         ]
       }
     },
+    getSuperFundStyle: function () {
+      return feature => {
+        return [
+          new Style({
+            image: new Icon({
+              size: [96, 93],
+              imgSize: [96, 93],
+              scale: 0.4,
+              src: 'statics/biohazard.png'
+            })
+          })
+        ]
+      }
+    },
+    getHospitalsStyle: function () {
+      return feature => {
+        return [
+          new Style({
+            image: new Icon({
+              size: [96, 93],
+              imgSize: [96, 93],
+              scale: 0.4,
+              src: 'statics/hospital.png'
+            })
+          })
+        ]
+      }
+    },
+    getSchoolsStyle: function () {
+      return feature => {
+        return [
+          new Style({
+            image: new Icon({
+              size: [96, 93],
+              imgSize: [96, 93],
+              scale: 0.4,
+              src: 'statics/school.png'
+            })
+          })
+        ]
+      }
+    },
     getNCWellwiseLayer1ID: function () {
       return 'ncwellwise_layer1'
     },
@@ -5662,6 +5928,34 @@ export default {
         } else if (this.ncCountiesModel1 === 'Not Selected') {
           this.cntlayer1.visible = false
         }
+      } else if (variable === 'superfundsites') {
+        let sfslayer = this.layers1[7]
+        if (this.ncSuperFundModel1 === 'Selected') {
+          sfslayer.visible = true
+        } else if (this.ncSuperFundModel1 === 'Not Selected') {
+          sfslayer.visible = false
+        }
+      } else if (variable === 'hospitals') {
+        let hosplayer = this.layers1[8]
+        if (this.hospitalsModel1 === 'Selected') {
+          hosplayer.visible = true
+        } else if (this.hospitalsModel1 === 'Not Selected') {
+          hosplayer.visible = false
+        }
+      } else if (variable === 'public_schools') {
+        let pslayer = this.layers1[9]
+        if (this.publicSchoolsModel1 === 'Selected') {
+          pslayer.visible = true
+        } else if (this.publicSchoolsModel1 === 'Not Selected') {
+          pslayer.visible = false
+        }
+      } else if (variable === 'non_public_schools') {
+        let npslayer = this.layers1[10]
+        if (this.nonPublicSchoolsModel1 === 'Selected') {
+          npslayer.visible = true
+        } else if (this.nonPublicSchoolsModel1 === 'Not Selected') {
+          npslayer.visible = false
+        }
       }
     },
     showMap2PanelToggleLayer: function (variable) {
@@ -6123,6 +6417,34 @@ export default {
           this.cntlayer2.visible = true
         } else if (this.ncCountiesModel2 === 'Not Selected') {
           this.cntlayer2.visible = false
+        }
+      } else if (variable === 'superfundsites') {
+        let sfslayer = this.layers2[7]
+        if (this.ncSuperFundModel2 === 'Selected') {
+          sfslayer.visible = true
+        } else if (this.ncSuperFundModel2 === 'Not Selected') {
+          sfslayer.visible = false
+        }
+      } else if (variable === 'hospitals') {
+        let hosplayer = this.layers2[8]
+        if (this.hospitalsModel2 === 'Selected') {
+          hosplayer.visible = true
+        } else if (this.hospitalsModel2 === 'Not Selected') {
+          hosplayer.visible = false
+        }
+      } else if (variable === 'public_schools') {
+        let pslayer = this.layers2[9]
+        if (this.publicSchoolsModel2 === 'Selected') {
+          pslayer.visible = true
+        } else if (this.publicSchoolsModel2 === 'Not Selected') {
+          pslayer.visible = false
+        }
+      } else if (variable === 'non_public_schools') {
+        let npslayer = this.layers2[10]
+        if (this.nonPublicSchoolsModel2 === 'Selected') {
+          npslayer.visible = true
+        } else if (this.nonPublicSchoolsModel2 === 'Not Selected') {
+          npslayer.visible = false
         }
       }
     },
