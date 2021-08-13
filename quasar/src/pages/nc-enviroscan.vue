@@ -1398,12 +1398,43 @@
           </q-markup-table>
         </q-expansion-item>
         <!-- // state -->
+        <!--// select location tools if not mobile -->
+        <div v-if="!this.$q.platform.is.mobile">
+          <q-separator />
+            <q-expansion-item dense dense-toggle expand-separator icon="list" label="Map location tools">
+              <div class="q-pa-md" style="max-width: 400px">
+                <b>Map an address</b>
+                <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
+                  <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Please type something']"
+                  ></q-input>
+                  <div>
+                    <q-btn label="Submit" type="submit" color="teal"></q-btn>
+                    <q-btn label="Reset" type="reset" color="teal" flat class="q-ml-sm"></q-btn>
+                  </div>
+                </q-form>
+              </div>
+              <q-separator />
+              <div class="q-pa-md" style="max-width: 400px">
+                <b>Set map to your current location?</b>
+                <div>
+                  <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                    <q-tab name="False" label="No" />
+                    <q-tab name="True" label="Yes" />
+                  </q-tabs>
+                </div>
+              </div>
+            </q-expansion-item>
+        </div>
+        <!--// select location tools if not mobile -->
         <q-separator />
+        <!-- // Help Tips Doc -->
         <font size="2" face="Arial" >
           <div class="text-center">
             <a :href="helpURL" target="_blank" style="color: #000;">Download Map Help Tips<q-tooltip>Download Map Help Tips</q-tooltip></a>
           </div>
         </font>
+        <!-- // Help Tips Doc -->
       </q-list>
     </q-drawer>
     <!--// left side drawer Ends -->
@@ -1586,57 +1617,59 @@
     </q-page-sticky>
     <!--// NC Enviroscan Icon -->
 
-    <!--// select location tools -->
-    <q-page-sticky position="bottom-right" :offset="[18, 18]">
-      <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Map Location Tools</q-tooltip>
-      <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Map Location Tools">
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Map an Address">
-          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-            <q-card class="bg-teal-1">
-              <q-banner inline-actions class="bg-teal-1">
-                <div class="q-pa-md" style="max-width: 400px">
-                  <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
-                    <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
-                      :rules="[ val => val && val.length > 0 || 'Please type something']"
-                    ></q-input>
-                    <div>
-                      <q-btn label="Submit" type="submit" color="teal"></q-btn>
-                      <q-btn label="Reset" type="reset" color="teal" flat class="q-ml-sm"></q-btn>
-                    </div>
-                  </q-form>
-                </div>
-                <template align="right" v-slot:action>
-                  <q-btn flat round dense icon="close" color="teal" v-close-popup />
-                </template>
-              </q-banner>
-              <q-separator />
-            </q-card>
-          </q-popup-proxy>
-        </q-fab-action>
-        <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Your Current Location">
-          <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
-            <q-card class="bg-teal-1">
-              <q-banner inline-actions class="bg-teal-1">
-                <div class="q-pa-md" style="max-width: 400px">
-                  <b>Set map to your current location?</b>
-                  <div>
-                    <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
-                      <q-tab name="False" label="No" />
-                      <q-tab name="True" label="Yes" />
-                    </q-tabs>
+    <!--// select location tools mobile -->
+    <div v-if="this.$q.platform.is.mobile">
+      <q-page-sticky position="bottom-right" :offset="[18, 18]">
+        <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Map Location Tools</q-tooltip>
+        <q-fab icon="keyboard_arrow_up" direction="up" label-position="left" external-label color="teal text-black" label="Map Location Tools">
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Map an Address">
+            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+              <q-card class="bg-teal-1">
+                <q-banner inline-actions class="bg-teal-1">
+                  <div class="q-pa-md" style="max-width: 400px">
+                    <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
+                      <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
+                        :rules="[ val => val && val.length > 0 || 'Please type something']"
+                      ></q-input>
+                      <div>
+                        <q-btn label="Submit" type="submit" color="teal"></q-btn>
+                        <q-btn label="Reset" type="reset" color="teal" flat class="q-ml-sm"></q-btn>
+                      </div>
+                    </q-form>
                   </div>
-                </div>
-                <template align="right" v-slot:action>
-                  <q-btn flat round dense icon="close" color="teal" v-close-popup />
-                </template>
-              </q-banner>
-              <q-separator />
-            </q-card>
-          </q-popup-proxy>
-        </q-fab-action>
-      </q-fab>
-    </q-page-sticky>
-    <!--// select location tools -->
+                  <template align="right" v-slot:action>
+                    <q-btn flat round dense icon="close" color="teal" v-close-popup />
+                  </template>
+                </q-banner>
+                <q-separator />
+              </q-card>
+            </q-popup-proxy>
+          </q-fab-action>
+          <q-fab-action color="teal" class="text-black" icon="fas fa-map-marked-alt" label-position="left" external-label label="Set Map to Your Current Location">
+            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+              <q-card class="bg-teal-1">
+                <q-banner inline-actions class="bg-teal-1">
+                  <div class="q-pa-md" style="max-width: 400px">
+                    <b>Set map to your current location?</b>
+                    <div>
+                      <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                        <q-tab name="False" label="No" />
+                        <q-tab name="True" label="Yes" />
+                      </q-tabs>
+                    </div>
+                  </div>
+                  <template align="right" v-slot:action>
+                    <q-btn flat round dense icon="close" color="teal" v-close-popup />
+                  </template>
+                </q-banner>
+                <q-separator />
+              </q-card>
+            </q-popup-proxy>
+          </q-fab-action>
+        </q-fab>
+      </q-page-sticky>
+    </div>
+    <!--// select location tools if mobile -->
 
     <!--// base layer map attribution -->
     <q-page-sticky position="bottom-left" :offset="[200, 38]">
