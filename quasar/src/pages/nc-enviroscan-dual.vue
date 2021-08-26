@@ -1585,6 +1585,7 @@
                   </q-menu>
                 </q-item>
                 <!-- // Health layers -->
+
                 <!-- Additiona features -->
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
@@ -3032,9 +3033,9 @@
                                       <td>Interleave Two</td>
                                     </tr>
                                     <tr>
-                                      <td><q-radio val="nopattern" v-model="pretermmap1style" color="teal" /></td>
-                                      <td><q-radio val="pattern1" v-model="pretermmap1style" color="teal" /></td>
-                                      <td><q-radio val="pattern2" v-model="pretermmap1style" color="teal" /></td>
+                                      <td><q-radio val="nopattern" v-model="pretermmap2style" color="teal" /></td>
+                                      <td><q-radio val="pattern1" v-model="pretermmap2style" color="teal" /></td>
+                                      <td><q-radio val="pattern2" v-model="pretermmap2style" color="teal" /></td>
                                     </tr>
                                   </table>
                                 </q-item>

@@ -1398,10 +1398,11 @@
           </q-markup-table>
         </q-expansion-item>
         <!-- // state -->
+
         <!--// select location tools if not mobile -->
         <div v-if="!this.$q.platform.is.mobile">
           <q-separator />
-            <q-expansion-item dense dense-toggle expand-separator icon="list" label="Map location tools">
+            <q-expansion-item default-opened dense dense-toggle expand-separator icon="list" label="Map location tools">
               <div class="q-pa-md" style="max-width: 400px">
                 <b>Map an address</b>
                 <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
