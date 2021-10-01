@@ -101,6 +101,36 @@
     <!--// right side drawer Starts -->
     <q-drawer side="right" v-model="rightDrawerOpen" :width="400" show-if-above bordered content-class="teal bg-teal-1">
       <q-list bordered class="rounded-borders">
+        <!--// select location tools if not mobile -->
+        <div v-if="!this.$q.platform.is.mobile">
+          <q-separator />
+            <q-expansion-item default-opened dense dense-toggle expand-separator icon="list" label="Map location tools">
+              <div class="q-pa-md" style="max-width: 400px">
+                <b>Map an address</b>
+                <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
+                  <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
+                    :rules="[ val => val && val.length > 0 || 'Please type something']"
+                  ></q-input>
+                  <div>
+                    <q-btn label="Submit" type="submit" color="teal"></q-btn>
+                    <q-btn label="Reset" type="reset" color="teal" flat class="q-ml-sm"></q-btn>
+                  </div>
+                </q-form>
+              </div>
+              <q-separator />
+              <div class="q-pa-md" style="max-width: 400px">
+                <b>Set map to your current location?</b>
+                <div>
+                  <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
+                    <q-tab name="False" label="No" />
+                    <q-tab name="True" label="Yes" />
+                  </q-tabs>
+                </div>
+              </div>
+            </q-expansion-item>
+        </div>
+        <!--// select location tools if not mobile -->
+
         <!-- // baselayers -->
         <q-expansion-item default-opened expand-separator icon="list" label="Base Layers">
           <div class="q-pa-md" style="min-width: 200px">
@@ -1399,35 +1429,6 @@
         </q-expansion-item>
         <!-- // state -->
 
-        <!--// select location tools if not mobile -->
-        <div v-if="!this.$q.platform.is.mobile">
-          <q-separator />
-            <q-expansion-item default-opened dense dense-toggle expand-separator icon="list" label="Map location tools">
-              <div class="q-pa-md" style="max-width: 400px">
-                <b>Map an address</b>
-                <q-form @submit="address2Geoloc" @reset="resetAddress" class="q-gutter-md">
-                  <q-input filled v-model="address" label="Address *" hint="Address, City, NC and USA or ZipCode USA" lazy-rules
-                    :rules="[ val => val && val.length > 0 || 'Please type something']"
-                  ></q-input>
-                  <div>
-                    <q-btn label="Submit" type="submit" color="teal"></q-btn>
-                    <q-btn label="Reset" type="reset" color="teal" flat class="q-ml-sm"></q-btn>
-                  </div>
-                </q-form>
-              </div>
-              <q-separator />
-              <div class="q-pa-md" style="max-width: 400px">
-                <b>Set map to your current location?</b>
-                <div>
-                  <q-tabs v-model="getlocation" v-on:input="getCurrentLocation()" no-caps class="bg-teal text-black">
-                    <q-tab name="False" label="No" />
-                    <q-tab name="True" label="Yes" />
-                  </q-tabs>
-                </div>
-              </div>
-            </q-expansion-item>
-        </div>
-        <!--// select location tools if not mobile -->
         <q-separator />
         <!-- // Help Tips Doc -->
         <font size="2" face="Arial" >
