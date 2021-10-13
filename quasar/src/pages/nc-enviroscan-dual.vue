@@ -3567,7 +3567,7 @@
           <!-- q-toolbar-title class="q-mr-sm text-black">Footer</q-toolbar-title -->
           <!-- // Map1 interleave legend -->
           <div class="q-pa-md q-gutter-y-sm column text-black">
-            Map One Interleave Legend
+            Map One Dataset 1 Legend
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <font size="2" face="Arial" >
                 <q-markup-table dense class="bg-brown-1">
@@ -3627,7 +3627,7 @@
           <q-space />
           <!-- // Map2 interleave legend -->
           <div class="q-pa-md q-gutter-y-sm column text-black">
-            Map Two Interleave Legend
+            Map Two Dataset 2 Legend
             <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
               <font size="2" face="Arial" >
                 <q-markup-table dense class="bg-brown-1">
