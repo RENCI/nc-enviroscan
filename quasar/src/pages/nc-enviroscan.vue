@@ -101,6 +101,16 @@
     <!--// right side drawer Starts -->
     <q-drawer side="right" v-model="rightDrawerOpen" :width="400" show-if-above bordered content-class="teal bg-teal-1">
       <q-list bordered class="rounded-borders">
+        <!-- // nolayer -->
+        <div>
+            <q-item tag="label" v-ripple>
+            <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
+              <q-item-section>
+                <q-item-label>Clear Data</q-item-label>
+                </q-item-section>
+            </q-item>
+        </div>
+
         <!--// select location tools if not mobile -->
         <div v-if="!this.$q.platform.is.mobile">
           <q-separator />
@@ -158,19 +168,6 @@
         </q-expansion-item>
         <!-- // baselayers -->
 
-        <!-- // nolayer -->
-        <q-expansion-item expand-separator icon="list" label="Clear Data">
-          <div class="q-pa-md" style="min-width: 200px">
-            <q-list link>
-              <q-item tag="label" v-ripple>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
-                <q-item-section>
-                  <q-item-label>Clear Data</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </div>
-        </q-expansion-item>
         <!-- // nolayer -->
 
         <!-- // NC wellwise layers -->
