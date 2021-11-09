@@ -1900,7 +1900,7 @@ export default {
       selectedFeatureMaxBarBox: [],
       selectedFeatureStdBarBox: [],
       // Other layers attributes
-      ncCountiesModel: 'Not Selected',
+      ncCountiesModel: 'Selected',
       ncSuperFundModel: 'Not Selected',
       hospitalsModel: 'Not Selected',
       publicSchoolsModel: 'Not Selected',
@@ -2019,7 +2019,7 @@ export default {
           id: 'ncCounties',
           title: 'NC Counties',
           cmp: 'vl-layer-vector-tile',
-          visible: false,
+          visible: true,
           source: {
             cmp: 'vl-source-vector-tile',
             url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
@@ -2444,11 +2444,12 @@ export default {
     getNCCountiesStyle: function () {
       return feature => {
         return [
-          createStyle({
-            strokeColor: '#000',
-            strokeWidth: (this.zoom / 2.0),
-            strokeLineCap: 'round',
-            strokeLineJoin: 'bevel'
+          new Style({
+            stroke: new Stroke({
+              color: 'black',
+              width: (this.zoom / 16.0),
+              fill: new Fill('rgba(200,20,20,0.2)')
+            })
           })
         ]
       }
