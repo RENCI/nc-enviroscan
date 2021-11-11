@@ -101,6 +101,16 @@
     <!--// right side drawer Starts -->
     <q-drawer side="right" v-model="rightDrawerOpen" :width="400" show-if-above bordered content-class="teal bg-teal-1">
       <q-list bordered class="rounded-borders">
+        <!-- // nolayer -->
+        <div>
+            <q-item tag="label" v-ripple>
+            <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
+              <q-item-section>
+                <q-item-label>Clear Data</q-item-label>
+                </q-item-section>
+            </q-item>
+        </div>
+
         <!--// select location tools if not mobile -->
         <div v-if="!this.$q.platform.is.mobile">
           <q-separator />
@@ -158,19 +168,6 @@
         </q-expansion-item>
         <!-- // baselayers -->
 
-        <!-- // nolayer -->
-        <q-expansion-item expand-separator icon="list" label="Clear Data">
-          <div class="q-pa-md" style="min-width: 200px">
-            <q-list link>
-              <q-item tag="label" v-ripple>
-                <q-radio v-on:input="showMapPanelRadioLayer" val="nolayer" v-model="currentvariable" color="teal" />
-                <q-item-section>
-                  <q-item-label>Clear Data</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </div>
-        </q-expansion-item>
         <!-- // nolayer -->
 
         <!-- // NC wellwise layers -->
@@ -1903,7 +1900,7 @@ export default {
       selectedFeatureMaxBarBox: [],
       selectedFeatureStdBarBox: [],
       // Other layers attributes
-      ncCountiesModel: 'Not Selected',
+      ncCountiesModel: 'Selected',
       ncSuperFundModel: 'Not Selected',
       hospitalsModel: 'Not Selected',
       publicSchoolsModel: 'Not Selected',
@@ -2022,7 +2019,7 @@ export default {
           id: 'ncCounties',
           title: 'NC Counties',
           cmp: 'vl-layer-vector-tile',
-          visible: false,
+          visible: true,
           source: {
             cmp: 'vl-source-vector-tile',
             url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/ncdot_county_boundaries.mvt?tile={z}/{x}/{y}'
@@ -2447,11 +2444,12 @@ export default {
     getNCCountiesStyle: function () {
       return feature => {
         return [
-          createStyle({
-            strokeColor: '#000',
-            strokeWidth: (this.zoom / 2.0),
-            strokeLineCap: 'round',
-            strokeLineJoin: 'bevel'
+          new Style({
+            stroke: new Stroke({
+              color: 'black',
+              width: (this.zoom / 16.0),
+              fill: new Fill('rgba(200,20,20,0.2)')
+            })
           })
         ]
       }
