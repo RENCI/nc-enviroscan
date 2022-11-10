@@ -1585,7 +1585,80 @@
                   </q-menu>
                 </q-item>
                 <!-- // Health layers -->
-
+                <!-- // Wildfire layers -->
+                <q-item clickable>
+                  <q-item-section>Wildfire Hazards by 2020 Census Tracts</q-item-section>
+                  <q-item-section side>
+                    <q-icon name="keyboard_arrow_right"></q-icon>
+                  </q-item-section>
+                  <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                    <table>
+                      <tr>
+                        <!-- // legend -->
+                        <td>
+                          Wildfire Hazard Potential Quintile Legend
+                        </td>
+                        <td>
+                          <q-tooltip>Click to View Map Legend</q-tooltip>
+                          <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                              <font size="2" face="Arial" >
+                                <q-markup-table dense class="bg-teal-1">
+                                  <tr>
+                                     <td style="text-align:center;" colspan="3">Wildfire Hazard Potential Quintile</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align:center;" colspan="2">Number</td>
+                                    <td style="text-align:center;">Percentage</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu1"></span></td>
+                                    <td>&lt; {{ wildfire_haz_pot_qnum_values[1] }}</td>
+                                    <td>&lt; {{ wildfire_haz_pot_qprcnt_values[1] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu2"></span></td>
+                                    <td>&ge; {{ wildfire_haz_pot_qnum_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[2] }}</td>
+                                    <td>&ge; {{ wildfire_haz_pot_qprcnt_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[2] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu3"></span></td>
+                                    <td>&ge; {{ wildfire_haz_pot_qnum_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[3] }}</td>
+                                    <td>&ge; {{ wildfire_haz_pot_qprcnt_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[3] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu4"></span></td>
+                                      <td>&ge; {{ wildfire_haz_pot_qnum_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                                      <td>&ge; {{ wildfire_haz_pot_qprcnt_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu5"></span></td>
+                                      <td>&ge; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                                      <td>&ge; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                                  </tr>
+                                </q-markup-table>
+                              </font>
+                            </q-popup-proxy>
+                          </q-btn>
+                        </td>
+                        <!-- // legend -->
+                      </tr>
+                      <td>
+                        <q-toggle
+                          :label="`Wildfire Hazard Potential Quintile ${ wildfire_haz_pot_qnumModel1 }`"
+                          v-on:input="showMap1PanelToggleLayer('wildfire_haz_pot_qnum')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="wildfire_haz_pot_qnumModel1"
+                        >
+                          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Wildfire Hazard Potential Quintile</q-tooltip>
+                        </q-toggle>
+                      </td>
+                    </table>
+                  </q-menu>
+                </q-item>
+                <!-- // Wildfire layers-->
                 <!-- Additiona features -->
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
@@ -2865,7 +2938,6 @@
                   </q-menu>
                 </q-item>
                 <!-- // EJScreen layers -->
-
                 <!-- // Health layers -->
                 <q-item clickable>
                   <q-item-section>Health Outcomes</q-item-section>
@@ -3250,7 +3322,80 @@
                   </q-menu>
                 </q-item>
                 <!-- // Health layers -->
-
+                <!-- // Wildfire layers -->
+                <q-item clickable>
+                  <q-item-section>Wildfire Hazards by 2020 Census Tracts</q-item-section>
+                  <q-item-section side>
+                    <q-icon name="keyboard_arrow_right"></q-icon>
+                  </q-item-section>
+                  <q-menu anchor="top end" self="top start" content-class="bg-teal-1">
+                    <table>
+                      <tr>
+                        <!-- // legend -->
+                        <td>
+                          Wildfire Hazard Potential Quintile Legend
+                        </td>
+                        <td>
+                          <q-tooltip>Click to View Map Legend</q-tooltip>
+                          <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                            <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                              <font size="2" face="Arial" >
+                                <q-markup-table dense class="bg-teal-1">
+                                  <tr>
+                                     <td style="text-align:center;" colspan="3">Wildfire Hazard Potential Quintile</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="text-align:center;" colspan="2">Number</td>
+                                    <td style="text-align:center;">Percentage</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu1"></span></td>
+                                    <td>&lt; {{ wildfire_haz_pot_qnum_values[1] }}</td>
+                                    <td>&lt; {{ wildfire_haz_pot_qprcnt_values[1] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu2"></span></td>
+                                    <td>&ge; {{ wildfire_haz_pot_qnum_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[2] }}</td>
+                                    <td>&ge; {{ wildfire_haz_pot_qprcnt_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[2] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu3"></span></td>
+                                    <td>&ge; {{ wildfire_haz_pot_qnum_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[3] }}</td>
+                                    <td>&ge; {{ wildfire_haz_pot_qprcnt_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[3] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu4"></span></td>
+                                      <td>&ge; {{ wildfire_haz_pot_qnum_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                                      <td>&ge; {{ wildfire_haz_pot_qprcnt_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="padding:5px"><span class="wfsqu5"></span></td>
+                                      <td>&ge; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                                      <td>&ge; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                                  </tr>
+                                </q-markup-table>
+                              </font>
+                            </q-popup-proxy>
+                          </q-btn>
+                        </td>
+                        <!-- // legend -->
+                      </tr>
+                      <td>
+                        <q-toggle
+                          :label="`Wildfire Hazard Potential Quintile ${ wildfire_haz_pot_qnumModel2 }`"
+                          v-on:input="showMap2PanelToggleLayer('wildfire_haz_pot_qnum')"
+                          color="teal"
+                          false-value="Not Selected"
+                          true-value="Selected"
+                          v-model="wildfire_haz_pot_qnumModel2"
+                        >
+                          <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Wildfire Hazard Potential Quintile</q-tooltip>
+                        </q-toggle>
+                      </td>
+                    </table>
+                  </q-menu>
+                </q-item>
+                <!-- // Wildfire layers-->
                 <!-- // Additiona feature -->
                 <q-item clickable>
                   <q-item-section>Additional Features</q-item-section>
@@ -3751,7 +3896,8 @@ export default {
       address: null,
       acceptaddress: false,
       vtSelection: {},
-      vtIdProp: 'geoid10',
+      vtIdProp10: 'geoid10',
+      vtIdProp20: 'geoid20',
       // Toggle Models and layers for color patterns
       // ncwelllayer1: undefined,
       arsenicMedModel1: 'Selected',
@@ -3803,6 +3949,8 @@ export default {
       casespertenModel1: 'Not Selected',
       casesperhundredModel1: 'Not Selected',
       deathsModel1: 'Not Selected',
+      wildfirelayer1: undefined,
+      wildfire_haz_pot_qnumModel1: 'Not Selected',
       cntlayer1: undefined,
       ncCountiesModel1: 'Not Selected',
       ncSuperFundModel1: 'Not Selected',
@@ -3859,6 +4007,8 @@ export default {
       fc_clinpreterm_percentageModel2: 'Not Selected',
       sc_calcpreterm_percentageModel2: 'Not Selected',
       sc_clinpreterm_percentageModel2: 'Not Selected',
+      wildfirelayer2: undefined,
+      wildfire_haz_pot_qnumModel2: 'Not Selected',
       cntlayer2: undefined,
       ncCountiesModel2: 'Not Selected',
       ncSuperFundModel2: 'Not Selected',
@@ -3887,6 +4037,7 @@ export default {
       ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
       covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
       pretermcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(207, 252, 242, 0.65)', 'rgba(140, 250, 224, 0.65)', 'rgba(46, 240, 162, 0.65)', 'rgba(3, 148, 90, 0.65)'],
+      wildfirecolors: ['rgba(91, 95, 99, 0.65)', 'rgba(247, 241, 168, 0.65)', 'rgba(230, 211, 5, 0.65)', 'rgba(230, 159, 5, 0.65)', 'rgba(250, 103, 5, 0.65)', 'rgba(250, 5, 13, 0.65)'],
       arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
       arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
       arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
@@ -3925,6 +4076,8 @@ export default {
       // fc_clinpreterm_percentage_values: [-999.99, 9.253, 10.41, 11.936],
       // sc_calcpreterm_percentage_values: [-999.99, 9.554, 11.285, 13.197],
       // sc_clinpreterm_percentage_values: [-999.99, 7.429, 8.621, 10.0],
+      wildfire_haz_pot_qnum_values: [-9.9, 2, 3, 4, 5],
+      wildfire_haz_pot_qprcnt_values: ['-99', '20-40%', '40-60%', '60-80%', '80-100%'],
       map1pat1val1: 0,
       map1pat1val2: 0,
       map1pat1val3: 0,
@@ -3984,11 +4137,13 @@ export default {
       currentejsvariable1: 'd_ldpnt_2',
       currentpretermvariable1: 'fc_calcega_mean_avg',
       currentconfic19variable1: 'cases',
+      currentwildfirevariable1: 'wildfire_haz_pot_qnum',
       currentncwellvariable2: 'ncwellwise_arsenic_med',
       currentacsvariable2: 'percent_below_poverty_level',
       currentpretermvariable2: 'fc_calcega_mean_avg',
       currentejsvariable2: 'd_ldpnt_2',
       currentconfic19variable2: 'cases',
+      currentwildfirevariable2: 'wildfire_haz_pot_qnum',
       layers1: [
         {
           id: this.getNCWellwiseLayer1ID(),
@@ -4068,6 +4223,22 @@ export default {
             {
               cmp: 'vl-style-func',
               factory: this.getpretermStyle1
+            }
+          ]
+        },
+        {
+          id: this.getWildFireLayer1ID(),
+          title: 'WildFire',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_wildfires_geom.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getwildfireStyle1
             }
           ]
         },
@@ -4251,6 +4422,22 @@ export default {
           ]
         },
         {
+          id: this.getWildFireLayer2ID(),
+          title: 'WildFire',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_wildfires_geom.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getwildfireStyle2
+            }
+          ]
+        },
+        {
           id: 'ncCounties2',
           title: 'NC Counties2',
           cmp: 'vl-layer-vector-tile',
@@ -4408,6 +4595,11 @@ export default {
       return {
         '--preterm-colors': this.pretermcolors
       }
+    },
+    wildfireColors () {
+      return {
+        '--wildfire-colors': this.wildfirecolors
+      }
     }
   },
   methods: {
@@ -4550,18 +4742,34 @@ export default {
           this.varcolor = colors[6]
         }
       } else if (colors.length === 6) {
-        if (data[variable.substring(11)] === values[0]) {
-          this.varcolor = colors[0]
-        } else if (data[variable.substring(11)] < values[1]) {
-          this.varcolor = colors[1]
-        } else if (data[variable.substring(11)] >= values[1] && data[variable.substring(11)] < values[2]) {
-          this.varcolor = colors[2]
-        } else if (data[variable.substring(11)] >= values[2] && data[variable.substring(11)] < values[3]) {
-          this.varcolor = colors[3]
-        } else if (data[variable.substring(11)] >= values[3] && data[variable.substring(11)] < values[4]) {
-          this.varcolor = colors[4]
-        } else if (data[variable.substring(11)] >= values[4]) {
-          this.varcolor = colors[5]
+        if (layer.substring(0, layer.length - 1) === 'wildfirelayer') {
+          if (data[variable] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable] >= values[3] && data[variable] < values[4]) {
+            this.varcolor = colors[4]
+          } else if (data[variable] >= values[4]) {
+            this.varcolor = colors[5]
+          }
+        } else {
+          if (data[this.currentvariable.substring(11)] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[this.currentvariable.substring(11)] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[this.currentvariable.substring(11)] >= values[1] && data[this.currentvariable.substring(11)] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[this.currentvariable.substring(11)] >= values[2] && data[this.currentvariable.substring(11)] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[this.currentvariable.substring(11)] >= values[3] && data[this.currentvariable.substring(11)] < values[4]) {
+            this.varcolor = colors[4]
+          } else if (data[this.currentvariable.substring(11)] >= values[4]) {
+            this.varcolor = colors[5]
+          }
         }
       } else if (colors.length === 5) {
         if (layer.substring(0, layer.length - 1) === 'ncwelllayer') {
@@ -4924,7 +5132,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentncwellvariable1
         if (variable === 'ncwellwise_arsenic_med') {
@@ -4975,7 +5183,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentacsvariable1
         getStyle(data, this.census_acs_values, this.acscolors, variable, 'acslayer1')
@@ -5002,7 +5210,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentejsvariable1
         if (variable === 'd_ldpnt_2') {
@@ -5043,7 +5251,7 @@ export default {
     },
     getcovid19Style1: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentcovid19variable1
         if (variable === 'cases') {
@@ -5078,7 +5286,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentpretermvariable1
         if (this.currentpretermvariable1 === 'fc_calcega_mean_avg') {
@@ -5111,6 +5319,25 @@ export default {
         ]
       }
     },
+    getwildfireStyle1: function () {
+      return feature => {
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp20)]
+        let data = feature.getProperties()
+        let variable = this.currentwildfirevariable1
+        this.getColors(data, this.wildfire_haz_pot_qnum_values, this.wildfirecolors, variable, 'wildfirelayer1')
+        return [
+          new Style({
+            stroke: new Stroke({
+              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
+              width: selected ? 2 : (this.zoom / 8.0)
+            }),
+            fill: new Fill({
+              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+            })
+          })
+        ]
+      }
+    },
     getncwellwiseStyle2: function () {
       let getStyle
       if (this.ncwellmap2style === 'nopattern') {
@@ -5121,7 +5348,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentncwellvariable2
         if (variable === 'ncwellwise_arsenic_med') {
@@ -5172,7 +5399,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentacsvariable2
         getStyle(data, this.census_acs_values, this.acscolors, variable, 'acslayer2')
@@ -5199,7 +5426,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentejsvariable2
         if (variable === 'd_ldpnt_2') {
@@ -5240,7 +5467,7 @@ export default {
     },
     getcovid19Style2: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentcovid19variable2
         if (variable === 'cases') {
@@ -5275,7 +5502,7 @@ export default {
         getStyle = this.getPatternColors
       }
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentpretermvariable2
         if (this.currentpretermvariable2 === 'fc_calcega_mean_avg') {
@@ -5295,6 +5522,25 @@ export default {
         } else if (this.currentpretermvariable2 === 'sc_clinpreterm_percentage') {
           getStyle(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer2')
         }
+        return [
+          new Style({
+            stroke: new Stroke({
+              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
+              width: selected ? 2 : (this.zoom / 8.0)
+            }),
+            fill: new Fill({
+              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+            })
+          })
+        ]
+      }
+    },
+    getwildfireStyle2: function () {
+      return feature => {
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp20)]
+        let data = feature.getProperties()
+        let variable = this.currentwildfirevariable2
+        this.getColors(data, this.wildfire_haz_pot_qnum_values, this.wildfirecolors, variable, 'wildfirelayer2')
         return [
           new Style({
             stroke: new Stroke({
@@ -5391,6 +5637,9 @@ export default {
     getPreTermLayer1ID: function () {
       return 'preterm_layer1'
     },
+    getWildFireLayer1ID: function () {
+      return 'wildfire_layer1'
+    },
     getNCWellwiseLayer2ID: function () {
       return 'ncwellwise_layer2'
     },
@@ -5405,6 +5654,9 @@ export default {
     },
     getPreTermLayer2ID: function () {
       return 'preterm_layer2'
+    },
+    getWildFireLayer2ID: function () {
+      return 'wildfire_layer2'
     },
     onMapMounted: function (map1) {
       // now ol.Map instance is ready and we can work with it directly
@@ -5920,9 +6172,19 @@ export default {
         } else if (this.sc_clinpreterm_percentageModel1 === 'Not Selected') {
           this.pretermlayer1.visible = false
         }
+      } else if (variable === 'wildfire_haz_pot_qnum') {
+        if (this.wildfirelayer1 === undefined) {
+          this.wildfirelayer1 = this.layers1[5]
+        }
+        if (this.wildfire_haz_pot_qnumModel1 === 'Selected') {
+          this.wildfirelayer1.visible = true
+          this.currentwildfirevariable1 = variable
+        } else if (this.wildfire_haz_pot_qnumModel1 === 'Not Selected') {
+          this.wildfirelayer1.visible = false
+        }
       } else if (variable === 'nccounties') {
         if (this.cntlayer1 === undefined) {
-          this.cntlayer1 = this.layers1[5]
+          this.cntlayer1 = this.layers1[6]
         }
         if (this.ncCountiesModel1 === 'Selected') {
           this.cntlayer1.visible = true
@@ -5930,28 +6192,28 @@ export default {
           this.cntlayer1.visible = false
         }
       } else if (variable === 'superfundsites') {
-        let sfslayer = this.layers1[7]
+        let sfslayer = this.layers1[8]
         if (this.ncSuperFundModel1 === 'Selected') {
           sfslayer.visible = true
         } else if (this.ncSuperFundModel1 === 'Not Selected') {
           sfslayer.visible = false
         }
       } else if (variable === 'hospitals') {
-        let hosplayer = this.layers1[8]
+        let hosplayer = this.layers1[9]
         if (this.hospitalsModel1 === 'Selected') {
           hosplayer.visible = true
         } else if (this.hospitalsModel1 === 'Not Selected') {
           hosplayer.visible = false
         }
       } else if (variable === 'public_schools') {
-        let pslayer = this.layers1[9]
+        let pslayer = this.layers1[10]
         if (this.publicSchoolsModel1 === 'Selected') {
           pslayer.visible = true
         } else if (this.publicSchoolsModel1 === 'Not Selected') {
           pslayer.visible = false
         }
       } else if (variable === 'non_public_schools') {
-        let npslayer = this.layers1[10]
+        let npslayer = this.layers1[11]
         if (this.nonPublicSchoolsModel1 === 'Selected') {
           npslayer.visible = true
         } else if (this.nonPublicSchoolsModel1 === 'Not Selected') {
@@ -6410,9 +6672,19 @@ export default {
         } else if (this.sc_clinpreterm_percentageModel2 === 'Not Selected') {
           this.pretermlayer2.visible = false
         }
+      } else if (variable === 'wildfire_haz_pot_qnum') {
+        if (this.wildfirelayer2 === undefined) {
+          this.wildfirelayer2 = this.layers2[5]
+        }
+        if (this.wildfire_haz_pot_qnumModel2 === 'Selected') {
+          this.wildfirelayer2.visible = true
+          this.currentwildfirevariable2 = variable
+        } else if (this.wildfire_haz_pot_qnumModel2 === 'Not Selected') {
+          this.wildfirelayer2.visible = false
+        }
       } else if (variable === 'nccounties') {
         if (this.cntlayer2 === undefined) {
-          this.cntlayer2 = this.layers2[5]
+          this.cntlayer2 = this.layers2[6]
         }
         if (this.ncCountiesModel2 === 'Selected') {
           this.cntlayer2.visible = true
@@ -6420,28 +6692,28 @@ export default {
           this.cntlayer2.visible = false
         }
       } else if (variable === 'superfundsites') {
-        let sfslayer = this.layers2[7]
+        let sfslayer = this.layers2[8]
         if (this.ncSuperFundModel2 === 'Selected') {
           sfslayer.visible = true
         } else if (this.ncSuperFundModel2 === 'Not Selected') {
           sfslayer.visible = false
         }
       } else if (variable === 'hospitals') {
-        let hosplayer = this.layers2[8]
+        let hosplayer = this.layers2[9]
         if (this.hospitalsModel2 === 'Selected') {
           hosplayer.visible = true
         } else if (this.hospitalsModel2 === 'Not Selected') {
           hosplayer.visible = false
         }
       } else if (variable === 'public_schools') {
-        let pslayer = this.layers2[9]
+        let pslayer = this.layers2[10]
         if (this.publicSchoolsModel2 === 'Selected') {
           pslayer.visible = true
         } else if (this.publicSchoolsModel2 === 'Not Selected') {
           pslayer.visible = false
         }
       } else if (variable === 'non_public_schools') {
-        let npslayer = this.layers2[10]
+        let npslayer = this.layers2[11]
         if (this.nonPublicSchoolsModel2 === 'Selected') {
           npslayer.visible = true
         } else if (this.nonPublicSchoolsModel2 === 'Not Selected') {
@@ -6473,7 +6745,7 @@ export default {
               this.vtSelection = {}
               this.map1var1 = var1 + ': ' + features[i].properties_[var1].toString()
               let feature = features[i]
-              let fid = feature.get(this.vtIdProp)
+              let fid = feature.get(this.vtIdProp10)
               this.vtSelection[fid] = feature
               this.$refs.layer1Style[i].refresh()
               // console.log(var1, this.$refs.layer1Style)
@@ -6483,7 +6755,7 @@ export default {
               this.vtSelection = {}
               this.map1var2 = var2 + ': ' + features[i].properties_[var2].toString()
               let feature = features[i]
-              let fid = feature.get(this.vtIdProp)
+              let fid = feature.get(this.vtIdProp10)
               this.vtSelection[fid] = feature
               this.$refs.layer1Style[i].refresh()
               // console.log(var2, this.$refs.layer1Style)
@@ -6525,7 +6797,7 @@ export default {
               this.vtSelection = {}
               this.map2var1 = var1 + ': ' + features[i].properties_[var1].toString()
               let feature = features[i]
-              let fid = feature.get(this.vtIdProp)
+              let fid = feature.get(this.vtIdProp10)
               this.vtSelection[fid] = feature
               this.$refs.layer2Style[i].refresh()
             }
@@ -6534,7 +6806,7 @@ export default {
               this.vtSelection = {}
               this.map2var2 = var2 + ': ' + features[i].properties_[var2].toString()
               let feature = features[i]
-              let fid = feature.get(this.vtIdProp)
+              let fid = feature.get(this.vtIdProp10)
               this.vtSelection[fid] = feature
               this.$refs.layer2Style[i].refresh()
             }
@@ -6880,6 +7152,41 @@ export default {
     height: 15px;
     width: 15px;
     background-color: rgba(3, 148, 90, 0.65);
+    // background-color: var(--manganese-colors[4]);
+    display: inline-block;
+  }
+  .wfsqu1 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(247, 241, 168, 0.65);
+    // background-color: var(--manganese-colors[1]);
+    display: inline-block;
+  }
+  .wfsqu2 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(230, 211, 5, 0.65);
+    // background-color: var(--manganese-colors[1]);
+    display: inline-block;
+  }
+  .wfsqu3 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(230, 159, 5, 0.65);
+    // background-color: var(--manganese-colors[2]);
+    display: inline-block;
+  }
+  .wfsqu4 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(250, 103, 5, 0.65);
+    // background-color: var(--manganese-colors[3]);
+    display: inline-block;
+  }
+  .wfsqu5 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(250, 5, 13, 0.65);
     // background-color: var(--manganese-colors[4]);
     display: inline-block;
   }

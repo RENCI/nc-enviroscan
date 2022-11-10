@@ -30,6 +30,7 @@ python manage.py showmigrations
 python manage.py createsuperuser --email jmpmcman@ranci.org --username admin
 python manage.py runserver
 127.0.0.1:1337/drf/apimvt/v1/data/ncwellwise_subset_20102019_geom.mvt?tile=12/1148/1609
+127.0.0.1:1337/drf/apimvt/v1/data/nc_wildfires_geom.mvt?tile=12/1148/1609
 127.0.0.1:1337/drf/apimvt/v1/data/acs_2019_5y_estimates_geom.mvt?tile=12/1148/1609
 127.0.0.1:1337/drf/apimvt/v1/data/ejscreen_subset_geom.mvt?tile=12/1148/1609
 127.0.0.1:1337/drf/apimvt/v1/data/nc_covid_zipcode_geom.mvt?tile=12/1148/1609

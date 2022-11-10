@@ -86,6 +86,11 @@ class nc_preterm_subset(models.Model):
     sc_clinega_med = models.FloatField(null=True)
     sc_clinpreterm_percentage = models.FloatField(null=True)
 
+class nc_wildfires(models.Model):
+    geoid20 = models.TextField(11, null=True)
+    wildfire_haz_pot_qnum = models.FloatField()
+    wildfire_haz_pot_qprcnt = models.TextField(8, null=False) 
+
 class nc_census_tracks_4326(models.Model):
     geoid10 = models.TextField(11, null=True)
     total_pop = models.IntegerField()
@@ -249,6 +254,18 @@ class nc_preterm_subset_geom(models.Model):
     class Meta:
         managed = False
         db_table = "drf_nc_preterm_subset_geom"
+
+class nc_wildfires_geom(models.Model):
+    geoid20 = models.TextField(11, null=True)
+    wildfire_haz_pot_qnum = models.FloatField()
+    wildfire_haz_pot_qprcnt = models.TextField(8, null=False)
+    geom = models.MultiPolygonField(null=True)
+    objects = models.Manager()
+    vector_tiles = MVTManager()
+
+    class Meta:
+        managed = False
+        db_table = "drf_nc_wildfires_geom"
 
 class nc_superfund_sites(models.Model):
     superfund_site = models.TextField(55, null=True)

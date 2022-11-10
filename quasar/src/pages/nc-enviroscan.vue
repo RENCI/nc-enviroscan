@@ -1324,15 +1324,83 @@
         </q-expansion-item>
         <!-- // Health layers -->
 
+        <!-- // Wildfire layers -->
+        <q-expansion-item dense dense-toggle expand-separator icon="list" label="Wildfire Hazards by 2020 Census Tracts">
+          <div class="q-pa-md q-gutter-y-sm column">
+            <table cellspacing="3" cellpadding="0" style="width:100%">
+              <tr>
+                <!-- // legend -->
+                <td>
+                  Wildfire Hazard Potential Quintile Legend
+                </td>
+                <td>
+                  <q-tooltip>Click to View Map Legend</q-tooltip>
+                  <q-btn flat dense round icon="fas fa-list" class="teal text-black" aria-label="Map Legend">
+                    <q-popup-proxy transition-show="flip-up" transition-hide="flip-down">
+                      <font size="2" face="Arial" >
+                        <q-markup-table dense class="bg-teal-1">
+                          <tr>
+                             <td style="text-align:center;" colspan="3">Wildfire Hazard Potential Quintile</td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center;" colspan="2">Number</td>
+                            <td style="text-align:center;">Percentage</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="wfsqu1"></span></td>
+                            <td>&lt; {{ wildfire_haz_pot_qnum_values[1] }}</td>
+                            <td>&lt; {{ wildfire_haz_pot_qprcnt_values[1] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="wfsqu2"></span></td>
+                            <td>&ge; {{ wildfire_haz_pot_qnum_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[2] }}</td>
+                            <td>&ge; {{ wildfire_haz_pot_qprcnt_values[1] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[2] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="wfsqu3"></span></td>
+                            <td>&ge; {{ wildfire_haz_pot_qnum_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[3] }}</td>
+                            <td>&ge; {{ wildfire_haz_pot_qprcnt_values[2] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[3] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="wfsqu4"></span></td>
+                              <td>&ge; {{ wildfire_haz_pot_qnum_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                              <td>&ge; {{ wildfire_haz_pot_qprcnt_values[3] }} &amp; &lt; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                          </tr>
+                          <tr>
+                            <td style="padding:5px"><span class="wfsqu5"></span></td>
+                              <td>&ge; {{ wildfire_haz_pot_qnum_values[4] }}</td>
+                              <td>&ge; {{ wildfire_haz_pot_qprcnt_values[4] }}</td>
+                          </tr>
+                        </q-markup-table>
+                      </font>
+                    </q-popup-proxy>
+                  </q-btn>
+                </td>
+                <!-- // legend -->
+              </tr>
+              <tr>
+                <td>
+                  <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">Wildfire Hazard Potential Quintile</q-tooltip>
+                  <q-radio v-on:input="showMapPanelRadioLayer" val="wildfire_haz_pot_qnum" v-model="currentvariable" color="teal" />
+                </td>
+                <td>
+                  <q-item-label>Wildfire Hazard Potential Quintile</q-item-label>
+                </td>
+              </tr>
+            </table>
+           </div>
+        </q-expansion-item>
+        <!-- // Wildfire layers-->
+
         <!-- // Additional Features -->
         <q-expansion-item dense dense-toggle expand-separator icon="list" label="Additional Features">
           <q-tooltip anchor="center left" self="center right" :offset="[10, 10]">From North Carolina One Map</q-tooltip>
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`North Carolina County Boundaries${ ncCountiesModel }`"
-              :key="layers[5].id"
+              :key="layers[6].id"
               v-on:input="showMapPanelToggleLayer('nccounties')"
-              :class="{ 'is-active': layers[5].visible }"
+              :class="{ 'is-active': layers[6].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
@@ -1343,9 +1411,9 @@
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`Super Fund Sites${ ncSuperFundModel }`"
-              :key="layers[7].id"
+              :key="layers[8].id"
               v-on:input="showMapPanelToggleLayer('superfundsites')"
-              :class="{ 'is-active': layers[7].visible }"
+              :class="{ 'is-active': layers[8].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
@@ -1356,9 +1424,9 @@
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`Hospitals ${ hospitalsModel }`"
-              :key="layers[8].id"
+              :key="layers[9].id"
               v-on:input="showMapPanelToggleLayer('hospitals')"
-              :class="{ 'is-active': layers[8].visible }"
+              :class="{ 'is-active': layers[9].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
@@ -1369,9 +1437,9 @@
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`Public Schools ${ publicSchoolsModel }`"
-              :key="layers[9].id"
+              :key="layers[10].id"
               v-on:input="showMapPanelToggleLayer('public_schools')"
-              :class="{ 'is-active': layers[9].visible }"
+              :class="{ 'is-active': layers[10].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
@@ -1382,9 +1450,9 @@
           <div class="q-pa-md q-gutter-y-sm column">
             <q-toggle
               :label="`Private Schools ${ nonPublicSchoolsModel }`"
-              :key="layers[10].id"
+              :key="layers[11].id"
               v-on:input="showMapPanelToggleLayer('non_public_schools')"
-              :class="{ 'is-active': layers[10].visible }"
+              :class="{ 'is-active': layers[11].visible }"
               color="teal"
               false-value="Not Selected"
               true-value="Selected"
@@ -1856,6 +1924,7 @@ export default {
       ejscolors: ['rgba(91, 95, 99, 0.65)', 'rgba(235, 252, 3, 0.65)', 'rgba(252, 186, 3, 0.65)', 'rgba(252, 128, 3, 0.65)', 'rgba(252, 82, 3, 0.65)'],
       covidcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(34, 240, 219, 0.65)', 'rgba(34, 223, 240, 0.65)', 'rgba(34, 185, 240, 0.65)', 'rgba(22, 141, 245, 0.65)', 'rgba(22, 74, 245, 0.65)', 'rgba(23, 2, 247, 0.65)'],
       pretermcolors: ['rgba(91, 95, 99, 0.65)', 'rgba(207, 252, 242, 0.65)', 'rgba(140, 250, 224, 0.65)', 'rgba(46, 240, 162, 0.65)', 'rgba(3, 148, 90, 0.65)'],
+      wildfirecolors: ['rgba(91, 95, 99, 0.65)', 'rgba(247, 241, 168, 0.65)', 'rgba(230, 211, 5, 0.65)', 'rgba(230, 159, 5, 0.65)', 'rgba(250, 103, 5, 0.65)', 'rgba(250, 5, 13, 0.65)'],
       arsenic_med_values: [-999.99, 3.55, 6.847, 11.18],
       arsenic_mean_values: [-999.99, 3.549, 3.71, 4.47],
       arsenic_prcast_values: [-999.99, 0.1, 2.607, 9.187],
@@ -1894,6 +1963,8 @@ export default {
       // fc_clinpreterm_percentage_values: [-999.99, 9.253, 10.41, 11.936],
       // sc_calcpreterm_percentage_values: [-999.99, 9.554, 11.285, 13.197],
       // sc_clinpreterm_percentage_values: [-999.99, 7.429, 8.621, 10.0],
+      wildfire_haz_pot_qnum_values: [-9.9, 2, 3, 4, 5],
+      wildfire_haz_pot_qprcnt_values: ['-99', '20-40%', '40-60%', '60-80%', '80-100%'],
       // ncwellwise features
       selectedFeature: [],
       selectedFeatureMeanBarBox: [],
@@ -1911,7 +1982,8 @@ export default {
       address: null,
       acceptaddress: false,
       vtSelection: {},
-      vtIdProp: 'geoid10',
+      vtIdProp10: 'geoid10',
+      vtIdProp20: 'geoid20',
       // state attributes
       eventCoordinate: [NaN, NaN],
       deviceCoordinate: [NaN, NaN],
@@ -2015,6 +2087,22 @@ export default {
             {
               cmp: 'vl-style-func',
               factory: this.getpretermStyle
+            }
+          ]
+        },
+        {
+          id: this.getWildFireLayerID(),
+          title: 'WildFire',
+          cmp: 'vl-layer-vector-tile',
+          visible: false,
+          source: {
+            cmp: 'vl-source-vector-tile',
+            url: pubhost[0].PUBHOST_URL + '/drf/apimvt/v1/data/nc_wildfires_geom.mvt?tile={z}/{x}/{y}'
+          },
+          style: [
+            {
+              cmp: 'vl-style-func',
+              factory: this.getwildfireStyle
             }
           ]
         },
@@ -2157,6 +2245,11 @@ export default {
       return {
         '--preterm-colors': this.pretermcolors
       }
+    },
+    wildfireColors () {
+      return {
+        '--wildfire-colors': this.wildfirecolors
+      }
     }
   },
   methods: {
@@ -2236,18 +2329,34 @@ export default {
           this.varcolor = colors[6]
         }
       } else if (colors.length === 6) {
-        if (data[this.currentvariable.substring(11)] === values[0]) {
-          this.varcolor = colors[0]
-        } else if (data[this.currentvariable.substring(11)] < values[1]) {
-          this.varcolor = colors[1]
-        } else if (data[this.currentvariable.substring(11)] >= values[1] && data[this.currentvariable.substring(11)] < values[2]) {
-          this.varcolor = colors[2]
-        } else if (data[this.currentvariable.substring(11)] >= values[2] && data[this.currentvariable.substring(11)] < values[3]) {
-          this.varcolor = colors[3]
-        } else if (data[this.currentvariable.substring(11)] >= values[3] && data[this.currentvariable.substring(11)] < values[4]) {
-          this.varcolor = colors[4]
-        } else if (data[this.currentvariable.substring(11)] >= values[4]) {
-          this.varcolor = colors[5]
+        if (layer === 'wildfirelayer') {
+          if (data[variable] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[variable] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[variable] >= values[1] && data[variable] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[variable] >= values[2] && data[variable] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[variable] >= values[3] && data[variable] < values[4]) {
+            this.varcolor = colors[4]
+          } else if (data[variable] >= values[4]) {
+            this.varcolor = colors[5]
+          }
+        } else {
+          if (data[this.currentvariable.substring(11)] === values[0]) {
+            this.varcolor = colors[0]
+          } else if (data[this.currentvariable.substring(11)] < values[1]) {
+            this.varcolor = colors[1]
+          } else if (data[this.currentvariable.substring(11)] >= values[1] && data[this.currentvariable.substring(11)] < values[2]) {
+            this.varcolor = colors[2]
+          } else if (data[this.currentvariable.substring(11)] >= values[2] && data[this.currentvariable.substring(11)] < values[3]) {
+            this.varcolor = colors[3]
+          } else if (data[this.currentvariable.substring(11)] >= values[3] && data[this.currentvariable.substring(11)] < values[4]) {
+            this.varcolor = colors[4]
+          } else if (data[this.currentvariable.substring(11)] >= values[4]) {
+            this.varcolor = colors[5]
+          }
         }
       } else if (colors.length === 5) {
         if (layer === 'ncwelllayer') {
@@ -2279,7 +2388,7 @@ export default {
     },
     getncwellwiseStyle: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentvariable
         if (this.currentvariable === 'ncwellwise_arsenic_med') {
@@ -2323,7 +2432,7 @@ export default {
     },
     getacsStyle: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentvariable
         this.getColors(data, this.census_acs_values, this.acscolors, variable, 'acslayer')
@@ -2342,7 +2451,7 @@ export default {
     },
     getejscreenStyle: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentvariable
         if (this.currentvariable === 'd_ldpnt_2') {
@@ -2384,7 +2493,7 @@ export default {
     },
     getcovid19Style: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentvariable
         if (this.currentvariable === 'cases') {
@@ -2411,7 +2520,7 @@ export default {
     },
     getpretermStyle: function () {
       return feature => {
-        let selected = !!this.vtSelection[feature.get(this.vtIdProp)]
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp10)]
         let data = feature.getProperties()
         let variable = this.currentvariable
         if (this.currentvariable === 'fc_calcega_mean_avg') {
@@ -2431,6 +2540,25 @@ export default {
         } else if (this.currentvariable === 'sc_clinpreterm_percentage') {
           this.getColors(data, this.preterm_percentage_values, this.pretermcolors, variable, 'pretermlayer')
         }
+        return [
+          new Style({
+            stroke: new Stroke({
+              color: selected ? 'rgba(200,20,20,0.8)' : 'black',
+              width: selected ? 2 : (this.zoom / 8.0)
+            }),
+            fill: new Fill({
+              color: selected ? 'rgba(200,20,20,0.2)' : this.varcolor
+            })
+          })
+        ]
+      }
+    },
+    getwildfireStyle: function () {
+      return feature => {
+        let selected = !!this.vtSelection[feature.get(this.vtIdProp20)]
+        let data = feature.getProperties()
+        let variable = this.currentvariable
+        this.getColors(data, this.wildfire_haz_pot_qnum_values, this.wildfirecolors, variable, 'wildfirelayer')
         return [
           new Style({
             stroke: new Stroke({
@@ -2525,6 +2653,9 @@ export default {
     getPreTermLayerID: function () {
       return 'preterm'
     },
+    getWildFireLayerID: function () {
+      return 'wildfire'
+    },
     onMapMounted: function (map) {
       // now ol.Map instance is ready and we can work with it directly
       this.$refs.map.$map.getControls().extend([
@@ -2566,35 +2697,35 @@ export default {
     },
     showMapPanelToggleLayer: function (variable) {
       if (variable === 'nccounties') {
-        let cntlayer = this.layers[5]
+        let cntlayer = this.layers[6]
         if (this.ncCountiesModel === 'Selected') {
           cntlayer.visible = true
         } else if (this.ncCountiesModel === 'Not Selected') {
           cntlayer.visible = false
         }
       } else if (variable === 'superfundsites') {
-        let sfslayer = this.layers[7]
+        let sfslayer = this.layers[8]
         if (this.ncSuperFundModel === 'Selected') {
           sfslayer.visible = true
         } else if (this.ncSuperFundModel === 'Not Selected') {
           sfslayer.visible = false
         }
       } else if (variable === 'hospitals') {
-        let hosplayer = this.layers[8]
+        let hosplayer = this.layers[9]
         if (this.hospitalsModel === 'Selected') {
           hosplayer.visible = true
         } else if (this.hospitalsModel === 'Not Selected') {
           hosplayer.visible = false
         }
       } else if (variable === 'public_schools') {
-        let pslayer = this.layers[9]
+        let pslayer = this.layers[10]
         if (this.publicSchoolsModel === 'Selected') {
           pslayer.visible = true
         } else if (this.publicSchoolsModel === 'Not Selected') {
           pslayer.visible = false
         }
       } else if (variable === 'non_public_schools') {
-        let npslayer = this.layers[10]
+        let npslayer = this.layers[11]
         if (this.nonPublicSchoolsModel === 'Selected') {
           npslayer.visible = true
         } else if (this.nonPublicSchoolsModel === 'Not Selected') {
@@ -2794,6 +2925,10 @@ export default {
         layer = this.layers.find(layer => layer.id === 'preterm')
         for (i = 0; i < this.$refs.layerStyle.length; i++) { this.$refs.layerStyle[i].refresh() }
         // this.$refs.layerStyle.refresh()
+      } else if (this.currentvariable === 'wildfire_haz_pot_qnum') {
+        layer = this.layers.find(layer => layer.id === 'wildfire')
+        for (i = 0; i < this.$refs.layerStyle.length; i++) { this.$refs.layerStyle[i].refresh() }
+        // this.$refs.layerStyle.refresh()
       } else if (this.currentvariable === 'nolayer') {
         layer = this.layers.find(layer => layer.id === 'noLayer')
         for (i = 0; i < this.$refs.layerStyle.length; i++) { this.$refs.layerStyle[i].refresh() }
@@ -2824,7 +2959,7 @@ export default {
           this.vtSelection = {}
           this.eventCoordinate = event.coordinate
           let feature = features[0]
-          let fid = feature.get(this.vtIdProp)
+          let fid = feature.get(this.vtIdProp10)
           this.vtSelection[fid] = feature
           let properties = feature.getProperties()
           if (properties['geoid10']) {
@@ -3204,6 +3339,41 @@ export default {
     height: 15px;
     width: 15px;
     background-color: rgba(3, 148, 90, 0.65);
+    // background-color: var(--manganese-colors[4]);
+    display: inline-block;
+  }
+  .wfsqu1 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(247, 241, 168, 0.65);
+    // background-color: var(--manganese-colors[1]);
+    display: inline-block;
+  }
+  .wfsqu2 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(230, 211, 5, 0.65);
+    // background-color: var(--manganese-colors[1]);
+    display: inline-block;
+  }
+  .wfsqu3 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(230, 159, 5, 0.65);
+    // background-color: var(--manganese-colors[2]);
+    display: inline-block;
+  }
+  .wfsqu4 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(250, 103, 5, 0.65);
+    // background-color: var(--manganese-colors[3]);
+    display: inline-block;
+  }
+  .wfsqu5 {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(250, 5, 13, 0.65);
     // background-color: var(--manganese-colors[4]);
     display: inline-block;
   }

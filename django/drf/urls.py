@@ -18,7 +18,7 @@ from django.urls import path
 from rest_framework import routers
 from rest_framework_mvt.views import mvt_view_factory
 from . import views
-from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries, nc_superfund_sites, hospitals_4326, public_schools_4326, non_public_schools_4326
+from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, nc_wildfires_geom, ncdot_county_boundaries, nc_superfund_sites, hospitals_4326, public_schools_4326, non_public_schools_4326
 
 router = routers.DefaultRouter()
 router.register(r'nc_superfund_sites', views.drf_nc_superfund_sites_View)
@@ -33,6 +33,7 @@ urlpatterns = [
     path("apimvt/v1/data/ejscreen_subset_geom.mvt/", mvt_view_factory(ejscreen_subset_geom)),
     path("apimvt/v1/data/nc_covid_zipcode_geom.mvt/", mvt_view_factory(nc_covid_zipcode_geom)),
     path("apimvt/v1/data/nc_preterm_subset_geom.mvt/", mvt_view_factory(nc_preterm_subset_geom)),
+    path("apimvt/v1/data/nc_wildfires_geom.mvt/", mvt_view_factory(nc_wildfires_geom)),
     path("apimvt/v1/data/ncdot_county_boundaries.mvt/", mvt_view_factory(ncdot_county_boundaries)),
     path("apimvt/v1/data/nc_superfund_sites.mvt/", mvt_view_factory(nc_superfund_sites)),
     path("apimvt/v1/data/hospitals_4326.mvt/", mvt_view_factory(hospitals_4326)),

@@ -1,7 +1,7 @@
 #from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 from rest_framework.serializers import HyperlinkedModelSerializer #ModelSerializer
-from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, ncdot_county_boundaries, nc_superfund_sites, hospitals_4326, public_schools_4326, non_public_schools_4326
+from .models import ncwellwise_subset_20102019_geom, acs_2019_5y_estimates_geom, ejscreen_subset_geom, nc_covid_zipcode_geom, nc_preterm_subset_geom, nc_wildfires_geom, ncdot_county_boundaries, nc_superfund_sites, hospitals_4326, public_schools_4326, non_public_schools_4326
 
 class ncwellwise_subset_20102019_geom_Serializer(HyperlinkedModelSerializer,GeoFeatureModelSerializer):
     class Meta:
@@ -37,6 +37,13 @@ class nc_preterm_subset_geom_Serializer(HyperlinkedModelSerializer,GeoFeatureMod
         geo_field = 'geom'
         id_field = 'id'
         fields = ('id','geoid10','fc_calcega_mean_avg','fc_calcega_med','fc_calcpreterm_percentage','fc_clinega_mean_avg','fc_clinega_med','fc_clinpreterm_percentage','sc_calcega_mean_avg,sc_calcega_med','sc_calcpreterm_percentage','sc_clinega_mean_avg','sc_clinega_med','sc_clinpreterm_percentage')
+
+class nc_wildfires_geom_Serializer(HyperlinkedModelSerializer,GeoFeatureModelSerializer):
+    class Meta:
+        model = nc_wildfires_geom
+        geo_field = 'geom'
+        id_field = 'id'
+        fields = ('id','geoid20','wildfire_haz_pot_qnum','wildfire_haz_pot_qprcnt')
 
 class ncdot_county_boundaries_Serializer(HyperlinkedModelSerializer,GeoFeatureModelSerializer):
     class Meta:
