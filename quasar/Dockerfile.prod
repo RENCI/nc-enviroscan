@@ -1,10 +1,10 @@
 # build environment
-FROM node:12.2.0-alpine as build
+FROM node:12.3.1-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
-RUN yarn install --silent
-RUN yarn global add @quasar/cli
+RUN yarn install --silent --frozen-lockfile
+RUN yarn global add @quasar/cli@1.2.2
 COPY . /app
 RUN quasar build
 
